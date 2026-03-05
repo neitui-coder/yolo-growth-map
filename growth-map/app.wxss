@@ -1,0 +1,106 @@
+/* ===== 全局样式 ===== */
+
+/* 品牌色系 */
+/* 品牌橙: #f97316 */
+/* 品牌红: #ef4444 */
+/* 品牌粉: #ec4899 */
+/* 节点类型色: */
+/*   activity (YOLO+活动): 靛蓝 #6366f1, 背景 #e0e7ff, 文字 #4338ca */
+/*   role (角色变化): 琥珀 #f59e0b, 背景 #fef3c7, 文字 #92400e */
+/*   life (人生节点): 粉色 #ec4899, 背景 #fce7f3, 文字 #9d174d */
+/*   ted (TED分享): 紫色 #8b5cf6, 背景 #ede9fe, 文字 #6b21a8 */
+/*   cert (技能认证): 绿色 #10b981, 背景 #d1fae5, 文字 #065f46 */
+
+page {
+  background: #f3f4f6;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* 通用按钮样式 */
+.btn-primary {
+  background: linear-gradient(135deg, #f97316, #ef4444);
+  color: #fff;
+  border: none;
+  border-radius: 20rpx;
+  padding: 16rpx 32rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+.btn-primary::after {
+  border: none;
+}
+
+/* 通用卡片样式 */
+.card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 24rpx 28rpx;
+  box-shadow: 0 2rpx 16rpx rgba(0, 0, 0, 0.08);
+  border: 1rpx solid #f0f0f0;
+}
+
+/* 渐变背景 */
+.gradient-bg {
+  background: linear-gradient(135deg, #f97316 0%, #ef4444 50%, #ec4899 100%);
+}
+
+/* 技能标签 */
+.skill-tag {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1rpx solid rgba(255, 255, 255, 0.4);
+  border-radius: 32rpx;
+  padding: 8rpx 24rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* 统计徽章 */
+.stat-badge {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 40rpx;
+  padding: 12rpx 32rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+
+/* 表单通用样式 */
+.form-group {
+  margin-bottom: 28rpx;
+}
+
+.form-label {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 12rpx;
+}
+
+.form-input {
+  width: 100%;
+  border: 1rpx solid #d1d5db;
+  border-radius: 20rpx;
+  padding: 20rpx 24rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  width: 100%;
+  border: 1rpx solid #d1d5db;
+  border-radius: 20rpx;
+  padding: 20rpx 24rpx;
+  font-size: 28rpx;
+  min-height: 160rpx;
+  box-sizing: border-box;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  display: none;
+}

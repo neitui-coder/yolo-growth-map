@@ -1,0 +1,22 @@
+<!--
+  member-bar: 顶部会员头像横向滚动栏
+  - 水平滚动展示所有用户头像和名字
+  - 当前选中用户高亮显示（橙色边框 + 放大）
+  - 点击头像触发 memberselect 事件切换用户
+-->
+<scroll-view class="member-bar" scroll-x="true" enhanced="true" show-scrollbar="{{false}}">
+  <view
+    wx:for="{{users}}"
+    wx:key="id"
+    class="member-avatar-wrap {{item.id === selectedUserId ? 'active' : ''}}"
+    data-user-id="{{item.id}}"
+    bindtap="onMemberTap"
+  >
+    <image
+      class="member-avatar"
+      src="{{item.avatarUrl}}"
+      mode="aspectFill"
+    />
+    <text class="member-avatar-name">{{item.name}}</text>
+  </view>
+</scroll-view>

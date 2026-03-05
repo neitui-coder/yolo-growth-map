@@ -1,0 +1,168 @@
+{
+  "collections": {
+    "users": {
+      "description": "YOLO+ 会员用户表",
+      "fields": {
+        "_id": {
+          "type": "string",
+          "required": true,
+          "description": "文档唯一ID，CloudBase 自动生成"
+        },
+        "_openid": {
+          "type": "string",
+          "required": true,
+          "description": "微信用户 openid，登录时由 CloudBase 自动注入"
+        },
+        "name": {
+          "type": "string",
+          "required": true,
+          "description": "用户昵称，显示在成员栏和个人页面"
+        },
+        "avatarStyle": {
+          "type": "string",
+          "required": false,
+          "default": "fun-emoji",
+          "description": "DiceBear 头像风格，可选值: fun-emoji, lorelei, bottts, adventurer-neutral"
+        },
+        "avatarSeed": {
+          "type": "string",
+          "required": false,
+          "description": "DiceBear 头像种子字符串，用于生成唯一头像。默认使用用户名"
+        },
+        "motto": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "description": "个人格言，显示在个人资料区域"
+        },
+        "skills": {
+          "type": "array",
+          "items": "string",
+          "required": false,
+          "default": [],
+          "description": "技能认证标签列表，如 CFA、PMP、AWS SAA 等"
+        },
+        "goal": {
+          "type": "string|null",
+          "required": false,
+          "default": null,
+          "description": "年度目标，为 null 时显示'设定年度目标'按钮"
+        },
+        "joinDate": {
+          "type": "string",
+          "required": true,
+          "description": "入会日期，格式 YYYY-MM，用于计算'加入 YOLO+ X 天'"
+        },
+        "editPassword": {
+          "type": "string",
+          "required": false,
+          "default": "yolo",
+          "description": "编辑密码，其他用户编辑该用户的成长地图时需验证此密码"
+        },
+        "createdAt": {
+          "type": "date",
+          "required": true,
+          "description": "记录创建时间，由服务端或云函数自动设置"
+        },
+        "updatedAt": {
+          "type": "date",
+          "required": true,
+          "description": "记录最近更新时间，每次修改时更新"
+        }
+      },
+      "indexes": [
+        {
+          "name": "idx_openid",
+          "fields": [{ "field": "_openid", "direction": "asc" }],
+          "unique": true,
+          "description": "openid 唯一索引，确保每个微信用户只有一条记录，同时加速按 openid 查询"
+        }
+      ],
+      "permissions": {
+        "read": "doc._openid == auth.openid || true",
+        "create": "auth.openid != null",
+        "update": "doc._openid == auth.openid",
+        "delete": "doc._openid == auth.openid",
+        "description": "所有人可读任何用户资料；仅创建者可修改/删除自己的资料。注：密码验证编辑功能在应用层实现（云函数校验 editPassword），数据库权限层面仅允许本人修改。"
+      }
+    },
+    "milestones": {
+      "description": "成长节点/里程碑表，记录用户在 YOLO+ 的成长历程",
+      "fields": {
+        "_id": {
+          "type": "string",
+          "required": true,
+          "description": "文档唯一ID，CloudBase 自动生成"
+        },
+        "userId": {
+          "type": "string",
+          "required": true,
+          "description": "关联 users._id，标识该节点属于哪个用户"
+        },
+        "_openid": {
+          "type": "string",
+          "required": true,
+          "description": "创建者的微信 openid，由 CloudBase 自动注入，用于权限控制"
+        },
+        "date": {
+          "type": "string",
+          "required": true,
+          "description": "节点日期，格式 YYYY-MM，用于时间线排序展示"
+        },
+        "type": {
+          "type": "string",
+          "required": true,
+          "enum": ["activity", "role", "life", "ted", "cert"],
+          "description": "节点类型。activity=YOLO+活动, role=角色变化, life=人生节点, ted=TED分享, cert=技能认证"
+        },
+        "desc": {
+          "type": "string",
+          "required": true,
+          "description": "节点描述，简要说明该成长事件"
+        },
+        "images": {
+          "type": "array",
+          "items": "string",
+          "required": false,
+          "default": [],
+          "maxItems": 3,
+          "description": "图片列表，存储 CloudBase 云存储的 fileID，最多3张"
+        },
+        "createdAt": {
+          "type": "date",
+          "required": true,
+          "description": "记录创建时间"
+        },
+        "updatedAt": {
+          "type": "date",
+          "required": true,
+          "description": "记录最近更新时间"
+        }
+      },
+      "indexes": [
+        {
+          "name": "idx_userId_date",
+          "fields": [
+            { "field": "userId", "direction": "asc" },
+            { "field": "date", "direction": "desc" }
+          ],
+          "unique": false,
+          "description": "用户ID + 日期降序复合索引，加速按用户查询并按时间倒序排列节点"
+        },
+        {
+          "name": "idx_openid",
+          "fields": [{ "field": "_openid", "direction": "asc" }],
+          "unique": false,
+          "description": "openid 索引，用于权限校验和按创建者查询"
+        }
+      ],
+      "permissions": {
+        "read": "true",
+        "create": "auth.openid != null",
+        "update": "doc._openid == auth.openid",
+        "delete": "doc._openid == auth.openid",
+        "description": "所有人可读所有成长节点（公开展示）；仅创建者可修改/删除自己创建的节点。注：帮他人添加节点的场景（密码验证后）通过云函数实现，绕过客户端权限检查。"
+      }
+    }
+  }
+}

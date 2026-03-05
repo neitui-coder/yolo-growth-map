@@ -1,0 +1,40 @@
+<!--
+  profile-header: 用户资料头部区域
+  - 渐变背景（橙 → 红 → 粉）
+  - 头像（可编辑时显示相机按钮）
+  - 昵称 + 加入天数
+  - 成长值和导师数统计
+  - 座右铭
+  - 技能标签列表
+-->
+<view class="profile-header">
+  <!-- 头像区域 -->
+  <view class="profile-avatar-container">
+    <image class="profile-avatar" src="{{avatarUrl}}" mode="aspectFill" />
+    <view wx:if="{{isOwner}}" class="avatar-edit-btn" bindtap="onAvatarEditTap">
+      <text class="edit-icon">📷</text>
+    </view>
+  </view>
+
+  <!-- 昵称 -->
+  <view class="profile-name">{{user.name}}</view>
+
+  <!-- 加入天数 -->
+  <view class="profile-days">加入YOLO+ {{days}} 天</view>
+
+  <!-- 统计徽章 -->
+  <view class="profile-stats">
+    <view class="stat-badge">🔥 成长值 {{growthValue}}</view>
+    <view class="stat-badge">👥 导师 {{mentors}}</view>
+  </view>
+
+  <!-- 座右铭 -->
+  <view class="profile-motto">"{{user.motto}}"</view>
+
+  <!-- 技能标签 -->
+  <view class="skill-tags">
+    <view wx:for="{{user.skills}}" wx:key="*this" class="skill-tag">
+      🏅 {{item}}
+    </view>
+  </view>
+</view>

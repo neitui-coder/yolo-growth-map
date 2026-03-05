@@ -1,0 +1,201 @@
+{
+  "users": [
+    {
+      "_id": "user_alex",
+      "_openid": "oXXXX_alex_openid_placeholder",
+      "name": "Alex",
+      "avatarStyle": "fun-emoji",
+      "avatarSeed": "Alex",
+      "motto": "在不确定中寻找确定",
+      "skills": ["CFA", "PADI OW"],
+      "goal": "2024年完成马拉松",
+      "joinDate": "2020-06",
+      "editPassword": "yolo",
+      "createdAt": "2020-06-01T00:00:00.000Z",
+      "updatedAt": "2024-01-15T00:00:00.000Z"
+    },
+    {
+      "_id": "user_jenny",
+      "_openid": "oXXXX_jenny_openid_placeholder",
+      "name": "Jenny",
+      "avatarStyle": "fun-emoji",
+      "avatarSeed": "Jenny",
+      "motto": "每一步都算数",
+      "skills": ["PMP"],
+      "goal": null,
+      "joinDate": "2019-09",
+      "editPassword": "yolo",
+      "createdAt": "2019-09-01T00:00:00.000Z",
+      "updatedAt": "2023-11-10T00:00:00.000Z"
+    },
+    {
+      "_id": "user_sean",
+      "_openid": "oXXXX_sean_openid_placeholder",
+      "name": "Sean",
+      "avatarStyle": "fun-emoji",
+      "avatarSeed": "Sean",
+      "motto": "做难而正确的事",
+      "skills": ["AWS SAA"],
+      "goal": "学会潜水",
+      "joinDate": "2021-11",
+      "editPassword": "yolo",
+      "createdAt": "2021-11-01T00:00:00.000Z",
+      "updatedAt": "2023-06-20T00:00:00.000Z"
+    }
+  ],
+  "milestones": [
+    {
+      "_id": "ms_alex_001",
+      "userId": "user_alex",
+      "_openid": "oXXXX_alex_openid_placeholder",
+      "date": "2024-01",
+      "type": "cert",
+      "desc": "获得CFA认证",
+      "images": [
+        "cloud://env-id.xxxx/milestones/alex/cfa1.jpg",
+        "cloud://env-id.xxxx/milestones/alex/cfa2.jpg"
+      ],
+      "createdAt": "2024-01-15T00:00:00.000Z",
+      "updatedAt": "2024-01-15T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_alex_002",
+      "userId": "user_alex",
+      "_openid": "oXXXX_alex_openid_placeholder",
+      "date": "2023-09",
+      "type": "ted",
+      "desc": "TED分享《在不确定中寻找确定》",
+      "images": [
+        "cloud://env-id.xxxx/milestones/alex/ted1.jpg",
+        "cloud://env-id.xxxx/milestones/alex/ted2.jpg",
+        "cloud://env-id.xxxx/milestones/alex/ted3.jpg"
+      ],
+      "createdAt": "2023-09-10T00:00:00.000Z",
+      "updatedAt": "2023-09-10T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_alex_003",
+      "userId": "user_alex",
+      "_openid": "oXXXX_alex_openid_placeholder",
+      "date": "2022-05",
+      "type": "life",
+      "desc": "结婚",
+      "images": [
+        "cloud://env-id.xxxx/milestones/alex/wedding1.jpg",
+        "cloud://env-id.xxxx/milestones/alex/wedding2.jpg"
+      ],
+      "createdAt": "2022-05-20T00:00:00.000Z",
+      "updatedAt": "2022-05-20T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_alex_004",
+      "userId": "user_alex",
+      "_openid": "oXXXX_alex_openid_placeholder",
+      "date": "2021-03",
+      "type": "role",
+      "desc": "担任小组长",
+      "images": [],
+      "createdAt": "2021-03-05T00:00:00.000Z",
+      "updatedAt": "2021-03-05T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_alex_005",
+      "userId": "user_alex",
+      "_openid": "oXXXX_alex_openid_placeholder",
+      "date": "2020-06",
+      "type": "activity",
+      "desc": "加入YOLO+",
+      "images": [
+        "cloud://env-id.xxxx/milestones/alex/join1.jpg"
+      ],
+      "createdAt": "2020-06-01T00:00:00.000Z",
+      "updatedAt": "2020-06-01T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_jenny_001",
+      "userId": "user_jenny",
+      "_openid": "oXXXX_jenny_openid_placeholder",
+      "date": "2023-11",
+      "type": "life",
+      "desc": "喜得贵子",
+      "images": [
+        "cloud://env-id.xxxx/milestones/jenny/baby1.jpg",
+        "cloud://env-id.xxxx/milestones/jenny/baby2.jpg"
+      ],
+      "createdAt": "2023-11-10T00:00:00.000Z",
+      "updatedAt": "2023-11-10T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_jenny_002",
+      "userId": "user_jenny",
+      "_openid": "oXXXX_jenny_openid_placeholder",
+      "date": "2022-08",
+      "type": "ted",
+      "desc": "TED分享《在路上》",
+      "images": [
+        "cloud://env-id.xxxx/milestones/jenny/ted1.jpg"
+      ],
+      "createdAt": "2022-08-15T00:00:00.000Z",
+      "updatedAt": "2022-08-15T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_jenny_003",
+      "userId": "user_jenny",
+      "_openid": "oXXXX_jenny_openid_placeholder",
+      "date": "2021-01",
+      "type": "role",
+      "desc": "担任主持人",
+      "images": [],
+      "createdAt": "2021-01-08T00:00:00.000Z",
+      "updatedAt": "2021-01-08T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_jenny_004",
+      "userId": "user_jenny",
+      "_openid": "oXXXX_jenny_openid_placeholder",
+      "date": "2019-09",
+      "type": "activity",
+      "desc": "加入YOLO+",
+      "images": [],
+      "createdAt": "2019-09-01T00:00:00.000Z",
+      "updatedAt": "2019-09-01T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_sean_001",
+      "userId": "user_sean",
+      "_openid": "oXXXX_sean_openid_placeholder",
+      "date": "2023-06",
+      "type": "life",
+      "desc": "买房",
+      "images": [
+        "cloud://env-id.xxxx/milestones/sean/house1.jpg",
+        "cloud://env-id.xxxx/milestones/sean/house2.jpg",
+        "cloud://env-id.xxxx/milestones/sean/house3.jpg"
+      ],
+      "createdAt": "2023-06-20T00:00:00.000Z",
+      "updatedAt": "2023-06-20T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_sean_002",
+      "userId": "user_sean",
+      "_openid": "oXXXX_sean_openid_placeholder",
+      "date": "2022-03",
+      "type": "role",
+      "desc": "担任组委",
+      "images": [],
+      "createdAt": "2022-03-12T00:00:00.000Z",
+      "updatedAt": "2022-03-12T00:00:00.000Z"
+    },
+    {
+      "_id": "ms_sean_003",
+      "userId": "user_sean",
+      "_openid": "oXXXX_sean_openid_placeholder",
+      "date": "2021-11",
+      "type": "activity",
+      "desc": "加入YOLO+",
+      "images": [],
+      "createdAt": "2021-11-01T00:00:00.000Z",
+      "updatedAt": "2021-11-01T00:00:00.000Z"
+    }
+  ]
+}

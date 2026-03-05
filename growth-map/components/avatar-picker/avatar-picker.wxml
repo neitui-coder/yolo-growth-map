@@ -1,0 +1,26 @@
+<!--
+  avatar-picker: 头像选择弹窗
+  - 半透明遮罩层
+  - 居中白色弹窗，标题"选择你的头像"
+  - 4x4 网格展示 DiceBear 头像选项
+  - 当前头像高亮显示（橙色边框）
+  - 点击选择触发 avatarselect 事件
+  - 点击遮罩关闭
+-->
+<view wx:if="{{visible}}" class="avatar-picker-overlay" bindtap="onOverlayTap">
+  <view class="avatar-picker-box" catchtap="onContentTap">
+    <view class="picker-title">😊 选择你的头像</view>
+    <view class="avatar-grid">
+      <image
+        wx:for="{{avatarChoices}}"
+        wx:key="seed"
+        class="avatar-choice {{item.isCurrent ? 'current' : ''}}"
+        src="{{item.url}}"
+        mode="aspectFill"
+        data-style="{{item.style}}"
+        data-seed="{{item.seed}}"
+        bindtap="onAvatarTap"
+      />
+    </view>
+  </view>
+</view>

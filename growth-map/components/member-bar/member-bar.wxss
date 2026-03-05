@@ -1,0 +1,48 @@
+/* member-bar: 顶部会员切换栏样式 */
+
+.member-bar {
+  display: flex;
+  white-space: nowrap;
+  padding: 24rpx 32rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.member-avatar-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+}
+
+.member-avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  border: 6rpx solid transparent;
+  transition: all 0.2s ease;
+  background: #fef3c7;
+}
+
+.member-avatar-wrap.active .member-avatar {
+  border-color: #f97316;
+  box-shadow: 0 0 0 4rpx rgba(249, 115, 22, 0.3);
+  transform: scale(1.1);
+}
+
+.member-avatar-name {
+  font-size: 20rpx;
+  color: #9ca3af;
+  max-width: 96rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member-avatar-wrap.active .member-avatar-name {
+  color: #f97316;
+  font-weight: 600;
+}

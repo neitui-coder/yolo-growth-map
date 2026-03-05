@@ -1,0 +1,67 @@
+<!--
+  index 主页面结构:
+  1. member-bar: 顶部会员头像滚动切换栏
+  2. profile-header: 渐变背景用户资料区（头像/昵称/天数/成长值/座右铭/技能）
+  3. goal-card: 年度目标卡片（有目标显示卡片，无目标显示设定按钮）
+  4. 时间轴区域:
+     - 标题 + 添加节点按钮
+     - 竖线时间轴，节点左右交替排列
+     - 每个节点显示日期、类型标签、描述、图片
+  5. avatar-picker: 头像选择弹窗（点击头像编辑按钮时显示）
+-->
+
+<!-- 会员切换栏 -->
+<member-bar
+  users="{{users}}"
+  selectedUserId="{{selectedUserId}}"
+  bind:memberselect="onMemberSelect"
+/>
+
+<!-- 用户资料头部 -->
+<profile-header
+  user="{{selectedUser}}"
+  isOwner="{{isOwner}}"
+  bind:avataredit="onAvatarEdit"
+/>
+
+<!-- 年度目标 -->
+<goal-card
+  goal="{{selectedUser.goal}}"
+  bind:setgoal="onSetGoal"
+/>
+
+<!-- 时间轴区域 -->
+<view class="timeline-section">
+  <view class="timeline-header">
+    <text class="timeline-title">🛤️ 我的成长地图</text>
+    <button class="btn-add" bindtap="onAddNode">+ 添加节点</button>
+  </view>
+
+  <!-- 时间轴 -->
+  <view wx:if="{{sortedNodes.length > 0}}" class="timeline">
+    <timeline-node
+      wx:for="{{sortedNodes}}"
+      wx:key="_idx"
+      node="{{item}}"
+      index="{{index}}"
+      typeConfig="{{nodeTypes[item.type]}}"
+      bind:nodetap="onNodeTap"
+    />
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:else class="empty-timeline">
+    <text class="empty-icon">🗺️</text>
+    <text class="empty-text">还没有成长记录</text>
+    <text class="empty-hint">点击上方按钮添加第一个节点</text>
+  </view>
+</view>
+
+<!-- 头像选择弹窗 -->
+<avatar-picker
+  visible="{{showAvatarPicker}}"
+  currentStyle="{{selectedUser.avatarStyle}}"
+  currentSeed="{{selectedUser.avatarSeed}}"
+  bind:avatarselect="onAvatarSelect"
+  bind:close="onAvatarPickerClose"
+/>

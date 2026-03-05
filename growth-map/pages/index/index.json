@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "member-bar": "../../components/member-bar/member-bar",
+    "profile-header": "../../components/profile-header/profile-header",
+    "timeline-node": "../../components/timeline-node/timeline-node",
+    "goal-card": "../../components/goal-card/goal-card",
+    "avatar-picker": "../../components/avatar-picker/avatar-picker"
+  }
+}

@@ -1,0 +1,12 @@
+<!--
+  goal-card: 年度目标卡片
+  - 有目标时：黄色渐变卡片，显示"年度目标"标题和目标内容
+  - 无目标时：虚线框按钮，点击触发 setgoal 事件
+-->
+<view wx:if="{{goal}}" class="goal-card">
+  <view class="goal-title">🎯 年度目标</view>
+  <view class="goal-text">{{goal}}</view>
+</view>
+<view wx:else class="btn-set-goal" bindtap="onSetGoal">
+  ➕ 设定年度目标
+</view>

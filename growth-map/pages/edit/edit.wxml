@@ -1,0 +1,74 @@
+<!--
+  edit 编辑页面结构:
+  - 日期选择器（picker mode="date"，fields="month"）
+  - 类型选择器（picker mode="selector"）
+  - 内容描述文本框
+  - 照片选择区域（12张预置照片，最多选3张）
+  - 保存按钮
+-->
+<view class="edit-page">
+  <!-- 日期 -->
+  <view class="form-group">
+    <text class="form-label">日期</text>
+    <picker mode="date" fields="month" value="{{date}}" bindchange="onDateChange">
+      <view class="form-input picker-value">
+        {{date || '请选择日期'}}
+      </view>
+    </picker>
+  </view>
+
+  <!-- 类型 -->
+  <view class="form-group">
+    <text class="form-label">类型</text>
+    <picker range="{{typeOptions}}" value="{{typeIndex}}" bindchange="onTypeChange">
+      <view class="form-input picker-value">
+        {{typeOptions[typeIndex]}}
+      </view>
+    </picker>
+  </view>
+
+  <!-- 内容描述 -->
+  <view class="form-group">
+    <text class="form-label">内容描述</text>
+    <textarea
+      class="form-textarea"
+      value="{{desc}}"
+      placeholder="描述这个成长节点..."
+      bindinput="onDescInput"
+    />
+  </view>
+
+  <!-- 照片区域 -->
+  <view class="form-group">
+    <text class="form-label">添加照片（最多3张）</text>
+    <!-- 已选择的照片 -->
+    <view class="selected-photos">
+      <block wx:if="{{selectedPhotos.length > 0}}">
+        <view wx:for="{{selectedPhotos}}" wx:key="url" class="selected-photo-tag">
+          <image class="selected-photo-img" src="{{item.url}}" mode="aspectFill" />
+          <text class="selected-photo-name">照片{{index + 1}}</text>
+          <text class="remove-photo" data-index="{{index}}" bindtap="onRemovePhoto">x</text>
+        </view>
+      </block>
+      <text wx:else class="no-photo-hint">未选择照片</text>
+    </view>
+    <!-- 预置照片网格 -->
+    <text class="photo-grid-hint">从相册选择：</text>
+    <view class="photo-grid">
+      <image
+        wx:for="{{samplePhotos}}"
+        wx:key="id"
+        class="photo-option {{item.selected ? 'selected' : ''}}"
+        src="{{item.url}}"
+        mode="aspectFill"
+        data-index="{{index}}"
+        bindtap="onTogglePhoto"
+      />
+    </view>
+  </view>
+
+  <!-- 保存按钮 -->
+  <button class="btn-submit" bindtap="onSubmit">
+    {{isEdit ? '更新' : '保存'}}
+  </button>
+</view>

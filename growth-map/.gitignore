@@ -1,0 +1,9 @@
+node_modules/
+miniprogram_npm/
+miniprogram/miniprogram_npm/
+cloudfunctions/*/node_modules/
+.DS_Store
+*.log
+automation-*.png
+/tmp/
+project.private.config.json

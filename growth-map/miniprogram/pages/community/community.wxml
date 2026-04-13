@@ -1,0 +1,114 @@
+<view class="community-page">
+  <view class="nav-bar" style="padding-top: {{navPaddingTop}}px;">
+    <view class="nav-title">社区成长地图</view>
+  </view>
+
+  <view wx:if="{{pageLoading}}" class="community-skeleton">
+    <view wx:for="{{skeletonItems}}" wx:key="*this" class="skeleton-card">
+      <view class="skeleton-author">
+        <view class="skeleton-avatar"></view>
+        <view class="skeleton-lines">
+          <view class="skeleton-line skeleton-line-short"></view>
+          <view class="skeleton-line skeleton-line-mid"></view>
+        </view>
+      </view>
+      <view class="skeleton-line"></view>
+      <view class="skeleton-line skeleton-line-mid"></view>
+      <view class="skeleton-grid">
+        <view wx:for="{{skeletonItems}}" wx:key="*this" class="skeleton-image"></view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:elif="{{feedItems.length > 0}}" class="community-feed">
+    <view wx:for="{{feedItems}}" wx:key="key" wx:for-item="feedItem" class="feed-card feed-card-{{feedItem.feedType}}">
+      <view class="feed-author-row">
+        <view class="feed-author-wrap" bindtap="onAuthorTap" data-user-id="{{feedItem.author.userId}}">
+          <view class="feed-avatar-wrap">
+            <image wx:if="{{feedItem.author.avatarUrl}}" class="feed-avatar" src="{{feedItem.author.avatarUrl}}" mode="aspectFill" lazy-load="true" />
+            <view wx:else class="feed-avatar collective">YOLO</view>
+            <view wx:if="{{feedItem.author.isBirthdayMonth}}" class="feed-birthday-hat">
+              <view class="feed-birthday-hat-ball"></view>
+            </view>
+          </view>
+          <view class="feed-author-info">
+            <view class="feed-author-name">{{feedItem.author.name}}</view>
+            <view class="feed-author-meta">
+              <text>{{feedItem.dateLabel}}</text>
+              <text wx:if="{{feedItem.typeLabel}}">{{feedItem.typeLabel}}</text>
+              <text wx:if="{{feedItem.author.career}}">{{feedItem.author.career}}</text>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{feedItem.participantCount > 1}}" class="feed-participant-count">{{feedItem.participantCount}} 人</view>
+      </view>
+
+      <view wx:if="{{feedItem.title}}" class="feed-title">{{feedItem.title}}</view>
+      <view class="feed-content">{{feedItem.content}}</view>
+
+      <view wx:if="{{feedItem.participantPreview && feedItem.participantPreview.length > 0}}" class="feed-participants">
+        <view class="feed-participant-stack">
+          <image
+            wx:for="{{feedItem.participantPreview}}"
+            wx:key="userId"
+            wx:for-item="participant"
+            class="feed-participant-avatar"
+            src="{{participant.avatarUrl}}"
+            mode="aspectFill"
+            lazy-load="true"
+            bindtap="onParticipantTap"
+            data-user-id="{{participant.userId}}"
+          />
+        </view>
+        <text class="feed-participant-more" wx:if="{{feedItem.extraParticipantCount > 0}}">+{{feedItem.extraParticipantCount}}</text>
+      </view>
+
+      <view wx:if="{{feedItem.images && feedItem.images.length > 0}}" class="feed-images">
+        <image
+          wx:for="{{feedItem.images}}"
+          wx:key="*this"
+          wx:for-item="imageUrl"
+          wx:for-index="imgIndex"
+          class="feed-image {{feedItem.images.length === 1 ? 'single' : ''}}"
+          src="{{imageUrl}}"
+          mode="aspectFill"
+          lazy-load="true"
+          bindtap="onPreviewImages"
+          data-index="{{imgIndex}}"
+          data-key="{{feedItem.key}}"
+        />
+      </view>
+
+      <view class="feed-footer">
+        <text class="feed-footer-time">{{feedItem.dateLabel}}</text>
+        <view class="feed-footer-stats">
+          <text>{{feedItem.likesCount || 0}} 赞</text>
+          <text>{{feedItem.commentsCount || 0}} 评论</text>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{feedHasMore}}" class="feed-load-more">
+      <text>继续上滑看更多</text>
+    </view>
+    <view wx:elif="{{feedItems.length > 0}}" class="feed-load-more muted">
+      <text>已经到底了</text>
+    </view>
+    <view class="community-load-sentinel"></view>
+  </view>
+
+  <view wx:else class="feed-empty">
+    <text class="feed-empty-text">社区动态还在整理中</text>
+  </view>
+
+  <view wx:if="{{imageViewerVisible}}" class="image-viewer-overlay" bindtap="onCloseImageViewer">
+    <swiper class="image-viewer-swiper" current="{{viewerIndex}}" bindchange="onViewerChange" catchtap="noop">
+      <swiper-item wx:for="{{viewerImages}}" wx:key="*this">
+        <view class="image-viewer-slide">
+          <image class="image-viewer-image" src="{{item}}" mode="aspectFit" />
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="image-viewer-close" bindtap="onCloseImageViewer">关闭</view>
+  </view>
+</view>

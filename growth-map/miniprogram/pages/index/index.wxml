@@ -1,0 +1,115 @@
+<view class="home-page">
+  <view class="nav-bar" style="padding-top: {{navPaddingTop}}px;">
+    <view class="nav-head">
+      <view class="nav-title-row">
+        <view class="nav-title">YOLO+ 成长地图</view>
+        <view wx:if="{{operatorModeActive}}" class="nav-badge">运营者</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="mode-toggle">
+    <view
+      class="mode-chip {{homeMode === 'mock' ? 'active' : ''}} {{dataTypeLoading ? 'disabled' : ''}}"
+      bindtap="onToggleDataType"
+      data-mode="mock"
+    >模拟</view>
+    <view
+      class="mode-chip {{homeMode === 'real' ? 'active' : ''}} {{dataTypeLoading ? 'disabled' : ''}}"
+      bindtap="onToggleDataType"
+      data-mode="real"
+    >真实</view>
+    <view
+      class="mode-chip {{homeMode === 'operator' ? 'active' : ''}} {{dataTypeLoading ? 'disabled' : ''}}"
+      bindtap="onToggleDataType"
+      data-mode="operator"
+    >运营者</view>
+  </view>
+
+  <view wx:if="{{pageLoading}}" class="section-card skeleton-card">
+    <view class="skeleton-line skeleton-line-title"></view>
+    <view class="skeleton-line"></view>
+    <view class="skeleton-line skeleton-line-search"></view>
+    <view class="skeleton-chip-row">
+      <view wx:for="{{skeletonChipItems}}" wx:key="*this" class="skeleton-chip"></view>
+    </view>
+    <view class="skeleton-grid">
+      <view wx:for="{{skeletonCardItems}}" wx:key="*this" class="skeleton-member-card"></view>
+    </view>
+  </view>
+
+  <view wx:else class="section-card">
+    <view class="search-bar">
+      <view class="search-input-wrap">
+        <text class="search-icon-text">🔍</text>
+        <input
+          class="search-input"
+          placeholder="搜索会员..."
+          value="{{searchQuery}}"
+          bindinput="onSearchInput"
+        />
+        <view wx:if="{{searchQuery}}" class="search-clear" bindtap="onSearchClear">✕</view>
+      </view>
+    </view>
+
+    <scroll-view class="filter-pills" scroll-x="true" enhanced="true" show-scrollbar="{{false}}">
+      <view class="filter-pills-inner">
+        <view
+          class="filter-pill {{activeFilter === '' ? 'active' : ''}}"
+          bindtap="onFilterTap"
+          data-filter=""
+        >全部</view>
+        <view
+          wx:for="{{filterOptions}}"
+          wx:key="index"
+          class="filter-pill {{activeFilter === item ? 'active' : ''}}"
+          bindtap="onFilterTap"
+          data-filter="{{item}}"
+        >{{item}}</view>
+      </view>
+    </scroll-view>
+
+    <view class="member-stats-bar">
+      <text class="member-count">共 {{filteredUserCount}} 位会员</text>
+      <view class="stats-bar-right">
+        <view wx:if="{{canViewAlumni}}" class="alumni-btn {{showAlumni ? 'active' : ''}}" bindtap="onAlumniToggle">
+          <text>往届</text>
+        </view>
+        <view class="sort-btn {{sortByGrowth ? 'active' : ''}}" bindtap="onSortToggle">
+          <text>成长值排序</text>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{listRefreshing || dataTypeLoading}}" class="inline-loading">
+      <view class="inline-loading-dot"></view>
+      <text>{{dataTypeLoading ? '正在切换数据源…' : '正在补齐更多会员数据…'}}</text>
+    </view>
+
+    <view wx:if="{{filteredUsers.length > 0}}" class="card-grid">
+        <member-card
+          wx:for="{{filteredUsers}}"
+          wx:key="id"
+          user="{{item}}"
+          rank="{{item._rank}}"
+          showRank="{{sortByGrowth}}"
+          bind:cardtap="onCardTap"
+          bind:growthtap="onCardTap"
+        />
+      </view>
+
+    <view wx:else class="empty-state">
+      <view class="empty-state-title">没有找到匹配会员</view>
+      <view class="empty-state-text">可以试试清空关键词或切换筛选标签</view>
+    </view>
+
+    <view wx:if="{{filteredUserCount > filteredUsers.length}}" class="load-more">
+      <text wx:if="{{memberLoadingMore}}">正在加载更多会员...</text>
+      <text wx:else>继续下拉可加载更多</text>
+    </view>
+    <view wx:elif="{{filteredUserCount > 0}}" class="load-more muted">
+      <text>已展示全部会员</text>
+    </view>
+    <view class="home-load-sentinel"></view>
+  </view>
+</view>

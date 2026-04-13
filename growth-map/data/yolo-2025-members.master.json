@@ -1,0 +1,3646 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-04-12T09:00:00.000Z",
+  "sourcePdfPath": "/Users/Sean/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/wxwxwx284260582_29ca/msg/file/2026-03/【PDF版本】YOLO+2025会员海报合集(1).pdf",
+  "defaultJoinDate": "2025-01",
+  "members": [
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 1,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-bill",
+        "name": "陈威全",
+        "englishName": "BiLL"
+      },
+      "community": {
+        "role": "初创理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "让生活自然的发生",
+        "birthday": "1月28日",
+        "city": "台湾",
+        "education": [
+          "美国雪城大学创业创新学系国际关系学系双主修，经济学辅修"
+        ],
+        "companyCareerRaw": "凌嘉科技-特助",
+        "company": "凌嘉科技",
+        "career": "特助",
+        "gallup": [
+          "个别",
+          "责任",
+          "信仰",
+          "交往",
+          "统筹"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "小酌",
+          "睡觉",
+          "看书"
+        ],
+        "travelDestinations": [
+          "日本"
+        ],
+        "favoriteSingers": [
+          "Lady Gaga"
+        ]
+      },
+      "notes": [
+        "刚看了她的演唱会"
+      ],
+      "raw": {
+        "yoloRoleText": "初创理事",
+        "cityText": "台湾"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-bill.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 2,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-katherine",
+        "name": "高海纯",
+        "englishName": "Katherine"
+      },
+      "community": {
+        "role": "初创理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": null,
+        "birthday": "6月13日",
+        "city": "上海",
+        "education": [
+          "美国布朗大学 经济学/社会学双学位"
+        ],
+        "companyCareerRaw": "天合富家能源股份有限公司-董事长",
+        "company": "天合富家能源股份有限公司",
+        "career": "董事长",
+        "gallup": []
+      },
+      "interests": {
+        "hobbies": [
+          "美景",
+          "美食",
+          "美酒",
+          "有趣的人"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [],
+      "raw": {
+        "yoloRoleText": "初创理事",
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-katherine.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 3,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-rachel",
+        "name": "张瑞琪",
+        "englishName": "Rachel"
+      },
+      "community": {
+        "role": "初创理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": null,
+        "birthday": "7月4日",
+        "city": "宁波",
+        "education": [
+          "加拿大多伦多大学"
+        ],
+        "companyCareerRaw": "浙江中兴精密工业集团有限公司-副总裁",
+        "company": "浙江中兴精密工业集团有限公司",
+        "career": "副总裁",
+        "gallup": []
+      },
+      "interests": {
+        "hobbies": [
+          "吃喝",
+          "调酒",
+          "烹饪",
+          "阅读"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [],
+      "raw": {
+        "yoloRoleText": "初创理事",
+        "cityText": "浙江宁波"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-rachel.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 4,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-yueyue",
+        "name": "周玥",
+        "englishName": "Yueyue"
+      },
+      "community": {
+        "role": "初创理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": null,
+        "birthday": "4月10日",
+        "city": "上海",
+        "education": [
+          "英国南安普顿大学（本）；英国谢菲尔德大学（硕）"
+        ],
+        "companyCareerRaw": "江苏康乃馨纺织集团-投资部/人力资源部经理",
+        "company": "江苏康乃馨纺织集团",
+        "career": "投资部/人力资源部经理",
+        "gallup": [
+          "沟通",
+          "积极",
+          "战略",
+          "统筹",
+          "取悦"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "时尚",
+          "教育",
+          "旅行"
+        ],
+        "travelDestinations": [
+          "伦敦"
+        ],
+        "favoriteSingers": [
+          "单依纯"
+        ]
+      },
+      "notes": [
+        "和好朋友一起吃漂亮饭喝酒。",
+        "在看的剧：《藏海传》"
+      ],
+      "raw": {
+        "yoloRoleText": "初创理事",
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-yueyue.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 5,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-jingzi",
+        "name": "蒋柳璟子",
+        "englishName": "Jingzi"
+      },
+      "community": {
+        "role": "常务理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "万物皆可期，星海无限大",
+        "birthday": "6月6日",
+        "city": "浙江",
+        "education": [
+          "费城艺术大学（本）；美国帕森斯艺术设计学院（硕）"
+        ],
+        "companyCareerRaw": "飞越真空科技-事业部总经理",
+        "company": "飞越真空科技",
+        "career": "事业部总经理",
+        "gallup": [
+          "战略",
+          "成就",
+          "前瞻",
+          "责任",
+          "积极"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "读书",
+          "艺术",
+          "设计",
+          "滑雪"
+        ],
+        "travelDestinations": [
+          "伦敦",
+          "冰岛",
+          "大溪地"
+        ],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "喜欢的书籍：《给经理人的第一课》",
+        "下一站旅行偏好：规划行程"
+      ],
+      "raw": {
+        "yoloRoleText": "常务理事",
+        "cityText": "浙江"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jingzi.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 6,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-sarah",
+        "name": "罗琦玥",
+        "englishName": "Sarah"
+      },
+      "community": {
+        "role": "常务理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "来都来了",
+        "birthday": "4月20日",
+        "city": "上海",
+        "education": [
+          "伦敦大学国王学院（本）；英国皇家中央演讲与戏剧学院（硕）"
+        ],
+        "companyCareerRaw": "聚橙音乐剧-经理",
+        "company": "聚橙音乐剧",
+        "career": "经理",
+        "mbti": "INFJ",
+        "gallup": [
+          "完美",
+          "交往",
+          "学习",
+          "积极",
+          "个别"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "弹钢琴",
+          "看戏",
+          "看展",
+          "做美食",
+          "攀岩",
+          "蹦极"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": [
+          "单依纯"
+        ]
+      },
+      "notes": [
+        "在看的剧：《苦尽柑来遇见你》"
+      ],
+      "raw": {
+        "yoloRoleText": "常务理事",
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sarah.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 7,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-sean",
+        "name": "王骁",
+        "englishName": "Sean"
+      },
+      "community": {
+        "role": "常务理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "流水不争先，争的是滔滔不绝",
+        "birthday": "8月19日",
+        "city": "北京",
+        "education": [
+          "UCSD Data Science（本）；UCB IEOR（硕）"
+        ],
+        "companyCareerRaw": "北京超线性-CEO",
+        "company": "北京超线性",
+        "career": "CEO",
+        "mbti": "ENTP",
+        "gallup": [
+          "战略",
+          "分析",
+          "个别",
+          "自信",
+          "统筹"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "自驾",
+          "网球",
+          "溯溪"
+        ],
+        "travelDestinations": [
+          "日本九州"
+        ],
+        "favoriteSingers": [
+          "陈奕迅"
+        ]
+      },
+      "notes": [
+        "小时候想成为科学家",
+        "喜欢的动漫：《名侦探柯南》"
+      ],
+      "raw": {
+        "yoloRoleText": "常务理事",
+        "cityText": "北京"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sean.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 8,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-zhiqian",
+        "name": "徐志谦",
+        "englishName": "Zhiqian"
+      },
+      "community": {
+        "role": "常务理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": null,
+        "birthday": "4月28日",
+        "city": "杭州",
+        "education": [
+          "美国欧文谷大学/加州大学尔湾分校（本）；美国加州大学尔湾分校（硕）"
+        ],
+        "companyCareerRaw": "浙江新农化工股份有限公司-人力资源管培生",
+        "company": "浙江新农化工股份有限公司",
+        "career": "人力资源管培生",
+        "mbti": "INFP",
+        "gallup": [
+          "沟通",
+          "适应",
+          "学习",
+          "交往",
+          "责任"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "看书",
+          "自驾游",
+          "学美术",
+          "画画"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "小时候想成为宇航员",
+        "喜欢的动画片：《哆啦A梦》"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "浙江杭州"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-zhiqian.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 9,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-p09",
+        "name": "邓礼睿",
+        "englishName": "凳子"
+      },
+      "community": {
+        "role": "常务理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "大展宏图！",
+        "birthday": "5月5日",
+        "city": "上海",
+        "education": [
+          "波士顿大学商学院（本）；复旦大学新闻学院（硕）"
+        ],
+        "companyCareerRaw": "欧悦科技-市场总监",
+        "company": "欧悦科技",
+        "career": "市场总监",
+        "mbti": "ENFP",
+        "gallup": [
+          "个别",
+          "取悦",
+          "沟通",
+          "包容",
+          "体谅"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "电竞",
+          "音乐",
+          "宠物",
+          "滑雪",
+          "滑板"
+        ],
+        "travelDestinations": [
+          "泰国",
+          "济州岛"
+        ],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "小时候想成为宇航员",
+        "喜欢的动画片：《海尔兄弟》"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-p09.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 10,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-monica",
+        "name": "吴梓萌",
+        "englishName": "Monica"
+      },
+      "community": {
+        "role": "常务理事",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "KEEP CALM AND CARRY ON",
+        "birthday": "8月1日",
+        "city": "美国",
+        "education": [
+          "美国西北大学-生物技术专业（读研中）"
+        ],
+        "companyCareerRaw": null,
+        "company": null,
+        "career": null,
+        "mbti": "ENFJ",
+        "gallup": [
+          "个别",
+          "和谐",
+          "取悦",
+          "交往",
+          "追求"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "云顶之弈",
+          "英雄联盟",
+          "王者荣耀",
+          "和平精英",
+          "猛兽派对"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": [
+          "RIIZE"
+        ]
+      },
+      "notes": [
+        "最近自学韩语日语中",
+        "喜欢的书：《解忧杂货店》《哑舍》"
+      ],
+      "raw": {
+        "yoloRoleText": "常务理事",
+        "cityText": "美国"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-monica.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 11,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-peter",
+        "name": "吴昌鸿",
+        "englishName": "Peter"
+      },
+      "community": {
+        "role": "副组长",
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "我若成佛 天下无魔，我若成魔 佛奈我何",
+        "birthday": "6月29日",
+        "city": "桂林",
+        "education": [
+          "美国罗格斯大学"
+        ],
+        "companyCareerRaw": "凯文彼德科技有限公司",
+        "company": "凯文彼德科技有限公司",
+        "career": "董事长级别游民",
+        "mbti": "ENTP",
+        "gallup": [
+          "思维",
+          "学习",
+          "交往",
+          "前瞻",
+          "竞争"
+        ]
+      },
+      "interests": {
+        "hobbies": [],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "小时候想成为济公",
+        "探索本质，口腔世界第一"
+      ],
+      "raw": {
+        "yoloRoleText": "董事长级别游民",
+        "cityText": "广西桂林"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-peter.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 12,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-amber",
+        "name": "张嘉沁",
+        "englishName": "Amber"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": null,
+        "birthday": "8月3日",
+        "city": "西雅图",
+        "education": [
+          "美国西方学院（本）",
+          "宾夕法尼亚大学（硕）"
+        ],
+        "companyCareerRaw": "家里公司",
+        "company": "家里公司",
+        "career": "北美外贸经理",
+        "mbti": "ISTJ",
+        "gallup": [
+          "和谐",
+          "伯乐",
+          "体谅",
+          "个别",
+          "责任"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "下棋",
+          "唠嗑",
+          "烹饪",
+          "狼人杀"
+        ],
+        "travelDestinations": [
+          "秘鲁"
+        ],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "宾州、华盛顿州独立执照心理咨询师"
+      ],
+      "raw": {
+        "yoloRoleText": "北美外贸经理",
+        "cityText": "美国西雅图"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-amber.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 13,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-charles",
+        "name": "胡润卿",
+        "englishName": "Charles"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "今天永远是新的开始",
+        "birthday": "10月10日",
+        "city": "深圳",
+        "education": [
+          "美国加州大学圣塔芭芭拉分校（本）",
+          "香港大学（硕）"
+        ],
+        "companyCareerRaw": "华为公司",
+        "company": "华为公司",
+        "career": null,
+        "mbti": "ENTJ-A",
+        "gallup": [
+          "和谐",
+          "学习",
+          "纪律",
+          "成就",
+          "行动"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "健身",
+          "篮球",
+          "摄影"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "高空跳伞"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "深圳"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-charles.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 14,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-janine",
+        "name": "艾佳宁",
+        "englishName": "Janine"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "咖啡",
+        "birthday": "2月2日",
+        "city": "上海",
+        "education": [
+          "加拿大麦吉尔大学"
+        ],
+        "companyCareerRaw": "明亚保险经纪公司-高级经纪人",
+        "company": "明亚保险经纪公司",
+        "career": "高级经纪人",
+        "mbti": "INTJ",
+        "gallup": [
+          "学习",
+          "和谐",
+          "行动",
+          "思维",
+          "自信"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "睡觉",
+          "桌游",
+          "唱歌",
+          "看戏",
+          "徒步"
+        ],
+        "travelDestinations": [
+          "意大利"
+        ],
+        "favoriteSingers": [
+          "Stella Jang",
+          "张悬"
+        ]
+      },
+      "notes": [
+        "诚征跑团桌游小伙伴"
+      ],
+      "raw": {
+        "yoloRoleText": "高级经纪人",
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-janine.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 15,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-rita",
+        "name": "林安之",
+        "englishName": "Rita"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "一蓑烟雨任平生",
+        "birthday": "2月7日",
+        "city": "浙江",
+        "education": [
+          "墨尔本蒙纳士大学"
+        ],
+        "companyCareerRaw": "Linlong Limited",
+        "company": "Linlong Limited",
+        "career": "CEO",
+        "mbti": "ENTJ",
+        "gallup": [
+          "思维",
+          "前瞻",
+          "完美",
+          "搜集",
+          "战略"
+        ]
+      },
+      "interests": {
+        "hobbies": [],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "爬雪山"
+      ],
+      "raw": {
+        "yoloRoleText": "CEO",
+        "cityText": "浙江"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-rita.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 16,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-kevin",
+        "name": "高直方",
+        "englishName": "Kevin"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "炸酱面",
+        "birthday": "10月9日",
+        "city": "洛杉矶",
+        "education": [
+          "美国西方文理学院"
+        ],
+        "companyCareerRaw": null,
+        "company": null,
+        "career": null,
+        "mbti": "INTP-A",
+        "gallup": [
+          "适应",
+          "积极",
+          "个别",
+          "行动",
+          "完美"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "摇滚乐",
+          "小酌",
+          "吃辣"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "罗马不是一天建成的",
+        "生命和宇宙的终极答案是42"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "美国洛杉矶"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-kevin.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 17,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-jiayu",
+        "name": "潘佳瑜",
+        "englishName": "Jiayu"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "CARPE DIEM",
+        "birthday": "12月20日",
+        "city": "浙江",
+        "education": [
+          "旧金山大学"
+        ],
+        "companyCareerRaw": "浙江瑞丰五福气动工具有限公司",
+        "company": "浙江瑞丰五福气动工具有限公司",
+        "career": "副总",
+        "mbti": "INFJ",
+        "gallup": [
+          "学习",
+          "排难",
+          "和谐",
+          "思维",
+          "伯乐"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "摄影",
+          "阅读",
+          "运动",
+          "音乐"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "三毛"
+      ],
+      "raw": {
+        "yoloRoleText": "副总",
+        "cityText": "浙江"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jiayu.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 18,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-xiaoyan",
+        "name": "范晓雁",
+        "englishName": "Xiaoyan"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "拓宽视野，发现自我",
+        "birthday": "1月19日",
+        "city": "无锡",
+        "education": [
+          "新南威尔士大学（本）",
+          "新南威尔士大学（硕）"
+        ],
+        "companyCareerRaw": "无锡市吉润国际贸易有限公司",
+        "company": "无锡市吉润国际贸易有限公司",
+        "career": "业务经理",
+        "mbti": "INTJ-A",
+        "gallup": [
+          "交往",
+          "战略",
+          "排难",
+          "成就",
+          "竞争"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "旅游",
+          "高尔夫",
+          "钢琴"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "偏爱科幻和动画"
+      ],
+      "raw": {
+        "yoloRoleText": "业务经理",
+        "cityText": "江苏无锡"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-xiaoyan.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 19,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-zhuofan",
+        "name": "詹卓凡",
+        "englishName": "Zhuofan"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "不要忘记前方还有无尽的星辰大海",
+        "birthday": "2月29日",
+        "city": "北京",
+        "education": [
+          "加拿大多伦多大学（纯数学及经济学双学位）"
+        ],
+        "companyCareerRaw": "北京市银信长远科技股份有限公司",
+        "company": "北京市银信长远科技股份有限公司",
+        "career": "副总裁",
+        "mbti": "ISTJ",
+        "gallup": [
+          "学习",
+          "成就",
+          "自信",
+          "个别",
+          "分析"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "篮球",
+          "历史",
+          "露营",
+          "徒步"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": [
+          "王力宏"
+        ]
+      },
+      "notes": [
+        "周星驰 系列作品",
+        "姜文 系列作品"
+      ],
+      "raw": {
+        "yoloRoleText": "副总裁",
+        "cityText": "北京"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-zhuofan.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 20,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-jerry",
+        "name": "林海",
+        "englishName": "Jerry"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "既然都这么想了，就去试试看吧",
+        "birthday": "7月29日",
+        "city": "上海",
+        "education": [
+          "华盛顿大学（本）",
+          "杜克大学（硕）",
+          "中欧商学院（在读）"
+        ],
+        "companyCareerRaw": null,
+        "company": null,
+        "career": null,
+        "mbti": "ENTJ",
+        "gallup": [
+          "排难",
+          "个别",
+          "战略",
+          "竞争",
+          "成就"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "橄榄球",
+          "高尔夫",
+          "马术",
+          "露营",
+          "潜水",
+          "旅游",
+          "滑雪",
+          "Techno音乐"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": [
+          "Colyn",
+          "Amelie Lens"
+        ]
+      },
+      "notes": [
+        "MBTI: ENTJ",
+        "基本信息: 无糖芬达",
+        "最近沉迷上班",
+        "另外寻求滑雪搭子"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jerry.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 21,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-mat-so",
+        "name": "苏炜烔",
+        "englishName": "Mat So"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "永远学习，永不止步",
+        "birthday": "3月6日",
+        "city": "上海",
+        "education": [
+          "上海纽约大学"
+        ],
+        "companyCareerRaw": "garmentHERE",
+        "company": "garmentHERE",
+        "career": null,
+        "mbti": "ISFJ",
+        "gallup": [
+          "排难",
+          "责任",
+          "前瞻",
+          "交往",
+          "审慎"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "健身",
+          "打篮球",
+          "烹饪",
+          "旅游",
+          "美食"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": [
+          "Fred again.",
+          "Anderson .Paak",
+          "CHIKA",
+          "d4vd"
+        ]
+      },
+      "notes": [
+        "MBTI: ISFJ",
+        "食物偏好: 任何瘦肉类，不吃甜品吗"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-mat-so.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 22,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-jiawei",
+        "name": "林佳炜",
+        "englishName": "Jiawei"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "且让自己欢喜",
+        "birthday": "2月5日",
+        "city": "杭州",
+        "education": [
+          "浙江大学"
+        ],
+        "companyCareerRaw": "合肥佳冠口腔医疗有限公司",
+        "company": "合肥佳冠口腔医疗有限公司",
+        "career": "网络运营",
+        "mbti": "ENFJ-T",
+        "gallup": [
+          "排难",
+          "成就",
+          "责任",
+          "交往",
+          "包容"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "改车",
+          "溜车",
+          "自驾游",
+          "跳伞"
+        ],
+        "travelDestinations": [
+          "新疆"
+        ],
+        "favoriteSingers": [
+          "薛之谦",
+          "陈奕迅"
+        ]
+      },
+      "notes": [
+        "MBTI: ENFJ-T",
+        "食物偏好: 西湖醋鱼以外都可以",
+        "小时候想成为的人: 救死扶伤的人"
+      ],
+      "raw": {
+        "yoloRoleText": "网络运营",
+        "cityText": "浙江杭州"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jiawei.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 23,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-wenxin",
+        "name": "宣文馨",
+        "englishName": "Wenxin"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "I DON'T GET OLDER I JUST GET BETTER",
+        "birthday": "10月12日",
+        "city": "江苏",
+        "education": [
+          "加拿大约克大学"
+        ],
+        "companyCareerRaw": "安徽亿维医疗用品有限公司",
+        "company": "安徽亿维医疗用品有限公司",
+        "career": "副总经理",
+        "mbti": "ENFP",
+        "gallup": [
+          "行动",
+          "理念",
+          "适应",
+          "交往",
+          "完美"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "脱口秀"
+        ],
+        "travelDestinations": [
+          "新疆"
+        ],
+        "favoriteSingers": [
+          "周杰伦"
+        ]
+      },
+      "notes": [
+        "MBTI: ENFP",
+        "基本信息: 柠檬茶",
+        "喜欢的动漫: 蜡笔小新",
+        "小时候想成为的人: 艺术家"
+      ],
+      "raw": {
+        "yoloRoleText": "副总经理",
+        "cityText": "江苏"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-wenxin.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 24,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-shenyin",
+        "name": "沈吟",
+        "englishName": "Shenyin"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "我没有梦想，我脚踏实地",
+        "birthday": "6月23日",
+        "city": "广州",
+        "education": [
+          "美国南加州大学"
+        ],
+        "companyCareerRaw": "广州月集科技有限公司",
+        "company": "广州月集科技有限公司",
+        "career": "总经理",
+        "mbti": "INFP",
+        "gallup": [
+          "排难",
+          "交往",
+          "包容",
+          "分析",
+          "和谐"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "游戏",
+          "潜水",
+          "戏剧"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": [
+          "Lana Del Ray",
+          "keshi",
+          "宫野真守"
+        ]
+      },
+      "notes": [
+        "MBTI: INFP"
+      ],
+      "raw": {
+        "yoloRoleText": "总经理",
+        "cityText": "广东广州"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-shenyin.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 25,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-nara",
+        "name": "解圓尉",
+        "englishName": "Nara"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": null,
+        "birthday": "2月9日",
+        "city": "深圳",
+        "education": [
+          "上海华东理工大学工商管理"
+        ],
+        "companyCareerRaw": "无以名状文化传播有限公司",
+        "company": "无以名状文化传播有限公司",
+        "career": null,
+        "gallup": []
+      },
+      "interests": {
+        "hobbies": [
+          "乐器学习",
+          "handpan",
+          "吉他",
+          "颂钵",
+          "音叉",
+          "水晶钵",
+          "萨满鼓",
+          "音束"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "广东深圳"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-nara.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 26,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-lucy",
+        "name": "杭一璐",
+        "englishName": "Lucy"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "我最喜欢的放松方式：旅游，购物，晒太阳，吃",
+        "birthday": "12月22日",
+        "city": "美国",
+        "education": [
+          "南加州大学"
+        ],
+        "companyCareerRaw": null,
+        "company": null,
+        "career": null,
+        "mbti": "INFP / ENFP",
+        "gallup": [
+          "前瞻",
+          "适应",
+          "统筹",
+          "个别",
+          "追求"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "运动",
+          "时尚",
+          "旅游",
+          "做饮品",
+          "记录"
+        ],
+        "travelDestinations": [
+          "台湾"
+        ],
+        "favoriteSingers": [
+          "周杰伦"
+        ]
+      },
+      "notes": [
+        "MBTI: ENFP",
+        "小时候想成为的人: 有趣的人"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "美国"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-lucy.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 27,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-jackson",
+        "name": "葛汉",
+        "englishName": "Jackson"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "每天进步一点点",
+        "birthday": "9月23日",
+        "city": "杭州",
+        "education": [
+          "Drexel University"
+        ],
+        "companyCareerRaw": "知轮（杭州）科技有限公司",
+        "company": "知轮（杭州）科技有限公司",
+        "career": "销售运营",
+        "mbti": "INFJ-A",
+        "gallup": [
+          "分析",
+          "责任",
+          "回顾",
+          "审慎",
+          "战略"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "户外活动",
+          "阅读",
+          "看展",
+          "游戏",
+          "学习",
+          "驾驶飞机"
+        ],
+        "travelDestinations": [
+          "北京",
+          "日本"
+        ],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "MBTI: INFJ-A",
+        "童年最喜欢的动画片/卡通人物: 名侦探柯南"
+      ],
+      "raw": {
+        "yoloRoleText": "销售运营",
+        "cityText": "浙江杭州"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jackson.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 28,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-chloe",
+        "name": "彭唐心",
+        "englishName": "Chloe"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "我想有个面朝大海充满阳光的房子",
+        "birthday": "8月10日",
+        "city": "上海",
+        "education": [
+          "加拿大西安大略大学-金融"
+        ],
+        "companyCareerRaw": "青海蓝湖善成生物技术有限公司",
+        "company": "青海蓝湖善成生物技术有限公司",
+        "career": "市场总监",
+        "gallup": [
+          "和谐",
+          "公平",
+          "统筹",
+          "个别",
+          "责任"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "户外",
+          "滑雪",
+          "潜水"
+        ],
+        "travelDestinations": [
+          "危地马拉"
+        ],
+        "favoriteSingers": [
+          "Jonah Kagen"
+        ]
+      },
+      "notes": [
+        "喜欢的书籍: 《油炸绿番茄》",
+        "喜欢的剧: The Good Wife",
+        "小时候想成为的人: 张扬、个性鲜明的人"
+      ],
+      "raw": {
+        "yoloRoleText": "市场总监",
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-chloe.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 29,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-boyuan",
+        "name": "李博源",
+        "englishName": "Boyuan"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "啊啊啊啊啊啊",
+        "birthday": "4月2日",
+        "city": "上海",
+        "education": [
+          "密歇根州立大学（本）；圣路易斯华盛顿大学（硕）"
+        ],
+        "companyCareerRaw": "米其林中国（投资）有限公司-机械工程师",
+        "company": "米其林中国（投资）有限公司",
+        "career": "机械工程师",
+        "gallup": [
+          "理念",
+          "排难",
+          "分析",
+          "个别",
+          "责任"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "散步",
+          "听歌",
+          "自驾游",
+          "看别人吵架&打架"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": [
+          "Lady Gaga"
+        ]
+      },
+      "notes": [
+        "刚看了她的演唱会"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-boyuan.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 30,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-sarah-p30",
+        "name": "高秋闲",
+        "englishName": "Sarah"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "开心开心开心",
+        "birthday": "7月30日",
+        "city": "苏州",
+        "education": [
+          "曼彻斯特大学（本）；爱丁堡大学（硕）"
+        ],
+        "companyCareerRaw": "汇思集团-副总裁",
+        "company": "汇思集团",
+        "career": "副总裁",
+        "gallup": []
+      },
+      "interests": {
+        "hobbies": [
+          "手游",
+          "极限运动",
+          "滑雪",
+          "户外探险"
+        ],
+        "travelDestinations": [
+          "日本小樽"
+        ],
+        "favoriteSingers": [
+          "Drake"
+        ]
+      },
+      "notes": [
+        "小时候梦想成为有钱人"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "江苏苏州"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sarah-p30.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 31,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-weiyun",
+        "name": "李维韵",
+        "englishName": "Weiyun"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "就那样",
+        "birthday": "1月29日",
+        "city": "上海",
+        "education": [
+          "多伦多大学罗德曼商学院-管理专业"
+        ],
+        "companyCareerRaw": "合鲸资本、二级投资、公众号",
+        "company": "合鲸资本、二级投资、公众号",
+        "career": null,
+        "gallup": [
+          "学习",
+          "思维",
+          "理念",
+          "排难",
+          "战略"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "二次元",
+          "哲学"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "喜欢的书籍：《不能承受的生命之轻》"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-weiyun.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 32,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-sophie",
+        "name": "苏雨",
+        "englishName": "Sophie"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "终生学习 保持好奇",
+        "birthday": "8月6日",
+        "city": "香港",
+        "education": [
+          "不列颠哥伦比亚大学（本）；北京大学汇丰商学院（硕）"
+        ],
+        "companyCareerRaw": "卓时（香港）有限公司-资产配置总监",
+        "company": "卓时（香港）有限公司",
+        "career": "资产配置总监",
+        "gallup": [
+          "学习",
+          "交往",
+          "个别",
+          "回顾",
+          "分析"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "跳伞",
+          "冲浪",
+          "羽毛球",
+          "攀岩"
+        ],
+        "travelDestinations": [
+          "巴塞罗那"
+        ],
+        "favoriteSingers": [
+          "李雨霏"
+        ]
+      },
+      "notes": [],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "香港"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sophie.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 33,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-jiatong",
+        "name": "高嘉瞳",
+        "englishName": "Jiatong"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "别人老问我什么时候不困 我说睡觉的时候不困",
+        "birthday": "4月15日",
+        "city": "深圳 / 美国湾区",
+        "education": [
+          "The Pennsylvania State University",
+          "Santa Clara University 经济"
+        ],
+        "companyCareerRaw": null,
+        "company": null,
+        "career": null,
+        "gallup": [
+          "交往",
+          "体谅",
+          "理念",
+          "前瞻",
+          "伯乐"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "游戏",
+          "滑雪",
+          "打篮球",
+          "跳伞"
+        ],
+        "travelDestinations": [
+          "成都"
+        ],
+        "favoriteSingers": [
+          "Capper"
+        ]
+      },
+      "notes": [
+        "小时候想成为一个好人",
+        "童年最喜欢的动画片/卡通人物：闪电麦昆"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "广东深圳，美国湾区"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jiatong.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 34,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-weijie",
+        "name": "毕伟杰",
+        "englishName": "Weijie"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": null,
+        "birthday": "8月3日",
+        "city": "上海",
+        "education": [
+          "加州大学洛杉矶分校（本）；浙江大学（硕）"
+        ],
+        "companyCareerRaw": "次世代品牌管理有限公司-运营经理",
+        "company": "次世代品牌管理有限公司",
+        "career": "运营经理",
+        "gallup": [
+          "战略",
+          "交往",
+          "竞争",
+          "自信",
+          "成就"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "看电影（剧情类）",
+          "看毛选"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-weijie.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 35,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-linda",
+        "name": "陆怡霖",
+        "englishName": "Linda"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "那可太好了",
+        "birthday": "8月18日",
+        "city": "费城",
+        "education": [
+          "美国宾夕法尼亚大学-人类学和经济专业"
+        ],
+        "companyCareerRaw": null,
+        "company": null,
+        "career": null,
+        "gallup": [
+          "回顾",
+          "个别",
+          "伯乐",
+          "关联",
+          "战略"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "健身",
+          "打网球",
+          "写影评"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "小时候梦想成为的人：当导演又想当奶茶店员"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "美国费城"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-linda.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 36,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-dufresne",
+        "name": "陈其乐",
+        "englishName": "Dufresne"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": "爱冲浪 爱玩烂梗",
+        "birthday": "4月13日",
+        "city": "杭州",
+        "education": [
+          "加州大学尔湾分校 戏剧专业"
+        ],
+        "companyCareerRaw": null,
+        "company": null,
+        "career": null,
+        "gallup": [
+          "交往",
+          "适应",
+          "伯乐",
+          "积极",
+          "体谅"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "羽毛球",
+          "偶尔健身",
+          "单机游戏",
+          "看电影"
+        ],
+        "travelDestinations": [],
+        "favoriteSingers": [
+          "Ariana Grande"
+        ]
+      },
+      "notes": [
+        "童年最喜欢的动画片/卡通人物：铠甲勇士里的炎龙侠",
+        "最近想尝试的冒险活动：跳伞"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "浙江杭州"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-dufresne.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "source": {
+        "pdf": "【PDF版本】YOLO+2025会员海报合集(1).pdf",
+        "page": 37,
+        "type": "poster"
+      },
+      "identity": {
+        "userId": "pdf2025-eco",
+        "name": "宗羱",
+        "englishName": "Eco"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2025-01",
+        "joinPeriods": [
+          {
+            "start": "2025-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "motto": null,
+        "birthday": "8月29日",
+        "city": "上海",
+        "education": [
+          "维多利亚大学（本）；复旦大学（硕）"
+        ],
+        "companyCareerRaw": "南京金禾金家居用品有限公司-市场总监",
+        "company": "南京金禾金家居用品有限公司",
+        "career": "市场总监",
+        "gallup": [
+          "沟通",
+          "行动",
+          "取悦",
+          "完美",
+          "战略"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "工作",
+          "学习",
+          "跳伞"
+        ],
+        "travelDestinations": [
+          "慕尼黑"
+        ],
+        "favoriteSingers": []
+      },
+      "notes": [
+        "喜欢的电影/书：哈利波特全系列"
+      ],
+      "raw": {
+        "yoloRoleText": null,
+        "cityText": "上海"
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-eco.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2025-member-posters-pdf"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-kingsley",
+        "name": "焦桢",
+        "englishName": "Kingsley"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2023-06"
+          }
+        ]
+      },
+      "profile": {
+        "city": "无锡",
+        "education": [
+          "美国俄勒冈大学新闻专业（本）",
+          "英国谢菲尔德大学国际新闻专业（硕）"
+        ],
+        "company": "普华永道",
+        "career": "ESG部门",
+        "gallup": [
+          "个别",
+          "沟通",
+          "成就",
+          "收集",
+          "专注"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "运动",
+          "网球",
+          "跑步"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-jiachen",
+        "name": "季佳琛",
+        "englishName": null
+      },
+      "community": {
+        "role": "组长",
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "美国美利坚大学"
+        ],
+        "company": "美国驻华大使馆",
+        "career": "政策与合作关系官员",
+        "city": "北京",
+        "gallup": [
+          "战略",
+          "成就",
+          "回顾",
+          "个别",
+          "体谅"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "舞蹈",
+          "马术",
+          "健身",
+          "跑步",
+          "种花"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-yucheng",
+        "name": "纪域呈",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "南京财经大学（本）",
+          "美国宾夕法尼亚大学（硕）"
+        ],
+        "company": "华为技术有限公司",
+        "career": "打工人",
+        "city": "上海",
+        "gallup": [
+          "理念",
+          "适应",
+          "搜集",
+          "交往",
+          "竞争"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "唱跳",
+          "rap",
+          "篮球"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-jinhua",
+        "name": "胡晋华",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "美国加州大学圣塔芭芭拉分校"
+        ],
+        "city": "成都",
+        "motto": "今天永远是新的开始",
+        "gallup": [
+          "和谐",
+          "学习",
+          "纪律",
+          "成就",
+          "行动"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "健身",
+          "篮球",
+          "摄影"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-xiaoyu",
+        "name": "胡晓钰",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {
+        "company": "波波匠酒酒体",
+        "career": "包装设计部",
+        "city": "贵州贵阳",
+        "motto": "走自己的路，发自己的光",
+        "gallup": [
+          "个别",
+          "体谅",
+          "战略",
+          "沟通",
+          "积极"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "唱歌",
+          "拍照",
+          "逛街购物",
+          "看电影"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-xiaoxin",
+        "name": "杜晓欣",
+        "englishName": "Xiaoxin"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "英国卡迪夫大学（本）",
+          "英国伯明翰城市大学奢侈品管理专业（硕）"
+        ],
+        "company": "深圳宝树商业管理有限公司",
+        "career": "总经理助理",
+        "city": "深圳",
+        "gallup": [
+          "适应",
+          "排难",
+          "公平",
+          "包容",
+          "和谐"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "吃喝",
+          "泰拳",
+          "游泳"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-yutong",
+        "name": "刘昱同",
+        "englishName": null
+      },
+      "community": {
+        "role": "常务理事",
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "北京航空航天大学（本）",
+          "浙江大学与爱丁堡大学ZJE学院（读研中）"
+        ],
+        "city": "北京",
+        "mbti": "INTJ",
+        "gallup": [
+          "成就",
+          "竞争",
+          "沟通",
+          "战略",
+          "交往"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "物理",
+          "科研",
+          "旅游",
+          "美食"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-jack",
+        "name": "金连成",
+        "englishName": "Jack"
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "美国特拉华大学环境工程专业"
+        ],
+        "company": "瑞泰新时代（北京）科技有限公司",
+        "career": "销售经理",
+        "city": "北京",
+        "mbti": "ISFP-A",
+        "gallup": [
+          "和谐",
+          "公平",
+          "适应",
+          "审慎",
+          "关联"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "读书（古生物，海洋生物）",
+          "看电影",
+          "打游戏"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-huixi",
+        "name": "朱慧溪",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "芝加哥艺术学院（本）",
+          "伦敦艺术学院-伦敦时装学院（硕）"
+        ],
+        "company": "托德斯（上海）贸易有限公司",
+        "career": "公关部",
+        "city": "上海",
+        "mbti": "ISTJ",
+        "motto": "非常安静的白羊座",
+        "gallup": [
+          "行动",
+          "和谐",
+          "公平",
+          "适应",
+          "个别"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "看艺术展",
+          "画展",
+          "歌剧",
+          "戏剧",
+          "约饭",
+          "探索餐厅"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-saxi",
+        "name": "阮赛茜",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "浙江传媒大学",
+          "同济大学EMBA"
+        ],
+        "company": "上海桅裳教育科技有限公司",
+        "career": "总经理",
+        "city": "上海",
+        "mbti": "ESFJ",
+        "gallup": [
+          "积极",
+          "取悦",
+          "沟通",
+          "完美",
+          "统筹"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "滑雪",
+          "电影",
+          "旅游"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-qingtong",
+        "name": "林青桐",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2024-06",
+        "joinPeriods": [
+          {
+            "start": "2024-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "美国伊利诺伊大学厄巴纳香槟分校"
+        ],
+        "company": "浙江浙大联合创新投资管理合伙企业",
+        "career": "投资经理",
+        "city": "杭州",
+        "motto": "良木长青，持衡四时",
+        "gallup": [
+          "适应",
+          "交往",
+          "和谐",
+          "体谅",
+          "责任"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "游泳",
+          "徒步",
+          "长笛"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-kaixing",
+        "name": "何楷行",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2024-06",
+        "joinPeriods": [
+          {
+            "start": "2024-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "杜兰大学国际关系（就读中）"
+        ],
+        "city": "杭州",
+        "mbti": "INFP-T",
+        "motto": "A GIANT LOOKS IN THE MIRROR AND SEES NOTHING.",
+        "gallup": [
+          "交往",
+          "个别",
+          "回顾",
+          "战略",
+          "审慎"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "打篮球",
+          "音乐",
+          "说唱",
+          "弹钢琴",
+          "学习设计和美术"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-haocheng",
+        "name": "周浩铖",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "Concordia University"
+        ],
+        "city": "加拿大",
+        "mbti": "INFJ-A",
+        "motto": "我不知道将去往何方，但我已在路上",
+        "gallup": [
+          "责任",
+          "交往",
+          "和谐",
+          "积极",
+          "体谅"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "运动",
+          "篮球",
+          "滑雪",
+          "听歌",
+          "唱歌",
+          "听播客"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-yiping",
+        "name": "邵怡平",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "香港公开大学"
+        ],
+        "city": "浙江",
+        "company": "宁波爱诗化妆品有限公司",
+        "career": "财务管会",
+        "mbti": "ISTJ",
+        "motto": "SEIZE THE DAY",
+        "gallup": [
+          "交往",
+          "分析",
+          "纪律",
+          "审慎",
+          "完美"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "乐高",
+          "散步",
+          "建立规则的游戏"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-huanglei",
+        "name": "黄蕾",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "康考迪亚大学"
+        ],
+        "city": "加拿大",
+        "company": "政府认证译员，专业民用&商业地产经纪",
+        "mbti": "ESFP-T",
+        "gallup": [
+          "沟通",
+          "积极",
+          "和谐",
+          "取悦",
+          "统筹"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "义工活动",
+          "唱歌",
+          "看偶像剧",
+          "品尝美食",
+          "city walk",
+          "国风舞"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-jiayi",
+        "name": "李嘉怡",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "西安建筑科技大学",
+          "英国卡迪夫大学（硕）"
+        ],
+        "city": "上海",
+        "company": "上海美丽妈妈科技集团有限公司",
+        "career": "副总",
+        "mbti": "INTP",
+        "gallup": [
+          "积极",
+          "取悦",
+          "包容",
+          "和谐",
+          "适应"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "徒步",
+          "旅游",
+          "健身"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-xiaoxuan",
+        "name": "陈晓萱",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "纽约大学（在读）"
+        ],
+        "city": "美国·纽约",
+        "mbti": "INTP",
+        "gallup": [
+          "专注",
+          "统筹",
+          "包容",
+          "学习",
+          "沟通"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "旅游",
+          "摄影",
+          "拍短片Vlog",
+          "戏剧表演",
+          "音乐",
+          "艺术",
+          "插花",
+          "游戏设计"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-siwen",
+        "name": "崔斯雯",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2025-06"
+          }
+        ]
+      },
+      "profile": {
+        "education": [
+          "美国加州大学圣地亚哥分校（就读中）"
+        ],
+        "city": "美国",
+        "gallup": [
+          "审慎",
+          "排难",
+          "和谐",
+          "思维",
+          "搜集"
+        ]
+      },
+      "interests": {
+        "hobbies": [
+          "宠物",
+          "游泳",
+          "读书",
+          "写作",
+          "绘画"
+        ]
+      },
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-ruixiang",
+        "name": "王睿翔",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2023-06"
+          }
+        ]
+      },
+      "profile": {},
+      "interests": {},
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-shijie",
+        "name": "苏世杰",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {},
+      "interests": {},
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-wangwang",
+        "name": "汪汪",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {},
+      "interests": {},
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-zherui",
+        "name": "张哲瑞",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {},
+      "interests": {},
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-shuni",
+        "name": "朱书妮",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {},
+      "interests": {},
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-yuxin",
+        "name": "姚语馨",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2022-06",
+        "joinPeriods": [
+          {
+            "start": "2022-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {},
+      "interests": {},
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-jinsha",
+        "name": "欧阳瑾莎",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {},
+      "interests": {},
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "source": {
+        "pdf": null,
+        "page": null,
+        "type": "attendance-records"
+      },
+      "identity": {
+        "userId": "alumni-yian",
+        "name": "邵怡安",
+        "englishName": null
+      },
+      "community": {
+        "role": null,
+        "joinDate": "2023-06",
+        "joinPeriods": [
+          {
+            "start": "2023-06",
+            "end": "2024-06"
+          }
+        ]
+      },
+      "profile": {},
+      "interests": {},
+      "import": {
+        "dataType": "real",
+        "source": "multi-year-poster-attendance"
+      }
+    }
+  ]
+}

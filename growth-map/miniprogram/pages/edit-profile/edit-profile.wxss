@@ -1,0 +1,76 @@
+/* 资料编辑页样式 */
+.edit-profile-page {
+  padding: 32rpx;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.form-group {
+  margin-bottom: 28rpx;
+}
+
+.form-label {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12rpx;
+}
+
+.form-input {
+  width: 100%;
+  border: 2rpx solid #e2e8f0;
+  border-radius: 20rpx;
+  padding: 20rpx 24rpx;
+  font-size: 28rpx;
+  background: #fff;
+  color: #1f2937;
+}
+
+.form-input:focus {
+  border-color: #2563eb;
+}
+
+.picker-value {
+  color: #1f2937;
+  min-height: 44rpx;
+  line-height: 44rpx;
+}
+
+.city-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.city-tag {
+  padding: 12rpx 28rpx;
+  border: 2rpx solid #e2e8f0;
+  border-radius: 32rpx;
+  font-size: 26rpx;
+  color: #6b7280;
+  background: #fff;
+}
+
+.city-tag-active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.btn-submit {
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-top: 16rpx;
+  line-height: 1.2;
+}
+
+.btn-submit::after {
+  border: none;
+}

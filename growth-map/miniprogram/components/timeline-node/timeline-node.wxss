@@ -1,0 +1,371 @@
+/* timeline-node 样式: modern + minimal 两种变体 */
+
+/* ============================================================
+   Modern 变体 — 圆点+脉冲 + 渐变边框卡片 + 大图
+   ============================================================ */
+
+.tl-modern {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 0;
+  animation: tl-m-in 0.35s ease forwards;
+  opacity: 0;
+  transform: translateY(16rpx);
+}
+
+@keyframes tl-m-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 圆点容器 */
+.tl-m-dot-wrap {
+  position: absolute;
+  top: 22rpx;
+  left: 0;
+  width: 32rpx;
+  height: 32rpx;
+  display: block;
+}
+
+/* 实心圆点 */
+.tl-m-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 4rpx solid #fff;
+  box-shadow: 0 0 0 4rpx rgba(59, 130, 246, 0.12);
+  z-index: 2;
+}
+
+/* 脉冲光环 */
+.tl-m-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* 卡片 */
+.tl-m-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 12rpx 0 28rpx 44rpx;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  overflow: visible;
+}
+
+/* 卡片顶部装饰渐变条 */
+.tl-m-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1rpx;
+  background: #edf1f5;
+}
+
+/* 头部: 日期 + 类型 */
+.tl-m-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+  gap: 16rpx;
+}
+
+.tl-m-date-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6rpx;
+}
+
+.tl-m-year {
+  font-size: 21rpx;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.2rpx;
+}
+
+/* 类型标签 — 彩色圆形 badge */
+.tl-m-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 999rpx;
+  font-size: 18rpx;
+  font-weight: 600;
+}
+
+.tl-m-type-text {
+  font-size: 18rpx;
+}
+
+/* 描述文字 */
+.tl-m-desc {
+  font-size: 29rpx;
+  color: #111827;
+  line-height: 1.65;
+  display: block;
+  font-weight: 500;
+}
+
+.tl-participant-row {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  margin-top: 14rpx;
+  padding: 12rpx 14rpx;
+  border-radius: 16rpx;
+  background: #f7f9fc;
+}
+
+.tl-participant-row-minimal {
+  margin-top: 10rpx;
+}
+
+.tl-participant-stack {
+  display: flex;
+  align-items: center;
+}
+
+.tl-participant-avatar {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 3rpx solid #fff;
+  margin-left: -10rpx;
+  background: #e2e8f0;
+}
+
+.tl-participant-avatar:first-child {
+  margin-left: 0;
+}
+
+.tl-participant-count {
+  font-size: 21rpx;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.tl-m-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+  margin-top: 12rpx;
+}
+
+.tl-m-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6rpx;
+  padding: 5rpx 10rpx;
+  border-radius: 999rpx;
+  background: #f6f8fb;
+  border: 1rpx solid #e8edf3;
+  font-size: 18rpx;
+  color: #475569;
+}
+
+.tl-m-meta-label {
+  font-weight: 600;
+  color: #64748b;
+}
+
+.tl-m-meta-value {
+  color: #0f172a;
+}
+
+/* 图片 — 更大更美观 */
+.tl-m-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8rpx;
+  margin-top: 14rpx;
+}
+
+.tl-m-img {
+  width: 100%;
+  height: 182rpx;
+  border-radius: 12rpx;
+  background: #f3f4f6;
+  border: 1rpx solid #eef2f7;
+  object-fit: cover;
+}
+
+.tl-m-images.single .tl-m-img {
+  width: 100%;
+  height: 360rpx;
+  grid-column: span 3;
+}
+
+.tl-m-images.double .tl-m-img,
+.tl-m-images.triple .tl-m-img {
+  width: 100%;
+}
+
+/* === Modern 节点类型颜色（统一蓝色）=== */
+
+.type-activity .tl-m-dot,
+.type-role .tl-m-dot,
+.type-life .tl-m-dot,
+.type-ted .tl-m-dot,
+.type-cert .tl-m-dot { background: #2563eb; }
+
+.type-activity .tl-m-pulse,
+.type-role .tl-m-pulse,
+.type-life .tl-m-pulse,
+.type-ted .tl-m-pulse,
+.type-cert .tl-m-pulse { background: rgba(37, 99, 235, 0.2); }
+
+.type-activity .tl-m-card,
+.type-role .tl-m-card,
+.type-life .tl-m-card,
+.type-ted .tl-m-card,
+.type-cert .tl-m-card { border-left-color: transparent; }
+
+.type-activity .tl-m-card::after,
+.type-role .tl-m-card::after,
+.type-life .tl-m-card::after,
+.type-ted .tl-m-card::after,
+.type-cert .tl-m-card::after { background: #edf1f5; }
+
+.type-activity .tl-m-type-badge,
+.type-role .tl-m-type-badge,
+.type-life .tl-m-type-badge,
+.type-ted .tl-m-type-badge,
+.type-cert .tl-m-type-badge { background: #f3f6fb; color: #576b95; }
+
+
+/* ============================================================
+   Minimal 变体 — 纯文字+时间线，紧凑布局
+   ============================================================ */
+
+.tl-minimal {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 0;
+  animation: tl-n-in 0.3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes tl-n-in {
+  to { opacity: 1; }
+}
+
+/* 小圆点 */
+.tl-n-dot {
+  display: none;
+}
+
+/* 内容区域 */
+.tl-n-content {
+  padding: 18rpx 0 24rpx 44rpx;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1rpx solid #edf1f5;
+}
+
+/* 日期 + 标签行 */
+.tl-n-row {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-bottom: 4rpx;
+}
+
+.tl-n-date {
+  font-size: 21rpx;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.tl-n-tag {
+  font-size: 18rpx;
+  font-weight: 600;
+  padding: 4rpx 10rpx;
+  border-radius: 999rpx;
+}
+
+/* 描述 */
+.tl-n-desc {
+  font-size: 28rpx;
+  color: #111827;
+  line-height: 1.55;
+  display: block;
+}
+
+.tl-n-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+  margin-top: 10rpx;
+}
+
+.tl-n-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6rpx;
+  padding: 4rpx 10rpx;
+  border-radius: 999rpx;
+  background: #f8fafc;
+  border: 1rpx solid #e2e8f0;
+  font-size: 18rpx;
+  color: #475569;
+}
+
+.tl-n-meta-label {
+  font-weight: 600;
+  color: #64748b;
+}
+
+.tl-n-meta-value {
+  color: #0f172a;
+}
+
+/* 缩略图行 */
+.tl-n-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8rpx;
+  margin-top: 12rpx;
+}
+
+.tl-n-thumb {
+  width: 100%;
+  height: 160rpx;
+  border-radius: 12rpx;
+  background: #f3f4f6;
+  border: 1rpx solid #e5e7eb;
+  object-fit: cover;
+}
+
+/* === Minimal 节点类型颜色（统一蓝色）=== */
+.type-activity .tl-n-dot,
+.type-role .tl-n-dot,
+.type-life .tl-n-dot,
+.type-ted .tl-n-dot,
+.type-cert .tl-n-dot { background: #2563eb; }
+
+.type-activity .tl-n-tag,
+.type-role .tl-n-tag,
+.type-life .tl-n-tag,
+.type-ted .tl-n-tag,
+.type-cert .tl-n-tag { background: #f3f6fb; color: #576b95; }

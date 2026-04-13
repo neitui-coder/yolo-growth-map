@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-03-22T16:15:53.101Z",
+  "envId": "cloud1-7giblg7i4595eaf3",
+  "assets": {
+    "/images/avatars/pdf2025-bill.jpg": {
+      "localRef": "/images/avatars/pdf2025-bill.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-bill.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-bill.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-bill.jpg"
+    },
+    "/images/avatars/pdf2025-katherine.jpg": {
+      "localRef": "/images/avatars/pdf2025-katherine.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-katherine.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-katherine.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-katherine.jpg"
+    },
+    "/images/avatars/pdf2025-rachel.jpg": {
+      "localRef": "/images/avatars/pdf2025-rachel.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-rachel.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-rachel.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-rachel.jpg"
+    },
+    "/images/avatars/pdf2025-yueyue.jpg": {
+      "localRef": "/images/avatars/pdf2025-yueyue.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-yueyue.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-yueyue.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-yueyue.jpg"
+    },
+    "/images/avatars/pdf2025-jingzi.jpg": {
+      "localRef": "/images/avatars/pdf2025-jingzi.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-jingzi.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-jingzi.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jingzi.jpg"
+    },
+    "/images/avatars/pdf2025-sarah.jpg": {
+      "localRef": "/images/avatars/pdf2025-sarah.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-sarah.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-sarah.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sarah.jpg"
+    },
+    "/images/avatars/pdf2025-sean.jpg": {
+      "localRef": "/images/avatars/pdf2025-sean.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-sean.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-sean.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sean.jpg"
+    },
+    "/images/avatars/pdf2025-zhiqian.jpg": {
+      "localRef": "/images/avatars/pdf2025-zhiqian.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-zhiqian.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-zhiqian.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-zhiqian.jpg"
+    },
+    "/images/avatars/pdf2025-p09.jpg": {
+      "localRef": "/images/avatars/pdf2025-p09.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-p09.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-p09.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-p09.jpg"
+    },
+    "/images/avatars/pdf2025-monica.jpg": {
+      "localRef": "/images/avatars/pdf2025-monica.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-monica.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-monica.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-monica.jpg"
+    },
+    "/images/avatars/pdf2025-peter.jpg": {
+      "localRef": "/images/avatars/pdf2025-peter.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-peter.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-peter.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-peter.jpg"
+    },
+    "/images/avatars/pdf2025-amber.jpg": {
+      "localRef": "/images/avatars/pdf2025-amber.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-amber.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-amber.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-amber.jpg"
+    },
+    "/images/avatars/pdf2025-charles.jpg": {
+      "localRef": "/images/avatars/pdf2025-charles.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-charles.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-charles.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-charles.jpg"
+    },
+    "/images/avatars/pdf2025-janine.jpg": {
+      "localRef": "/images/avatars/pdf2025-janine.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-janine.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-janine.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-janine.jpg"
+    },
+    "/images/avatars/pdf2025-rita.jpg": {
+      "localRef": "/images/avatars/pdf2025-rita.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-rita.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-rita.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-rita.jpg"
+    },
+    "/images/avatars/pdf2025-kevin.jpg": {
+      "localRef": "/images/avatars/pdf2025-kevin.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-kevin.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-kevin.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-kevin.jpg"
+    },
+    "/images/avatars/pdf2025-jiayu.jpg": {
+      "localRef": "/images/avatars/pdf2025-jiayu.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-jiayu.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-jiayu.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jiayu.jpg"
+    },
+    "/images/avatars/pdf2025-xiaoyan.jpg": {
+      "localRef": "/images/avatars/pdf2025-xiaoyan.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-xiaoyan.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-xiaoyan.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-xiaoyan.jpg"
+    },
+    "/images/avatars/pdf2025-zhuofan.jpg": {
+      "localRef": "/images/avatars/pdf2025-zhuofan.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-zhuofan.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-zhuofan.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-zhuofan.jpg"
+    },
+    "/images/avatars/pdf2025-jerry.jpg": {
+      "localRef": "/images/avatars/pdf2025-jerry.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-jerry.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-jerry.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jerry.jpg"
+    },
+    "/images/avatars/pdf2025-mat-so.jpg": {
+      "localRef": "/images/avatars/pdf2025-mat-so.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-mat-so.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-mat-so.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-mat-so.jpg"
+    },
+    "/images/avatars/pdf2025-jiawei.jpg": {
+      "localRef": "/images/avatars/pdf2025-jiawei.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-jiawei.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-jiawei.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jiawei.jpg"
+    },
+    "/images/avatars/pdf2025-wenxin.jpg": {
+      "localRef": "/images/avatars/pdf2025-wenxin.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-wenxin.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-wenxin.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-wenxin.jpg"
+    },
+    "/images/avatars/pdf2025-shenyin.jpg": {
+      "localRef": "/images/avatars/pdf2025-shenyin.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-shenyin.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-shenyin.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-shenyin.jpg"
+    },
+    "/images/avatars/pdf2025-nara.jpg": {
+      "localRef": "/images/avatars/pdf2025-nara.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-nara.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-nara.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-nara.jpg"
+    },
+    "/images/avatars/pdf2025-lucy.jpg": {
+      "localRef": "/images/avatars/pdf2025-lucy.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-lucy.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-lucy.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-lucy.jpg"
+    },
+    "/images/avatars/pdf2025-jackson.jpg": {
+      "localRef": "/images/avatars/pdf2025-jackson.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-jackson.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-jackson.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jackson.jpg"
+    },
+    "/images/avatars/pdf2025-chloe.jpg": {
+      "localRef": "/images/avatars/pdf2025-chloe.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-chloe.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-chloe.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-chloe.jpg"
+    },
+    "/images/avatars/pdf2025-boyuan.jpg": {
+      "localRef": "/images/avatars/pdf2025-boyuan.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-boyuan.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-boyuan.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-boyuan.jpg"
+    },
+    "/images/avatars/pdf2025-sarah-p30.jpg": {
+      "localRef": "/images/avatars/pdf2025-sarah-p30.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-sarah-p30.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-sarah-p30.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sarah-p30.jpg"
+    },
+    "/images/avatars/pdf2025-weiyun.jpg": {
+      "localRef": "/images/avatars/pdf2025-weiyun.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-weiyun.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-weiyun.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-weiyun.jpg"
+    },
+    "/images/avatars/pdf2025-sophie.jpg": {
+      "localRef": "/images/avatars/pdf2025-sophie.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-sophie.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-sophie.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sophie.jpg"
+    },
+    "/images/avatars/pdf2025-jiatong.jpg": {
+      "localRef": "/images/avatars/pdf2025-jiatong.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-jiatong.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-jiatong.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jiatong.jpg"
+    },
+    "/images/avatars/pdf2025-weijie.jpg": {
+      "localRef": "/images/avatars/pdf2025-weijie.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-weijie.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-weijie.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-weijie.jpg"
+    },
+    "/images/avatars/pdf2025-linda.jpg": {
+      "localRef": "/images/avatars/pdf2025-linda.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-linda.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-linda.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-linda.jpg"
+    },
+    "/images/avatars/pdf2025-dufresne.jpg": {
+      "localRef": "/images/avatars/pdf2025-dufresne.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-dufresne.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-dufresne.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-dufresne.jpg"
+    },
+    "/images/avatars/pdf2025-eco.jpg": {
+      "localRef": "/images/avatars/pdf2025-eco.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/pdf2025-eco.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/pdf2025-eco.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-eco.jpg"
+    },
+    "/images/activity-review/review-01.png": {
+      "localRef": "/images/activity-review/review-01.png",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-01.png",
+      "cloudPath": "yolo-growth-map/media/activity-review/review-01.png",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-01.png"
+    },
+    "/images/activity-review/review-02.png": {
+      "localRef": "/images/activity-review/review-02.png",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-02.png",
+      "cloudPath": "yolo-growth-map/media/activity-review/review-02.png",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-02.png"
+    },
+    "/images/activity-review/review-03.png": {
+      "localRef": "/images/activity-review/review-03.png",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-03.png",
+      "cloudPath": "yolo-growth-map/media/activity-review/review-03.png",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-03.png"
+    },
+    "/images/activity-review/review-04.png": {
+      "localRef": "/images/activity-review/review-04.png",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-04.png",
+      "cloudPath": "yolo-growth-map/media/activity-review/review-04.png",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-04.png"
+    },
+    "/images/activity-review/review-05.png": {
+      "localRef": "/images/activity-review/review-05.png",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-05.png",
+      "cloudPath": "yolo-growth-map/media/activity-review/review-05.png",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-05.png"
+    },
+    "/images/activity-review/review-06.png": {
+      "localRef": "/images/activity-review/review-06.png",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-06.png",
+      "cloudPath": "yolo-growth-map/media/activity-review/review-06.png",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-06.png"
+    },
+    "/images/activity-review/review-07.png": {
+      "localRef": "/images/activity-review/review-07.png",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-07.png",
+      "cloudPath": "yolo-growth-map/media/activity-review/review-07.png",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-07.png"
+    },
+    "/images/activity-review/review-08.png": {
+      "localRef": "/images/activity-review/review-08.png",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-08.png",
+      "cloudPath": "yolo-growth-map/media/activity-review/review-08.png",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-08.png"
+    },
+    "/images/activity-review/review-09.png": {
+      "localRef": "/images/activity-review/review-09.png",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-09.png",
+      "cloudPath": "yolo-growth-map/media/activity-review/review-09.png",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-09.png"
+    }
+  }
+}

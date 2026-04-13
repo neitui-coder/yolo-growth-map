@@ -1,0 +1,617 @@
+<!--
+  个人档案页:
+  支持两种 UI: useNewUI=true 为新版简洁设计, false 为原版
+-->
+
+<view wx:if="{{pageLoading}}" class="profile-skeleton">
+  <view class="profile-skeleton-hero"></view>
+  <view class="profile-skeleton-card"></view>
+  <view class="profile-skeleton-card"></view>
+  <view class="profile-skeleton-card profile-skeleton-tall"></view>
+</view>
+
+<!-- ==================== 新版 UI ==================== -->
+<block wx:elif="{{useNewUI}}">
+
+<!-- 导航条 -->
+<view class="v2-nav" style="padding-top: {{navPaddingTop}}px;">
+  <view class="v2-nav-back" bindtap="onGoBack">
+    <text class="v2-nav-back-icon">←</text>
+  </view>
+  <view class="v2-nav-title">个人档案</view>
+  <view class="v2-nav-toggle" bindtap="onToggleUI">
+    <text class="v2-toggle-label">原版</text>
+  </view>
+</view>
+
+<!-- Hero 卡片: 头像 + 名字 + 核心信息 + 操作按钮 -->
+<view class="v2-hero">
+  <view class="v2-hero-bg"></view>
+  <view class="v2-hero-content">
+    <!-- 上半: 头像 + 信息 -->
+    <view class="v2-hero-row">
+      <view class="v2-avatar-wrap">
+        <image class="v2-avatar" src="{{selectedUser.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill" lazy-load="true" />
+        <view wx:if="{{selectedUser.isBirthdayMonth}}" class="v2-birthday-hat">
+          <view class="v2-birthday-hat-ball"></view>
+        </view>
+        <view wx:if="{{isOwner}}" class="v2-avatar-edit" bindtap="onAvatarEdit">
+          <text>换</text>
+        </view>
+      </view>
+      <view class="v2-hero-info">
+        <view class="v2-hero-name">{{selectedUser.name}}</view>
+        <view class="v2-hero-motto" wx:if="{{selectedUser.motto}}">"{{selectedUser.motto}}"</view>
+        <view class="v2-hero-funny" wx:if="{{funnyIntro}}">{{funnyIntro}}</view>
+        <view class="v2-hero-chips">
+          <text wx:if="{{selectedUser.memberStatus === 'alumni'}}" class="v2-chip v2-chip-alumni">往届会员</text>
+          <text wx:if="{{selectedUser.isFounder}}" class="v2-chip v2-chip-founder" bindtap="onTagTap" data-field="tags" data-value="创始人">创始人</text>
+          <text wx:if="{{selectedUser.yoloRole}}" class="v2-chip v2-chip-role" bindtap="onTagTap" data-field="yoloRole" data-value="{{selectedUser.yoloRole}}">{{selectedUser.yoloRole}}</text>
+          <text wx:if="{{selectedUser.career}}" class="v2-chip" bindtap="onTagTap" data-field="career" data-value="{{selectedUser.career}}">{{selectedUser.career}}</text>
+          <text wx:if="{{selectedUser.cityDisplay}}" class="v2-chip" bindtap="onTagTap" data-field="city" data-value="{{selectedUser.cityDisplay}}">{{selectedUser.cityDisplay}}</text>
+          <text wx:if="{{selectedUser.mbti}}" class="v2-chip v2-chip-accent" bindtap="onTagTap" data-field="mbti" data-value="{{selectedUser.mbti}}">{{selectedUser.mbti}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 统计条 -->
+    <view class="v2-stats-row">
+      <view class="v2-stat" bindtap="onGrowthTap">
+        <text class="v2-stat-num">{{growthTotal}}</text>
+        <text class="v2-stat-label">成长值</text>
+      </view>
+      <view class="v2-stat-divider"></view>
+      <view class="v2-stat">
+        <text class="v2-stat-num">{{sortedNodes.length}}</text>
+        <text class="v2-stat-label">成长节点</text>
+      </view>
+      <view class="v2-stat-divider"></view>
+      <view class="v2-stat">
+        <text class="v2-stat-num">{{qaVisibleCount}}</text>
+        <text class="v2-stat-label">问答</text>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="v2-hero-actions">
+      <view wx:if="{{isOwner || canEditOthers}}" class="v2-action-btn v2-action-primary" bindtap="onEditProfile">
+        <text>编辑资料</text>
+      </view>
+      <view wx:if="{{isOwner || canEditOthers}}" class="v2-action-btn v2-action-secondary" bindtap="onAddNode">
+        <text>+ 添加节点</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 完整度提示 (仅 owner + 未满时) -->
+<view class="v2-completeness" wx:if="{{isOwner && completeness < 100}}">
+  <view class="v2-completeness-bar">
+    <view class="v2-completeness-fill" style="width: {{completeness}}%;"></view>
+  </view>
+  <text class="v2-completeness-text">资料 {{completeness}}% 完整</text>
+  <text class="v2-completeness-hint" wx:if="{{missingFieldsText}}">还差: {{missingFieldsText}}</text>
+</view>
+
+<!-- 详细资料 -->
+<view class="v2-card" wx:if="{{hasDetailInfo}}">
+  <view class="v2-card-header">
+    <text class="v2-card-title">详细资料</text>
+  </view>
+  <view class="v2-card-body expanded">
+    <view class="v2-card-inner">
+      <!-- 更多信息 -->
+      <view class="v2-detail-group" wx:if="{{(selectedUser.mbti || selectedUser.cityDisplay || selectedUser.career || selectedUser.company || selectedUser.education || selectedUser.birthday || selectedUser.zodiac) && (selectedUser.detailVisibility.basic !== false || canEditOthers || isOwner)}}">
+        <view class="v2-detail-head">
+          <text class="v2-detail-label">基础信息</text>
+          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="basic">
+            <text>{{selectedUser.detailVisibility.basic === false ? '设为公开' : '设为隐藏'}}</text>
+          </view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.basic === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view class="v2-detail-tags">
+          <text wx:if="{{selectedUser.mbti}}" class="v2-detail-tag" bindtap="onTagTap" data-field="mbti" data-value="{{selectedUser.mbti}}">{{selectedUser.mbti}}</text>
+          <text wx:if="{{selectedUser.cityDisplay}}" class="v2-detail-tag" bindtap="onTagTap" data-field="city" data-value="{{selectedUser.cityDisplay}}">{{selectedUser.cityDisplay}}</text>
+          <text wx:if="{{selectedUser.career}}" class="v2-detail-tag" bindtap="onTagTap" data-field="career" data-value="{{selectedUser.career}}">{{selectedUser.career}}</text>
+          <text wx:if="{{selectedUser.company}}" class="v2-detail-tag" bindtap="onTagTap" data-field="company" data-value="{{selectedUser.company}}">{{selectedUser.company}}</text>
+          <text wx:if="{{selectedUser.education}}" class="v2-detail-tag" bindtap="onTagTap" data-field="education" data-value="{{selectedUser.education}}">{{selectedUser.education}}</text>
+          <text wx:if="{{selectedUser.birthday}}" class="v2-detail-tag" bindtap="onTagTap" data-field="birthday" data-value="{{selectedUser.birthday}}">{{selectedUser.birthday}}</text>
+          <text wx:if="{{selectedUser.zodiac}}" class="v2-detail-tag" bindtap="onTagTap" data-field="zodiac" data-value="{{selectedUser.zodiac}}">{{selectedUser.zodiac}}</text>
+        </view>
+      </view>
+
+      <!-- 盖洛普优势 -->
+      <view class="v2-detail-group" wx:if="{{selectedUser.gallup && selectedUser.gallup.length > 0 && (selectedUser.detailVisibility.gallup !== false || canEditOthers || isOwner)}}">
+        <view class="v2-detail-head">
+          <text class="v2-detail-label">盖洛普优势</text>
+          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="gallup">
+            <text>{{selectedUser.detailVisibility.gallup === false ? '设为公开' : '设为隐藏'}}</text>
+          </view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.gallup === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view class="v2-detail-tags">
+          <text wx:for="{{selectedUser.gallup}}" wx:key="*this" class="v2-detail-tag v2-tag-gallup" bindtap="onTagTap" data-field="gallup" data-value="{{item}}">{{item}}</text>
+        </view>
+      </view>
+
+      <!-- 技能 -->
+      <view class="v2-detail-group" wx:if="{{selectedUser.skills.length > 0 && (selectedUser.detailVisibility.skills !== false || canEditOthers || isOwner)}}">
+        <view class="v2-detail-head">
+          <text class="v2-detail-label">技能</text>
+          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="skills">
+            <text>{{selectedUser.detailVisibility.skills === false ? '设为公开' : '设为隐藏'}}</text>
+          </view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.skills === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view class="v2-detail-tags">
+          <text wx:for="{{selectedUser.skills}}" wx:key="*this" class="v2-detail-tag v2-tag-skill" bindtap="onTagTap" data-field="skills" data-value="{{item}}">{{item}}</text>
+        </view>
+      </view>
+
+      <!-- 爱好 -->
+      <view class="v2-detail-group" wx:if="{{selectedUser.hobbies.length > 0 && (selectedUser.detailVisibility.hobbies !== false || canEditOthers || isOwner)}}">
+        <view class="v2-detail-head">
+          <text class="v2-detail-label">爱好</text>
+          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="hobbies">
+            <text>{{selectedUser.detailVisibility.hobbies === false ? '设为公开' : '设为隐藏'}}</text>
+          </view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.hobbies === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view class="v2-detail-tags">
+          <text wx:for="{{selectedUser.hobbies}}" wx:key="*this" class="v2-detail-tag v2-tag-hobby" bindtap="onTagTap" data-field="hobbies" data-value="{{item}}">{{item}}</text>
+        </view>
+      </view>
+
+      <!-- 擅长 -->
+      <view class="v2-detail-group" wx:if="{{selectedUser.expertise.length > 0 && (selectedUser.detailVisibility.expertise !== false || canEditOthers || isOwner)}}">
+        <view class="v2-detail-head">
+          <text class="v2-detail-label">擅长领域</text>
+          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="expertise">
+            <text>{{selectedUser.detailVisibility.expertise === false ? '设为公开' : '设为隐藏'}}</text>
+          </view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.expertise === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view class="v2-detail-tags">
+          <text wx:for="{{selectedUser.expertise}}" wx:key="*this" class="v2-detail-tag" bindtap="onTagTap" data-field="expertise" data-value="{{item}}">{{item}}</text>
+        </view>
+      </view>
+
+      <!-- 标签 -->
+      <view class="v2-detail-group" wx:if="{{selectedUser.tags.length > 0 && (selectedUser.detailVisibility.tags !== false || canEditOthers || isOwner)}}">
+        <view class="v2-detail-head">
+          <text class="v2-detail-label">标签</text>
+          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="tags">
+            <text>{{selectedUser.detailVisibility.tags === false ? '设为公开' : '设为隐藏'}}</text>
+          </view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.tags === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view class="v2-detail-tags">
+          <text wx:for="{{selectedUser.tags}}" wx:key="*this" class="v2-detail-tag v2-tag-hash" bindtap="onTagTap" data-field="tags" data-value="{{item}}">#{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 年度目标 -->
+<goal-card
+  wx:if="{{selectedUser.goal || isOwner}}"
+  goal="{{selectedUser.goal}}"
+  bind:setgoal="onSetGoal"
+/>
+
+<!-- 相似会员 (横滑卡片) -->
+<view class="v2-card" wx:if="{{similarUsers.length > 0}}">
+  <view class="v2-card-header">
+    <text class="v2-card-title">{{similarUsersTitle}}</text>
+    <view class="v2-info-icon" bindtap="onExplainSimilarity">
+      <text>i</text>
+    </view>
+  </view>
+  <scroll-view class="v2-similar-scroll" scroll-x enable-flex>
+    <view class="v2-similar-item" wx:for="{{similarUsers}}" wx:key="index" bindtap="onSimilarTap" data-user-id="{{item.user.userId || item.user.id}}">
+      <image class="v2-similar-avatar" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load="true" />
+      <text class="v2-similar-name">{{item.user.name}}</text>
+      <text class="v2-similar-reason">{{item.reason}}</text>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- Q&A 区域 -->
+<view class="v2-card">
+  <view class="v2-card-header">
+    <text class="v2-card-title">问答</text>
+    <view wx:if="{{!isOwner}}" class="v2-qa-ask-btn" bindtap="onAskQuestion">
+      <text>向TA提问</text>
+    </view>
+    <text class="v2-qa-count" wx:if="{{qaVisibleCount > 0}}">{{qaVisibleCount}}</text>
+  </view>
+
+  <view wx:if="{{qaVisibleCount === 0}}" class="v2-empty-hint">
+    <text>{{qaEmptyText}}</text>
+  </view>
+
+  <view wx:for="{{selectedUserQa}}" wx:key="index" wx:if="{{!item.hidden || isOwner || canEditOthers}}" class="v2-qa-item {{item.hidden ? 'hidden' : ''}}">
+    <view wx:if="{{item.askedBy !== 'system'}}" class="v2-qa-from">{{item.askedBy}} 提问</view>
+    <view class="v2-qa-question">
+      <text class="v2-qa-q-badge">Q</text>
+      <text>{{item.question}}</text>
+    </view>
+    <block wx:if="{{item.answer}}">
+      <view class="v2-qa-answer">{{item.answer}}</view>
+    </block>
+    <block wx:else>
+      <view wx:if="{{item.hidden && (isOwner || canEditOthers)}}" class="v2-qa-hidden-note">已隐藏，其他人不可见</view>
+      <block wx:if="{{isOwner}}">
+        <view class="v2-qa-pending">等你来回答...</view>
+        <view class="v2-qa-answer-btn" bindtap="onAnswerQuestion" data-index="{{index}}">回答</view>
+      </block>
+      <view wx:else class="v2-qa-pending">TA 还没回答</view>
+    </block>
+    <view wx:if="{{isOwner || canEditOthers}}" class="v2-qa-admin-row">
+      <view class="v2-qa-admin-btn" bindtap="onToggleQuestionVisibility" data-index="{{index}}">
+        <text>{{item.hidden ? '显示问题' : '隐藏问题'}}</text>
+      </view>
+      <view class="v2-qa-admin-btn danger" bindtap="onDeleteQuestion" data-index="{{index}}">
+        <text>删除</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 时间轴 -->
+<view class="v2-card v2-card-last v2-card-timeline">
+  <view class="v2-card-header">
+    <view class="v2-card-title-row">
+      <text class="v2-card-title">成长地图</text>
+      <text class="v2-node-count" wx:if="{{sortedNodes.length > 0}}">{{sortedNodes.length}} 个节点</text>
+    </view>
+    <view class="tl-variant-toggle" bindtap="onToggleTimeline">
+      <text class="tl-variant-label">{{timelineVariant === 'modern' ? '极简' : '卡片'}}</text>
+    </view>
+  </view>
+
+  <view wx:if="{{sortedNodes.length > 0}}" class="v2-timeline {{timelineVariant === 'minimal' ? 'v2-timeline-minimal' : ''}}">
+    <timeline-node
+      wx:for="{{sortedNodes}}"
+      wx:key="_idx"
+      node="{{item}}"
+      index="{{index}}"
+      typeConfig="{{nodeTypes[item.type]}}"
+      variant="{{timelineVariant}}"
+      bind:nodetap="onNodeTap"
+      bind:imagetap="onTimelineImageTap"
+    />
+  </view>
+
+<view wx:else class="v2-empty-timeline">
+    <text class="v2-empty-icon">成长地图</text>
+    <text class="v2-empty-text">还没有成长记录</text>
+  </view>
+</view>
+
+<!-- 成长值明细弹窗 (共用) -->
+<view class="growth-modal-overlay {{showGrowthModal ? 'show' : ''}}" bindtap="onCloseGrowthModal">
+  <view class="growth-modal-box" catchtap="noop">
+    <view class="gv-total">
+      <view class="gv-total-num">{{growthTotal}}</view>
+      <view class="gv-total-label">{{selectedUser.name}} 的成长值</view>
+    </view>
+    <view class="gv-body">
+      <view class="gv-row" wx:for="{{growthRows}}" wx:key="label">
+        <view class="gv-row-left">
+          <view class="gv-row-icon" style="background: {{item.bg}};">
+            <text>{{item.icon}}</text>
+          </view>
+          <view class="gv-row-info">
+            <text class="gv-row-label">{{item.label}}</text>
+            <text class="gv-row-detail">{{item.detail}}</text>
+          </view>
+        </view>
+        <view class="gv-row-val {{item.pts === 0 ? 'zero' : ''}}">+{{item.pts}}</view>
+      </view>
+      <view class="gv-rule-note">持续记录成长，成长值没有天花板</view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{imageViewerVisible}}" class="image-viewer-overlay" bindtap="onCloseImageViewer">
+  <swiper class="image-viewer-swiper" current="{{viewerIndex}}" bindchange="onViewerChange" catchtap="noop">
+    <swiper-item wx:for="{{viewerImages}}" wx:key="*this">
+      <view class="image-viewer-slide">
+        <image class="image-viewer-image" src="{{item}}" mode="aspectFit" />
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="image-viewer-close" bindtap="onCloseImageViewer">关闭</view>
+</view>
+
+</block>
+
+<!-- ==================== 原版 UI ==================== -->
+<block wx:else>
+
+<!-- 导航条 -->
+<view class="nav-bar" style="padding-top: {{navPaddingTop}}px;">
+  <view class="nav-back" bindtap="onGoBack">
+    <text>←</text>
+  </view>
+  <view class="nav-title">{{selectedUser.name}}的成长之旅</view>
+<view class="nav-spacer-right">
+      <view class="v2-nav-toggle-old" bindtap="onToggleUI">
+        <text style="font-size: 22rpx; color: rgba(255,255,255,0.8);">新版</text>
+      </view>
+    </view>
+</view>
+
+<!-- 用户资料头部 -->
+<profile-header
+  user="{{selectedUser}}"
+  isOwner="{{isOwner}}"
+  bind:avataredit="onAvatarEdit"
+/>
+
+<!-- 编辑按钮 -->
+<view wx:if="{{isOwner || canEditOthers}}" class="btn-edit-profile" bindtap="onEditProfile">
+  {{isOwner ? '编辑我的资料' : '编辑资料'}}
+</view>
+
+<!-- 完整度提示条 -->
+<view class="completeness-bar" wx:if="{{completeness < 100}}">
+  <view class="completeness-track">
+    <view class="completeness-progress" style="width: {{completeness}}%; background: {{completeness > 70 ? '#22c55e' : completeness > 40 ? '#f59e0b' : '#ef4444'}}"></view>
+  </view>
+  <text class="completeness-text">资料完整度 {{completeness}}%</text>
+  <text class="completeness-hint" wx:if="{{missingFieldsText}}">还差: {{missingFieldsText}}</text>
+</view>
+
+<view wx:if="{{funnyIntro}}" class="profile-funny-line">
+  <text>{{funnyIntro}}</text>
+</view>
+
+<!-- 个人资料详情区域 -->
+<view class="profile-info">
+  <!-- 成长值入口 -->
+  <view class="growth-value-entry" bindtap="onGrowthTap">
+    <text class="growth-entry-label">成长值</text>
+    <text class="growth-entry-value">{{growthTotal}}</text>
+    <text class="growth-entry-arrow">查看明细 ></text>
+  </view>
+
+  <view class="info-detail-body expanded">
+    <view class="info-detail-inner">
+      <!-- 更多信息 -->
+      <view class="info-section" wx:if="{{(selectedUser.mbti || selectedUser.cityDisplay || selectedUser.career || selectedUser.company || selectedUser.education || selectedUser.birthday || selectedUser.zodiac) && (selectedUser.detailVisibility.basic !== false || isOwner || canEditOthers)}}">
+        <view class="info-section-header">
+        <view class="info-section-title">更多信息</view>
+        <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="basic">{{selectedUser.detailVisibility.basic === false ? '设为公开' : '设为隐藏'}}</view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.basic === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view class="info-tags">
+          <view class="info-tag" wx:if="{{selectedUser.mbti}}">
+            <text bindtap="onTagTap" data-field="mbti" data-value="{{selectedUser.mbti}}">{{selectedUser.mbti}}</text>
+          </view>
+          <view class="info-tag" wx:if="{{selectedUser.cityDisplay}}">
+            <text bindtap="onTagTap" data-field="city" data-value="{{selectedUser.cityDisplay}}">{{selectedUser.cityDisplay}}</text>
+          </view>
+          <view class="info-tag" wx:if="{{selectedUser.career}}">
+            <text bindtap="onTagTap" data-field="career" data-value="{{selectedUser.career}}">{{selectedUser.career}}</text>
+          </view>
+          <view class="info-tag" wx:if="{{selectedUser.company}}">
+            <text bindtap="onTagTap" data-field="company" data-value="{{selectedUser.company}}">{{selectedUser.company}}</text>
+          </view>
+          <view class="info-tag" wx:if="{{selectedUser.education}}">
+            <text bindtap="onTagTap" data-field="education" data-value="{{selectedUser.education}}">{{selectedUser.education}}</text>
+          </view>
+          <view class="info-tag" wx:if="{{selectedUser.birthday}}">
+            <text bindtap="onTagTap" data-field="birthday" data-value="{{selectedUser.birthday}}">{{selectedUser.birthday}}</text>
+          </view>
+          <view class="info-tag" wx:if="{{selectedUser.zodiac}}">
+            <text bindtap="onTagTap" data-field="zodiac" data-value="{{selectedUser.zodiac}}">{{selectedUser.zodiac}}</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 技能认证 -->
+      <view class="info-section" wx:if="{{selectedUser.skills.length > 0 && (selectedUser.detailVisibility.skills !== false || isOwner || canEditOthers)}}">
+        <view class="info-section-header">
+          <view class="info-section-title">技能认证</view>
+          <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="skills">{{selectedUser.detailVisibility.skills === false ? '设为公开' : '设为隐藏'}}</view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.skills === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view class="info-tags">
+          <view class="info-tag skill" wx:for="{{selectedUser.skills}}" wx:key="*this">
+            <text bindtap="onTagTap" data-field="skills" data-value="{{item}}">{{item}}</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 爱好 -->
+      <view class="info-section" wx:if="{{selectedUser.hobbies.length > 0 && (selectedUser.detailVisibility.hobbies !== false || isOwner || canEditOthers)}}">
+        <view class="info-section-header">
+          <view class="info-section-title">爱好</view>
+          <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="hobbies">{{selectedUser.detailVisibility.hobbies === false ? '设为公开' : '设为隐藏'}}</view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.hobbies === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view class="info-tags">
+          <view class="info-tag hobby" wx:for="{{selectedUser.hobbies}}" wx:key="*this">
+            <text bindtap="onTagTap" data-field="hobbies" data-value="{{item}}">{{item}}</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 擅长领域 -->
+      <view class="info-section" wx:if="{{selectedUser.expertise.length > 0 && (selectedUser.detailVisibility.expertise !== false || isOwner || canEditOthers)}}">
+        <view class="info-section-header">
+          <view class="info-section-title">擅长领域</view>
+          <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="expertise">{{selectedUser.detailVisibility.expertise === false ? '设为公开' : '设为隐藏'}}</view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.expertise === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view class="info-tags">
+          <view class="info-tag" wx:for="{{selectedUser.expertise}}" wx:key="*this">
+            <text bindtap="onTagTap" data-field="expertise" data-value="{{item}}">{{item}}</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 标签 -->
+      <view class="info-section" wx:if="{{selectedUser.tags.length > 0 && (selectedUser.detailVisibility.tags !== false || isOwner || canEditOthers)}}">
+        <view class="info-section-header">
+          <view class="info-section-title">标签</view>
+          <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="tags">{{selectedUser.detailVisibility.tags === false ? '设为公开' : '设为隐藏'}}</view>
+        </view>
+        <view wx:if="{{selectedUser.detailVisibility.tags === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view class="info-tags">
+          <view class="info-tag" wx:for="{{selectedUser.tags}}" wx:key="*this">
+            <text bindtap="onTagTap" data-field="tags" data-value="{{item}}">#{{item}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 成长值明细弹窗 -->
+<view class="growth-modal-overlay {{showGrowthModal ? 'show' : ''}}" bindtap="onCloseGrowthModal">
+  <view class="growth-modal-box" catchtap="noop">
+    <view class="gv-total">
+      <view class="gv-total-num">{{growthTotal}}</view>
+      <view class="gv-total-label">{{selectedUser.name}} 的成长值</view>
+    </view>
+    <view class="gv-body">
+      <view class="gv-row" wx:for="{{growthRows}}" wx:key="label">
+        <view class="gv-row-left">
+          <view class="gv-row-icon" style="background: {{item.bg}};">
+            <text>{{item.icon}}</text>
+          </view>
+          <view class="gv-row-info">
+            <text class="gv-row-label">{{item.label}}</text>
+            <text class="gv-row-detail">{{item.detail}}</text>
+          </view>
+        </view>
+        <view class="gv-row-val {{item.pts === 0 ? 'zero' : ''}}">+{{item.pts}}</view>
+      </view>
+      <view class="gv-rule-note">持续记录成长，成长值没有天花板</view>
+    </view>
+  </view>
+</view>
+
+<!-- 年度目标 -->
+<goal-card
+  wx:if="{{selectedUser.goal || isOwner}}"
+  goal="{{selectedUser.goal}}"
+  bind:setgoal="onSetGoal"
+/>
+
+<!-- 相似会员推荐 -->
+<view class="similar-section" wx:if="{{similarUsers.length > 0}}">
+  <view class="similar-header-row">
+    <view class="similar-title">{{similarUsersTitle}}</view>
+    <view class="info-section-action info-icon-action" bindtap="onExplainSimilarity">i</view>
+  </view>
+  <view class="similar-list">
+    <view class="similar-item" wx:for="{{similarUsers}}" wx:key="index" bindtap="onSimilarTap" data-user-id="{{item.user.userId || item.user.id}}">
+      <image class="similar-avatar" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load="true" />
+      <text class="similar-name">{{item.user.name}}</text>
+      <text class="similar-reason">{{item.reason}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- Q&A Section -->
+<view class="qa-section">
+  <view class="qa-header">
+    <text class="qa-title">问我</text>
+    <view wx:if="{{!isOwner}}" class="qa-ask-btn" bindtap="onAskQuestion">向TA提问</view>
+  </view>
+
+  <view wx:if="{{qaVisibleCount === 0}}" class="qa-empty">
+    <text>{{qaEmptyText}}</text>
+  </view>
+
+  <view wx:for="{{selectedUserQa}}" wx:key="index" wx:if="{{!item.hidden || isOwner || canEditOthers}}" class="qa-card {{item.hidden ? 'qa-card-hidden' : ''}}">
+    <view wx:if="{{item.askedBy !== 'system'}}" class="qa-from">
+      <text>{{item.askedBy}} 提问</text>
+    </view>
+    <view class="qa-question">
+      <text class="qa-q-icon">Q</text>
+      <text>{{item.question}}</text>
+    </view>
+    <block wx:if="{{item.answer}}">
+      <view class="qa-answer">
+        <text>{{item.answer}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view wx:if="{{item.hidden && (isOwner || canEditOthers)}}" class="qa-hidden-note">已隐藏，其他人不可见</view>
+      <block wx:if="{{isOwner}}">
+        <view class="qa-unanswered"><text>等你来回答...</text></view>
+        <button class="qa-answer-btn" bindtap="onAnswerQuestion" data-index="{{index}}">回答这个问题</button>
+      </block>
+      <view wx:else class="qa-unanswered">
+        <text>TA 还没回答这个问题</text>
+      </view>
+    </block>
+    <view wx:if="{{isOwner || canEditOthers}}" class="qa-admin-row">
+      <view class="qa-admin-btn" bindtap="onToggleQuestionVisibility" data-index="{{index}}">
+        <text>{{item.hidden ? '显示问题' : '隐藏问题'}}</text>
+      </view>
+      <view class="qa-admin-btn danger" bindtap="onDeleteQuestion" data-index="{{index}}">
+        <text>删除</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 时间轴区域 -->
+<view class="timeline-section">
+  <view class="timeline-header">
+    <view class="timeline-title-row">
+      <text class="timeline-title">成长地图</text>
+      <view class="tl-variant-toggle" bindtap="onToggleTimeline">
+        <text class="tl-variant-label">{{timelineVariant === 'modern' ? '极简' : '卡片'}}</text>
+      </view>
+    </view>
+    <button wx:if="{{isOwner || canEditOthers}}" class="btn-add" bindtap="onAddNode">+ 添加节点</button>
+  </view>
+
+  <view wx:if="{{sortedNodes.length > 0}}" class="timeline {{timelineVariant === 'minimal' ? 'timeline-minimal' : ''}}">
+    <timeline-node
+      wx:for="{{sortedNodes}}"
+      wx:key="_idx"
+      node="{{item}}"
+      index="{{index}}"
+      typeConfig="{{nodeTypes[item.type]}}"
+      variant="{{timelineVariant}}"
+      bind:nodetap="onNodeTap"
+      bind:imagetap="onTimelineImageTap"
+    />
+  </view>
+
+  <view wx:else class="empty-timeline">
+    <text class="empty-icon">成长地图</text>
+    <text class="empty-text">还没有成长记录</text>
+  </view>
+</view>
+
+<view wx:if="{{imageViewerVisible}}" class="image-viewer-overlay" bindtap="onCloseImageViewer">
+  <swiper class="image-viewer-swiper" current="{{viewerIndex}}" bindchange="onViewerChange" catchtap="noop">
+    <swiper-item wx:for="{{viewerImages}}" wx:key="*this">
+      <view class="image-viewer-slide">
+        <image class="image-viewer-image" src="{{item}}" mode="aspectFit" />
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="image-viewer-close" bindtap="onCloseImageViewer">关闭</view>
+</view>
+
+</block>
+
+<!-- 头像选择弹窗 (共用) -->
+<avatar-picker
+  visible="{{showAvatarPicker}}"
+  currentStyle="{{selectedUser.avatarStyle}}"
+  currentSeed="{{selectedUser.avatarSeed}}"
+  bind:avatarselect="onAvatarSelect"
+  bind:close="onAvatarPickerClose"
+/>

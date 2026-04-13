@@ -1,0 +1,48 @@
+<view class="member-card" bindtap="onCardTap">
+  <!-- Rank badge -->
+  <view wx:if="{{showRank && rank > 0}}" class="mc-rank {{rank === 1 ? 'top1' : rank === 2 ? 'top2' : rank === 3 ? 'top3' : 'top-other'}}">
+    {{rank}}
+  </view>
+
+  <view class="mc-avatar-wrap">
+    <image class="mc-avatar" src="{{avatarUrl}}" mode="aspectFill" lazy-load="true" />
+    <view wx:if="{{user.isBirthdayMonth}}" class="mc-birthday-hat">
+      <view class="mc-birthday-hat-ball"></view>
+    </view>
+  </view>
+
+  <!-- Name -->
+  <view class="mc-name-row">
+    <view class="mc-name">{{user.name}}</view>
+    <view wx:if="{{user.isFounder}}" class="mc-founder-badge">创始人</view>
+  </view>
+
+  <view wx:if="{{user.yoloRole || user.memberStatus === 'alumni'}}" class="mc-role-row">
+    <view wx:if="{{user.memberStatus === 'alumni'}}" class="mc-alumni-badge">往届</view>
+    <view wx:if="{{user.yoloRole}}" class="mc-role-badge">{{user.yoloRole}}</view>
+  </view>
+
+  <view wx:if="{{user.isBirthdayMonth}}" class="mc-birthday-row">
+    <view class="mc-birthday-badge">{{user.birthdayTag}}{{user.birthdayDayLabel ? ' · ' + user.birthdayDayLabel : ''}}</view>
+  </view>
+
+  <!-- MBTI -->
+  <view wx:if="{{user.mbti}}" class="mc-mbti">{{user.mbti}}</view>
+
+  <!-- Motto -->
+  <view wx:if="{{user.motto}}" class="mc-motto">"{{user.motto}}"</view>
+
+  <!-- Tags: city + career -->
+  <view wx:if="{{cityDisplay || user.career}}" class="mc-tags">
+    <view wx:if="{{cityDisplay}}" class="mc-tag">{{cityDisplay}}</view>
+    <view wx:if="{{user.career}}" class="mc-tag">{{user.career}}</view>
+  </view>
+
+  <view class="mc-footer">
+    <!-- Growth value -->
+    <view class="mc-growth" catchtap="onGrowthTap">成长值 {{growthValue}}</view>
+
+    <!-- Days since join -->
+    <view class="mc-days">加入YOLO {{daysSince}}天</view>
+  </view>
+</view>

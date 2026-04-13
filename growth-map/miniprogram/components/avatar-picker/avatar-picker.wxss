@@ -1,0 +1,50 @@
+/* avatar-picker: 头像选择弹窗样式 */
+
+.avatar-picker-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-picker-box {
+  background: #f8fafc;
+  border-radius: 40rpx;
+  padding: 40rpx;
+  width: 640rpx;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 16rpx 60rpx rgba(0, 0, 0, 0.15);
+}
+
+.picker-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-bottom: 24rpx;
+  color: #1e293b;
+}
+
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20rpx;
+}
+
+.avatar-choice {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 6rpx solid transparent;
+  background: #f1f5f9;
+}
+
+.avatar-choice.current {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4rpx rgba(37, 99, 235, 0.2);
+}

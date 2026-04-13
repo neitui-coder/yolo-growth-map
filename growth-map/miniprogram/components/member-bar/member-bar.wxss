@@ -1,0 +1,49 @@
+/* member-bar: 顶部会员切换栏样式 */
+/* HTML原型对照: .member-card img 60px → 120rpx; 选中态参考 .member-card:hover */
+
+.member-bar {
+  display: flex;
+  white-space: nowrap;
+  padding: 20rpx 32rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e2e8f0;
+}
+
+.member-avatar-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.member-avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  border: 4rpx solid #e2e8f0;
+  background: #f1f5f9;
+}
+
+.member-avatar-wrap.active .member-avatar {
+  border-color: #2563eb;
+  border-width: 4rpx;
+  box-shadow: 0 0 0 4rpx rgba(37, 99, 235, 0.2);
+  transform: scale(1.1);
+}
+
+.member-avatar-name {
+  font-size: 20rpx;
+  color: #9ca3af;
+  max-width: 96rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member-avatar-wrap.active .member-avatar-name {
+  color: #2563eb;
+  font-weight: 600;
+}

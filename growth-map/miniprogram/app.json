@@ -1,0 +1,46 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/community/community",
+    "pages/profile/profile",
+    "pages/edit/edit",
+    "pages/edit-profile/edit-profile"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1d4ed8",
+    "navigationBarTitleText": "YOLO+ 成长地图",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f3f4f6",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#64748b",
+    "selectedColor": "#2563eb",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab-home.png",
+        "selectedIconPath": "images/tab-home-active.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "images/tab-community.png",
+        "selectedIconPath": "images/tab-community-active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/tab-me.png",
+        "selectedIconPath": "images/tab-me-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

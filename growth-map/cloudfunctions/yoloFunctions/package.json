@@ -1,0 +1,9 @@
+{
+  "name": "yoloFunctions",
+  "version": "1.0.0",
+  "description": "YOLO+ 成长地图云函数",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

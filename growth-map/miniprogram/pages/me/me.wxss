@@ -1,0 +1,119 @@
+/* 我的页面样式 */
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #1d4ed8;
+  padding: 28rpx 32rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.nav-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  letter-spacing: 0.6rpx;
+}
+
+/* 用户信息卡片 */
+.me-card {
+  display: flex;
+  align-items: center;
+  padding: 32rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e2e8f0;
+}
+
+.me-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 4rpx solid #e2e8f0;
+  background: #f1f5f9;
+  flex-shrink: 0;
+}
+
+.me-info {
+  flex: 1;
+  margin-left: 24rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.me-name {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8rpx;
+}
+
+.me-motto {
+  font-size: 24rpx;
+  color: #9ca3af;
+  line-height: 1.4;
+}
+
+.me-arrow {
+  font-size: 28rpx;
+  color: #d1d5db;
+}
+
+/* 成长值概览 */
+.me-growth-bar {
+  display: flex;
+  background: #fff;
+  padding: 28rpx 0;
+  border-bottom: 1rpx solid #e2e8f0;
+}
+
+.me-growth-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.me-growth-num {
+  font-size: 36rpx;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 8rpx;
+}
+
+.me-growth-label {
+  font-size: 22rpx;
+  color: #9ca3af;
+}
+
+/* 功能入口菜单 */
+.me-menu {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.me-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 32rpx;
+  border-bottom: 1rpx solid #f1f5f9;
+}
+
+.me-menu-icon {
+  font-size: 32rpx;
+  margin-right: 20rpx;
+}
+
+.me-menu-text {
+  flex: 1;
+  font-size: 28rpx;
+  color: #374151;
+}
+
+.me-menu-arrow {
+  font-size: 24rpx;
+  color: #d1d5db;
+}

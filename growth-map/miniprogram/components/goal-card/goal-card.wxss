@@ -1,0 +1,35 @@
+/* goal-card: 年度目标卡片样式 */
+/* HTML原型对照: .goal-card, .btn-set-goal */
+
+.goal-card {
+  margin: 0 32rpx 24rpx;
+  border-radius: 28rpx;
+  padding: 28rpx;
+  background: #eff6ff;
+  border: 1rpx solid #e2e8f0;
+}
+
+.goal-title {
+  font-size: 26rpx;
+  color: #2563eb;
+  margin-bottom: 12rpx;
+  font-weight: 600;
+}
+
+.goal-text {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.btn-set-goal {
+  margin: 0 32rpx 24rpx;
+  background: #fff;
+  border: 3rpx dashed #cbd5e1;
+  border-radius: 28rpx;
+  padding: 24rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #64748b;
+  text-align: center;
+}

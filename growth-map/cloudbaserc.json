@@ -1,0 +1,20 @@
+{
+  "envId": "cloud1-7giblg7i4595eaf3",
+  "functionRoot": "cloudfunctions",
+  "functions": [
+    {
+      "name": "yoloFunctions",
+      "timeout": 30,
+      "runtime": "Nodejs16.13",
+      "handler": "index.main",
+      "installDependency": true
+    },
+    {
+      "name": "quickstartFunctions",
+      "timeout": 30,
+      "runtime": "Nodejs16.13",
+      "handler": "index.main",
+      "installDependency": true
+    }
+  ]
+}

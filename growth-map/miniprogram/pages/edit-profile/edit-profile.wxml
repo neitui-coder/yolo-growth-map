@@ -1,0 +1,99 @@
+<!--
+  资料编辑页：完整表单，包含所有用户字段
+  - 文本输入字段
+  - MBTI picker (16 types)
+  - Zodiac picker (12 signs)
+  - Birthday date picker
+  - 逗号分隔的数组字段
+-->
+<view class="edit-profile-page">
+  <view class="form-group">
+    <text class="form-label">姓名</text>
+    <input class="form-input" value="{{name}}" placeholder="请输入姓名" bindinput="onInput" data-field="name" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">格言</text>
+    <input class="form-input" value="{{motto}}" placeholder="请输入个人格言" bindinput="onInput" data-field="motto" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">MBTI</text>
+    <picker range="{{mbtiOptions}}" value="{{mbtiIndex}}" bindchange="onMbtiChange">
+      <view class="form-input picker-value">
+        {{mbtiIndex >= 0 ? mbtiOptions[mbtiIndex] : '请选择 MBTI 类型'}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">职业</text>
+    <input class="form-input" value="{{career}}" placeholder="请输入职业" bindinput="onInput" data-field="career" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">公司</text>
+    <input class="form-input" value="{{company}}" placeholder="请输入公司" bindinput="onInput" data-field="company" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">城市（最多选3个）</text>
+    <view class="city-tags">
+      <view wx:for="{{cityOptions}}" wx:key="*this"
+            class="city-tag {{selectedCities.indexOf(item) !== -1 ? 'city-tag-active' : ''}}"
+            bindtap="onCityTap" data-city="{{item}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">生日</text>
+    <picker mode="date" value="{{birthday}}" bindchange="onBirthdayChange">
+      <view class="form-input picker-value">
+        {{birthday || '请选择生日'}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="form-group" wx:if="{{false}}">
+    <text class="form-label">星座</text>
+    <picker range="{{zodiacOptions}}" value="{{zodiacIndex}}" bindchange="onZodiacChange">
+      <view class="form-input picker-value">
+        {{zodiacIndex >= 0 ? zodiacOptions[zodiacIndex] : '请选择星座'}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">教育背景</text>
+    <input class="form-input" value="{{education}}" placeholder="请输入教育背景" bindinput="onInput" data-field="education" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">爱好</text>
+    <input class="form-input" value="{{hobbiesStr}}" placeholder="用逗号分隔，如：阅读,跑步,旅行" bindinput="onInput" data-field="hobbiesStr" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">擅长领域</text>
+    <input class="form-input" value="{{expertiseStr}}" placeholder="用逗号分隔，如：产品设计,数据分析" bindinput="onInput" data-field="expertiseStr" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">标签</text>
+    <input class="form-input" value="{{tagsStr}}" placeholder="用逗号分隔，如：咖啡爱好者,马拉松跑者" bindinput="onInput" data-field="tagsStr" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">技能认证</text>
+    <input class="form-input" value="{{skillsStr}}" placeholder="用逗号分隔，如：CFA,PMP,AWS SAA" bindinput="onInput" data-field="skillsStr" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">年度目标</text>
+    <input class="form-input" value="{{goal}}" placeholder="请输入年度目标" bindinput="onInput" data-field="goal" />
+  </view>
+
+  <button class="btn-submit" bindtap="onSubmit">保存</button>
+</view>

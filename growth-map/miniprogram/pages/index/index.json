@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "member-card": "../../components/member-card/member-card"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 180
+}

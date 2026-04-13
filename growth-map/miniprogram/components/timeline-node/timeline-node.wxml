@@ -1,0 +1,121 @@
+<!--
+  timeline-node: 时间轴节点
+  支持两种变体: modern (现代卡片) / minimal (极简文字)
+  通过 variant 属性控制
+-->
+
+<!-- ========== Modern 变体 (默认) ========== -->
+<block wx:if="{{variant === 'modern'}}">
+<view class="tl-modern {{typeConfig.className}}" bindtap="onNodeTap">
+  <!-- 时间线圆点 + 脉冲环 -->
+  <view class="tl-m-dot-wrap">
+    <view class="tl-m-dot"></view>
+    <view class="tl-m-pulse"></view>
+  </view>
+
+  <!-- 卡片 -->
+  <view class="tl-m-card">
+    <!-- 顶部: 日期 + 类型标签 -->
+    <view class="tl-m-header">
+      <view class="tl-m-date-wrap">
+        <text class="tl-m-year">{{formattedDate}}</text>
+      </view>
+      <view class="tl-m-type-badge">
+        <text class="tl-m-type-text">{{typeConfig.label}}</text>
+      </view>
+    </view>
+
+    <!-- 描述 -->
+    <text class="tl-m-desc">{{node.desc}}</text>
+
+    <view wx:if="{{hasParticipants}}" class="tl-participant-row">
+      <view class="tl-participant-stack">
+        <image
+          wx:for="{{participantAvatars}}"
+          wx:key="userId"
+          class="tl-participant-avatar"
+          src="{{item.avatarUrl}}"
+          mode="aspectFill"
+          lazy-load="true"
+        />
+      </view>
+      <text class="tl-participant-count">{{participantCount}} 人参加</text>
+    </view>
+
+    <!-- 活动参与信息 -->
+    <view wx:if="{{hasActivityMeta}}" class="tl-m-meta">
+      <view wx:for="{{activityMetaItems}}" wx:key="index" class="tl-m-meta-pill">
+        <text class="tl-m-meta-label">{{item.label}}</text>
+        <text class="tl-m-meta-value">{{item.value}}</text>
+      </view>
+    </view>
+
+    <!-- 图片 -->
+    <view wx:if="{{node.displayImages && node.displayImages.length > 0}}" class="tl-m-images {{node.displayImages.length === 1 ? 'single' : node.displayImages.length === 2 ? 'double' : 'triple'}}">
+      <image
+        wx:for="{{node.displayImages}}"
+        wx:for-index="imgIdx"
+        wx:if="{{imgIdx < 9}}"
+        wx:key="*this"
+        class="tl-m-img"
+        src="{{item}}"
+        mode="aspectFill"
+        lazy-load="true"
+        catchtap="onImageTap"
+        data-index="{{imgIdx}}"
+      />
+    </view>
+  </view>
+</view>
+</block>
+
+<!-- ========== Minimal 变体 ========== -->
+<block wx:else>
+<view class="tl-minimal {{typeConfig.className}}" bindtap="onNodeTap">
+  <!-- 小圆点 -->
+  <view class="tl-n-dot"></view>
+
+  <!-- 内容行 -->
+  <view class="tl-n-content">
+    <view class="tl-n-row">
+      <text class="tl-n-date">{{formattedDate}}</text>
+      <text class="tl-n-tag">{{typeConfig.label}}</text>
+    </view>
+    <text class="tl-n-desc">{{node.desc}}</text>
+    <view wx:if="{{hasActivityMeta}}" class="tl-n-meta">
+      <view wx:for="{{activityMetaItems}}" wx:key="index" class="tl-n-meta-pill">
+        <text class="tl-n-meta-label">{{item.label}}</text>
+        <text class="tl-n-meta-value">{{item.value}}</text>
+      </view>
+    </view>
+    <view wx:if="{{hasParticipants}}" class="tl-participant-row tl-participant-row-minimal">
+      <view class="tl-participant-stack">
+        <image
+          wx:for="{{participantAvatars}}"
+          wx:key="userId"
+          class="tl-participant-avatar"
+          src="{{item.avatarUrl}}"
+          mode="aspectFill"
+          lazy-load="true"
+        />
+      </view>
+      <text class="tl-participant-count">{{participantCount}} 人参加</text>
+    </view>
+    <!-- 缩略图 -->
+    <view wx:if="{{node.displayImages && node.displayImages.length > 0}}" class="tl-n-thumbs">
+      <image
+        wx:for="{{node.displayImages}}"
+        wx:for-index="imgIdx"
+        wx:if="{{imgIdx < 9}}"
+        wx:key="*this"
+        class="tl-n-thumb"
+        src="{{item}}"
+        mode="aspectFill"
+        lazy-load="true"
+        catchtap="onImageTap"
+        data-index="{{imgIdx}}"
+      />
+    </view>
+  </view>
+</view>
+</block>

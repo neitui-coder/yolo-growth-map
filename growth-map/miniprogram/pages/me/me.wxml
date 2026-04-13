@@ -1,0 +1,68 @@
+<!--
+  "我的"页面：个人中心入口
+  - 头像 + 名字 + 格言
+  - 成长值概览
+  - 功能入口列表
+-->
+
+<!-- 导航条 -->
+<view class="nav-bar" style="padding-top: {{navPaddingTop}}px;">
+  <view class="nav-title">我的</view>
+</view>
+
+<!-- 用户信息卡片 -->
+<view class="me-card" bindtap="onViewProfile">
+  <block wx:if="{{avatarUrl}}">
+    <image class="me-avatar" src="{{avatarUrl}}" mode="aspectFill" />
+  </block>
+  <block wx:else>
+    <view class="me-avatar">营</view>
+  </block>
+  <view class="me-info">
+    <text class="me-name">{{user.name}}</text>
+    <text class="me-motto">{{user.motto || (isOperatorView ? '当前可维护全部会员资料' : '点击查看个人档案')}}</text>
+  </view>
+  <text wx:if="{{!isOperatorView}}" class="me-arrow">▸</text>
+</view>
+
+<!-- 成长值概览 -->
+<view class="me-growth-bar">
+  <view class="me-growth-item">
+    <text class="me-growth-num">{{growthValue}}</text>
+    <text class="me-growth-label">成长值</text>
+  </view>
+  <view class="me-growth-item">
+    <text class="me-growth-num">{{nodeCount}}</text>
+    <text class="me-growth-label">成长节点</text>
+  </view>
+  <view class="me-growth-item">
+    <text class="me-growth-num">{{completeness}}%</text>
+    <text class="me-growth-label">资料完善度</text>
+  </view>
+</view>
+
+<!-- 初始化云数据库（临时入口） -->
+<button class="btn-seed" bindtap="onSeedData" wx:if="{{!seeded}}">初始化云数据库</button>
+
+<!-- 功能入口 -->
+<view class="me-menu">
+  <view wx:if="{{!isOperatorView}}" class="me-menu-item" bindtap="onViewProfile">
+    <text class="me-menu-icon">👤</text>
+    <text class="me-menu-text">查看个人档案</text>
+    <text class="me-menu-arrow">▸</text>
+  </view>
+  <view wx:if="{{!isOperatorView}}" class="me-menu-item" bindtap="onEditProfile">
+    <text class="me-menu-icon">✏️</text>
+    <text class="me-menu-text">编辑资料</text>
+    <text class="me-menu-arrow">▸</text>
+  </view>
+  <view wx:if="{{!isOperatorView}}" class="me-menu-item" bindtap="onViewMap">
+    <text class="me-menu-icon">🗺️</text>
+    <text class="me-menu-text">我的成长地图</text>
+    <text class="me-menu-arrow">▸</text>
+  </view>
+  <view wx:if="{{isOperatorView}}" class="me-menu-item">
+    <text class="me-menu-icon">🛠️</text>
+    <text class="me-menu-text">请从首页进入会员档案，直接维护成长地图</text>
+  </view>
+</view>

@@ -1,0 +1,1950 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-13T10:06:04.561Z",
+  "activities": [
+    {
+      "activityKey": "yolo-2023-hongkong",
+      "title": "YOLO+ 香港游学",
+      "summary": "2023年YOLO+香港游学活动，探索商业生态与文化体验。",
+      "date": "2023-07",
+      "location": "香港",
+      "type": "travel",
+      "collectiveActivity": true,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-yucheng",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoxin",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jinhua",
+          "role": ""
+        },
+        {
+          "userId": "alumni-shijie",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jack",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "alumni-kingsley",
+          "role": ""
+        },
+        {
+          "userId": "alumni-saxi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jiayi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoyu",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jinsha",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoxuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "alumni-yiping",
+          "role": ""
+        },
+        {
+          "userId": "alumni-yian",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2023-japan",
+      "title": "YOLO+ 日本游学",
+      "summary": "2023年YOLO+日本游学，跨文化体验与商业考察。",
+      "date": "2023-09",
+      "location": "日本",
+      "type": "travel",
+      "collectiveActivity": true,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jinhua",
+          "role": ""
+        },
+        {
+          "userId": "alumni-shijie",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jack",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "alumni-kingsley",
+          "role": ""
+        },
+        {
+          "userId": "alumni-saxi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jiayi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoyu",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoxuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "alumni-yiping",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2023-chongqing",
+      "title": "YOLO+ 重庆年会",
+      "summary": "2023年YOLO+重庆年会，年度总结与展望。",
+      "date": "2023-11",
+      "location": "重庆",
+      "type": "annual",
+      "collectiveActivity": true,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
+          "role": ""
+        },
+        {
+          "userId": "alumni-kingsley",
+          "role": ""
+        },
+        {
+          "userId": "alumni-saxi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jiayi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jack",
+          "role": ""
+        },
+        {
+          "userId": "alumni-shijie",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jinhua",
+          "role": ""
+        },
+        {
+          "userId": "alumni-yucheng",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoxin",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoyu",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jinsha",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoxuan",
+          "role": ""
+        },
+        {
+          "userId": "alumni-yiping",
+          "role": ""
+        },
+        {
+          "userId": "alumni-yian",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2024-shanghai-march",
+      "title": "YOLO+ 上海区域活动（3月）",
+      "summary": "2024年3月上海区域活动，导师小组交流与Gallup优势对谈。",
+      "date": "2024-03",
+      "location": "上海",
+      "type": "activity",
+      "collectiveActivity": true,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiatong",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-linda",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2024-shenzhen",
+      "title": "YOLO+ 深圳游学",
+      "summary": "2024年深圳游学活动，企业参访与小组深度交流。",
+      "date": "2024-07",
+      "location": "深圳",
+      "type": "travel",
+      "collectiveActivity": true,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah-p30",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2024-singapore",
+      "title": "YOLO+ 新加坡游学",
+      "summary": "2024年新加坡游学，东南亚商业生态考察与国际化视野拓展。",
+      "date": "2024-09",
+      "location": "新加坡",
+      "type": "travel",
+      "collectiveActivity": true,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiatong",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-linda",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2024-macau",
+      "title": "YOLO+ 澳门年会",
+      "summary": "2024年澳门年会，TED Talk与年度复盘。",
+      "date": "2024-11",
+      "location": "澳门",
+      "type": "annual",
+      "collectiveActivity": true,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiatong",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-linda",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah-p30",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2025-wenling",
+      "title": "YOLO+ 温岭区域活动",
+      "summary": "3月13—15日YOLO+以「制造升级·新生力量」为题赴温岭，参访瑞丰五福、新界泵业、飞越机电、甬岭数控等制造标杆企业，聚焦传统制造业代际传承与转型升级；辅以石塘绿道徒步、Mini教练工作坊和圆桌论坛，探讨新生代接班抉择。",
+      "date": "2025-03",
+      "location": "温岭",
+      "type": "activity",
+      "collectiveActivity": true,
+      "images": [
+        "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSlfFYLdUnHoWGjRX4Qx38XPianibDatxAcibUQOP9ab2zqdDRVpswyQW7VoZvm6y0licFVJUrwyefzzg/640?wx_fmt=gif&from=appmsg"
+      ],
+      "keyHighlights": [
+        "参访瑞丰五福/新界泵业/飞越机电/甬岭数控四家制造标杆企业",
+        "二代企业家分享接班与创业故事",
+        "ICF认证教练David主持人生平衡轮工作坊",
+        "石塘滨海绿道徒步 & 深夜坦白局",
+        "圆桌论坛：新生代抉择之路"
+      ],
+      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSlfFYLdUnHoWGjRX4Qx38XPianibDatxAcibUQOP9ab2zqdDRVpswyQW7VoZvm6y0licFVJUrwyefzzg/640?wx_fmt=gif&from=appmsg",
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah-p30",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2025-yantai",
+      "title": "YOLO+ 烟台使命探索之旅",
+      "summary": "2025年6月26—28日YCA会员聚首烟台，以「使命」迭代为主题展开深度旅程：参访中集来福士感受「大国重器」震撞，重走习近平视察路线，高管分享海洋工程战略创新，围绕个人与组织使命进行向内深度探索与同伴链接。",
+      "date": "2025-06",
+      "location": "烟台",
+      "type": "activity",
+      "collectiveActivity": true,
+      "images": [
+        "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSAezjI5VwlHNfj5bWXmMDBc00TBDFOITKEF8wE5KeIJ5JeZupA2gWn3Tel2bC4R4CV2ZxeS0sUMA/640?wx_fmt=gif&from=appmsg"
+      ],
+      "keyHighlights": [
+        "走进中集来福士海洋工程，重走习近平视察路线",
+        "中集海洋科技集团高管分享战略与创新",
+        "以「使命」迭代为核心主题深度探寻",
+        "烟台蓬莱仙境滨海文化体验",
+        "企业家向内探索 & 向外链接交流"
+      ],
+      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSAezjI5VwlHNfj5bWXmMDBc00TBDFOITKEF8wE5KeIJ5JeZupA2gWn3Tel2bC4R4CV2ZxeS0sUMA/640?wx_fmt=gif&from=appmsg",
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiatong",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-linda",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah-p30",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2025-zhengzhou",
+      "title": "YOLO+ 郑州变革管理模块",
+      "summary": "8月7–9日Mini-EMBA第13期与YOLO+联合赴郑州，深入蜜雪冰城温县产业园及郑州总部，解码雪王超级IP与平价全球规模化策略；同步深度研习变革管理模块课程，在实战推演中锻造引领组织转型的核心能力。",
+      "date": "2025-08",
+      "location": "郑州",
+      "type": "activity",
+      "collectiveActivity": true,
+      "images": [
+        "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZTmKQiaVSbV8TExnmpX3CxS8kIXw37G8krH22OwWE9KUpeggKC6QkgJU17xmwibcmtGyp0nYmNFo9JA/640?wx_fmt=jpeg"
+      ],
+      "keyHighlights": [
+        "参访蜜雪冰城温县产业园及郑州总部",
+        "解码雪王IP打造与全球化平价扩张路径",
+        "变革管理模块课程 & 头脑风暴实战推演",
+        "YCA郑州会员「宋风雅宴」接风跨社群交流",
+        "Mini-EMBA13期与YOLO+联合标杆学习"
+      ],
+      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZTmKQiaVSbV8TExnmpX3CxS8kIXw37G8krH22OwWE9KUpeggKC6QkgJU17xmwibcmtGyp0nYmNFo9JA/640?wx_fmt=jpeg",
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiatong",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-linda",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah-p30",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2025-middleeast",
+      "title": "YOLO+ 中东海外游学",
+      "summary": "9月28日至10月3日，47位企业家横跨沙特、阿联酋6天访学：利雅得对话美团Keeta、联想、极兔等中国出海企业；迪拜探访Mashreq银行、Emaar、腾讯云；阿布扎比体验清真寺与卢浮宫，全面解锁中东市场新机遇。",
+      "date": "2025-09",
+      "location": "中东",
+      "type": "travel",
+      "collectiveActivity": true,
+      "images": [
+        "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZSvO40yqvyFaplJLJWV1wFdKiajENC2CXTjPxoiaqg5knn5pPImcwBe1hhcyOsicMPNpUIOQ5ZXicgSyA/640?wx_fmt=jpeg"
+      ],
+      "keyHighlights": [
+        "利雅得：对话美团Keeta/联想/极兔等中国出海企业",
+        "迪拜：探访Mashreq银行/Emaar地产/腾讯云",
+        "阿布扎比：谢赫扎耶德清真寺 & 阿布扎比卢浮宫",
+        "杰瑞集团灯塔分享 & 私董会跨界交流",
+        "横跨沙特+阿联酋2国3城，47位企业家同行"
+      ],
+      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZSvO40yqvyFaplJLJWV1wFdKiajENC2CXTjPxoiaqg5knn5pPImcwBe1hhcyOsicMPNpUIOQ5ZXicgSyA/640?wx_fmt=jpeg",
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiatong",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-linda",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah-p30",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2025-suzhou",
+      "title": "YOLO+ 苏州年会",
+      "summary": "11月14—15日，第十六届中国组织能力高峰论坛暨2025YCA年会在苏州太湖畅隆重开幕，近200位嘉宾以「大变局下行稳致远」为题，聚焦AI企业落地实践与宏观经济研判，共同探讨企业穿越周期的长效增长路径。",
+      "date": "2025-11",
+      "location": "苏州",
+      "type": "annual",
+      "collectiveActivity": true,
+      "images": [
+        "https://mmbiz.qpic.cn/sz_mmbiz_png/xeuxIvQA9ZSXQE21tUrXM61lyNkkylK39INqpU3eUFSFB6zFAHPwTmaMS7vNCxjcXgd7Rk7sNUZZEjhzrrqfZA/640?wx_fmt=png&from=appmsg"
+      ],
+      "keyHighlights": [
+        "第十六届中国组织能力高峰论坛，苏州太湖之滨",
+        "核心议题：AI技术企业落地 & 大变局宏观经济研判",
+        "杨三角理论（战略×组织能力）深度研习",
+        "70位YCA核心会员 + 20余位YOLO+新生代齐聚",
+        "2025 YCA年会：企业穿越周期长效增长路径"
+      ],
+      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_png/xeuxIvQA9ZSXQE21tUrXM61lyNkkylK39INqpU3eUFSFB6zFAHPwTmaMS7vNCxjcXgd7Rk7sNUZZEjhzrrqfZA/640?wx_fmt=png&from=appmsg",
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiatong",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-linda",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah-p30",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2025-shanghai-group",
+      "title": "YOLO+ 上海小组活动",
+      "summary": "2025年12月上海小组聚会，年末深度交流。",
+      "date": "2025-12",
+      "location": "上海",
+      "type": "activity",
+      "collectiveActivity": false,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiatong",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-linda",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2025-guangdong-group",
+      "title": "YOLO+ 大湾区小组活动",
+      "summary": "2025年12月大湾区小组聚会，探讨湾区机遇与年末回顾。",
+      "date": "2025-12",
+      "location": "广州/深圳",
+      "type": "activity",
+      "collectiveActivity": false,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah-p30",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2026-wuyishan",
+      "title": "YOLO+ 武夷山区域活动",
+      "summary": "三月YOLO+赴武夷山开启「以茶为媒」深度之旅：赴黄坑茶园体验萎凋到焙火全工序、亲手采摘摇青体验非遗技艺；晚宿理事Sean开设「AI前沿洞察」交流局，在武夷山世界双遗产山水间融合茶文化探索与AI时代思考。",
+      "date": "2026-03",
+      "location": "武夷山",
+      "type": "activity",
+      "collectiveActivity": true,
+      "images": [
+        "https://mmbiz.qpic.cn/sz_mmbiz_png/btLkCxjz5dKZ17smpLwBrlXkALPic0NDq9f30aHIiaZ2PvHH3zTnJChoBDoJCRwvu3NZbQ3HrwgwfU3KKNb8xrj1762VjsB0WOWNrxZfDCiaak/640?wx_fmt=png"
+      ],
+      "keyHighlights": [
+        "黄坑茶园参访：萎凋→做青→焙火全工序体验",
+        "亲手采摘鲜叶 & 非遗摇青技艺体验",
+        "Sean理事分享AI前沿洞察 & AI与传统行业碰撞",
+        "千年红豆杉 & 武夷山世界双遗产自然探索",
+        "两代茶人故事分享 & 会员深度情谊沉淀"
+      ],
+      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_png/btLkCxjz5dKZ17smpLwBrlXkALPic0NDq9f30aHIiaZ2PvHH3zTnJChoBDoJCRwvu3NZbQ3HrwgwfU3KKNb8xrj1762VjsB0WOWNrxZfDCiaak/640?wx_fmt=png",
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-peter",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-amber",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-kevin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jackson",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah-p30",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weijie",
+          "role": ""
+        }
+      ]
+    }
+  ]
+}

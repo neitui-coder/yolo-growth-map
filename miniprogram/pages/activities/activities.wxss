@@ -1,0 +1,305 @@
+page {
+  background: #f8fafc;
+}
+
+.activities-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding-bottom: 60rpx;
+}
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  padding: 24rpx 32rpx 24rpx;
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 55%, #2563eb 100%);
+  box-shadow: 0 12rpx 32rpx rgba(15, 23, 42, 0.18);
+}
+
+.nav-title {
+  font-size: 38rpx;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1rpx;
+  line-height: 1.2;
+}
+
+.nav-subtitle {
+  margin-top: 6rpx;
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 500;
+}
+
+.year-filter {
+  padding: 20rpx 24rpx 0;
+  white-space: nowrap;
+}
+
+.year-filter-inner {
+  display: inline-flex;
+  gap: 14rpx;
+  padding-bottom: 4rpx;
+}
+
+.year-pill {
+  display: inline-block;
+  padding: 12rpx 28rpx;
+  border-radius: 999rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  border: 1rpx solid #dbe4f0;
+  background: #fff;
+  color: #64748b;
+  transition: all 0.15s;
+}
+
+.year-pill.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.activity-count {
+  padding: 16rpx 32rpx 8rpx;
+  font-size: 22rpx;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.card-list {
+  padding: 8rpx 24rpx 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.activity-card {
+  background: #fff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 24rpx rgba(15, 23, 42, 0.07);
+  border: 1rpx solid rgba(226, 232, 240, 0.8);
+}
+
+.card-cover-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  background: #dbeafe;
+}
+
+.card-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-cover-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.card-cover-placeholder-text {
+  font-size: 36rpx;
+  font-weight: 800;
+  color: #2563eb;
+  opacity: 0.4;
+}
+
+.card-date-badge {
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+  padding: 6rpx 16rpx;
+  border-radius: 999rpx;
+  background: rgba(15, 23, 42, 0.62);
+  color: #fff;
+  font-size: 22rpx;
+  font-weight: 700;
+  backdrop-filter: blur(8rpx);
+}
+
+.card-type-pill {
+  position: absolute;
+  top: 16rpx;
+  right: 16rpx;
+  padding: 6rpx 16rpx;
+  border-radius: 999rpx;
+  background: rgba(37, 99, 235, 0.82);
+  color: #fff;
+  font-size: 20rpx;
+  font-weight: 600;
+  backdrop-filter: blur(8rpx);
+}
+
+.card-body {
+  padding: 24rpx 24rpx 20rpx;
+}
+
+.card-title {
+  font-size: 30rpx;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+.card-summary {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #475569;
+  line-height: 1.6;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18rpx;
+  gap: 16rpx;
+}
+
+.card-location {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  color: #64748b;
+  font-size: 23rpx;
+}
+
+.card-location-dot {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: #2563eb;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.card-participants {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+  flex-shrink: 0;
+}
+
+.avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-item {
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 50%;
+  border: 3rpx solid #fff;
+  margin-left: -10rpx;
+  background: #dbeafe;
+}
+
+.avatar-item:first-child {
+  margin-left: 0;
+}
+
+.participant-label {
+  font-size: 22rpx;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.empty-state {
+  padding: 80rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.empty-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.empty-sub {
+  font-size: 24rpx;
+  color: #94a3b8;
+}
+
+.activities-skeleton {
+  padding: 16rpx 24rpx;
+}
+
+.skeleton-filter-row {
+  display: flex;
+  gap: 14rpx;
+  margin-bottom: 24rpx;
+}
+
+.skeleton-pill,
+.skeleton-line,
+.skeleton-cover {
+  background: linear-gradient(90deg, #eef4ff 25%, #ffffff 45%, #eef4ff 65%);
+  background-size: 240% 100%;
+  animation: sk 1.2s ease infinite;
+  border-radius: 16rpx;
+}
+
+@keyframes sk {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+.skeleton-pill {
+  width: 100rpx;
+  height: 56rpx;
+  border-radius: 999rpx;
+}
+
+.skeleton-card {
+  background: #fff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(15, 23, 42, 0.05);
+}
+
+.skeleton-cover {
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 0;
+}
+
+.skeleton-body {
+  padding: 24rpx;
+}
+
+.skeleton-line {
+  height: 26rpx;
+  border-radius: 999rpx;
+  margin-bottom: 16rpx;
+}
+
+.skeleton-line-title {
+  width: 75%;
+  height: 32rpx;
+}
+
+.skeleton-line-mid {
+  width: 90%;
+}
+
+.skeleton-line-short {
+  width: 50%;
+}

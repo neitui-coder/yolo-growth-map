@@ -41,9 +41,6 @@
   </view>
 </view>
 
-<!-- 初始化云数据库（临时入口） -->
-<button class="btn-seed" bindtap="onSeedData" wx:if="{{!seeded}}">初始化云数据库</button>
-
 <!-- 功能入口 -->
 <view class="me-menu">
   <view wx:if="{{!isOperatorView}}" class="me-menu-item" bindtap="onViewProfile">

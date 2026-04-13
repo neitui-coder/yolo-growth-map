@@ -750,6 +750,13 @@ Page({
     });
     if (!node) return;
 
+    if (node.activityKey) {
+      wx.navigateTo({
+        url: "/pages/activity-detail/activity-detail?activityKey=" + node.activityKey,
+      });
+      return;
+    }
+
     if (node.type === "activity" && !this.data.canManageProfile) {
       this._showActivityDetail(node);
       return;

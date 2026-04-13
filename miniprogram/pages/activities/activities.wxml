@@ -1,0 +1,95 @@
+<view class="activities-page">
+  <view class="nav-bar" style="padding-top: {{navPaddingTop}}px;">
+    <view class="nav-title">YOLO+ 活动</view>
+    <view class="nav-subtitle">{{totalCount}} 场精彩活动</view>
+  </view>
+
+  <view wx:if="{{pageLoading}}" class="activities-skeleton">
+    <view class="skeleton-filter-row">
+      <view wx:for="{{yearOptions}}" wx:key="*this" class="skeleton-pill"></view>
+    </view>
+    <view wx:for="{{skeletonItems}}" wx:key="*this" class="skeleton-card">
+      <view class="skeleton-cover"></view>
+      <view class="skeleton-body">
+        <view class="skeleton-line skeleton-line-title"></view>
+        <view class="skeleton-line skeleton-line-mid"></view>
+        <view class="skeleton-line skeleton-line-short"></view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else>
+    <scroll-view class="year-filter" scroll-x="true" enhanced="true" show-scrollbar="{{false}}">
+      <view class="year-filter-inner">
+        <view
+          wx:for="{{yearOptions}}"
+          wx:key="*this"
+          class="year-pill {{activeYear === item ? 'active' : ''}}"
+          bindtap="onYearTap"
+          data-year="{{item}}"
+        >{{item}}</view>
+      </view>
+    </scroll-view>
+
+    <view class="activity-count">
+      <text>共 {{filteredActivities.length}} 场活动</text>
+    </view>
+
+    <view wx:if="{{filteredActivities.length > 0}}" class="card-list">
+      <view
+        wx:for="{{filteredActivities}}"
+        wx:key="activityKey"
+        class="activity-card"
+        bindtap="onCardTap"
+        data-activity-key="{{item.activityKey}}"
+      >
+        <view class="card-cover-wrap">
+          <image
+            wx:if="{{item.coverUrl}}"
+            class="card-cover"
+            src="{{item.coverUrl}}"
+            mode="aspectFill"
+            lazy-load="true"
+          />
+          <view wx:else class="card-cover card-cover-placeholder">
+            <text class="card-cover-placeholder-text">YOLO+</text>
+          </view>
+          <view class="card-date-badge">{{item.yearMonth}}</view>
+          <view wx:if="{{item.type}}" class="card-type-pill">{{item.type === 'activity' ? '集体活动' : item.type}}</view>
+        </view>
+
+        <view class="card-body">
+          <view class="card-title">{{item.title}}</view>
+          <view wx:if="{{item.summary}}" class="card-summary">{{item.summary}}</view>
+
+          <view class="card-footer">
+            <view class="card-location" wx:if="{{item.location}}">
+              <text class="card-location-dot"></text>
+              <text>{{item.location}}</text>
+            </view>
+
+            <view class="card-participants" wx:if="{{item.participantCount > 0}}">
+              <view class="avatar-stack">
+                <image
+                  wx:for="{{item.avatarStack}}"
+                  wx:key="userId"
+                  wx:for-item="p"
+                  class="avatar-item"
+                  src="{{p.avatarUrl}}"
+                  mode="aspectFill"
+                  lazy-load="true"
+                />
+              </view>
+              <text class="participant-label">{{item.participantCount}} 人参与</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:else class="empty-state">
+      <text class="empty-title">暂无活动记录</text>
+      <text class="empty-sub">换个年份试试</text>
+    </view>
+  </view>
+</view>

@@ -718,18 +718,26 @@ App({
 
       if (util.isBirthdayInCurrentMonth(user)) {
         var parsedBirthday = util.parseBirthday(user.birthday) || {};
+        var birthdayMessages = [
+          '我过生日啦~',
+          '今天生日，来许个愿吧。',
+          '我生日到啦！',
+          '本月小主角登场。',
+          '生日月，请多关照。'
+        ];
+        var mi = Math.abs((userId || '').split('').reduce(function (s, c) { return s + c.charCodeAt(0); }, 0)) % birthdayMessages.length;
         feedItems.push({
           key: 'birthday_' + userId,
           feedType: 'birthday',
           date: currentYear + '-' + String(parsedBirthday.month || 1).padStart(2, '0') + '-' + String(parsedBirthday.day || 1).padStart(2, '0'),
           dateLabel: '本月生日 · ' + (user.birthday || ''),
-          content: author.name + ' 本月过生日，记得去送一句祝福。',
+          content: birthdayMessages[mi],
           images: [],
           author: author,
           typeLabel: '生日',
-          participants: [author],
-          participantCount: 1,
-          participantPreview: [author],
+          participants: [],
+          participantCount: 0,
+          participantPreview: [],
           extraParticipantCount: 0,
           likesCount: 0,
           commentsCount: 0

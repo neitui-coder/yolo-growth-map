@@ -1,0 +1,110 @@
+<view class="detail-page">
+  <view wx:if="{{pageLoading}}" class="detail-skeleton">
+    <view class="sk-hero"></view>
+    <view class="sk-body">
+      <view class="sk-line sk-line-lg"></view>
+      <view class="sk-line sk-line-md"></view>
+      <view class="sk-line sk-line-sm"></view>
+    </view>
+  </view>
+
+  <block wx:elif="{{activity}}">
+    <view class="nav-bar" style="padding-top: {{navPaddingTop}}px;">
+      <view class="nav-back" bindtap="onGoBack">
+        <text class="nav-back-icon">←</text>
+      </view>
+      <view class="nav-title-text">活动详情</view>
+    </view>
+
+    <view class="hero-wrap">
+      <image
+        wx:if="{{activity.coverUrl}}"
+        class="hero-image"
+        src="{{activity.coverUrl}}"
+        mode="aspectFill"
+        lazy-load="false"
+      />
+      <view wx:else class="hero-image hero-placeholder">
+        <text class="hero-placeholder-text">YOLO+</text>
+      </view>
+      <view class="hero-overlay">
+        <view class="hero-title">{{activity.title}}</view>
+        <view class="hero-meta">
+          <text wx:if="{{activity.dateFormatted}}">{{activity.dateFormatted}}</text>
+          <text wx:if="{{activity.location}}" class="hero-meta-sep">·</text>
+          <text wx:if="{{activity.location}}">{{activity.location}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="content-body">
+      <view wx:if="{{activity.summary}}" class="summary-card">
+        <view class="summary-border"></view>
+        <view class="summary-text">{{activity.summary}}</view>
+      </view>
+
+      <view wx:if="{{activity.keyHighlights && activity.keyHighlights.length > 0}}" class="section">
+        <view class="section-title">活动亮点</view>
+        <view class="highlights-list">
+          <view
+            wx:for="{{activity.keyHighlights}}"
+            wx:key="*this"
+            class="highlight-item"
+          >
+            <view class="highlight-dot"></view>
+            <text class="highlight-text">{{item}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{displayParticipants.length > 0}}" class="section">
+        <view class="section-title">参与者 <text class="section-count">{{displayParticipants.length}} 人</text></view>
+        <view class="participants-grid">
+          <view
+            wx:for="{{displayParticipants}}"
+            wx:key="userId"
+            class="participant-item"
+          >
+            <image
+              wx:if="{{item.avatarUrl}}"
+              class="participant-avatar"
+              src="{{item.avatarUrl}}"
+              mode="aspectFill"
+              lazy-load="true"
+            />
+            <view wx:else class="participant-avatar participant-avatar-placeholder">
+              <text>{{item.name ? item.name[0] : '?'}}</text>
+            </view>
+            <text class="participant-name">{{item.name}}</text>
+            <text wx:if="{{item.role}}" class="participant-role">{{item.role}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{displayImages.length > 0}}" class="section">
+        <view class="section-title">照片 <text class="section-count">{{displayImages.length}} 张</text></view>
+        <view class="photos-grid">
+          <view
+            wx:for="{{displayImages}}"
+            wx:key="*this"
+            wx:for-index="imgIndex"
+            class="photo-wrap"
+            bindtap="onImageTap"
+            data-index="{{imgIndex}}"
+          >
+            <image class="photo-image" src="{{item}}" mode="aspectFill" lazy-load="true" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="back-btn-wrap">
+      <view class="back-btn" bindtap="onGoBack">返回上页</view>
+    </view>
+  </block>
+
+  <view wx:else class="not-found">
+    <text class="not-found-text">活动不存在</text>
+    <view class="back-btn" bindtap="onGoBack">返回上页</view>
+  </view>
+</view>

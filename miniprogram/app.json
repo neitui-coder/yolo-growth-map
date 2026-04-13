@@ -4,6 +4,8 @@
     "pages/index/index",
     "pages/me/me",
     "pages/community/community",
+    "pages/activities/activities",
+    "pages/activity-detail/activity-detail",
     "pages/profile/profile",
     "pages/edit/edit",
     "pages/edit-profile/edit-profile"
@@ -32,6 +34,12 @@
         "text": "社区",
         "iconPath": "images/tab-community.png",
         "selectedIconPath": "images/tab-community-active.png"
+      },
+      {
+        "pagePath": "pages/activities/activities",
+        "text": "活动",
+        "iconPath": "images/tab-activity.png",
+        "selectedIconPath": "images/tab-activity-active.png"
       },
       {
         "pagePath": "pages/me/me",

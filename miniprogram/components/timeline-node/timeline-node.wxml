@@ -36,7 +36,6 @@
           class="tl-participant-avatar"
           src="{{item.avatarUrl}}"
           mode="aspectFill"
-          lazy-load="true"
         />
       </view>
       <text class="tl-participant-count">{{participantCount}} 人参加</text>
@@ -96,7 +95,6 @@
           class="tl-participant-avatar"
           src="{{item.avatarUrl}}"
           mode="aspectFill"
-          lazy-load="true"
         />
       </view>
       <text class="tl-participant-count">{{participantCount}} 人参加</text>

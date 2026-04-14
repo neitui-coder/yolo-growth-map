@@ -3,7 +3,7 @@ var app = getApp();
 
 Page({
   data: {
-    homeMode: "mock",
+    homeMode: "real",
     operatorModeActive: false,
     dataTypeLoading: false,
     pageLoading: true,
@@ -54,7 +54,7 @@ Page({
     };
     this.setData({
       navPaddingTop: (app.globalData.statusBarHeight || 20) + 14,
-      homeMode: app.globalData.homeMode || "mock",
+      homeMode: app.globalData.homeMode || "real",
       operatorModeActive: app.isOperatorModeActive
         ? app.isOperatorModeActive()
         : !!app.globalData.operatorModeActive,
@@ -138,7 +138,7 @@ Page({
       (app.globalData.homeMode !== "mock") && (isOperator || isLishi);
 
     var nextData = {
-      homeMode: app.globalData.homeMode || "mock",
+      homeMode: app.globalData.homeMode || "real",
       operatorModeActive: isOperator,
       canViewAlumni: canViewAlumni,
       users: users,

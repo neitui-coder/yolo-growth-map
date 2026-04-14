@@ -8,25 +8,7 @@
     </view>
   </view>
 
-  <view class="mode-toggle">
-    <view
-      class="mode-chip {{homeMode === 'mock' ? 'active' : ''}} {{dataTypeLoading ? 'disabled' : ''}}"
-      bindtap="onToggleDataType"
-      data-mode="mock"
-    >模拟</view>
-    <view
-      class="mode-chip {{homeMode === 'real' ? 'active' : ''}} {{dataTypeLoading ? 'disabled' : ''}}"
-      bindtap="onToggleDataType"
-      data-mode="real"
-    >真实</view>
-    <view
-      class="mode-chip {{homeMode === 'operator' ? 'active' : ''}} {{dataTypeLoading ? 'disabled' : ''}}"
-      bindtap="onToggleDataType"
-      data-mode="operator"
-    >运营者</view>
-  </view>
-
-  <view wx:if="{{pageLoading}}" class="section-card skeleton-card">
+<view wx:if="{{pageLoading}}" class="section-card skeleton-card">
     <view class="skeleton-line skeleton-line-title"></view>
     <view class="skeleton-line"></view>
     <view class="skeleton-line skeleton-line-search"></view>

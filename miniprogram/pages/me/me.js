@@ -10,7 +10,9 @@ Page({
     completeness: 0,
     navPaddingTop: 20,
     seeded: false,
-    isOperatorView: false
+    isOperatorView: false,
+    canSwitchMode: false,
+    homeMode: 'real'
   },
 
   onLoad: function () {
@@ -20,11 +22,34 @@ Page({
   },
 
   onShow: function () {
+    this.setData({
+      canSwitchMode: app.canSwitchMode ? app.canSwitchMode() : false,
+      homeMode: app.globalData.homeMode || 'real'
+    });
     if (app.globalData.usersLoaded) {
       this._ensureMyUser();
     } else {
       app.onUsersLoaded(this._ensureMyUser.bind(this));
     }
+  },
+
+  onSwitchMode: function () {
+    if (!(app.canSwitchMode && app.canSwitchMode())) return;
+    var self = this;
+    wx.showActionSheet({
+      itemList: ['真实数据', '模拟演示', '运营者视角'],
+      success: function (res) {
+        var modes = ['real', 'mock', 'operator'];
+        var target = modes[res.tapIndex];
+        if (!target || target === app.globalData.homeMode) return;
+        wx.showLoading({ title: '切换中...' });
+        app.switchHomeMode(target, function () {
+          wx.hideLoading();
+          self.setData({ homeMode: app.globalData.homeMode });
+          wx.switchTab({ url: '/pages/index/index' });
+        });
+      }
+    });
   },
 
   _ensureMyUser: function () {
@@ -87,26 +112,4 @@ Page({
     });
   },
 
-  onSeedData: function () {
-    var self = this;
-    wx.showLoading({ title: '正在初始化...' });
-    wx.cloud.callFunction({
-      name: 'yoloFunctions',
-      data: { type: 'seedData', users: app.globalData.users },
-      success: function (res) {
-        wx.hideLoading();
-        if (res.result.success) {
-          wx.showToast({ title: '初始化成功！写入 ' + res.result.count + ' 条', icon: 'success' });
-          self.setData({ seeded: true });
-        } else {
-          wx.showToast({ title: res.result.error || '初始化失败', icon: 'none' });
-        }
-      },
-      fail: function (err) {
-        wx.hideLoading();
-        wx.showToast({ title: '调用失败', icon: 'error' });
-        console.error(err);
-      }
-    });
-  }
 });

@@ -62,4 +62,9 @@
     <text class="me-menu-icon">🛠️</text>
     <text class="me-menu-text">请从首页进入会员档案，直接维护成长地图</text>
   </view>
+  <view wx:if="{{canSwitchMode}}" class="me-menu-item" bindtap="onSwitchMode">
+    <text class="me-menu-icon">⚙️</text>
+    <text class="me-menu-text">切换数据模式（当前：{{homeMode === 'real' ? '真实' : (homeMode === 'mock' ? '模拟' : '运营者')}}）</text>
+    <text class="me-menu-arrow">▸</text>
+  </view>
 </view>

@@ -4,16 +4,19 @@ App({
   globalData: {
     statusBarHeight: 20,
     // 当前登录用户 ID
-    currentUserId: 'alex',
+    currentUserId: 'pdf2025-bill',
     // 当前选中查看的用户 ID
-    selectedUserId: 'alex',
+    selectedUserId: 'pdf2025-bill',
     defaultCurrentUserByMode: {
       mock: 'alex',
       real: 'pdf2025-bill',
       operator: '__operator__'
     },
     // 首页模式：'mock' | 'real' | 'operator'
-    homeMode: 'mock',
+    // 默认 real；仅 adminUserIds 内的账户能切到 mock/operator
+    homeMode: 'real',
+    // 可切换模式的管理员白名单（等 wx.login 接入后改为 openId/unionid 校验）
+    adminUserIds: ['pdf2025-sean', 'pdf2025-bill'],
     // 数据类型：'mock'（模拟数据）| 'real'（真实数据）
     dataType: 'mock',
     // 运营者模式标记：operator 模式下为 true
@@ -126,7 +129,7 @@ App({
     }
     var sysInfo = wx.getSystemInfoSync();
     this.globalData.statusBarHeight = sysInfo.statusBarHeight || 20;
-    this.globalData.homeMode = this.globalData.homeMode || 'mock';
+    this.globalData.homeMode = this.globalData.homeMode || 'real';
     this.globalData.dataType = this.globalData.homeMode === 'mock' ? 'mock' : 'real';
     this.globalData.operatorModeActive = this.globalData.homeMode === 'operator';
     this.globalData.godViewEnabled = this.globalData.operatorModeActive;
@@ -549,6 +552,15 @@ App({
    */
   isOperatorModeActive: function () {
     return !!this.globalData.operatorModeActive;
+  },
+
+  /**
+   * 当前账户是否有权切换 mock/real/operator 模式
+   * 等 wx.login 接入后改为 openId/unionid 校验
+   */
+  canSwitchMode: function () {
+    var list = this.globalData.adminUserIds || [];
+    return list.indexOf(this.globalData.currentUserId) !== -1;
   },
 
   /**

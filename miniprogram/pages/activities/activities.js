@@ -1,5 +1,11 @@
 var app = getApp();
 
+var TYPE_META = {
+  activity: { emoji: "🤝", label: "集体活动" },
+  travel:   { emoji: "🌍", label: "游学" },
+  annual:   { emoji: "🎉", label: "年会" },
+};
+
 Page({
   data: {
     pageLoading: true,
@@ -60,6 +66,7 @@ Page({
       var monthStr = (act.date || "").slice(5, 7);
       var yearMonth = yearStr && monthStr ? yearStr + " / " + monthStr : act.date || "";
 
+      var typeMeta = TYPE_META[act.type] || TYPE_META.activity;
       return Object.assign({}, act, {
         coverUrl: coverUrl,
         participantCount: participants.length,
@@ -67,6 +74,8 @@ Page({
         extraAvatarCount: Math.max(participants.length - 4, 0),
         yearStr: yearStr,
         yearMonth: yearMonth,
+        typeEmoji: typeMeta.emoji,
+        typeLabel: typeMeta.label,
       });
     });
 

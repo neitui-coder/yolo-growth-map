@@ -51,11 +51,13 @@
             mode="aspectFill"
             lazy-load="true"
           />
-          <view wx:else class="card-cover card-cover-placeholder">
-            <text class="card-cover-placeholder-text">YOLO+</text>
+          <view wx:else class="card-cover card-cover-placeholder card-cover-placeholder-{{item.type || 'activity'}}">
+            <text class="card-cover-placeholder-emoji">{{item.typeEmoji}}</text>
+            <text class="card-cover-placeholder-text">{{item.typeLabel}}</text>
+            <text class="card-cover-placeholder-sub">{{item.yearMonth}}</text>
           </view>
           <view class="card-date-badge">{{item.yearMonth}}</view>
-          <view wx:if="{{item.type}}" class="card-type-pill">{{item.type === 'activity' ? '集体活动' : item.type}}</view>
+          <view wx:if="{{item.type}}" class="card-type-pill">{{item.typeLabel}}</view>
         </view>
 
         <view class="card-body">

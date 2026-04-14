@@ -23,9 +23,11 @@
         src="{{activity.coverUrl}}"
         mode="aspectFill"
         lazy-load="false"
+        bindtap="onHeroTap"
       />
-      <view wx:else class="hero-image hero-placeholder">
-        <text class="hero-placeholder-text">YOLO+</text>
+      <view wx:else class="hero-image hero-placeholder hero-placeholder-{{activity.type || 'activity'}}">
+        <text class="hero-placeholder-emoji">{{activity.typeEmoji || '📍'}}</text>
+        <text class="hero-placeholder-text">{{activity.typeLabel || 'YOLO+'}}</text>
       </view>
       <view class="hero-overlay">
         <view class="hero-title">{{activity.title}}</view>

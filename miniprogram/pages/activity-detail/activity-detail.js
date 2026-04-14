@@ -1,6 +1,12 @@
 var util = require("../../utils/util.js");
 var app = getApp();
 
+var TYPE_META = {
+  activity: { emoji: "🤝", label: "集体活动" },
+  travel:   { emoji: "🌍", label: "游学" },
+  annual:   { emoji: "🎉", label: "年会" },
+};
+
 Page({
   data: {
     pageLoading: true,
@@ -67,10 +73,13 @@ Page({
       ? util.formatDate(act.date)
       : act.date || "";
 
+    var typeMeta = TYPE_META[act.type] || TYPE_META.activity;
     var activity = Object.assign({}, act, {
       coverUrl: coverUrl,
       dateFormatted: dateFormatted,
       keyHighlights: act.keyHighlights || [],
+      typeEmoji: typeMeta.emoji,
+      typeLabel: typeMeta.label,
     });
 
     var allRefs = [act.coverImage]
@@ -116,6 +125,13 @@ Page({
       current: images[index] || images[0],
       urls: images,
     });
+  },
+
+  onHeroTap: function () {
+    var cover = this.data.activity && this.data.activity.coverUrl;
+    if (!cover) return;
+    var all = [cover].concat(this.data.displayImages || []);
+    wx.previewImage({ current: cover, urls: all });
   },
 
   onGoBack: function () {

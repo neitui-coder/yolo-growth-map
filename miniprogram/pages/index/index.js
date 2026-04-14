@@ -206,10 +206,12 @@ Page({
     var showAlumni = !!this.data.showAlumni;
 
     var filtered = allUsers.filter(function (u) {
-      // Alumni filter: hide alumni unless toggle is on
-      if (!showAlumni && u.memberStatus === "alumni") {
-        return false;
-      }
+      // Alumni filter:
+      //   toggle OFF (default) → 只展示现会员（隐藏 alumni）
+      //   toggle ON             → 只展示往届会员（隐藏现会员）
+      var isAlumni = u.memberStatus === "alumni";
+      if (showAlumni && !isAlumni) return false;
+      if (!showAlumni && isAlumni) return false;
       if (searchField && searchValue) {
         if (!this._matchesScopedSearch(u, searchField, searchValue)) {
           return false;

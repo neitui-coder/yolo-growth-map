@@ -5,6 +5,9 @@ const _ = db.command;
 
 exports.main = async (event, context) => {
   switch (event.type) {
+    // --- wechat auth ---
+    case 'loginWechat':     return await loginWechat(event);
+    case 'bindWechat':      return await bindWechat(event);
     // --- activities ---
     case 'getActivities':   return await getActivities(event);
     case 'seedActivities':  return await seedActivities(event);
@@ -29,6 +32,43 @@ exports.main = async (event, context) => {
     case 'updateById':    return await updateById(event);
     default: return { success: false, error: 'unknown type' };
   }
+};
+
+// 微信登录：通过 cloud context 取到 openId/unionid，查 users 集合是否已绑定
+const loginWechat = async () => {
+  const { OPENID, UNIONID } = cloud.getWXContext();
+  if (!OPENID) return { success: false, error: 'no OPENID in context' };
+  const query = UNIONID
+    ? _.or([{ wechatOpenId: OPENID }, { wechatUnionId: UNIONID }])
+    : { wechatOpenId: OPENID };
+  const res = await db.collection('users').where(query).limit(1).get();
+  const bound = res.data && res.data[0];
+  return {
+    success: true,
+    openId: OPENID,
+    unionId: UNIONID || '',
+    bound: bound ? { userId: bound.userId, name: bound.name } : null
+  };
+};
+
+// 绑定：将当前 openId/unionid 写入指定 userId 的 users 记录
+// event.userId 必填；调用者应先通过 loginWechat 确认自己是该 userId 的归属
+const bindWechat = async (event) => {
+  const { OPENID, UNIONID } = cloud.getWXContext();
+  if (!OPENID) return { success: false, error: 'no OPENID in context' };
+  if (!event.userId) return { success: false, error: 'userId required' };
+  const existing = await db.collection('users')
+    .where({ wechatOpenId: OPENID })
+    .limit(1).get();
+  if (existing.data && existing.data[0] && existing.data[0].userId !== event.userId) {
+    return { success: false, error: '该微信号已绑定其他账户: ' + existing.data[0].userId };
+  }
+  const update = { wechatOpenId: OPENID };
+  if (UNIONID) update.wechatUnionId = UNIONID;
+  const r = await db.collection('users')
+    .where({ userId: event.userId })
+    .update({ data: update });
+  return { success: r.stats.updated > 0, updated: r.stats.updated, openId: OPENID };
 };
 
 // 前端传用户数据上来写入，防止重复 seed

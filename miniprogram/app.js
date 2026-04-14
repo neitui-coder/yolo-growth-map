@@ -15,8 +15,10 @@ App({
     // 首页模式：'mock' | 'real' | 'operator'
     // 默认 real；仅 adminUserIds 内的账户能切到 mock/operator
     homeMode: 'real',
-    // 可切换模式的管理员白名单（等 wx.login 接入后改为 openId/unionid 校验）
-    adminUserIds: ['pdf2025-sean', 'pdf2025-bill'],
+    // 可切换模式的管理员白名单
+    // 当前基于 userId；wx.login 接入后改为从 adminOpenIds 查 openId/unionid
+    adminUserIds: ['pdf2025-sean'],
+    adminOpenIds: ['oR4Gr5AfM4rgKhFwd6HsK7QWDNG0'],
     // 数据类型：'mock'（模拟数据）| 'real'（真实数据）
     dataType: 'mock',
     // 运营者模式标记：operator 模式下为 true
@@ -115,7 +117,10 @@ App({
     usersByMode: {},
     // 活动 collection 缓存（共享，全局）
     activitiesCache: null,
-    activitiesCachedAt: 0
+    activitiesCachedAt: 0,
+    // 微信登录状态
+    currentOpenId: '',
+    currentUnionId: ''
   },
 
   onLaunch: function () {
@@ -134,6 +139,39 @@ App({
     this.globalData.operatorModeActive = this.globalData.homeMode === 'operator';
     this.globalData.godViewEnabled = this.globalData.operatorModeActive;
     this._loadUsersFromCloud(true);
+    this._loginWechat();
+  },
+
+  _loginWechat: function () {
+    var that = this;
+    if (!wx.cloud) return;
+    wx.cloud.callFunction({
+      name: 'yoloFunctions',
+      data: { type: 'loginWechat' }
+    }).then(function (res) {
+      var r = res && res.result;
+      if (!r || !r.success) return;
+      that.globalData.currentOpenId = r.openId;
+      that.globalData.currentUnionId = r.unionId;
+      if (r.bound && r.bound.userId) {
+        that.globalData.currentUserId = r.bound.userId;
+        that.globalData.selectedUserId = r.bound.userId;
+      }
+      if (that._onWechatLoginCallbacks) {
+        var cbs = that._onWechatLoginCallbacks.slice();
+        that._onWechatLoginCallbacks = [];
+        cbs.forEach(function (cb) { try { cb(r); } catch (e) {} });
+      }
+    }).catch(function (err) {
+      console.warn('loginWechat failed', err);
+    });
+  },
+
+  bindCurrentUserToWechat: function (userId) {
+    return wx.cloud.callFunction({
+      name: 'yoloFunctions',
+      data: { type: 'bindWechat', userId: userId }
+    }).then(function (res) { return res && res.result; });
   },
 
   /**
@@ -559,6 +597,11 @@ App({
    * 等 wx.login 接入后改为 openId/unionid 校验
    */
   canSwitchMode: function () {
+    var openId = this.globalData.currentOpenId;
+    if (openId) {
+      var openList = this.globalData.adminOpenIds || [];
+      if (openList.indexOf(openId) !== -1) return true;
+    }
     var list = this.globalData.adminUserIds || [];
     return list.indexOf(this.globalData.currentUserId) !== -1;
   },

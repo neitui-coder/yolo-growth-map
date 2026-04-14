@@ -129,6 +129,7 @@ Page({
           title: act.title,
           summary: act.summary,
           location: act.location,
+          date: node.date || act.date || node.joinedDate,
           images: (node.images && node.images.length) ? node.images : (act.images || []),
           keyHighlights: act.keyHighlights || node.keyHighlights || [],
           coverImage: act.coverImage,
@@ -136,7 +137,7 @@ Page({
           type: node.type || act.type
         });
       }
-      return node;
+      return Object.assign({}, node, { date: node.date || node.joinedDate });
     });
     var canManageProfile = this.data.canManageProfile;
     var sortedNodes = this._buildDisplayNodes({ nodes: enrichedNodes }, canManageProfile);

@@ -15,6 +15,11 @@ App({
     // 登录网关状态
     authReady: false,
     authBound: false,
+    // ⚠️ 临时开关：测试期允许未绑定微信号的访客直接查看全部内容
+    // 上线前必须改回 false 恢复强制登录网关
+    TEST_BYPASS_AUTH: true,
+    // 测试期访客兜底 userId（当 TEST_BYPASS_AUTH=true 且未绑定时使用）
+    TEST_GUEST_USER_ID: 'pdf2025-bill',
     // 首页模式：'mock' | 'real' | 'operator'
     // 默认 real；仅 adminUserIds 内的账户能切到 mock/operator
     homeMode: 'real',
@@ -190,6 +195,15 @@ App({
   requireAuth: function (opts) {
     opts = opts || {};
     var that = this;
+    // 测试期绕过：不强制登录，未绑定访客用 TEST_GUEST_USER_ID 兜底
+    if (this.globalData.TEST_BYPASS_AUTH) {
+      if (!this.globalData.currentUserId) {
+        this.globalData.currentUserId = this.globalData.TEST_GUEST_USER_ID;
+        this.globalData.selectedUserId = this.globalData.TEST_GUEST_USER_ID;
+      }
+      if (opts.onReady) opts.onReady();
+      return true;
+    }
     // operator 模式允许管理员游览
     if (this.globalData.homeMode === 'operator') return true;
     var gate = function () {

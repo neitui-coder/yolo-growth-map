@@ -27,6 +27,10 @@ Page({
     this._loadActivity(activityKey);
   },
 
+  onShow: function () {
+    if (!app.requireAuth()) return;
+  },
+
   _loadActivity: function (activityKey) {
     var that = this;
     app.getActivitiesCache(function (acts) {

@@ -167,11 +167,27 @@ Page({
           skills: user.skills
         }
       },
-      fail: function (err) { console.error('updateUser profile sync failed', err); }
+      success: function (res) {
+        if (res && res.result && res.result.success) {
+          wx.showToast({ title: '已保存', icon: 'success' });
+          setTimeout(function () { wx.navigateBack(); }, 400);
+        } else {
+          wx.showModal({
+            title: '保存失败',
+            content: (res && res.result && res.result.error) || '云端返回异常，请重试',
+            showCancel: false
+          });
+        }
+      },
+      fail: function (err) {
+        console.error('updateUser profile sync failed', err);
+        wx.showModal({
+          title: '保存失败',
+          content: (err && err.errMsg) || '网络异常，请重试',
+          showCancel: false
+        });
+      }
     });
-
-    wx.showToast({ title: '已保存', icon: 'success' });
-    wx.navigateBack();
   },
 
   _splitToArray: function (str) {

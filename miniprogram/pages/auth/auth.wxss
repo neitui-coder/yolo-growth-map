@@ -1,0 +1,96 @@
+.auth-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-hero {
+  padding: 40rpx 48rpx 64rpx;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #fff;
+}
+.auth-brand { font-size: 34rpx; font-weight: 800; opacity: 0.85; letter-spacing: 2rpx; }
+.auth-title { font-size: 48rpx; font-weight: 800; margin-top: 16rpx; }
+.auth-sub { font-size: 26rpx; margin-top: 12rpx; opacity: 0.85; line-height: 1.5; }
+
+.auth-body {
+  flex: 1;
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.auth-search {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 28rpx;
+  padding: 20rpx 28rpx;
+  gap: 12rpx;
+  box-shadow: 0 2rpx 12rpx rgba(15, 23, 42, 0.04);
+}
+.search-icon { font-size: 28rpx; opacity: 0.55; }
+.search-input { flex: 1; font-size: 28rpx; color: #0f172a; }
+
+.auth-hint { padding: 40rpx; text-align: center; color: #64748b; font-size: 26rpx; }
+
+.auth-list { max-height: 60vh; }
+
+.auth-item {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx 24rpx;
+  margin-bottom: 12rpx;
+}
+.auth-item:active { background: #eff6ff; }
+
+.auth-item-avatar {
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #e2e8f0;
+}
+.auth-item-avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.auth-item-body { flex: 1; min-width: 0; }
+.auth-item-name {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.auth-item-en { color: #64748b; font-weight: 400; font-size: 26rpx; }
+.auth-item-sub {
+  font-size: 24rpx;
+  color: #64748b;
+  margin-top: 4rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.auth-item-arrow { color: #94a3b8; font-size: 32rpx; }
+
+.auth-footer {
+  padding: 40rpx 48rpx 60rpx;
+  text-align: center;
+}
+.auth-footer-text {
+  font-size: 24rpx;
+  color: #94a3b8;
+  line-height: 1.6;
+}

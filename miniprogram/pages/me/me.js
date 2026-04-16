@@ -22,6 +22,7 @@ Page({
   },
 
   onShow: function () {
+    if (!app.requireAuth()) return;
     this.setData({
       canSwitchMode: app.canSwitchMode ? app.canSwitchMode() : false,
       homeMode: app.globalData.homeMode || 'real'

@@ -24,6 +24,7 @@ Page({
   },
 
   onShow: function () {
+    if (!app.requireAuth()) return;
     if (!this.data.pageLoading && this.data.activities.length === 0) {
       this._loadActivities();
     }

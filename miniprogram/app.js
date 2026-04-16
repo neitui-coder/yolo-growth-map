@@ -3,15 +3,18 @@ var util = require('./utils/util.js');
 App({
   globalData: {
     statusBarHeight: 20,
-    // 当前登录用户 ID
-    currentUserId: 'pdf2025-bill',
+    // 当前登录用户 ID（空 = 未登录/未绑定，需要走 auth 流程）
+    currentUserId: '',
     // 当前选中查看的用户 ID
-    selectedUserId: 'pdf2025-bill',
+    selectedUserId: '',
+    // mock 模式用 alex；real/operator 由登录态决定
     defaultCurrentUserByMode: {
       mock: 'alex',
-      real: 'pdf2025-bill',
       operator: '__operator__'
     },
+    // 登录网关状态
+    authReady: false,
+    authBound: false,
     // 首页模式：'mock' | 'real' | 'operator'
     // 默认 real；仅 adminUserIds 内的账户能切到 mock/operator
     homeMode: 'real',
@@ -150,13 +153,21 @@ App({
       data: { type: 'loginWechat' }
     }).then(function (res) {
       var r = res && res.result;
-      if (!r || !r.success) return;
+      if (!r || !r.success) {
+        that.globalData.authReady = true;
+        that.globalData.authBound = false;
+        return;
+      }
       that.globalData.currentOpenId = r.openId;
       that.globalData.currentUnionId = r.unionId;
       if (r.bound && r.bound.userId) {
         that.globalData.currentUserId = r.bound.userId;
         that.globalData.selectedUserId = r.bound.userId;
+        that.globalData.authBound = true;
+      } else {
+        that.globalData.authBound = false;
       }
+      that.globalData.authReady = true;
       if (that._onWechatLoginCallbacks) {
         var cbs = that._onWechatLoginCallbacks.slice();
         that._onWechatLoginCallbacks = [];
@@ -164,7 +175,34 @@ App({
       }
     }).catch(function (err) {
       console.warn('loginWechat failed', err);
+      that.globalData.authReady = true;
+      that.globalData.authBound = false;
     });
+  },
+
+  onAuthReady: function (cb) {
+    if (this.globalData.authReady) { cb(); return; }
+    this._onWechatLoginCallbacks = this._onWechatLoginCallbacks || [];
+    this._onWechatLoginCallbacks.push(function () { cb(); });
+  },
+
+  // 页面在 onShow 中调用；未绑定 + 不在 operator 模式下 → 弹登录页
+  requireAuth: function (opts) {
+    opts = opts || {};
+    var that = this;
+    // operator 模式允许管理员游览
+    if (this.globalData.homeMode === 'operator') return true;
+    var gate = function () {
+      if (that.globalData.authBound) { if (opts.onReady) opts.onReady(); return; }
+      if (opts.onBlocked) opts.onBlocked();
+      wx.reLaunch({ url: '/pages/auth/auth' });
+    };
+    if (!this.globalData.authReady) {
+      this.onAuthReady(gate);
+    } else {
+      gate();
+    }
+    return this.globalData.authBound;
   },
 
   bindCurrentUserToWechat: function (userId) {
@@ -885,23 +923,46 @@ App({
     return payload;
   },
 
+  // 单一来源：activities.participants 决定谁参加了什么活动
+  // user.nodes 仅用于用户自己的时间线节点引用（activityKey），不用于反查参与者
   getActivityParticipants: function (targetNode) {
     var that = this;
-    if (!targetNode || (!targetNode.activityKey && targetNode.type !== 'activity' && !targetNode.collectiveActivity)) return [];
-    return (this.globalData.users || []).filter(function (user) {
-      return (user.nodes || []).some(function (node) {
-        if (targetNode.activityKey && node.activityKey) {
-          return node.activityKey === targetNode.activityKey;
-        }
-        return node.date === targetNode.date && node.desc === targetNode.desc && (node.type === targetNode.type || node.collectiveActivity);
+    if (!targetNode) return [];
+    var activityKey = targetNode.activityKey;
+    // 老数据（没有 activityKey）的兜底：仍按 date+desc 匹配
+    if (!activityKey) {
+      if (targetNode.type !== 'activity' && !targetNode.collectiveActivity) return [];
+      return (this.globalData.users || []).filter(function (user) {
+        return (user.nodes || []).some(function (node) {
+          return node.date === targetNode.date && node.desc === targetNode.desc && (node.type === targetNode.type || node.collectiveActivity);
+        });
+      }).map(function (user) {
+        return that._buildParticipant(user, null);
       });
-    }).map(function (user) {
-      return {
-        userId: user.userId || user.id,
-        name: user.name,
-        avatarUrl: that.getMediaUrl(user.avatarImage) || util.getAvatarUrl(user, 44)
-      };
+    }
+    var acts = this.globalData.activitiesCache || [];
+    var act = acts.find(function (a) { return a.activityKey === activityKey; });
+    var parts = (act && act.participants) || [];
+    var userMap = {};
+    (this.globalData.users || []).forEach(function (u) {
+      userMap[u.userId || u.id] = u;
     });
+    return parts
+      .map(function (p) {
+        var u = userMap[p.userId];
+        return u ? that._buildParticipant(u, p.role) : null;
+      })
+      .filter(Boolean);
+  },
+
+  _buildParticipant: function (user, role) {
+    return {
+      userId: user.userId || user.id,
+      name: user.name,
+      role: role || '',
+      avatarImage: user.avatarImage,
+      avatarUrl: this.getMediaUrl(user.avatarImage) || util.getAvatarUrl(user, 44)
+    };
   },
 
   /**

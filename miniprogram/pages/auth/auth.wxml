@@ -1,0 +1,51 @@
+<view class="auth-page">
+  <view class="auth-hero" style="padding-top: {{navPaddingTop}}px;">
+    <view class="auth-brand">YOLO+</view>
+    <view class="auth-title">请先绑定你的身份</view>
+    <view class="auth-sub">本小程序仅对 YOLO+ 内部开放。请从成员名单中选择你是谁。</view>
+  </view>
+
+  <view class="auth-body">
+    <view class="auth-search">
+      <text class="search-icon">🔍</text>
+      <input
+        class="search-input"
+        placeholder="输入姓名 / 英文名 / 公司搜索"
+        value="{{query}}"
+        bindinput="onSearchInput"
+        confirm-type="search"
+      />
+    </view>
+
+    <view wx:if="{{loading}}" class="auth-hint">加载成员列表中...</view>
+
+    <view wx:elif="{{!filtered.length}}" class="auth-hint">没找到匹配的成员。</view>
+
+    <scroll-view wx:else class="auth-list" scroll-y="true">
+      <view
+        wx:for="{{filtered}}"
+        wx:key="userId"
+        class="auth-item"
+        bindtap="onPickUser"
+        data-user-id="{{item.userId}}"
+      >
+        <image wx:if="{{item.avatarUrl}}" class="auth-item-avatar" src="{{item.avatarUrl}}" mode="aspectFill" />
+        <view wx:else class="auth-item-avatar auth-item-avatar-fallback">
+          <text>{{item.initial}}</text>
+        </view>
+        <view class="auth-item-body">
+          <view class="auth-item-name">
+            <text>{{item.name}}</text>
+            <text wx:if="{{item.englishName}}" class="auth-item-en"> · {{item.englishName}}</text>
+          </view>
+          <view class="auth-item-sub" wx:if="{{item.subtitle}}">{{item.subtitle}}</view>
+        </view>
+        <text class="auth-item-arrow">▸</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="auth-footer">
+    <text class="auth-footer-text">如名单中找不到自己，请联系 YOLO+ 管理员添加。</text>
+  </view>
+</view>

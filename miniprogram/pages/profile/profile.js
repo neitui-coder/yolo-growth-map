@@ -48,6 +48,7 @@ Page({
   },
 
   onShow: function () {
+    if (!app.requireAuth()) return;
     // 仅在未加载或 userId 变化时刷新，避免重复 setData
     if (!this._loaded || this.data.selectedUser.userId !== this.data.userId) {
       this._ensureUserReady();

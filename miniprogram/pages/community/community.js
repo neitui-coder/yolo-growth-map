@@ -37,6 +37,7 @@ Page({
   },
 
   onShow: function () {
+    if (!app.requireAuth()) return;
     if (app.globalData.usersLoaded) {
       this._ensureFeedUsers(false);
     }

@@ -68,6 +68,9 @@ Page({
       var yearMonth = yearStr && monthStr ? yearStr + " / " + monthStr : act.date || "";
 
       var typeMeta = TYPE_META[act.type] || TYPE_META.activity;
+      var dateLabel = act.dateRange
+        ? (yearStr ? yearStr + "年" + act.dateRange : act.dateRange)
+        : yearMonth;
       return Object.assign({}, act, {
         coverUrl: coverUrl,
         participantCount: participants.length,
@@ -75,6 +78,7 @@ Page({
         extraAvatarCount: Math.max(participants.length - 4, 0),
         yearStr: yearStr,
         yearMonth: yearMonth,
+        dateLabel: dateLabel,
         typeEmoji: typeMeta.emoji,
         typeLabel: typeMeta.label,
       });

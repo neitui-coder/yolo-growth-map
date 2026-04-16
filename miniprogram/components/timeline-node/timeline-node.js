@@ -113,9 +113,13 @@ Component({
     'node, index': function (node, index) {
       if (!node) return;
       var activityMetaItems = node.type === 'activity' ? buildActivityMeta(node) : [];
+      var year = (node.date || '').slice(0, 4);
+      var formatted = node.dateRange
+        ? (year ? year + '年' + node.dateRange : node.dateRange)
+        : (node.date ? util.formatDate(node.date) : '');
 
       this.setData({
-        formattedDate: node.date ? util.formatDate(node.date) : '',
+        formattedDate: formatted,
         isOdd: index % 2 === 0,
         activityMetaItems: activityMetaItems,
         hasActivityMeta: activityMetaItems.length > 0,

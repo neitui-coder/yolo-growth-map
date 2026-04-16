@@ -73,9 +73,13 @@ Page({
       ? app.getMediaUrl(act.coverImage) || act.coverImage || ""
       : act.coverImage || "";
 
-    var dateFormatted = util.formatDate
+    var baseDateLabel = util.formatDate
       ? util.formatDate(act.date)
       : act.date || "";
+    var year = (act.date || "").slice(0, 4);
+    var dateFormatted = act.dateRange
+      ? (year ? year + "年" + act.dateRange : act.dateRange)
+      : baseDateLabel;
 
     var typeMeta = TYPE_META[act.type] || TYPE_META.activity;
     var activity = Object.assign({}, act, {

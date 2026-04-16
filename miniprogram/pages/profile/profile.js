@@ -131,6 +131,7 @@ Page({
           summary: act.summary,
           location: act.location,
           date: node.date || act.date || node.joinedDate,
+          dateRange: node.dateRange || act.dateRange || '',
           images: (node.images && node.images.length) ? node.images : (act.images || []),
           keyHighlights: act.keyHighlights || node.keyHighlights || [],
           coverImage: act.coverImage,

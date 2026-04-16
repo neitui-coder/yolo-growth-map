@@ -1022,7 +1022,8 @@
           "userId": "pdf2025-jiayu",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": "3月13日—15日"
     },
     {
       "activityKey": "yolo-2025-yantai",
@@ -1184,7 +1185,8 @@
           "userId": "pdf2025-sarah-p30",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": "6月26日—28日"
     },
     {
       "activityKey": "yolo-2025-zhengzhou",
@@ -1346,7 +1348,8 @@
           "userId": "pdf2025-sarah-p30",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": "8月7日—9日"
     },
     {
       "activityKey": "yolo-2025-middleeast",
@@ -1508,7 +1511,8 @@
           "userId": "pdf2025-sarah-p30",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": "9月28日—10月3日"
     },
     {
       "activityKey": "yolo-2025-suzhou",
@@ -1670,7 +1674,8 @@
           "userId": "pdf2025-sarah-p30",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": "11月14日—15日"
     },
     {
       "activityKey": "yolo-2025-shanghai-group",
@@ -1947,7 +1952,8 @@
           "userId": "pdf2025-weijie",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": "3月"
     }
   ]
 }

@@ -56,7 +56,7 @@
             <text class="card-cover-placeholder-text">{{item.typeLabel}}</text>
             <text class="card-cover-placeholder-sub">{{item.yearMonth}}</text>
           </view>
-          <view class="card-date-badge">{{item.yearMonth}}</view>
+          <view class="card-date-badge">{{item.dateLabel || item.yearMonth}}</view>
           <view wx:if="{{item.type}}" class="card-type-pill">{{item.typeLabel}}</view>
         </view>
 

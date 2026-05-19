@@ -8,10 +8,10 @@
     </linearGradient>
   </defs>
   <rect x="0" y="0" width="512" height="512" fill="#ffffff"/>
-  <text x="246" y="300" text-anchor="middle"
+  <text x="228" y="300" text-anchor="middle"
         font-family="Arial Rounded MT Bold, 'SF Compact Rounded', sans-serif"
-        font-size="158" font-weight="700" fill="url(#yolo)" letter-spacing="-2">YOLO</text>
-  <text x="420" y="212" text-anchor="middle"
+        font-size="150" font-weight="700" fill="url(#yolo)" letter-spacing="-2">YOLO</text>
+  <text x="436" y="178" text-anchor="middle"
         font-family="Arial Rounded MT Bold, 'SF Compact Rounded', sans-serif"
-        font-size="104" font-weight="700" fill="#F5933E">+</text>
+        font-size="92" font-weight="700" fill="#F5933E">+</text>
 </svg>

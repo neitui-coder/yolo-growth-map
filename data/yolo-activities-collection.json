@@ -101,6 +101,14 @@
           "role": ""
         },
         {
+          "userId": "alumni-yiping",
+          "role": ""
+        },
+        {
+          "userId": "alumni-yian",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-mat-so",
           "role": ""
         },
@@ -114,14 +122,6 @@
         },
         {
           "userId": "pdf2025-wenxin",
-          "role": ""
-        },
-        {
-          "userId": "alumni-yiping",
-          "role": ""
-        },
-        {
-          "userId": "alumni-yian",
           "role": ""
         }
       ]
@@ -141,6 +141,10 @@
           "role": ""
         },
         {
+          "userId": "alumni-yucheng",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-sarah",
           "role": ""
         },
@@ -153,15 +157,15 @@
           "role": ""
         },
         {
+          "userId": "pdf2025-zhiqian",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-p09",
           "role": ""
         },
         {
-          "userId": "alumni-jinhua",
-          "role": ""
-        },
-        {
-          "userId": "alumni-shijie",
+          "userId": "alumni-xiaoxin",
           "role": ""
         },
         {
@@ -173,23 +177,11 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-kevin",
+          "userId": "alumni-shuni",
           "role": ""
         },
         {
-          "userId": "alumni-kingsley",
-          "role": ""
-        },
-        {
-          "userId": "alumni-saxi",
-          "role": ""
-        },
-        {
-          "userId": "alumni-jiayi",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-boyuan",
+          "userId": "alumni-yuxin",
           "role": ""
         },
         {
@@ -197,11 +189,7 @@
           "role": ""
         },
         {
-          "userId": "alumni-xiaoyu",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-xiaoyan",
+          "userId": "pdf2025-jiayu",
           "role": ""
         },
         {
@@ -213,23 +201,23 @@
           "role": ""
         },
         {
+          "userId": "alumni-huixi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-haocheng",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-mat-so",
           "role": ""
         },
         {
-          "userId": "pdf2025-jiawei",
+          "userId": "alumni-huanglei",
           "role": ""
         },
         {
           "userId": "alumni-xiaoxuan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-wenxin",
-          "role": ""
-        },
-        {
-          "userId": "alumni-yiping",
           "role": ""
         }
       ]
@@ -245,31 +233,15 @@
       "images": [],
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-katherine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rachel",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-jingzi",
           "role": ""
         },
         {
-          "userId": "pdf2025-sarah",
+          "userId": "pdf2025-sean",
           "role": ""
         },
         {
-          "userId": "pdf2025-sean",
+          "userId": "pdf2025-peter",
           "role": ""
         },
         {
@@ -281,19 +253,15 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-peter",
+          "userId": "alumni-jinhua",
           "role": ""
         },
         {
-          "userId": "pdf2025-monica",
+          "userId": "alumni-shijie",
           "role": ""
         },
         {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
+          "userId": "alumni-wangwang",
           "role": ""
         },
         {
@@ -301,7 +269,23 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-kevin",
+          "userId": "alumni-jack",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rita",
+          "role": ""
+        },
+        {
+          "userId": "alumni-shuni",
+          "role": ""
+        },
+        {
+          "userId": "alumni-saxi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-boyuan",
           "role": ""
         },
         {
@@ -309,11 +293,31 @@
           "role": ""
         },
         {
+          "userId": "alumni-jinsha",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-zhuofan",
           "role": ""
         },
         {
+          "userId": "alumni-huixi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-haocheng",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "alumni-huanglei",
           "role": ""
         },
         {
@@ -322,70 +326,6 @@
         },
         {
           "userId": "pdf2025-shenyin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sophie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-eco",
-          "role": ""
-        },
-        {
-          "userId": "alumni-kingsley",
-          "role": ""
-        },
-        {
-          "userId": "alumni-saxi",
-          "role": ""
-        },
-        {
-          "userId": "alumni-jiayi",
-          "role": ""
-        },
-        {
-          "userId": "alumni-jack",
-          "role": ""
-        },
-        {
-          "userId": "alumni-shijie",
-          "role": ""
-        },
-        {
-          "userId": "alumni-jinhua",
-          "role": ""
-        },
-        {
-          "userId": "alumni-yucheng",
-          "role": ""
-        },
-        {
-          "userId": "alumni-xiaoxin",
-          "role": ""
-        },
-        {
-          "userId": "alumni-xiaoyu",
-          "role": ""
-        },
-        {
-          "userId": "alumni-jinsha",
-          "role": ""
-        },
-        {
-          "userId": "alumni-xiaoxuan",
-          "role": ""
-        },
-        {
-          "userId": "alumni-yiping",
-          "role": ""
-        },
-        {
-          "userId": "alumni-yian",
           "role": ""
         }
       ]
@@ -401,23 +341,7 @@
       "images": [],
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-katherine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rachel",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jingzi",
+          "userId": "alumni-yucheng",
           "role": ""
         },
         {
@@ -425,31 +349,19 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-sean",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-zhiqian",
           "role": ""
         },
         {
-          "userId": "pdf2025-p09",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-monica",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
+          "userId": "alumni-wangwang",
           "role": ""
         },
         {
           "userId": "pdf2025-janine",
+          "role": ""
+        },
+        {
+          "userId": "alumni-saxi",
           "role": ""
         },
         {
@@ -461,23 +373,11 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-wenxin",
+          "userId": "pdf2025-jerry",
           "role": ""
         },
         {
-          "userId": "pdf2025-shenyin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sophie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-eco",
+          "userId": "alumni-huixi",
           "role": ""
         },
         {
@@ -485,27 +385,7 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-lucy",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jackson",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-chloe",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weiyun",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiatong",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-linda",
+          "userId": "pdf2025-wenxin",
           "role": ""
         }
       ]
@@ -521,56 +401,44 @@
       "images": [],
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jingzi",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-sean",
-          "role": ""
+          "role": "小组长,主持人"
         },
         {
           "userId": "pdf2025-zhiqian",
-          "role": ""
+          "role": "主持人,小组长"
         },
         {
           "userId": "pdf2025-p09",
+          "role": "小组长"
+        },
+        {
+          "userId": "pdf2025-charles",
+          "role": "小组长"
+        },
+        {
+          "userId": "pdf2025-janine",
+          "role": "学习代表"
+        },
+        {
+          "userId": "pdf2025-rita",
           "role": ""
         },
         {
-          "userId": "pdf2025-peter",
+          "userId": "alumni-saxi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-jiayi",
           "role": ""
         },
         {
           "userId": "pdf2025-monica",
-          "role": ""
+          "role": "主持人,小组长"
         },
         {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-janine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-kevin",
-          "role": ""
+          "userId": "pdf2025-jiayu",
+          "role": "学习代表"
         },
         {
           "userId": "pdf2025-xiaoyan",
@@ -581,7 +449,27 @@
           "role": ""
         },
         {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "alumni-huixi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-yiping",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-mat-so",
+          "role": "小组长"
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoxuan",
           "role": ""
         },
         {
@@ -589,31 +477,19 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-jiawei",
+          "userId": "pdf2025-shenyin",
           "role": ""
         },
         {
-          "userId": "pdf2025-lucy",
+          "userId": "alumni-qingtong",
           "role": ""
         },
         {
-          "userId": "pdf2025-jackson",
+          "userId": "alumni-kaixing",
           "role": ""
         },
         {
-          "userId": "pdf2025-boyuan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rita",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jerry",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah-p30",
+          "userId": "pdf2025-jiatong",
           "role": ""
         }
       ]
@@ -629,76 +505,52 @@
       "images": [],
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-katherine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rachel",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jingzi",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-sarah",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sean",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-zhiqian",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-p09",
-          "role": ""
+          "role": "小组长"
         },
         {
           "userId": "pdf2025-peter",
-          "role": ""
+          "role": "TED Talk"
         },
         {
-          "userId": "pdf2025-monica",
-          "role": ""
+          "userId": "pdf2025-zhiqian",
+          "role": "主持人"
         },
         {
-          "userId": "pdf2025-amber",
-          "role": ""
+          "userId": "pdf2025-p09",
+          "role": "带游戏,筹委会"
         },
         {
-          "userId": "pdf2025-charles",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-janine",
-          "role": ""
+          "userId": "pdf2025-rita",
+          "role": "小组长"
         },
         {
           "userId": "pdf2025-kevin",
+          "role": "TED Talk"
+        },
+        {
+          "userId": "pdf2025-monica",
+          "role": "筹委会,主持人"
+        },
+        {
+          "userId": "pdf2025-jiayu",
           "role": ""
         },
         {
-          "userId": "pdf2025-xiaoyan",
-          "role": ""
+          "userId": "pdf2025-jerry",
+          "role": "学习代表,小组长"
         },
         {
-          "userId": "pdf2025-zhuofan",
-          "role": ""
+          "userId": "alumni-huixi",
+          "role": "学习代表"
         },
         {
-          "userId": "pdf2025-mat-so",
-          "role": ""
+          "userId": "alumni-haocheng",
+          "role": "主持人"
+        },
+        {
+          "userId": "alumni-huanglei",
+          "role": "主持人,小组长"
         },
         {
           "userId": "pdf2025-wenxin",
@@ -706,11 +558,7 @@
         },
         {
           "userId": "pdf2025-shenyin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiawei",
-          "role": ""
+          "role": "学习代表"
         },
         {
           "userId": "pdf2025-lucy",
@@ -718,50 +566,6 @@
         },
         {
           "userId": "pdf2025-jackson",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-chloe",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weiyun",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiatong",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-linda",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sophie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-eco",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rita",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-boyuan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jerry",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiayu",
           "role": ""
         }
       ]
@@ -777,143 +581,59 @@
       "images": [],
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-katherine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rachel",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jingzi",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-sean",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-zhiqian",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-p09",
-          "role": ""
+          "role": "主持人"
         },
         {
           "userId": "pdf2025-peter",
           "role": ""
         },
         {
-          "userId": "pdf2025-monica",
-          "role": ""
+          "userId": "pdf2025-zhiqian",
+          "role": "小组长"
         },
         {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
-          "role": ""
+          "userId": "pdf2025-p09",
+          "role": "主持人"
         },
         {
           "userId": "pdf2025-janine",
           "role": ""
         },
         {
-          "userId": "pdf2025-kevin",
-          "role": ""
+          "userId": "alumni-jack",
+          "role": "TED Talk"
         },
         {
-          "userId": "pdf2025-xiaoyan",
-          "role": ""
+          "userId": "pdf2025-rita",
+          "role": "学习代表"
+        },
+        {
+          "userId": "alumni-saxi",
+          "role": "主持人"
+        },
+        {
+          "userId": "pdf2025-jiayu",
+          "role": "学习代表"
         },
         {
           "userId": "pdf2025-zhuofan",
-          "role": ""
+          "role": "主持人"
         },
         {
-          "userId": "pdf2025-mat-so",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-wenxin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-shenyin",
-          "role": ""
+          "userId": "alumni-haocheng",
+          "role": "小组长"
         },
         {
           "userId": "pdf2025-jiawei",
           "role": ""
         },
         {
-          "userId": "pdf2025-lucy",
-          "role": ""
+          "userId": "alumni-huanglei",
+          "role": "TED Talk"
         },
         {
-          "userId": "pdf2025-jackson",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-chloe",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weiyun",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiatong",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-linda",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sophie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-eco",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rita",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-boyuan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jerry",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiayu",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah-p30",
+          "userId": "pdf2025-shenyin",
           "role": ""
         }
       ]
@@ -939,52 +659,40 @@
       "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSlfFYLdUnHoWGjRX4Qx38XPianibDatxAcibUQOP9ab2zqdDRVpswyQW7VoZvm6y0licFVJUrwyefzzg/640?wx_fmt=gif&from=appmsg",
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-jingzi",
-          "role": ""
+          "role": "筹委会"
         },
         {
           "userId": "pdf2025-sarah",
-          "role": ""
+          "role": "带星空下夜谈"
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": "主持人"
         },
         {
           "userId": "pdf2025-zhiqian",
-          "role": ""
+          "role": "筹委会"
         },
         {
           "userId": "pdf2025-p09",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-peter",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
-          "role": ""
+          "role": "筹委会"
         },
         {
           "userId": "pdf2025-janine",
-          "role": ""
+          "role": "圆桌论坛嘉宾"
         },
         {
-          "userId": "pdf2025-kevin",
-          "role": ""
+          "userId": "pdf2025-jiayu",
+          "role": "筹委会"
         },
         {
           "userId": "pdf2025-xiaoyan",
-          "role": ""
+          "role": "TED Talk"
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": "TED Talk"
         },
         {
           "userId": "pdf2025-mat-so",
@@ -995,23 +703,11 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-lucy",
+          "userId": "pdf2025-wenxin",
           "role": ""
         },
         {
-          "userId": "pdf2025-jackson",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-boyuan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rita",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jerry",
+          "userId": "alumni-qingtong",
           "role": ""
         },
         {
@@ -1019,7 +715,7 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-jiayu",
+          "userId": "pdf2025-boyuan",
           "role": ""
         }
       ],
@@ -1046,24 +742,8 @@
       "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSAezjI5VwlHNfj5bWXmMDBc00TBDFOITKEF8wE5KeIJ5JeZupA2gWn3Tel2bC4R4CV2ZxeS0sUMA/640?wx_fmt=gif&from=appmsg",
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-katherine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rachel",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-jingzi",
-          "role": ""
+          "role": "主持人"
         },
         {
           "userId": "pdf2025-sarah",
@@ -1074,47 +754,31 @@
           "role": ""
         },
         {
+          "userId": "pdf2025-peter",
+          "role": "主持人"
+        },
+        {
           "userId": "pdf2025-zhiqian",
           "role": ""
         },
         {
           "userId": "pdf2025-p09",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-peter",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-monica",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
-          "role": ""
+          "role": "带游戏"
         },
         {
           "userId": "pdf2025-janine",
           "role": ""
         },
         {
-          "userId": "pdf2025-kevin",
+          "userId": "pdf2025-rita",
+          "role": "主持人"
+        },
+        {
+          "userId": "pdf2025-jiayu",
           "role": ""
         },
         {
-          "userId": "pdf2025-xiaoyan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-zhuofan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-mat-so",
+          "userId": "pdf2025-jerry",
           "role": ""
         },
         {
@@ -1123,18 +787,10 @@
         },
         {
           "userId": "pdf2025-shenyin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiawei",
-          "role": ""
+          "role": "TED Talk"
         },
         {
           "userId": "pdf2025-lucy",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jackson",
           "role": ""
         },
         {
@@ -1142,7 +798,15 @@
           "role": ""
         },
         {
+          "userId": "pdf2025-boyuan",
+          "role": "学习代表"
+        },
+        {
           "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
           "role": ""
         },
         {
@@ -1154,35 +818,11 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-sophie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
+          "userId": "pdf2025-dufresne",
           "role": ""
         },
         {
           "userId": "pdf2025-eco",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rita",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-boyuan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jerry",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiayu",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah-p30",
           "role": ""
         }
       ],
@@ -1209,35 +849,7 @@
       "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZTmKQiaVSbV8TExnmpX3CxS8kIXw37G8krH22OwWE9KUpeggKC6QkgJU17xmwibcmtGyp0nYmNFo9JA/640?wx_fmt=jpeg",
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-katherine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rachel",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jingzi",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-sean",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-zhiqian",
           "role": ""
         },
         {
@@ -1245,87 +857,7 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-peter",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-monica",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-janine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-kevin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-xiaoyan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-zhuofan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-mat-so",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-wenxin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-shenyin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiawei",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-lucy",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jackson",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-chloe",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weiyun",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiatong",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-linda",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sophie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-eco",
           "role": ""
         },
         {
@@ -1333,19 +865,47 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-boyuan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jerry",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-jiayu",
           "role": ""
         },
         {
-          "userId": "pdf2025-sarah-p30",
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": "TED Talk"
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": "学习代表"
+        },
+        {
+          "userId": "pdf2025-boyuan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-dufresne",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-eco",
           "role": ""
         }
       ],
@@ -1372,59 +932,7 @@
       "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZSvO40yqvyFaplJLJWV1wFdKiajENC2CXTjPxoiaqg5knn5pPImcwBe1hhcyOsicMPNpUIOQ5ZXicgSyA/640?wx_fmt=jpeg",
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-katherine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rachel",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-jingzi",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sean",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-zhiqian",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-p09",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-peter",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-monica",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-janine",
           "role": ""
         },
         {
@@ -1436,27 +944,7 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-zhuofan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-mat-so",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-wenxin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-shenyin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiawei",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-lucy",
           "role": ""
         },
         {
@@ -1465,50 +953,6 @@
         },
         {
           "userId": "pdf2025-chloe",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weiyun",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiatong",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-linda",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sophie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-eco",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rita",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-boyuan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jerry",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiayu",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah-p30",
           "role": ""
         }
       ],
@@ -1535,55 +979,19 @@
       "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_png/xeuxIvQA9ZSXQE21tUrXM61lyNkkylK39INqpU3eUFSFB6zFAHPwTmaMS7vNCxjcXgd7Rk7sNUZZEjhzrrqfZA/640?wx_fmt=png&from=appmsg",
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-katherine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rachel",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-jingzi",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah",
-          "role": ""
+          "role": "小组长"
         },
         {
           "userId": "pdf2025-sean",
-          "role": ""
+          "role": "主持人"
         },
         {
           "userId": "pdf2025-zhiqian",
-          "role": ""
+          "role": "主持人,带游戏"
         },
         {
           "userId": "pdf2025-p09",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-peter",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-monica",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
           "role": ""
         },
         {
@@ -1591,27 +999,23 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-kevin",
+          "userId": "pdf2025-rita",
           "role": ""
         },
         {
           "userId": "pdf2025-xiaoyan",
-          "role": ""
+          "role": "组长"
         },
         {
           "userId": "pdf2025-zhuofan",
           "role": ""
         },
         {
+          "userId": "pdf2025-jerry",
+          "role": "组长"
+        },
+        {
           "userId": "pdf2025-mat-so",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-wenxin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-shenyin",
           "role": ""
         },
         {
@@ -1619,43 +1023,7 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-lucy",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jackson",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-chloe",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weiyun",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiatong",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-linda",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sophie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-eco",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rita",
+          "userId": "pdf2025-wenxin",
           "role": ""
         },
         {
@@ -1663,15 +1031,23 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-jerry",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiayu",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-sarah-p30",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sophie",
+          "role": "主持人"
+        },
+        {
+          "userId": "alumni-qingtong",
+          "role": ""
+        },
+        {
+          "userId": "alumni-saxi",
           "role": ""
         }
       ],
@@ -1688,23 +1064,15 @@
       "images": [],
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-katherine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rachel",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-sean",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": "筹委会"
+        },
+        {
+          "userId": "pdf2025-janine",
           "role": ""
         },
         {
@@ -1712,19 +1080,7 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-janine",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-xiaoyan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-zhuofan",
+          "userId": "pdf2025-jiawei",
           "role": ""
         },
         {
@@ -1732,31 +1088,11 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-shenyin",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-chloe",
           "role": ""
         },
         {
-          "userId": "pdf2025-weiyun",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sophie",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-eco",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiatong",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-linda",
+          "userId": "alumni-jiayi",
           "role": ""
         }
       ]
@@ -1772,12 +1108,8 @@
       "images": [],
       "participants": [
         {
-          "userId": "pdf2025-jingzi",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah",
-          "role": ""
+          "userId": "pdf2025-sean",
+          "role": "筹委会"
         },
         {
           "userId": "pdf2025-zhiqian",
@@ -1788,43 +1120,7 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-peter",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-kevin",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-mat-so",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiawei",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-lucy",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jackson",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-rita",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-boyuan",
           "role": ""
         },
         {
@@ -1832,11 +1128,23 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-jiayu",
+          "userId": "pdf2025-shenyin",
+          "role": "筹委会"
+        },
+        {
+          "userId": "pdf2025-weiyun",
           "role": ""
         },
         {
-          "userId": "pdf2025-sarah-p30",
+          "userId": "pdf2025-sophie",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "alumni-xiaoxin",
           "role": ""
         }
       ]
@@ -1865,19 +1173,19 @@
       "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6naibkrLTSY4zDD3zE59LOAxVda4AMdQxjHqdzsduTjXatibGu9c59icKubJmNjR2yNZ8ibKD5puomjicaIvQQVge3FtKWibKSbia4ELw3xV7Pbj0c/640",
       "participants": [
         {
-          "userId": "pdf2025-bill",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-yueyue",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-jingzi",
-          "role": ""
+          "role": "分享嘉宾"
         },
         {
           "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sean",
+          "role": "分享嘉宾"
+        },
+        {
+          "userId": "pdf2025-peter",
           "role": ""
         },
         {
@@ -1889,27 +1197,23 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-peter",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-amber",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-charles",
-          "role": ""
-        },
-        {
           "userId": "pdf2025-janine",
           "role": ""
         },
         {
-          "userId": "pdf2025-kevin",
+          "userId": "pdf2025-rita",
           "role": ""
         },
         {
           "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
           "role": ""
         },
         {
@@ -1921,35 +1225,11 @@
           "role": ""
         },
         {
-          "userId": "pdf2025-lucy",
+          "userId": "pdf2025-wenxin",
           "role": ""
         },
         {
-          "userId": "pdf2025-jackson",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-boyuan",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-rita",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jerry",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-sarah-p30",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiayu",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-weijie",
+          "userId": "pdf2025-weiyun",
           "role": ""
         }
       ],

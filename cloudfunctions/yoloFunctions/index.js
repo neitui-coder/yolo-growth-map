@@ -3,6 +3,33 @@ cloud.init({ env: cloud.DYNAMIC_CURRENT_ENV });
 const db = cloud.database();
 const _ = db.command;
 
+// 内容安全检查（微信审核硬性要求：UGC 文本须过 msgSecCheck）
+// 返回 { ok:true } 或 { ok:false, error:'...' }
+const checkTextSecurity = async (texts) => {
+  const { OPENID } = cloud.getWXContext();
+  const list = (Array.isArray(texts) ? texts : [texts])
+    .filter((t) => typeof t === 'string' && t.trim().length > 0);
+  if (!list.length) return { ok: true };
+  const content = list.join('\n').slice(0, 2500);
+  try {
+    const res = await cloud.openapi.security.msgSecCheck({
+      version: 2,
+      scene: 2, // 资料文本
+      openid: OPENID,
+      content
+    });
+    const suggest = res && res.result && res.result.suggest;
+    if (suggest === 'risky') {
+      return { ok: false, error: '内容包含违规信息，请修改后重试' };
+    }
+    return { ok: true };
+  } catch (e) {
+    // 接口异常（如未配置）不阻断正常用户，但记录
+    console.warn('msgSecCheck failed, allow through:', e && e.errMsg);
+    return { ok: true };
+  }
+};
+
 exports.main = async (event, context) => {
   switch (event.type) {
     // --- wechat auth ---
@@ -124,6 +151,12 @@ const getUser = async (event) => {
 // 更新用户资料（按 userId + dataType 精确定位）
 const updateUser = async (event) => {
   const { userId, updates, dataType } = event;
+  // 资料文本内容安全检查
+  const u = updates || {};
+  const textFields = [u.name, u.motto, u.career, u.company, u.city, u.goal,
+    u.education].concat(u.hobbies || [], u.expertise || [], u.tags || [], u.skills || []);
+  const sec = await checkTextSecurity(textFields);
+  if (!sec.ok) return { success: false, error: sec.error };
   const where = { userId: userId };
   if (dataType) where.dataType = dataType;
   const result = await db.collection('users')
@@ -177,6 +210,8 @@ const deleteNode = async (event) => {
 // 添加提问到 qa 数组
 const addQuestion = async (event) => {
   const { userId, question, askedBy, dataType } = event;
+  const sec = await checkTextSecurity(question);
+  if (!sec.ok) return { success: false, error: sec.error };
   const newQa = { question: question, answer: null, askedBy: askedBy || 'anonymous' };
   const where = { userId: userId };
   if (dataType) where.dataType = dataType;
@@ -193,6 +228,8 @@ const addQuestion = async (event) => {
 // 回答某个问题（按 qa 数组索引更新）
 const answerQuestion = async (event) => {
   const { userId, index, answer, dataType } = event;
+  const sec = await checkTextSecurity(answer);
+  if (!sec.ok) return { success: false, error: sec.error };
   const updateKey = 'qa.' + index + '.answer';
   const updateData = {};
   updateData[updateKey] = answer;
@@ -415,6 +452,9 @@ const updateNodeById = async (event) => {
 // 添加评论（comments 是 nodeKey -> 评论数组 映射）
 const addComment = async (event) => {
   const { userId, nodeKey, comment, dataType } = event;
+  const sec = await checkTextSecurity(
+    comment && typeof comment === 'object' ? comment.text || comment.content : comment);
+  if (!sec.ok) return { success: false, error: sec.error };
   const updateKey = 'comments.' + nodeKey;
   const where = { userId: userId };
   if (dataType) where.dataType = dataType;

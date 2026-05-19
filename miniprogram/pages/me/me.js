@@ -11,6 +11,7 @@ Page({
     navPaddingTop: 20,
     seeded: false,
     isOperatorView: false,
+    isGuest: false,
     canSwitchMode: false,
     homeMode: 'real'
   },
@@ -23,15 +24,26 @@ Page({
 
   onShow: function () {
     if (!app.requireAuth()) return;
+    var isGuest = app.isGuestMode ? app.isGuestMode() : false;
     this.setData({
-      canSwitchMode: app.canSwitchMode ? app.canSwitchMode() : false,
+      isGuest: isGuest,
+      canSwitchMode: !isGuest && (app.canSwitchMode ? app.canSwitchMode() : false),
       homeMode: app.globalData.homeMode || 'real'
     });
+    if (isGuest) return; // 游客态不加载冒用资料
     if (app.globalData.usersLoaded) {
       this._ensureMyUser();
     } else {
       app.onUsersLoaded(this._ensureMyUser.bind(this));
     }
+  },
+
+  onGoBind: function () {
+    wx.reLaunch({ url: '/pages/auth/auth' });
+  },
+
+  onViewPrivacy: function () {
+    wx.navigateTo({ url: '/pages/privacy/privacy' });
   },
 
   onSwitchMode: function () {

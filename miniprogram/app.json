@@ -9,7 +9,8 @@
     "pages/profile/profile",
     "pages/edit/edit",
     "pages/edit-profile/edit-profile",
-    "pages/auth/auth"
+    "pages/auth/auth",
+    "pages/privacy/privacy"
   ],
   "window": {
     "navigationBarBackgroundColor": "#1d4ed8",

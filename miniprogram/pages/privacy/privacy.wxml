@@ -1,0 +1,38 @@
+<scroll-view scroll-y class="pp-page">
+  <view class="pp-title">YOLO+ 小程序隐私政策</view>
+  <view class="pp-updated">最近更新：2026 年 5 月</view>
+
+  <view class="pp-sec">
+    <view class="pp-h">一、我们是谁</view>
+    <view class="pp-p">YOLO+ 小程序是面向 YOLO+ 社群内部成员的成长档案与活动记录工具，仅供社群成员记录、浏览与交流，不涉及任何交易或收费。</view>
+  </view>
+
+  <view class="pp-sec">
+    <view class="pp-h">二、我们收集哪些信息</view>
+    <view class="pp-p">1. 微信登录标识（openid / unionid）：用于识别你的成员身份、绑定你的个人档案。</view>
+    <view class="pp-p">2. 你自愿填写的会员资料：姓名、所在公司、城市、生日、个人简介、标签、技能、问答内容、成长记录等。这些信息由你主动填写并在社群内向其他成员展示。</view>
+    <view class="pp-p">我们不收集你的位置、通讯录、相册、剪贴板等敏感信息，也不调用相关系统权限。</view>
+  </view>
+
+  <view class="pp-sec">
+    <view class="pp-h">三、信息如何使用</view>
+    <view class="pp-p">收集的信息仅用于：在社群成员名录中展示你的资料、记录与展示你的成长时间线和活动参与情况。我们不会将信息用于上述目的之外的用途，不会向社群外第三方出售或共享。</view>
+  </view>
+
+  <view class="pp-sec">
+    <view class="pp-h">四、信息存储与安全</view>
+    <view class="pp-p">数据存储于微信云开发（CloudBase）环境，受微信安全体系保护。所有用户提交的文本内容均经过内容安全检测后方可入库与展示。</view>
+  </view>
+
+  <view class="pp-sec">
+    <view class="pp-h">五、你的权利</view>
+    <view class="pp-p">你可随时在「我的 - 编辑资料」中修改你的个人信息。如需删除账户数据或解除微信绑定，请联系 YOLO+ 管理员。</view>
+  </view>
+
+  <view class="pp-sec">
+    <view class="pp-h">六、联系我们</view>
+    <view class="pp-p">如对本隐私政策有任何疑问，请通过 YOLO+ 社群渠道联系管理员。</view>
+  </view>
+
+  <view class="pp-foot">YOLO+ 内部社群工具 · 仅供成员使用</view>
+</scroll-view>

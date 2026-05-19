@@ -219,6 +219,12 @@ App({
     return this.globalData.authBound;
   },
 
+  // 游客模式：测试期绕过开启且当前微信号未真正绑定成员身份
+  // （用于"我的"页诚实展示游客态，不冒用兜底成员资料）
+  isGuestMode: function () {
+    return !!this.globalData.TEST_BYPASS_AUTH && !this.globalData.authBound;
+  },
+
   bindCurrentUserToWechat: function (userId) {
     return wx.cloud.callFunction({
       name: 'yoloFunctions',

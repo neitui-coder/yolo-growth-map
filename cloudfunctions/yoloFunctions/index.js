@@ -185,6 +185,8 @@ const bulkSetDataType = async (event) => {
 const addNode = async (event) => {
   const { userId, dataType } = event;
   const node = Object.assign({}, event.node);
+  const sec = await checkTextSecurity([node.desc, node.title, node.summary]);
+  if (!sec.ok) return { success: false, error: sec.error };
   if (!node.nodeId) {
     node.nodeId = 'n-' + Date.now() + '-' + Math.random().toString(36).slice(2, 7);
   }
@@ -421,6 +423,9 @@ const deleteNodeById = async (event) => {
 // 按 nodeId 更新节点（读取→找索引→用点路径更新）
 const updateNodeById = async (event) => {
   const { userId, nodeId, updates, dataType } = event;
+  const u = updates || {};
+  const sec = await checkTextSecurity([u.desc, u.title, u.summary]);
+  if (!sec.ok) return { success: false, error: sec.error };
   const where = { userId: userId };
   if (dataType) where.dataType = dataType;
 

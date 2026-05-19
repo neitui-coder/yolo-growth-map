@@ -1,0 +1,41 @@
+.pp-page {
+  height: 100vh;
+  background: #f8fafc;
+  padding: 32rpx 40rpx 80rpx;
+  box-sizing: border-box;
+}
+.pp-title {
+  font-size: 40rpx;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8rpx;
+}
+.pp-updated {
+  font-size: 24rpx;
+  color: #94a3b8;
+  margin-bottom: 32rpx;
+}
+.pp-sec {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx 28rpx 20rpx;
+  margin-bottom: 20rpx;
+}
+.pp-h {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin-bottom: 14rpx;
+}
+.pp-p {
+  font-size: 27rpx;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10rpx;
+}
+.pp-foot {
+  text-align: center;
+  font-size: 24rpx;
+  color: #94a3b8;
+  margin-top: 24rpx;
+}

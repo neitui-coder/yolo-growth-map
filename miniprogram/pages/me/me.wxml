@@ -10,6 +10,31 @@
   <view class="nav-title">我的</view>
 </view>
 
+<!-- 游客态：诚实展示，不冒用成员资料 -->
+<block wx:if="{{isGuest}}">
+  <view class="me-card">
+    <view class="me-avatar">游</view>
+    <view class="me-info">
+      <text class="me-name">游客浏览中</text>
+      <text class="me-motto">绑定 YOLO+ 成员身份后可查看与编辑个人档案</text>
+    </view>
+  </view>
+  <view class="me-menu">
+    <view class="me-menu-item" bindtap="onGoBind">
+      <text class="me-menu-icon">🔑</text>
+      <text class="me-menu-text">绑定我的成员身份</text>
+      <text class="me-menu-arrow">▸</text>
+    </view>
+    <view class="me-menu-item" bindtap="onViewPrivacy">
+      <text class="me-menu-icon">🔒</text>
+      <text class="me-menu-text">隐私政策</text>
+      <text class="me-menu-arrow">▸</text>
+    </view>
+  </view>
+</block>
+
+<!-- 已绑定/正常态 -->
+<block wx:else>
 <!-- 用户信息卡片 -->
 <view class="me-card" bindtap="onViewProfile">
   <block wx:if="{{avatarUrl}}">
@@ -67,4 +92,10 @@
     <text class="me-menu-text">切换数据模式（当前：{{homeMode === 'real' ? '真实' : (homeMode === 'mock' ? '模拟' : '运营者')}}）</text>
     <text class="me-menu-arrow">▸</text>
   </view>
+  <view class="me-menu-item" bindtap="onViewPrivacy">
+    <text class="me-menu-icon">🔒</text>
+    <text class="me-menu-text">隐私政策</text>
+    <text class="me-menu-arrow">▸</text>
+  </view>
 </view>
+</block>

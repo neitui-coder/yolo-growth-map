@@ -2,7 +2,7 @@
   <view class="nav-bar" style="padding-top: {{navPaddingTop}}px;">
     <view class="nav-head">
       <view class="nav-title-row">
-        <view class="nav-title">YOLO+ 成长地图</view>
+        <view class="nav-title">YOLO+</view>
         <view wx:if="{{operatorModeActive}}" class="nav-badge">运营者</view>
       </view>
     </view>

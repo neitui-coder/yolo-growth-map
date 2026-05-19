@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="55%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="512" height="512" rx="112" ry="112" fill="url(#bg)"/>
+  <rect x="0" y="0" width="512" height="256" rx="112" ry="112" fill="url(#shine)"/>
+  <text x="256" y="232" text-anchor="middle"
+        font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif"
+        font-size="118" font-weight="800" fill="#ffffff" letter-spacing="2">YOLO</text>
+  <text x="256" y="372" text-anchor="middle"
+        font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif"
+        font-size="110" font-weight="800" fill="#ffffff" opacity="0.95">+</text>
+</svg>

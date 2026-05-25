@@ -4,12 +4,8 @@
     {{rank}}
   </view>
 
-  <view class="mc-avatar-wrap">
-    <image class="mc-avatar" src="{{avatarUrl}}" mode="aspectFill" lazy-load="true" />
-    <view wx:if="{{user.isBirthdayMonth}}" class="mc-birthday-hat">
-      <view class="mc-birthday-hat-ball"></view>
-    </view>
-  </view>
+  <!-- 头像暂时隐藏（按 Sean 要求） -->
+  <view wx:if="{{user.isBirthdayMonth}}" class="mc-birthday-hat-standalone">🎂</view>
 
   <!-- Name -->
   <view class="mc-name-row">
@@ -32,17 +28,17 @@
   <!-- Motto -->
   <view wx:if="{{user.motto}}" class="mc-motto">"{{user.motto}}"</view>
 
-  <!-- Tags: city + career -->
-  <view wx:if="{{cityDisplay || user.career}}" class="mc-tags">
+  <!-- Tags: city + company -->
+  <view wx:if="{{cityDisplay || user.company}}" class="mc-tags">
     <view wx:if="{{cityDisplay}}" class="mc-tag">{{cityDisplay}}</view>
-    <view wx:if="{{user.career}}" class="mc-tag">{{user.career}}</view>
+    <view wx:if="{{user.company}}" class="mc-tag">{{user.company}}</view>
   </view>
 
   <view class="mc-footer">
     <!-- Growth value -->
     <view class="mc-growth" catchtap="onGrowthTap">成长值 {{growthValue}}</view>
 
-    <!-- Days since join -->
-    <view class="mc-days">加入YOLO {{daysSince}}天</view>
+    <!-- Years since join -->
+    <view class="mc-days">加入YOLO {{yearsSince}}年</view>
   </view>
 </view>

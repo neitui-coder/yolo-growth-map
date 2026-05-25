@@ -24,6 +24,7 @@ Component({
   data: {
     avatarUrl: '',
     daysSince: 0,
+    yearsSince: 0,
     growthValue: 0,
     cityDisplay: ''
   },
@@ -45,11 +46,14 @@ Component({
       if (!user || !user.name) return;
       var cityDisplay = '';
       if (user.city) {
-        cityDisplay = Array.isArray(user.city) ? user.city.join('、') : user.city;
+        // 多个城市只取第一个
+        var raw = Array.isArray(user.city) ? user.city[0] : user.city;
+        cityDisplay = (raw || '').split(/[、,，;；/]/)[0].trim();
       }
       this.setData({
         avatarUrl: util.getAvatarUrl(user, 60),
         daysSince: util.daysSince(user),
+        yearsSince: util.yearsSince(user),
         growthValue: util.computeGrowthValue(user),
         cityDisplay: cityDisplay
       });

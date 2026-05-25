@@ -30,6 +30,17 @@ function daysSince(dateStrOrUser) {
 }
 
 /**
+ * 加入 YOLO 的实际年数（向下取整，至少 1 年；累计 joinPeriods 所有段）
+ * 这是 Sean 要求的展示格式："加入YOLO X 年"
+ */
+function yearsSince(user) {
+  var days = daysSince(user);
+  if (!days) return 0;
+  var years = Math.floor(days / 365.25);
+  return years < 1 ? 1 : years;
+}
+
+/**
  * 将 "YYYY-MM" 格式化为 "YYYY年M月"
  * @param {string} dateStr - 格式 "YYYY-MM"
  * @returns {string} 格式化后的日期
@@ -318,6 +329,13 @@ function parseBirthday(birthday) {
     };
   }
 
+  // 只有月份格式："6月" 或 "6"
+  var monthOnly = String(birthday).match(/^(\d{1,2})月?$/);
+  if (monthOnly) {
+    var m = parseInt(monthOnly[1], 10);
+    if (m >= 1 && m <= 12) return { month: m, day: null };
+  }
+
   return null;
 }
 
@@ -365,6 +383,7 @@ function buildFunnyIntro(user) {
 
 module.exports = {
   daysSince: daysSince,
+  yearsSince: yearsSince,
   formatDate: formatDate,
   computeGrowthValue: computeGrowthValue,
   computeMentors: computeMentors,

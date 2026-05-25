@@ -37,7 +37,9 @@ Page({
         isBirthdayMonth: util.isBirthdayInCurrentMonth(user),
         birthdayTag: util.isBirthdayInCurrentMonth(user) ? "本月生日" : "",
         birthdayDayLabel: birthdayParsed
-          ? birthdayParsed.month + "月" + birthdayParsed.day + "日"
+          ? (birthdayParsed.day
+              ? birthdayParsed.month + "月" + birthdayParsed.day + "日"
+              : birthdayParsed.month + "月")
           : "",
       });
     });

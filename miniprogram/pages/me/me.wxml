@@ -10,8 +10,26 @@
   <view class="nav-title">我的</view>
 </view>
 
+<!-- 隐藏型工作人员（杨三角员工等）：只读访问 -->
+<block wx:if="{{isStaff}}">
+  <view class="me-card">
+    <view class="me-avatar">工</view>
+    <view class="me-info">
+      <text class="me-name">工作人员 · 查看模式</text>
+      <text class="me-motto">您可浏览全部内容，但不可编辑会员资料</text>
+    </view>
+  </view>
+  <view class="me-menu">
+    <view class="me-menu-item" bindtap="onViewPrivacy">
+      <text class="me-menu-icon">🔒</text>
+      <text class="me-menu-text">隐私政策</text>
+      <text class="me-menu-arrow">▸</text>
+    </view>
+  </view>
+</block>
+
 <!-- 游客态：诚实展示，不冒用成员资料 -->
-<block wx:if="{{isGuest}}">
+<block wx:elif="{{isGuest}}">
   <view class="me-card">
     <view class="me-avatar">游</view>
     <view class="me-info">
@@ -23,6 +41,11 @@
     <view class="me-menu-item" bindtap="onGoBind">
       <text class="me-menu-icon">🔑</text>
       <text class="me-menu-text">绑定我的成员身份</text>
+      <text class="me-menu-arrow">▸</text>
+    </view>
+    <view wx:if="{{currentOpenId}}" class="me-menu-item" bindtap="onCopyOpenId">
+      <text class="me-menu-icon">📋</text>
+      <text class="me-menu-text">我是工作人员 · 复制凭证发给管理员</text>
       <text class="me-menu-arrow">▸</text>
     </view>
     <view class="me-menu-item" bindtap="onViewPrivacy">

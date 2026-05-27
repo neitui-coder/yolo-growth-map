@@ -12,6 +12,8 @@ Page({
     seeded: false,
     isOperatorView: false,
     isGuest: false,
+    isStaff: false,
+    currentOpenId: '',
     canSwitchMode: false,
     homeMode: 'real'
   },
@@ -25,12 +27,15 @@ Page({
   onShow: function () {
     if (!app.requireAuth()) return;
     var isGuest = app.isGuestMode ? app.isGuestMode() : false;
+    var isStaff = app.isStaffMode ? app.isStaffMode() : false;
     this.setData({
       isGuest: isGuest,
-      canSwitchMode: !isGuest && (app.canSwitchMode ? app.canSwitchMode() : false),
+      isStaff: isStaff,
+      currentOpenId: app.globalData.currentOpenId || '',
+      canSwitchMode: !isGuest && !isStaff && (app.canSwitchMode ? app.canSwitchMode() : false),
       homeMode: app.globalData.homeMode || 'real'
     });
-    if (isGuest) return; // 游客态不加载冒用资料
+    if (isGuest || isStaff) return; // 游客/工作人员态不加载冒用资料
     if (app.globalData.usersLoaded) {
       this._ensureMyUser();
     } else {
@@ -44,6 +49,18 @@ Page({
 
   onViewPrivacy: function () {
     wx.navigateTo({ url: '/pages/privacy/privacy' });
+  },
+
+  onCopyOpenId: function () {
+    var oid = this.data.currentOpenId;
+    if (!oid) {
+      wx.showToast({ title: '尚未获取到 openid', icon: 'none' });
+      return;
+    }
+    wx.setClipboardData({
+      data: oid,
+      success: function () { wx.showToast({ title: 'openid 已复制' }); }
+    });
   },
 
   onSwitchMode: function () {

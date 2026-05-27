@@ -27,6 +27,11 @@ App({
     // 当前基于 userId；wx.login 接入后改为从 adminOpenIds 查 openId/unionid
     adminUserIds: ['pdf2025-sean'],
     adminOpenIds: ['oR4Gr5AfM4rgKhFwd6HsK7QWDNG0'],
+    // 隐藏型工作人员白名单（杨三角员工等，可查看全部但不绑定成员、不可编辑）
+    // 员工首次扫码后，"我的"页会显示他们的 openid，Sean 加进这里 push 即可
+    staffOpenIds: [],
+    // 当前用户是否为隐藏型工作人员（只读访问）
+    isStaff: false,
     // 数据类型：'mock'（模拟数据）| 'real'（真实数据）
     dataType: 'mock',
     // 运营者模式标记：operator 模式下为 true
@@ -169,8 +174,14 @@ App({
         that.globalData.currentUserId = r.bound.userId;
         that.globalData.selectedUserId = r.bound.userId;
         that.globalData.authBound = true;
+        that.globalData.isStaff = false;
+      } else if ((that.globalData.staffOpenIds || []).indexOf(r.openId) !== -1) {
+        // 隐藏型工作人员：放行查看，但不绑定成员、不可编辑
+        that.globalData.authBound = true;
+        that.globalData.isStaff = true;
       } else {
         that.globalData.authBound = false;
+        that.globalData.isStaff = false;
       }
       that.globalData.authReady = true;
       if (that._onWechatLoginCallbacks) {
@@ -196,8 +207,9 @@ App({
     opts = opts || {};
     var that = this;
     // 测试期绕过：不强制登录，未绑定访客用 TEST_GUEST_USER_ID 兜底
+    // 隐藏型工作人员（isStaff）不需要兜底身份，保持空 currentUserId
     if (this.globalData.TEST_BYPASS_AUTH) {
-      if (!this.globalData.currentUserId) {
+      if (!this.globalData.currentUserId && !this.globalData.isStaff) {
         this.globalData.currentUserId = this.globalData.TEST_GUEST_USER_ID;
         this.globalData.selectedUserId = this.globalData.TEST_GUEST_USER_ID;
       }
@@ -223,6 +235,11 @@ App({
   // （用于"我的"页诚实展示游客态，不冒用兜底成员资料）
   isGuestMode: function () {
     return !!this.globalData.TEST_BYPASS_AUTH && !this.globalData.authBound;
+  },
+
+  // 隐藏型工作人员模式：openid 在 staffOpenIds 白名单
+  isStaffMode: function () {
+    return !!this.globalData.isStaff;
   },
 
   bindCurrentUserToWechat: function (userId) {

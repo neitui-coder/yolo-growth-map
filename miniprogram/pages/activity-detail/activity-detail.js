@@ -31,6 +31,15 @@ Page({
     if (!app.requireAuth()) return;
   },
 
+  onShareAppMessage: function () {
+    var a = this.data.activity || {};
+    return {
+      title: (a.title || 'YOLO+ 活动'),
+      path: '/pages/activity-detail/activity-detail?activityKey=' + (this._activityKey || ''),
+      imageUrl: a.coverUrl || ''
+    };
+  },
+
   _loadActivity: function (activityKey) {
     var that = this;
     app.getActivitiesCache(function (acts) {

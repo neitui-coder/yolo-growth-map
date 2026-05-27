@@ -85,6 +85,20 @@ Page({
     this._applyPendingHomeSearch();
   },
 
+  onShareAppMessage: function () {
+    return {
+      title: 'YOLO+ · 我们的成长地图',
+      path: '/pages/index/index'
+    };
+  },
+
+  onShareTimeline: function () {
+    return {
+      title: 'YOLO+ · 我们的成长地图',
+      query: ''
+    };
+  },
+
   onUnload: function () {
     if (this._loadObserver) {
       this._loadObserver.disconnect();

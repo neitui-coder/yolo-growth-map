@@ -30,6 +30,17 @@ Page({
     }
   },
 
+  onShareAppMessage: function () {
+    return {
+      title: 'YOLO+ 历届活动 · 一起看看',
+      path: '/pages/activities/activities'
+    };
+  },
+
+  onShareTimeline: function () {
+    return { title: 'YOLO+ 历届活动' };
+  },
+
   onPullDownRefresh: function () {
     var that = this;
     app.getActivitiesCache(function (acts) {

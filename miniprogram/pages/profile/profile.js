@@ -55,6 +55,14 @@ Page({
     }
   },
 
+  onShareAppMessage: function () {
+    var u = this.data.selectedUser || {};
+    return {
+      title: (u.name || '会员') + ' 的成长档案 · YOLO+',
+      path: '/pages/profile/profile?userId=' + (u.userId || this.data.userId || '')
+    };
+  },
+
   _ensureUserReady: function () {
     var that = this;
     var userId = this.data.userId;

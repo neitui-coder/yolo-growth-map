@@ -5,22 +5,47 @@
 >
 > **完整迭代历史与决策摘要**：见 [`CHANGELOG.md`](./CHANGELOG.md)
 
-## 0. 密钥/凭证审计（重要）
+## 0. 项目相关的所有文件位置清单（重要）
 
-**仓库外没有任何 secret 文件**——这是设计选择：
-- 不需要 AppSecret：用 cloud function + `cloud.getWXContext()` 服务端直签
-- 不需要 CloudBase AccessKey：用 DevTools CLI 部署走 DevTools 微信登录
-- 仓库内的 AppID/EnvID/Sean openId 不是 secret（前者公开，后者是 Sean 个人标识）
+仓库内代码 + 仓库外资源都在 Sean 本机。**仓库外文件不入库**（避免 PII 风险或重复），但本机访问。下一个 CC session 在同一台电脑上能读这些路径。
 
-**仓库外但跟项目相关**：
+### 仓库内（`/Users/Sean/WeChatProjects/miniprogram-2/`）
+- 全部源代码、`scripts/`、`docs/`、生成产物 `data/yolo-*.json`、`assets/logo/`
+- **没有 secret 文件**（设计选择，见下方"无 secret 架构"）
+
+### 仓库外资源（本机访问）
+
+| 类型 | 路径 | 用途 | 谁需要 |
+|---|---|---|---|
+| **会员档案 xlsx** | `~/Downloads/YOLO+档案信息表（全）.xlsx` | `scripts/rebuild-from-xlsx.py`、`extract-phones.py`、`extract-mbti.py`、`clean-education.py`、`clean-company.py` 的源数据 | 数据重建脚本 |
+| **综合出席表 xlsx** | `~/Downloads/YOLO+出席表.xlsx` | `scripts/add-old-activities.py`（2019-2022 老活动）、`audit-attendance.py` | 出席数据 |
+| **武夷山 CSV** | `~/Downloads/YOLO+出席表-2026武夷山小组活动.csv` | 2026 武夷山专门表 | 出席数据 |
+| **历年出席 xlsx 目录** | `~/Downloads/YOLO+会员活动出席表格/` | 2023/2024/2025 三个独立 xlsx | 出席数据 |
+
+→ Sean 把新版本 xlsx 给下一个 session 时，**放到 `~/Downloads/` 同名覆盖即可**，scripts 自动用新数据。
+
+### 无 secret 架构
+
+仓库外**没有任何** secret/key 文件，因为架构故意避免依赖：
+- 不需要 AppSecret：所有需要 openid 的地方用 cloud function + `cloud.getWXContext()`（微信服务端直签）
+- 不需要 CloudBase AccessKey/SecretKey：用 DevTools CLI 部署，走 DevTools 微信登录
+- 没有 `.pem` / `credentials.json` / `.env` 等
+
+### Sean 本机会话态（无法迁移）
+
 | 项 | 位置 | 说明 |
 |---|---|---|
-| 数据源 xlsx（含 PII 手机号）| `data/sources/` 仓库已备份 + `~/Downloads/` 原版 | scripts 优先用 `data/sources/`，fallback `~/Downloads/` |
-| DevTools 登录态 | `~/Library/Application Support/微信开发者工具/` | Sean 本人持有，无法迁移 |
+| WeChat DevTools 登录 | `~/Library/Application Support/微信开发者工具/` | Sean 微信账号，仅本人持有 |
 | mp.weixin.qq.com 浏览器登录 | 浏览器 cookies | 同上 |
-| `~/.claude/shell-wrapper.sh` 一行 FNM_LOGLEVEL | 1 行环境变量 | 跟项目无关，纯抑制 fnm warning |
+| `~/.claude/shell-wrapper.sh` | 1 行 `FNM_LOGLEVEL=quiet` | 跟项目无关，纯抑制 fnm warning 污染 context |
 
-→ **所有项目代码 + 数据 + 脚本全部在 `/Users/Sean/WeChatProjects/miniprogram-2`**。
+### 仓库内引用了 AppID/EnvID（不算 secret）
+- AppID `wx2d60e117f613f2be` — `project.config.json` + 各种 commit message
+- CloudBase env `cloud1-7giblg7i4595eaf3` — `miniprogram/app.js` + `cloudfunctions/yoloFunctions/index.js`
+- Sean 自己的 openId `oR4Gr5AfM4rgKhFwd6HsK7QWDNG0` — `miniprogram/app.js` adminOpenIds、cloud function ADMIN_OPENIDS
+  - 这是 Sean 微信号在本小程序的标识。其他人拿到也无法冒用（绑定有唯一性校验）
+
+→ **真正的"项目操作"100% 在 `/Users/Sean/WeChatProjects/miniprogram-2` 内 + `~/Downloads/` 的源数据**。
 
 ## 1. 仓库与路径
 

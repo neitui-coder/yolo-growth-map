@@ -4,8 +4,12 @@
     {{rank}}
   </view>
 
-  <!-- 头像暂时隐藏（按 Sean 要求） -->
-  <view wx:if="{{user.isBirthdayMonth}}" class="mc-birthday-hat-standalone">🎂</view>
+  <view class="mc-avatar-wrap">
+    <image class="mc-avatar" src="{{avatarUrl}}" mode="aspectFill" lazy-load="true" />
+    <view wx:if="{{user.isBirthdayMonth}}" class="mc-birthday-hat">
+      <view class="mc-birthday-hat-ball"></view>
+    </view>
+  </view>
 
   <!-- Name -->
   <view class="mc-name-row">

@@ -35,6 +35,9 @@ exports.main = async (event, context) => {
     // --- wechat auth ---
     case 'loginWechat':     return await loginWechat(event);
     case 'bindWechat':      return await bindWechat(event);
+    case 'addStaff':        return await addStaff(event);
+    case 'removeStaff':     return await removeStaff(event);
+    case 'listStaff':       return await listStaff(event);
     // --- activities ---
     case 'getActivities':   return await getActivities(event);
     case 'seedActivities':  return await seedActivities(event);
@@ -61,21 +64,88 @@ exports.main = async (event, context) => {
   }
 };
 
-// 微信登录：通过 cloud context 取到 openId/unionid，查 users 集合是否已绑定
+// 微信登录：通过 cloud context 取到 openId/unionid
+// 1. 查 users 集合是否已绑定成员
+// 2. 查 staff 集合（隐藏型工作人员白名单，view-only）
 const loginWechat = async () => {
   const { OPENID, UNIONID } = cloud.getWXContext();
   if (!OPENID) return { success: false, error: 'no OPENID in context' };
   const query = UNIONID
     ? _.or([{ wechatOpenId: OPENID }, { wechatUnionId: UNIONID }])
     : { wechatOpenId: OPENID };
-  const res = await db.collection('users').where(query).limit(1).get();
-  const bound = res.data && res.data[0];
+  const userRes = await db.collection('users').where(query).limit(1).get();
+  const bound = userRes.data && userRes.data[0];
+
+  let staffEntry = null;
+  if (!bound) {
+    try {
+      const sq = UNIONID
+        ? _.or([{ wechatOpenId: OPENID }, { wechatUnionId: UNIONID }])
+        : { wechatOpenId: OPENID };
+      const sr = await db.collection('staff').where(sq).limit(1).get();
+      if (sr.data && sr.data[0]) {
+        staffEntry = { note: sr.data[0].note || '', org: sr.data[0].org || '' };
+      }
+    } catch (e) {
+      // staff 集合不存在等情况，静默忽略
+    }
+  }
+
   return {
     success: true,
     openId: OPENID,
     unionId: UNIONID || '',
-    bound: bound ? { userId: bound.userId, name: bound.name } : null
+    bound: bound ? { userId: bound.userId, name: bound.name } : null,
+    staff: staffEntry
   };
+};
+
+// 管理员加 staff（限 admin openid 调用）
+const addStaff = async (event) => {
+  const { OPENID } = cloud.getWXContext();
+  const ADMIN_OPENIDS = ['oR4Gr5AfM4rgKhFwd6HsK7QWDNG0']; // Sean
+  if (ADMIN_OPENIDS.indexOf(OPENID) === -1) {
+    return { success: false, error: 'admin only' };
+  }
+  if (!event.openId) return { success: false, error: 'openId required' };
+  try { await db.createCollection('staff'); } catch (_) {}
+  // 去重
+  const existing = await db.collection('staff').where({ wechatOpenId: event.openId }).limit(1).get();
+  if (existing.data && existing.data[0]) {
+    return { success: true, updated: 0, note: 'already exists' };
+  }
+  await db.collection('staff').add({
+    data: {
+      wechatOpenId: event.openId,
+      wechatUnionId: event.unionId || '',
+      note: event.note || '',
+      org: event.org || '杨三角',
+      addedAt: new Date(),
+      addedBy: OPENID
+    }
+  });
+  return { success: true, added: 1 };
+};
+
+const removeStaff = async (event) => {
+  const { OPENID } = cloud.getWXContext();
+  const ADMIN_OPENIDS = ['oR4Gr5AfM4rgKhFwd6HsK7QWDNG0'];
+  if (ADMIN_OPENIDS.indexOf(OPENID) === -1) {
+    return { success: false, error: 'admin only' };
+  }
+  if (!event.openId) return { success: false, error: 'openId required' };
+  const r = await db.collection('staff').where({ wechatOpenId: event.openId }).remove();
+  return { success: true, removed: r.stats.removed };
+};
+
+const listStaff = async () => {
+  const { OPENID } = cloud.getWXContext();
+  const ADMIN_OPENIDS = ['oR4Gr5AfM4rgKhFwd6HsK7QWDNG0'];
+  if (ADMIN_OPENIDS.indexOf(OPENID) === -1) {
+    return { success: false, error: 'admin only' };
+  }
+  const r = await db.collection('staff').limit(100).get();
+  return { success: true, staff: r.data || [] };
 };
 
 // 绑定：将当前 openId/unionid 写入指定 userId 的 users 记录

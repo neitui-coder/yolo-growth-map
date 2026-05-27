@@ -32,12 +32,6 @@
         "selectedIconPath": "images/tab-home-active.png"
       },
       {
-        "pagePath": "pages/community/community",
-        "text": "社区",
-        "iconPath": "images/tab-community.png",
-        "selectedIconPath": "images/tab-community-active.png"
-      },
-      {
         "pagePath": "pages/activities/activities",
         "text": "活动",
         "iconPath": "images/tab-activity.png",

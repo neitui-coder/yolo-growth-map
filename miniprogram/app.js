@@ -175,10 +175,11 @@ App({
         that.globalData.selectedUserId = r.bound.userId;
         that.globalData.authBound = true;
         that.globalData.isStaff = false;
-      } else if ((that.globalData.staffOpenIds || []).indexOf(r.openId) !== -1) {
-        // 隐藏型工作人员：放行查看，但不绑定成员、不可编辑
+      } else if (r.staff || (that.globalData.staffOpenIds || []).indexOf(r.openId) !== -1) {
+        // 隐藏型工作人员：DB 查得到 staff 记录 或 兜底白名单命中
         that.globalData.authBound = true;
         that.globalData.isStaff = true;
+        that.globalData.staffNote = r.staff ? r.staff.note : '';
       } else {
         that.globalData.authBound = false;
         that.globalData.isStaff = false;

@@ -26,7 +26,8 @@ Component({
     daysSince: 0,
     yearsSince: 0,
     growthValue: 0,
-    cityDisplay: ''
+    cityDisplay: '',
+    isLishi: false
   },
 
   lifetimes: {
@@ -50,12 +51,14 @@ Component({
         var raw = Array.isArray(user.city) ? user.city[0] : user.city;
         cityDisplay = (raw || '').split(/[、,，;；/]/)[0].trim();
       }
+      var isLishi = !!(user.yoloRole && user.yoloRole.indexOf('理事') !== -1);
       this.setData({
         avatarUrl: util.getAvatarUrl(user, 60),
         daysSince: util.daysSince(user),
         yearsSince: util.yearsSince(user),
         growthValue: util.computeGrowthValue(user),
-        cityDisplay: cityDisplay
+        cityDisplay: cityDisplay,
+        isLishi: isLishi
       });
     },
 

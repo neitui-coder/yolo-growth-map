@@ -17,9 +17,9 @@
     <view wx:if="{{user.isFounder}}" class="mc-founder-badge">创始人</view>
   </view>
 
-  <view wx:if="{{user.yoloRole || user.memberStatus === 'alumni'}}" class="mc-role-row">
+  <view wx:if="{{isLishi || user.memberStatus === 'alumni'}}" class="mc-role-row">
     <view wx:if="{{user.memberStatus === 'alumni'}}" class="mc-alumni-badge">往届</view>
-    <view wx:if="{{user.yoloRole}}" class="mc-role-badge">{{user.yoloRole}}</view>
+    <view wx:if="{{isLishi}}" class="mc-role-badge">理事</view>
   </view>
 
   <view wx:if="{{user.isBirthdayMonth}}" class="mc-birthday-row">

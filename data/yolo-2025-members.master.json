@@ -47,7 +47,7 @@
         "company": "天合资本管理公司",
         "city": "上海",
         "birthday": "6月",
-        "education": "美国布朗大学（经济学、社会学）",
+        "education": "布朗大学（经济学 / 社会学）",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -105,7 +105,7 @@
         "company": "凌嘉科技",
         "city": "昆山",
         "birthday": "1月",
-        "education": "Syracuse University 美国雪城大学 双主修：创业创新学系 和 国际关系学 (系辅修：经济学系)",
+        "education": "Syracuse University / 国际关系学",
         "educationDegree": "本科",
         "motto": "让生活自然的发生"
       },
@@ -150,10 +150,10 @@
       "profile": {
         "mbti": "",
         "gallup": [],
-        "company": "浙江中兴精密工业集团有限公司",
+        "company": "上海识野文化创意",
         "city": "宁波",
         "birthday": "7月",
-        "education": "加拿大多伦多大学 金融系",
+        "education": "多伦多大学",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -210,7 +210,7 @@
         "company": "江苏康乃馨纺织集团",
         "city": "淮安",
         "birthday": "4月",
-        "education": "本科：英国南安普顿大学会计和金融 研究生：英国谢菲尔德大学管理学",
+        "education": "南安普顿大学会计和金融 / 谢菲尔德大学管理学",
         "educationDegree": "硕士",
         "motto": ""
       },
@@ -263,10 +263,10 @@
           "责任",
           "积极"
         ],
-        "company": "浙江飞越机电有限公司",
+        "company": "浙江飞越机电",
         "city": "浙江台州",
         "birthday": "6月",
-        "education": "本科：费城艺术大学 研究生：美国帕森斯艺术设计学院，工业设计",
+        "education": "费城艺术大学 / 帕森斯艺术设计学院，工业设计",
         "educationDegree": "硕士",
         "motto": "万物皆可期，星海无限大"
       },
@@ -322,7 +322,7 @@
         "company": "",
         "city": "台湾",
         "birthday": "7月",
-        "education": "多伦多大学政治学专业 布朗大学公共事务硕士研究生在读",
+        "education": "多伦多大学政治学专业 / 布朗大学公共事务硕士研究生",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -369,7 +369,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "ENTJ-A",
         "gallup": [
           "和谐",
           "学习",
@@ -380,7 +380,7 @@
         "company": "",
         "city": "",
         "birthday": "10月",
-        "education": "美国加州大学计算机专业大一",
+        "education": "加州大学计算机专业",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -434,7 +434,7 @@
         "company": "",
         "city": "英国伦敦",
         "birthday": "",
-        "education": "英国皇家中央演讲与戏剧学院-实验戏剧",
+        "education": "皇家中央演讲与戏剧学院-实验戏剧",
         "educationDegree": "在读研究生",
         "motto": "来都来了"
       },
@@ -481,7 +481,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "INFJ",
         "gallup": [
           "学习",
           "排难",
@@ -492,7 +492,7 @@
         "company": "",
         "city": "",
         "birthday": "",
-        "education": "旧金山大学金融专业大四",
+        "education": "旧金山大学金融专业",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -539,7 +539,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "ENTP",
         "gallup": [
           "战略",
           "分析",
@@ -550,7 +550,7 @@
         "company": "",
         "city": "",
         "birthday": "8月",
-        "education": "美国加州大学圣地亚哥分校 专业： 数据科学 加州大学伯克利分校 IEOR",
+        "education": "加州大学圣地亚哥分校 / IEOR",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -593,7 +593,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "ENFP",
         "gallup": [
           "学习",
           "分析",
@@ -604,7 +604,7 @@
         "company": "",
         "city": "美国",
         "birthday": "",
-        "education": "美国罗格斯大学商学心理学专业大二",
+        "education": "罗格斯大学商学心理学专业",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -648,7 +648,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "INFP",
         "gallup": [
           "沟通",
           "适应",
@@ -659,7 +659,7 @@
         "company": "",
         "city": "",
         "birthday": "4月",
-        "education": "美国欧文谷大学经融管理专业 即将毕业",
+        "education": "欧文谷大学经融管理专业 即将毕业",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -704,7 +704,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "ISTJ",
         "gallup": [
           "和谐",
           "伯乐",
@@ -715,7 +715,7 @@
         "company": "",
         "city": "美国费城",
         "birthday": "8月",
-        "education": "美国西方学院心理本科，宾夕法尼亚大学心理咨询研究生在读",
+        "education": "西方学院心理本科，宾夕法尼亚大学心理咨询研究生",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -772,7 +772,7 @@
         "company": "",
         "city": "上海",
         "birthday": "5月",
-        "education": "波士顿大学商学院市场营销专业 复旦大学新闻学院广告系（在读研究生）",
+        "education": "波士顿大学商学院市场营销专业 / 复旦大学新闻学院广告系",
         "educationDegree": "本科",
         "motto": "大展宏图！"
       },
@@ -819,7 +819,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "INTJ",
         "gallup": [
           "学习",
           "和谐",
@@ -827,10 +827,10 @@
           "思维",
           "自信"
         ],
-        "company": "2018.1-2019.5",
+        "company": "鲨湾科技",
         "city": "上海",
         "birthday": "2月",
-        "education": "本科：加拿大麦吉尔大学心理和经济专业",
+        "education": "麦吉尔大学心理和经济专业",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -874,7 +874,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "ENTJ",
         "gallup": [
           "思维",
           "前瞻",
@@ -882,10 +882,10 @@
           "搜集",
           "战略"
         ],
-        "company": "担任母公司销售经理&子公司CEO，",
+        "company": "主管母公司的外贸销售业务以及海外…",
         "city": "台州",
         "birthday": "2月",
-        "education": "澳大利亚墨尔本Monash University 学位：Bachelor of Commerce主修会计",
+        "education": "Monash University",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -932,7 +932,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "INTP-A",
         "gallup": [
           "适应",
           "积极",
@@ -943,7 +943,7 @@
         "company": "",
         "city": "中国北京",
         "birthday": "10月",
-        "education": "本科：西方文理学院 专业：历史系",
+        "education": "西方文理学院",
         "educationDegree": "本科",
         "motto": ""
       },
@@ -999,7 +999,7 @@
         "company": "",
         "city": "美国",
         "birthday": "",
-        "education": "本科：密歇根州里大学 研究生：圣路易斯华盛顿大学 机械工程系（22年9月毕业）",
+        "education": "密歇根州里大学 / 圣路易斯华盛顿大学",
         "educationDegree": "",
         "motto": ""
       },
@@ -1045,7 +1045,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "ENFJ",
         "gallup": [
           "个别",
           "和谐",
@@ -1105,10 +1105,10 @@
         "gallup": [
           "交往｜战略｜排难｜成就｜竞争"
         ],
-        "company": "无锡市吉润国际贸易有限公司",
+        "company": "无锡市吉润国际贸易",
         "city": "江苏-无锡",
         "birthday": "1月",
-        "education": "本科：澳洲悉尼 新南威尔士大学 Biotechnology, Accounting 研究生：澳洲悉尼 新南威尔士大学 Financial analysis",
+        "education": "Biotechnology / Financial analysis",
         "educationDegree": "研究生",
         "motto": "拓宽视野，发现自我"
       },
@@ -1161,10 +1161,10 @@
           "个别",
           "分析"
         ],
-        "company": "北京市银信长远科技股份有限公司，",
+        "company": "深圳市融企动线数字科技",
         "city": "北京",
         "birthday": "2月",
-        "education": "加拿大多伦多大学 纯数学及经济学双学位",
+        "education": "多伦多大学 纯数学及经济学",
         "educationDegree": "本科",
         "motto": "不要忘记前方还有无尽的星辰大海"
       },
@@ -1223,7 +1223,7 @@
         "company": "海通证券",
         "city": "上海-黄浦区",
         "birthday": "7月",
-        "education": "本科：华盛顿大学 工商管理 研究生：杜克大学 管理学",
+        "education": "华盛顿大学 工商管理 / 杜克大学",
         "educationDegree": "研究生",
         "motto": "既然都这么想了，就去试试看吧"
       },
@@ -1336,7 +1336,7 @@
           "交往",
           "包容"
         ],
-        "company": "合肥佳冠口腔医疗有限公司",
+        "company": "合肥佳冠口腔医疗",
         "city": "浙江-杭州",
         "birthday": "2月",
         "education": "浙江大学工商管理专业",
@@ -1392,10 +1392,10 @@
           "交往",
           "完美"
         ],
-        "company": "安徽亿维医疗用品有限公司",
+        "company": "安徽亿维医疗用品",
         "city": "江苏-扬州",
         "birthday": "10月",
-        "education": "加拿大约克大学 工商管理",
+        "education": "约克大学 工商管理",
         "educationDegree": "本科",
         "motto": "I DON'T GET OLDER I JUST GET BETTER"
       },
@@ -1446,10 +1446,10 @@
           "分析",
           "和谐"
         ],
-        "company": "绒宝（广州）科技有限公司",
+        "company": "绒宝(广州)科技",
         "city": "广东-广州",
         "birthday": "6月",
-        "education": "美国南加州大学 工商管理专业",
+        "education": "南加州大学 工商管理专业",
         "educationDegree": "本科",
         "motto": "我没有梦想，我脚踏实地"
       },
@@ -1505,7 +1505,7 @@
         "company": "",
         "city": "英国",
         "birthday": "12月",
-        "education": "威斯敏斯特公学 （Westminster School)",
+        "education": "威斯敏斯特公学",
         "educationDegree": "高中",
         "motto": "我最喜欢的放松方式：旅游，购物，晒太阳，吃"
       },
@@ -1559,7 +1559,7 @@
           "审慎",
           "战略"
         ],
-        "company": "知轮（杭州）科技有限公司",
+        "company": "知轮(杭州)科技",
         "city": "中国-杭州",
         "birthday": "9月",
         "education": "Drexel University",
@@ -1612,7 +1612,7 @@
         "company": "汇思集团",
         "city": "江苏-苏州",
         "birthday": "7月",
-        "education": "本科：曼彻斯大学 研究生：爱丁堡大学",
+        "education": "曼彻斯大学 / 爱丁堡大学",
         "educationDegree": "研究生",
         "motto": "开心开心开心"
       },
@@ -1664,7 +1664,7 @@
           "排难",
           "战略"
         ],
-        "company": "合鲸资本、二级投资、公众号",
+        "company": "公众号",
         "city": "中国-上海",
         "birthday": "1月",
         "education": "多伦多大学罗德曼商学院管理专业",
@@ -1711,7 +1711,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "INTJ",
         "gallup": [
           "学习",
           "交往",
@@ -1719,10 +1719,10 @@
           "回顾",
           "分析"
         ],
-        "company": "卓时(香港)有限公司",
+        "company": "卓时(香港)",
         "city": "中国-香港",
         "birthday": "8月",
-        "education": "本科：UBC 不列颠哥伦比亚大学（Pysch & 经济） 研究生：北京大学汇丰商学院（金融）",
+        "education": "UBC 不列颠哥伦比亚大学 / 北京大学汇丰商学院",
         "educationDegree": "研究生",
         "motto": "终生学习 保持好奇"
       },
@@ -1776,7 +1776,7 @@
         "company": "6月初计划哔哩哔哩实习",
         "city": "美国-湾区",
         "birthday": "4月",
-        "education": "Santa Clara经济",
+        "education": "Santa Clara",
         "educationDegree": "本科在读",
         "motto": "别人老问我什么时候不困 我说睡觉的时候不困"
       },
@@ -1829,10 +1829,10 @@
           "自信",
           "成就"
         ],
-        "company": "次世代品牌管理有限公司",
+        "company": "次世代品牌管理",
         "city": "中国—上海",
         "birthday": "8月",
-        "education": "本科：UCLA 研究生：浙江大学EMBA",
+        "education": "UCLA / EMBA",
         "educationDegree": "研究生",
         "motto": ""
       },
@@ -1876,7 +1876,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "ESFP",
         "gallup": [
           "交往",
           "适应",
@@ -1989,7 +1989,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "ESTJ",
         "gallup": [
           "沟通",
           "行动",

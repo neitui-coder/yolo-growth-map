@@ -779,34 +779,44 @@ page {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: #fff;
-  padding: 24rpx 32rpx;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20rpx);
+  padding: 18rpx 28rpx;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.06);
+  justify-content: center;
+  position: relative;
 }
 
 .v2-nav-back {
-  width: 56rpx;
-  height: 56rpx;
+  position: absolute;
+  left: 24rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 64rpx;
+  height: 64rpx;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #f1f5f9;
-  white-space: nowrap;
+  background: rgba(243, 244, 246, 0.85);
+  transition: background 0.18s;
+}
+.v2-nav-back:active {
+  background: rgba(226, 232, 240, 1);
 }
 
 .v2-nav-back-icon {
-  font-size: 28rpx;
-  color: #1f2937;
+  font-size: 32rpx;
+  color: #475569;
+  font-weight: 600;
 }
 
 .v2-nav-title {
   font-size: 32rpx;
-  font-weight: 700;
-  color: #1f2937;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: 1rpx;
 }
 
 .v2-nav-toggle {

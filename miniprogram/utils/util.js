@@ -124,6 +124,15 @@ function computeMentors(user) {
 function getAvatarUrl(user, size) {
   size = size || 80;
   if (user && user.avatarImage && String(user.avatarImage).trim()) {
+    // 优先走全局 mediaUrlCache 解析的 https URL —— 首页/详情页/活动详情都共享同一个
+    // URL，微信 image 组件按 URL 缓存，避免重复拉图
+    try {
+      var app = getApp && getApp();
+      if (app && app.getMediaUrl) {
+        var resolved = app.getMediaUrl(user.avatarImage);
+        if (resolved) return resolved;
+      }
+    } catch (e) {}
     return user.avatarImage;
   }
   var style = user.avatarStyle || 'adventurer-neutral';

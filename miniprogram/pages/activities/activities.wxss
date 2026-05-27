@@ -9,9 +9,6 @@ page {
 }
 
 .nav-bar {
-  position: sticky;
-  top: 0;
-  z-index: 30;
   padding: 24rpx 32rpx 24rpx;
   background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 55%, #2563eb 100%);
   box-shadow: 0 12rpx 32rpx rgba(15, 23, 42, 0.18);

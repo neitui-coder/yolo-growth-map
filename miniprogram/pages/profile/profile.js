@@ -627,9 +627,25 @@ Page({
 
   // 点击头像 → 全屏预览（系统提供保存按钮）
   onAvatarPreview: function () {
-    var url = this.data.selectedUser && this.data.selectedUser.avatarUrl;
-    if (!url) return;
-    wx.previewImage({ current: url, urls: [url] });
+    var su = this.data.selectedUser || {};
+    var url = su.avatarUrl;
+    var raw = su.avatarImage;
+    if (!url && !raw) return;
+    // 已经是 https URL → 直接预览
+    if (url && url.indexOf('https://') === 0) {
+      wx.previewImage({ current: url, urls: [url] });
+      return;
+    }
+    // 还是 cloud:// 或缓存未命中 → 实时换签名 URL
+    var ref = (url && url.indexOf('cloud://') === 0) ? url : raw;
+    if (!ref) return;
+    wx.cloud.getTempFileURL({ fileList: [ref] }).then(function (r) {
+      var fresh = r.fileList && r.fileList[0] && r.fileList[0].tempFileURL;
+      if (fresh) wx.previewImage({ current: fresh, urls: [fresh] });
+      else wx.showToast({ title: '图片加载失败', icon: 'none' });
+    }).catch(function () {
+      wx.showToast({ title: '图片加载失败', icon: 'none' });
+    });
   },
 
   onAvatarSelect: function (e) {

@@ -3,6 +3,666 @@
   "generatedAt": "2026-04-13T10:06:04.561Z",
   "activities": [
     {
+      "activityKey": "yolo-2019-taiwan-06",
+      "title": "YOLO+ 6月台湾活动",
+      "date": "2019-06",
+      "dateRange": "",
+      "location": "台湾",
+      "type": "travel",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-ruixiang",
+          "role": ""
+        },
+        {
+          "userId": "mn-18022",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "mn-18027",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2019-shenzhen-11",
+      "title": "YOLO+ 11月深圳年会活动 1W",
+      "date": "2019-11",
+      "dateRange": "",
+      "location": "深圳",
+      "type": "annual",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-ruixiang",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2019-hangzhou-12",
+      "title": "YOLO+ 12月杭州活动  1S",
+      "date": "2019-12",
+      "dateRange": "",
+      "location": "杭州",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "mn-18027",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2020-shenzhen-08",
+      "title": "YOLO+ 8月深圳活动",
+      "date": "2020-08",
+      "dateRange": "",
+      "location": "深圳",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2020-beijing-09",
+      "title": "YOLO+ 9月北京活动",
+      "date": "2020-09",
+      "dateRange": "",
+      "location": "北京",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2020-hangzhou-11",
+      "title": "YOLO+ 11月杭州活动",
+      "date": "2020-11",
+      "dateRange": "",
+      "location": "杭州",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-18018",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2021-online-02",
+      "title": "YOLO+ 2月袁纯导师线上活动",
+      "date": "2021-02",
+      "dateRange": "",
+      "location": "线上",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "alumni-ruixiang",
+          "role": ""
+        },
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2021-beijing-07",
+      "title": "YOLO+ 7月北京活动",
+      "date": "2021-07",
+      "dateRange": "",
+      "location": "北京",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "mn-18018",
+          "role": ""
+        },
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "mn-18027",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-21063",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2021-online-09",
+      "title": "YOLO+ 9月22日樊华良线上活动",
+      "date": "2021-09",
+      "dateRange": "9月22日",
+      "location": "线上",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-18027",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2021-shanghai-10",
+      "title": "YOLO+ 10月上海导师小组活动",
+      "date": "2021-10",
+      "dateRange": "",
+      "location": "上海",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2021-gba-11",
+      "title": "YOLO+ 11月大湾区年会活动",
+      "date": "2021-11",
+      "dateRange": "",
+      "location": "大湾区",
+      "type": "annual",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "mn-18018",
+          "role": ""
+        },
+        {
+          "userId": "mn-18022",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2021-online-12",
+      "title": "YOLO+ 12月孙辉导师线上活动",
+      "date": "2021-12",
+      "dateRange": "",
+      "location": "线上",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2022-chengdu-07",
+      "title": "YOLO+ 7月8-9日成都活动",
+      "date": "2022-07",
+      "dateRange": "7月8-9日",
+      "location": "成都",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2022-changsha-08",
+      "title": "YOLO+ 8月19-21日长沙活动",
+      "date": "2022-08",
+      "dateRange": "8月19-21日",
+      "location": "长沙",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-18022",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-21079",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2022-hangzhou-09",
+      "title": "YOLO+ 9月2-3日杭州活动",
+      "date": "2022-09",
+      "dateRange": "9月2-3日",
+      "location": "杭州",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2022-shanghai-11",
+      "title": "YOLO+ 11月18-20日上海年会",
+      "date": "2022-11",
+      "dateRange": "11月18-20日",
+      "location": "上海",
+      "type": "annual",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-18022",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-21078",
+          "role": ""
+        }
+      ]
+    },
+    {
       "activityKey": "yolo-2023-hongkong",
       "title": "YOLO+ 香港游学",
       "summary": "2023年YOLO+香港游学活动，探索商业生态与文化体验。",

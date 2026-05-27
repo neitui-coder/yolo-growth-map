@@ -124,6 +124,27 @@ print(f'档案 xlsx 共 {len(archive)} sheet')
 
 master_sheet = archive[0]  # sheet1 综合
 detail_sheet = archive[1]  # sheet2 详细
+roster_sheet = archive[5]  # sheet6 2025-2026 年度名单 (权威现届列表，34 人)
+
+
+def build_roster_status():
+    """sheet6: col 1 类别(现届会员/新增会员/往届会员), col 2 姓名 → {name: status}"""
+    out = {}
+    for ri in sorted(roster_sheet.keys()):
+        if ri < 1: continue
+        r = roster_sheet[ri]
+        cat = (r.get(1) or '').strip()
+        name = norm(r.get(2) or '')
+        if not name or name in ('序号', '姓名'): continue
+        if cat in ('现届会员', '新增会员'):
+            out[name] = 'active'
+        elif cat == '往届会员':
+            out[name] = 'alumni'
+    return out
+
+
+roster_status = build_roster_status()
+print(f'sheet6 年度名单：{len(roster_status)} 人 ({sum(1 for v in roster_status.values() if v=="active")} active + {sum(1 for v in roster_status.values() if v=="alumni")} alumni)')
 
 
 def build_detail_index():
@@ -232,7 +253,10 @@ for ri in sorted(master_sheet.keys()):
         hobbies = (old.get('interests') or {}).get('hobbies') or []
 
     is_lishi = '理事' in role_title
-    keep = is_lishi or (join_year is not None and join_year >= 2022)
+    in_roster = name in roster_status
+    # 最终规则：以 sheet6（2025-2026 年度名单 34 人）为权威现届，
+    # 加上所有未在名单的理事（5 位创始理事补回）
+    keep = in_roster or is_lishi
     if not keep:
         skipped.append((name, join_year, role_title))
         continue
@@ -240,8 +264,11 @@ for ri in sorted(master_sheet.keys()):
     duration_years = max(0, CURRENT_YEAR - join_year) if join_year else None
     user_id = assign_user_id(name, member_no, len(members))
 
-    # member status: W/S 大写 = 现届，w/s 小写 = 往届
-    is_alumni = category in ('w', 's')
+    # member status: 优先 sheet6 年度名单；否则 fallback 到 类别 大小写
+    if name in roster_status:
+        is_alumni = (roster_status[name] == 'alumni')
+    else:
+        is_alumni = category in ('w', 's')
 
     avatar_image = (old.get('assets') or {}).get('avatarImage') or ''
 

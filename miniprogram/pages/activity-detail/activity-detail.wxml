@@ -61,6 +61,7 @@
 
       <view wx:if="{{displayParticipants.length > 0}}" class="section">
         <view class="section-title">参与者 <text class="section-count">{{displayParticipants.length}} 人</text></view>
+        <view class="participants-note">仅含 YOLO+ 现届与往届会员；非会员、家属、嘉宾不计入统计</view>
         <view class="participants-grid">
           <view
             wx:for="{{displayParticipants}}"

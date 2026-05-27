@@ -27,12 +27,12 @@
   <view class="v2-hero-content">
     <!-- 上半: 头像 + 信息 -->
     <view class="v2-hero-row">
-      <view class="v2-avatar-wrap">
+      <view class="v2-avatar-wrap" bindtap="onAvatarPreview">
         <image class="v2-avatar" src="{{selectedUser.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill" lazy-load="true" />
         <view wx:if="{{selectedUser.isBirthdayMonth}}" class="v2-birthday-hat">
           <view class="v2-birthday-hat-ball"></view>
         </view>
-        <view wx:if="{{isOwner}}" class="v2-avatar-edit" bindtap="onAvatarEdit">
+        <view wx:if="{{isOwner}}" class="v2-avatar-edit" catchtap="onAvatarEdit">
           <text>换</text>
         </view>
       </view>
@@ -41,12 +41,9 @@
         <view class="v2-hero-motto" wx:if="{{selectedUser.motto}}">"{{selectedUser.motto}}"</view>
         <view class="v2-hero-funny" wx:if="{{funnyIntro}}">{{funnyIntro}}</view>
         <view class="v2-hero-chips">
-          <text wx:if="{{selectedUser.memberStatus === 'alumni'}}" class="v2-chip v2-chip-alumni">往届会员</text>
-          <text wx:if="{{selectedUser.isFounder}}" class="v2-chip v2-chip-founder" bindtap="onTagTap" data-field="tags" data-value="创始人">创始人</text>
-          <text wx:if="{{selectedUser.yoloRole}}" class="v2-chip v2-chip-role" bindtap="onTagTap" data-field="yoloRole" data-value="{{selectedUser.yoloRole}}">{{selectedUser.yoloRole}}</text>
-          <text wx:if="{{selectedUser.career}}" class="v2-chip" bindtap="onTagTap" data-field="career" data-value="{{selectedUser.career}}">{{selectedUser.career}}</text>
-          <text wx:if="{{selectedUser.cityDisplay}}" class="v2-chip" bindtap="onTagTap" data-field="city" data-value="{{selectedUser.cityDisplay}}">{{selectedUser.cityDisplay}}</text>
-          <text wx:if="{{selectedUser.mbti}}" class="v2-chip v2-chip-accent" bindtap="onTagTap" data-field="mbti" data-value="{{selectedUser.mbti}}">{{selectedUser.mbti}}</text>
+          <text wx:if="{{selectedUser.memberStatus === 'alumni'}}" class="v2-chip v2-chip-alumni">往届</text>
+          <text wx:if="{{selectedUser.isFounder}}" class="v2-chip v2-chip-founder">创始人</text>
+          <text wx:if="{{selectedUser.isLishi}}" class="v2-chip v2-chip-role">理事</text>
         </view>
       </view>
     </view>
@@ -112,7 +109,6 @@
           <text wx:if="{{selectedUser.career}}" class="v2-detail-tag" bindtap="onTagTap" data-field="career" data-value="{{selectedUser.career}}">{{selectedUser.career}}</text>
           <text wx:if="{{selectedUser.company}}" class="v2-detail-tag" bindtap="onTagTap" data-field="company" data-value="{{selectedUser.company}}">{{selectedUser.company}}</text>
           <text wx:if="{{selectedUser.education}}" class="v2-detail-tag" bindtap="onTagTap" data-field="education" data-value="{{selectedUser.education}}">{{selectedUser.education}}</text>
-          <text wx:if="{{selectedUser.birthday}}" class="v2-detail-tag" bindtap="onTagTap" data-field="birthday" data-value="{{selectedUser.birthday}}">{{selectedUser.birthday}}</text>
           <text wx:if="{{selectedUser.zodiac}}" class="v2-detail-tag" bindtap="onTagTap" data-field="zodiac" data-value="{{selectedUser.zodiac}}">{{selectedUser.zodiac}}</text>
         </view>
       </view>

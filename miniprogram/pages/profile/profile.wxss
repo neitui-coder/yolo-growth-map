@@ -1302,7 +1302,6 @@ page {
 .v2-tag-gallup {
   background: #f0fdf4;
   color: #16a34a;
-  border: 1rpx solid #bbf7d0;
 }
 
 .v2-tag-hobby {

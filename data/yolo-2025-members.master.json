@@ -316,7 +316,9 @@
           "球赛"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-ruixiang.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -365,7 +367,9 @@
           "篮球"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-charles.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -470,7 +474,9 @@
           "摄影"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jiayu.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -519,7 +525,9 @@
           "滑雪"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sean.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -569,7 +577,9 @@
           "短跑"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-peter.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -583,8 +593,8 @@
         "englishName": ""
       },
       "community": {
-        "role": "会员",
-        "isLishi": false,
+        "role": "理事",
+        "isLishi": true,
         "memberNo": "18025",
         "category": "S",
         "joinYear": 2018,
@@ -620,7 +630,9 @@
           "学美术"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-zhiqian.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -671,7 +683,9 @@
           "烹饪"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-amber.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -776,7 +790,9 @@
           "做饭"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-janine.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -829,7 +845,9 @@
           "看电影"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-rita.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -880,7 +898,9 @@
           "打游戏"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-kevin.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -932,7 +952,9 @@
           "看 YouTube"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-boyuan.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -983,7 +1005,9 @@
           "自己也是体育赛事相关的博主"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-monica.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-2026-05"
@@ -1393,7 +1417,7 @@
           "追求"
         ],
         "company": "",
-        "city": "英国-",
+        "city": "英国",
         "birthday": "12月",
         "education": "威斯敏斯特公学 （Westminster School)",
         "educationDegree": "高中",

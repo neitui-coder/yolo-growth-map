@@ -167,6 +167,14 @@ page {
   color: #94a3b8;
 }
 
+.participants-note {
+  font-size: 22rpx;
+  color: #94a3b8;
+  margin-top: -10rpx;
+  margin-bottom: 18rpx;
+  line-height: 1.5;
+}
+
 .highlights-list {
   display: flex;
   flex-direction: column;

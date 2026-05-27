@@ -215,11 +215,13 @@ Page({
       cityDisplay = Array.isArray(user.city) ? user.city.join("、") : user.city;
     }
 
+    var isLishi = !!(user.yoloRole && user.yoloRole.indexOf('理事') !== -1);
     var selectedUser = Object.assign({}, user, {
       avatarUrl: app.getMediaUrl
         ? app.getMediaUrl(user.avatarImage) || util.getAvatarUrl(user, 80)
         : util.getAvatarUrl(user, 80),
       cityDisplay: cityDisplay,
+      isLishi: isLishi,
       isBirthdayMonth: util.isBirthdayInCurrentMonth(user),
       detailVisibility: user.visibility || {},
       skills: user.skills || [],
@@ -620,6 +622,13 @@ Page({
   onAvatarEdit: function () {
     if (!this.data.isOwner) return;
     this.setData({ showAvatarPicker: true });
+  },
+
+  // 点击头像 → 全屏预览（系统提供保存按钮）
+  onAvatarPreview: function () {
+    var url = this.data.selectedUser && this.data.selectedUser.avatarUrl;
+    if (!url) return;
+    wx.previewImage({ current: url, urls: [url] });
   },
 
   onAvatarSelect: function (e) {

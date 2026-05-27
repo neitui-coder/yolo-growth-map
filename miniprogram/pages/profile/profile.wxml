@@ -18,7 +18,7 @@
   <view class="v2-nav-back" bindtap="onGoBack">
     <text class="v2-nav-back-icon">←</text>
   </view>
-  <view class="v2-nav-title">个人档案</view>
+  <view class="v2-nav-title">成长档案</view>
 </view>
 
 <!-- Hero 卡片: 头像 + 名字 + 核心信息 + 操作按钮 -->
@@ -57,7 +57,7 @@
       <view class="v2-stat-divider"></view>
       <view class="v2-stat">
         <text class="v2-stat-num">{{sortedNodes.length}}</text>
-        <text class="v2-stat-label">成长节点</text>
+        <text class="v2-stat-label">一起走过</text>
       </view>
       <view class="v2-stat-divider"></view>
       <view class="v2-stat">
@@ -87,10 +87,10 @@
   <text class="v2-completeness-hint" wx:if="{{missingFieldsText}}">还差: {{missingFieldsText}}</text>
 </view>
 
-<!-- 详细资料 -->
+<!-- 关于 TA -->
 <view class="v2-card" wx:if="{{hasDetailInfo}}">
   <view class="v2-card-header">
-    <text class="v2-card-title">详细资料</text>
+    <text class="v2-card-title">关于 TA</text>
   </view>
   <view class="v2-card-body expanded">
     <view class="v2-card-inner">

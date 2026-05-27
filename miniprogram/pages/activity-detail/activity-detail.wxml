@@ -46,7 +46,7 @@
       </view>
 
       <view wx:if="{{activity.keyHighlights && activity.keyHighlights.length > 0}}" class="section">
-        <view class="section-title">活动亮点</view>
+        <view class="section-title">高光时刻</view>
         <view class="highlights-list">
           <view
             wx:for="{{activity.keyHighlights}}"
@@ -60,7 +60,7 @@
       </view>
 
       <view wx:if="{{displayParticipants.length > 0}}" class="section">
-        <view class="section-title">参与者 <text class="section-count">{{displayParticipants.length}} 人</text></view>
+        <view class="section-title">同行的伙伴 <text class="section-count">{{displayParticipants.length}} 人</text></view>
         <view class="participants-note">仅含 YOLO+ 现届与往届会员；非会员、家属、嘉宾不计入统计</view>
         <view class="participants-grid">
           <view
@@ -85,7 +85,7 @@
       </view>
 
       <view wx:if="{{displayImages.length > 0}}" class="section">
-        <view class="section-title">照片 <text class="section-count">{{displayImages.length}} 张</text></view>
+        <view class="section-title">现场记忆 <text class="section-count">{{displayImages.length}} 张</text></view>
         <view class="photos-grid">
           <view
             wx:for="{{displayImages}}"
@@ -102,12 +102,12 @@
     </view>
 
     <view class="back-btn-wrap">
-      <view class="back-btn" bindtap="onGoBack">返回上页</view>
+      <view class="back-btn" bindtap="onGoBack">看看其他活动</view>
     </view>
   </block>
 
   <view wx:else class="not-found">
     <text class="not-found-text">活动不存在</text>
-    <view class="back-btn" bindtap="onGoBack">返回上页</view>
+    <view class="back-btn" bindtap="onGoBack">看看其他活动</view>
   </view>
 </view>

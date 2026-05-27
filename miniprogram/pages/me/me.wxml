@@ -92,18 +92,13 @@
 <!-- 功能入口 -->
 <view class="me-menu">
   <view wx:if="{{!isOperatorView}}" class="me-menu-item" bindtap="onViewProfile">
-    <text class="me-menu-icon">👤</text>
-    <text class="me-menu-text">查看个人档案</text>
+    <text class="me-menu-icon">🗺️</text>
+    <text class="me-menu-text">看看我的成长地图</text>
     <text class="me-menu-arrow">▸</text>
   </view>
   <view wx:if="{{!isOperatorView}}" class="me-menu-item" bindtap="onEditProfile">
     <text class="me-menu-icon">✏️</text>
-    <text class="me-menu-text">编辑资料</text>
-    <text class="me-menu-arrow">▸</text>
-  </view>
-  <view wx:if="{{!isOperatorView}}" class="me-menu-item" bindtap="onViewMap">
-    <text class="me-menu-icon">🗺️</text>
-    <text class="me-menu-text">我的成长地图</text>
+    <text class="me-menu-text">完善我的资料</text>
     <text class="me-menu-arrow">▸</text>
   </view>
   <view wx:if="{{isOperatorView}}" class="me-menu-item">

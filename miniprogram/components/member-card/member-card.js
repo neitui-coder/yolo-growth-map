@@ -23,6 +23,7 @@ Component({
 
   data: {
     avatarUrl: '',
+    avatarInitial: '',
     daysSince: 0,
     yearsSince: 0,
     growthValue: 0,
@@ -54,6 +55,7 @@ Component({
       var isLishi = !!(user.yoloRole && user.yoloRole.indexOf('理事') !== -1);
       this.setData({
         avatarUrl: util.getAvatarUrl(user, 60),
+        avatarInitial: util.getAvatarInitial(user),
         daysSince: util.daysSince(user),
         yearsSince: util.yearsSince(user),
         growthValue: util.computeGrowthValue(user),

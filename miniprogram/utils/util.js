@@ -124,8 +124,6 @@ function computeMentors(user) {
 function getAvatarUrl(user, size) {
   size = size || 80;
   if (user && user.avatarImage && String(user.avatarImage).trim()) {
-    // 优先走全局 mediaUrlCache 解析的 https URL —— 首页/详情页/活动详情都共享同一个
-    // URL，微信 image 组件按 URL 缓存，避免重复拉图
     try {
       var app = getApp && getApp();
       if (app && app.getMediaUrl) {
@@ -135,9 +133,13 @@ function getAvatarUrl(user, size) {
     } catch (e) {}
     return user.avatarImage;
   }
-  var style = user.avatarStyle || 'adventurer-neutral';
-  var seed = encodeURIComponent(user.avatarSeed || user.name);
-  return 'https://api.dicebear.com/7.x/' + style + '/svg?seed=' + seed + '&size=' + size;
+  // 无真实头像 → 返回空字符串，组件层用"名字首字"占位
+  return '';
+}
+
+function getAvatarInitial(user) {
+  var name = (user && user.name) || '';
+  return name ? name.slice(0, 1) : '?';
 }
 
 /**
@@ -201,6 +203,12 @@ function computeSimilarity(userA, userB) {
     for (var i = 0; i < citiesA.length; i++) {
       if (citiesB.indexOf(citiesA[i]) !== -1) { score += 2; break; }
     }
+  }
+  // 盖洛普五大天赋（强信号：性格匹配的核心维度）
+  if (Array.isArray(userA.gallup) && Array.isArray(userB.gallup)) {
+    userA.gallup.forEach(function (g) {
+      if (userB.gallup.indexOf(g) !== -1) score += 1;
+    });
   }
   if (userA.hobbies && userB.hobbies) {
     userA.hobbies.forEach(function (h) {
@@ -394,6 +402,7 @@ module.exports = {
   daysSince: daysSince,
   yearsSince: yearsSince,
   formatDate: formatDate,
+  getAvatarInitial: getAvatarInitial,
   computeGrowthValue: computeGrowthValue,
   computeMentors: computeMentors,
   getAvatarUrl: getAvatarUrl,

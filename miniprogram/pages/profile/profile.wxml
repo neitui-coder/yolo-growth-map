@@ -28,7 +28,8 @@
     <!-- 上半: 头像 + 信息 -->
     <view class="v2-hero-row">
       <view class="v2-avatar-wrap" bindtap="onAvatarPreview">
-        <image class="v2-avatar" src="{{selectedUser.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill" lazy-load="true" />
+        <image wx:if="{{selectedUser.avatarUrl}}" class="v2-avatar" src="{{selectedUser.avatarUrl}}" mode="aspectFill" lazy-load="true" />
+        <view wx:else class="v2-avatar v2-avatar-initial">{{selectedUser.avatarInitial}}</view>
         <view wx:if="{{selectedUser.isBirthdayMonth}}" class="v2-birthday-hat">
           <view class="v2-birthday-hat-ball"></view>
         </view>

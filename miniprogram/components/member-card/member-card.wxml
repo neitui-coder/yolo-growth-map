@@ -1,9 +1,10 @@
 <view class="member-card" bindtap="onCardTap">
   <view wx:if="{{showRank && rank > 0}}" class="mc-rank {{rank === 1 ? 'top1' : rank === 2 ? 'top2' : rank === 3 ? 'top3' : 'top-other'}}">{{rank}}</view>
 
-  <!-- 头像 -->
+  <!-- 头像（有则图，没有则名字首字）-->
   <view class="mc-avatar-wrap">
-    <image class="mc-avatar" src="{{avatarUrl}}" mode="aspectFill" lazy-load="true" />
+    <image wx:if="{{avatarUrl}}" class="mc-avatar" src="{{avatarUrl}}" mode="aspectFill" lazy-load="true" />
+    <view wx:else class="mc-avatar mc-avatar-initial">{{avatarInitial}}</view>
     <view wx:if="{{user.isBirthdayMonth}}" class="mc-birthday-hat">
       <view class="mc-birthday-hat-ball"></view>
     </view>

@@ -35,6 +35,17 @@
   display: block;
 }
 
+.mc-avatar-initial {
+  background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56rpx;
+  font-weight: 700;
+  color: #1d4ed8;
+  letter-spacing: 1rpx;
+}
+
 .mc-birthday-hat {
   position: absolute;
   top: -14rpx;

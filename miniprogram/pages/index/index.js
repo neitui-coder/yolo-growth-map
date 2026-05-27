@@ -16,6 +16,7 @@ Page({
     searchValue: "",
     activeFilter: "",
     sortByGrowth: false,
+    sortMode: '',  // '' | 'growth' | 'similar'
     showAlumni: false,
     canViewAlumni: false,
     filterOptions: [],
@@ -264,7 +265,23 @@ Page({
       return true;
     }, this);
 
-    if (sortByGrowth) {
+    var sortMode = this.data.sortMode;
+    if (sortMode === 'similar') {
+      var me = app.getUser ? app.getUser(app.globalData.currentUserId) : null;
+      if (me) {
+        filtered.forEach(function (u) {
+          u._simScore = u.userId === me.userId ? 9999 : util.computeSimilarity(me, u);
+        });
+        filtered.sort(function (a, b) {
+          if (a.userId === me.userId) return -1;
+          if (b.userId === me.userId) return 1;
+          return (b._simScore || 0) - (a._simScore || 0);
+        });
+        filtered = filtered.map(function (user, index) {
+          return Object.assign({}, user, { _rank: index + 1 });
+        });
+      }
+    } else if (sortByGrowth) {
       filtered.sort(function (a, b) {
         var growthDelta = (b.growthValue || 0) - (a.growthValue || 0);
         if (growthDelta !== 0) return growthDelta;
@@ -434,8 +451,15 @@ Page({
     this._refreshMemberList();
   },
 
+  onSortBySimilar: function () {
+    var next = this.data.sortMode === 'similar' ? '' : 'similar';
+    this.setData({ sortMode: next, sortByGrowth: false });
+    this._hydrateHomeData(true);
+  },
+
   onSortToggle: function () {
-    this.setData({ sortByGrowth: !this.data.sortByGrowth });
+    var next = this.data.sortMode === 'growth' ? '' : 'growth';
+    this.setData({ sortMode: next, sortByGrowth: next === 'growth' });
     this._refreshMemberList();
   },
 

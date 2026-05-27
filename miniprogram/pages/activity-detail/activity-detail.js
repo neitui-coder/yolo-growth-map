@@ -62,6 +62,7 @@ Page({
       ? app.getActivityParticipants(act)
       : [];
 
+    var currentUid = app.globalData.currentUserId || '';
     var displayParticipants = participants.map(function (p) {
       return {
         userId: p.userId,
@@ -71,6 +72,12 @@ Page({
           ? app.getMediaUrl(p.avatarImage) || p.avatarUrl || ""
           : p.avatarUrl || "",
       };
+    });
+    // 排序：自己置顶，其余按姓名 zh-CN 排序
+    displayParticipants.sort(function (a, b) {
+      if (a.userId === currentUid) return -1;
+      if (b.userId === currentUid) return 1;
+      return (a.name || '').localeCompare(b.name || '', 'zh-CN');
     });
 
     var rawImages = act.images || [];
@@ -142,6 +149,12 @@ Page({
       current: images[index] || images[0],
       urls: images,
     });
+  },
+
+  onParticipantTap: function (e) {
+    var uid = e.currentTarget.dataset.userId;
+    if (!uid) return;
+    wx.navigateTo({ url: '/pages/profile/profile?userId=' + uid });
   },
 
   onHeroTap: function () {

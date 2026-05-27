@@ -220,6 +220,7 @@ Page({
       avatarUrl: app.getMediaUrl
         ? app.getMediaUrl(user.avatarImage) || util.getAvatarUrl(user, 80)
         : util.getAvatarUrl(user, 80),
+      avatarInitial: util.getAvatarInitial(user),
       cityDisplay: cityDisplay,
       isLishi: isLishi,
       isBirthdayMonth: util.isBirthdayInCurrentMonth(user),

@@ -57,7 +57,10 @@
         <view wx:if="{{canViewAlumni}}" class="alumni-btn {{showAlumni ? 'active' : ''}}" bindtap="onAlumniToggle">
           <text>往届</text>
         </view>
-        <view class="sort-btn {{sortByGrowth ? 'active' : ''}}" bindtap="onSortToggle">
+        <view class="sort-btn {{sortMode === 'similar' ? 'active' : ''}}" bindtap="onSortBySimilar">
+          <text>跟我最像</text>
+        </view>
+        <view class="sort-btn {{sortMode === 'growth' ? 'active' : ''}}" bindtap="onSortToggle">
           <text>成长值排序</text>
         </view>
       </view>

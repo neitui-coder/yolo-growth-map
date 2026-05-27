@@ -133,10 +133,14 @@ const bindByPhone = async (event) => {
       user: { userId: alreadyBound.data[0].userId, name: alreadyBound.data[0].name } };
   }
 
-  // 匹配未绑定的成员（phone 字段做规范化对比）
+  // 匹配未绑定的成员：phone 单字段 或 phones 数组任一规范化后命中
   const all = await db.collection('users').limit(200).get();
-  const match = (all.data || []).find((u) =>
-    normalizePhone(u.phone) === normalized && !u.wechatOpenId);
+  const match = (all.data || []).find((u) => {
+    if (u.wechatOpenId) return false;
+    if (normalizePhone(u.phone) === normalized) return true;
+    if (Array.isArray(u.phones) && u.phones.some((p) => normalizePhone(p) === normalized)) return true;
+    return false;
+  });
   if (!match) {
     return { success: true, matched: false, phone: normalized };
   }

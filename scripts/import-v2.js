@@ -127,6 +127,7 @@ function buildImportUser(master, activitiesCollection, member) {
     hobbies: ensureArray(interests.hobbies),
     expertise: [],
     yoloRole: normalizeString(community.role),
+    phones: Array.isArray(community.phones) ? community.phones : [],
     travelDestination: ensureArray(interests.travelDestinations),
     favoriteSinger: ensureArray(interests.favoriteSingers),
     posterNotes: ensureArray(member.notes),

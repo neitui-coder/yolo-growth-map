@@ -103,10 +103,17 @@ const loginWechat = async () => {
 };
 
 // 一键手机号绑定：用户点 button open-type="getPhoneNumber" 得到 code，传到这里
-// 我们调 openapi 解出手机号，按 users.phone 匹配 → 绑定 openid
+// 我们调 openapi 解出手机号，按 users.phones[] 匹配 → 绑定 openid
+//
+// 规范化策略：取最后 10 位数字，自动跨国家码（86/1）匹配
+//   "13261627801"           → "3261627801"  (CN)
+//   "+1 (908) 568-8001"     → "9085688001"  (US, openapi 也会返回这种格式)
+//   "8613261627801"         → "3261627801"  (含 86 国家码)
 const normalizePhone = (p) => {
   if (!p) return '';
-  return String(p).replace(/[\s\-+()]/g, '').replace(/^86/, '');
+  const digits = String(p).replace(/\D/g, '');
+  if (!digits) return '';
+  return digits.slice(-10);
 };
 
 const bindByPhone = async (event) => {
@@ -114,16 +121,18 @@ const bindByPhone = async (event) => {
   if (!OPENID) return { success: false, error: 'no OPENID in context' };
   if (!event.code) return { success: false, error: 'code required' };
 
-  let phone;
+  let phoneInfo;
   try {
     const res = await cloud.openapi.phonenumber.getPhoneNumber({ code: event.code });
-    phone = res.phoneInfo && (res.phoneInfo.purePhoneNumber || res.phoneInfo.phoneNumber);
+    phoneInfo = res.phoneInfo || {};
   } catch (e) {
     return { success: false, error: '获取手机号失败：' + (e.errMsg || String(e)) };
   }
-  if (!phone) return { success: false, error: '手机号为空' };
+  const rawPhone = phoneInfo.phoneNumber || phoneInfo.purePhoneNumber || '';
+  if (!rawPhone) return { success: false, error: '手机号为空' };
 
-  const normalized = normalizePhone(phone);
+  const normalized = normalizePhone(rawPhone);
+  if (!normalized) return { success: false, error: '手机号格式异常' };
 
   // 已被其他 openid 绑定？
   const alreadyBound = await db.collection('users')

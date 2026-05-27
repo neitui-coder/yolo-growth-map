@@ -7,7 +7,8 @@ Page({
     loading: true,
     allUsers: [],
     filtered: [],
-    query: ''
+    query: '',
+    phoneTried: false
   },
 
   onLoad: function () {
@@ -30,20 +31,89 @@ Page({
   },
 
   _buildList: function () {
-    var users = (app.globalData.users || []).filter(function (u) {
-      return u.memberStatus !== 'alumni';
-    }).map(function (u) {
-      return {
-        userId: u.userId,
-        name: u.name || '',
-        englishName: u.englishName || '',
-        subtitle: [u.company, u.role].filter(Boolean).join(' · '),
-        avatarUrl: app.getMediaUrl ? app.getMediaUrl(u.avatarImage) || util.getAvatarUrl(u, 60) : util.getAvatarUrl(u, 60),
-        initial: (u.name || '?').slice(0, 1)
-      };
+    var that = this;
+    // 调云函数 listBindable，已绑定的成员被排除
+    wx.cloud.callFunction({
+      name: 'yoloFunctions',
+      data: { type: 'listBindable' }
+    }).then(function (res) {
+      var raw = (res && res.result && res.result.members) || [];
+      var users = raw.map(function (u) {
+        return {
+          userId: u.userId,
+          name: u.name || '',
+          englishName: u.englishName || '',
+          subtitle: [u.company, u.role].filter(Boolean).join(' · '),
+          avatarUrl: app.getMediaUrl ? app.getMediaUrl(u.avatarImage) || util.getAvatarUrl(u, 60) : util.getAvatarUrl(u, 60),
+          initial: (u.name || '?').slice(0, 1)
+        };
+      });
+      users.sort(function (a, b) { return (a.name || '').localeCompare(b.name || '', 'zh-CN'); });
+      that.setData({ allUsers: users, filtered: users, loading: false });
+    }).catch(function () {
+      // fallback：用本地 master
+      var users = (app.globalData.users || [])
+        .filter(function (u) { return u.memberStatus !== 'alumni' && !u.wechatOpenId; })
+        .map(function (u) {
+          return {
+            userId: u.userId,
+            name: u.name || '',
+            englishName: u.englishName || '',
+            subtitle: [u.company, u.role].filter(Boolean).join(' · '),
+            avatarUrl: app.getMediaUrl ? app.getMediaUrl(u.avatarImage) || util.getAvatarUrl(u, 60) : util.getAvatarUrl(u, 60),
+            initial: (u.name || '?').slice(0, 1)
+          };
+        });
+      users.sort(function (a, b) { return (a.name || '').localeCompare(b.name || '', 'zh-CN'); });
+      that.setData({ allUsers: users, filtered: users, loading: false });
     });
-    users.sort(function (a, b) { return (a.name || '').localeCompare(b.name || '', 'zh-CN'); });
-    this.setData({ allUsers: users, filtered: users, loading: false });
+  },
+
+  onGetPhone: function (e) {
+    var self = this;
+    var d = e.detail || {};
+    if (d.errMsg && d.errMsg.indexOf('ok') === -1) {
+      // 用户拒绝授权
+      this.setData({ phoneTried: true });
+      return;
+    }
+    if (!d.code) {
+      this.setData({ phoneTried: true });
+      wx.showToast({ title: '未获取到手机号', icon: 'none' });
+      return;
+    }
+    wx.showLoading({ title: '正在识别...' });
+    wx.cloud.callFunction({
+      name: 'yoloFunctions',
+      data: { type: 'bindByPhone', code: d.code }
+    }).then(function (res) {
+      wx.hideLoading();
+      var r = res && res.result;
+      if (r && r.success && r.matched) {
+        app.globalData.currentUserId = r.user.userId;
+        app.globalData.selectedUserId = r.user.userId;
+        app.globalData.authBound = true;
+        wx.showToast({ title: '你好，' + r.user.name, icon: 'success' });
+        setTimeout(function () { wx.reLaunch({ url: '/pages/index/index' }); }, 1000);
+      } else {
+        // 没匹配上 → 提示手动选
+        self.setData({ phoneTried: true });
+        wx.showModal({
+          title: '没找到对应的成员',
+          content: '你的微信手机号不在 YOLO+ 成员名单里，请从下方手动选择。',
+          showCancel: false
+        });
+      }
+    }).catch(function (err) {
+      wx.hideLoading();
+      self.setData({ phoneTried: true });
+      console.warn('bindByPhone failed', err);
+      wx.showModal({
+        title: '识别失败',
+        content: '请从下方名单手动选择身份',
+        showCancel: false
+      });
+    });
   },
 
   onSearchInput: function (e) {

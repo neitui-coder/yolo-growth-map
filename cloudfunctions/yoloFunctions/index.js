@@ -35,6 +35,8 @@ exports.main = async (event, context) => {
     // --- wechat auth ---
     case 'loginWechat':     return await loginWechat(event);
     case 'bindWechat':      return await bindWechat(event);
+    case 'bindByPhone':     return await bindByPhone(event);
+    case 'listBindable':    return await listBindable(event);
     case 'addStaff':        return await addStaff(event);
     case 'removeStaff':     return await removeStaff(event);
     case 'listStaff':       return await listStaff(event);
@@ -98,6 +100,70 @@ const loginWechat = async () => {
     bound: bound ? { userId: bound.userId, name: bound.name } : null,
     staff: staffEntry
   };
+};
+
+// 一键手机号绑定：用户点 button open-type="getPhoneNumber" 得到 code，传到这里
+// 我们调 openapi 解出手机号，按 users.phone 匹配 → 绑定 openid
+const normalizePhone = (p) => {
+  if (!p) return '';
+  return String(p).replace(/[\s\-+()]/g, '').replace(/^86/, '');
+};
+
+const bindByPhone = async (event) => {
+  const { OPENID, UNIONID } = cloud.getWXContext();
+  if (!OPENID) return { success: false, error: 'no OPENID in context' };
+  if (!event.code) return { success: false, error: 'code required' };
+
+  let phone;
+  try {
+    const res = await cloud.openapi.phonenumber.getPhoneNumber({ code: event.code });
+    phone = res.phoneInfo && (res.phoneInfo.purePhoneNumber || res.phoneInfo.phoneNumber);
+  } catch (e) {
+    return { success: false, error: '获取手机号失败：' + (e.errMsg || String(e)) };
+  }
+  if (!phone) return { success: false, error: '手机号为空' };
+
+  const normalized = normalizePhone(phone);
+
+  // 已被其他 openid 绑定？
+  const alreadyBound = await db.collection('users')
+    .where({ wechatOpenId: OPENID }).limit(1).get();
+  if (alreadyBound.data && alreadyBound.data[0]) {
+    return { success: true, alreadyBound: true,
+      user: { userId: alreadyBound.data[0].userId, name: alreadyBound.data[0].name } };
+  }
+
+  // 匹配未绑定的成员（phone 字段做规范化对比）
+  const all = await db.collection('users').limit(200).get();
+  const match = (all.data || []).find((u) =>
+    normalizePhone(u.phone) === normalized && !u.wechatOpenId);
+  if (!match) {
+    return { success: true, matched: false, phone: normalized };
+  }
+
+  // 绑定
+  const update = { wechatOpenId: OPENID };
+  if (UNIONID) update.wechatUnionId = UNIONID;
+  await db.collection('users').where({ userId: match.userId }).update({ data: update });
+
+  return { success: true, matched: true, user: { userId: match.userId, name: match.name } };
+};
+
+// 列出可被绑定的成员（用于 auth 页 fallback 列表，排除已绑定的）
+const listBindable = async () => {
+  const all = await db.collection('users')
+    .field({ userId: true, name: true, englishName: true, company: true,
+             memberStatus: true, wechatOpenId: true, avatarImage: true,
+             yoloRole: true, joinDate: true })
+    .limit(200).get();
+  const bindable = (all.data || [])
+    .filter((u) => !u.wechatOpenId && u.memberStatus !== 'alumni')
+    .map((u) => ({
+      userId: u.userId, name: u.name, englishName: u.englishName || '',
+      company: u.company || '', avatarImage: u.avatarImage || '',
+      role: u.yoloRole || ''
+    }));
+  return { success: true, members: bindable };
 };
 
 // 管理员加 staff（限 admin openid 调用）

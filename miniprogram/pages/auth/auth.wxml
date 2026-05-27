@@ -1,11 +1,22 @@
 <view class="auth-page">
   <view class="auth-hero" style="padding-top: {{navPaddingTop}}px;">
     <view class="auth-brand">YOLO+</view>
-    <view class="auth-title">请先绑定你的身份</view>
-    <view class="auth-sub">本小程序仅对 YOLO+ 内部开放。请从成员名单中选择你是谁。</view>
+    <view class="auth-title">找到你自己</view>
+    <view class="auth-sub">YOLO+ 是我们的内部社群，先来认领你的身份。</view>
   </view>
 
   <view class="auth-body">
+    <!-- 一键手机号绑定 -->
+    <button
+      wx:if="{{!phoneTried}}"
+      class="auth-phone-btn"
+      open-type="getPhoneNumber"
+      bindgetphonenumber="onGetPhone"
+    >📱 用微信手机号一键绑定</button>
+    <view wx:if="{{phoneTried}}" class="auth-phone-tip">
+      手机号没匹配到？在下方手动选择你的身份
+    </view>
+
     <view class="auth-search">
       <text class="search-icon">🔍</text>
       <input

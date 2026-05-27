@@ -22,6 +22,25 @@
   gap: 20rpx;
 }
 
+.auth-phone-btn {
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 700;
+  border-radius: 28rpx;
+  padding: 28rpx;
+  text-align: center;
+  box-shadow: 0 4rpx 18rpx rgba(29, 78, 216, 0.25);
+}
+.auth-phone-btn::after { border: none; }
+
+.auth-phone-tip {
+  text-align: center;
+  font-size: 24rpx;
+  color: #94a3b8;
+  margin-top: -4rpx;
+}
+
 .auth-search {
   display: flex;
   align-items: center;

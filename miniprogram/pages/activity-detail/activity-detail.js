@@ -31,14 +31,7 @@ Page({
     if (!app.requireAuth()) return;
   },
 
-  onShareAppMessage: function () {
-    var a = this.data.activity || {};
-    return {
-      title: (a.title || 'YOLO+ 活动'),
-      path: '/pages/activity-detail/activity-detail?activityKey=' + (this._activityKey || ''),
-      imageUrl: a.coverUrl || ''
-    };
-  },
+  // 分享暂时关闭
 
   _loadActivity: function (activityKey) {
     var that = this;

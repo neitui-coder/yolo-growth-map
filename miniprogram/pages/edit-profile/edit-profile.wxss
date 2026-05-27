@@ -18,13 +18,17 @@
 }
 
 .form-input {
+  display: block;
   width: 100%;
+  box-sizing: border-box;
   border: 2rpx solid #e2e8f0;
   border-radius: 20rpx;
   padding: 20rpx 24rpx;
   font-size: 28rpx;
   background: #fff;
   color: #1f2937;
+  /* 关键：WX <input> 默认 placeholder-style 把宽度限制掉，强制全宽 */
+  min-width: 0;
 }
 
 .form-input:focus {

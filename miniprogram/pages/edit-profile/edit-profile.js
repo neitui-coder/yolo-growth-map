@@ -16,8 +16,7 @@ Page({
     motto: '',
     career: '',
     company: '',
-    selectedCities: [],
-    cityOptions: ['上海','北京','深圳','杭州','成都','广州','苏州','南京','武汉','厦门'],
+    city: '',
     birthday: '',
     education: '',
     goal: '',
@@ -65,7 +64,7 @@ Page({
       motto: user.motto || '',
       career: user.career || '',
       company: user.company || '',
-      selectedCities: Array.isArray(user.city) ? user.city : (user.city ? [user.city] : []),
+      city: Array.isArray(user.city) ? (user.city[0] || '') : (user.city || ''),
       birthday: user.birthday || '',
       education: user.education || '',
       goal: user.goal || '',
@@ -85,21 +84,6 @@ Page({
     this.setData(obj);
   },
 
-  onCityTap: function (e) {
-    var city = e.currentTarget.dataset.city;
-    var selected = this.data.selectedCities.slice();
-    var idx = selected.indexOf(city);
-    if (idx !== -1) {
-      selected.splice(idx, 1);
-    } else {
-      if (selected.length >= 3) {
-        wx.showToast({ title: '最多选择3个城市', icon: 'none' });
-        return;
-      }
-      selected.push(city);
-    }
-    this.setData({ selectedCities: selected });
-  },
 
   onMbtiChange: function (e) {
     this.setData({ mbtiIndex: parseInt(e.detail.value) });
@@ -121,7 +105,7 @@ Page({
     user.motto = this.data.motto.trim();
     user.career = this.data.career.trim();
     user.company = this.data.company.trim();
-    user.city = this.data.selectedCities.length > 0 ? this.data.selectedCities : [];
+    user.city = (this.data.city || '').trim();
     user.birthday = this.data.birthday;
     user.education = this.data.education.trim();
     user.goal = this.data.goal.trim() || null;

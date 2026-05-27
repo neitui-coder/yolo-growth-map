@@ -37,21 +37,15 @@
   </view>
 
   <view class="form-group">
-    <text class="form-label">城市（最多选3个）</text>
-    <view class="city-tags">
-      <view wx:for="{{cityOptions}}" wx:key="*this"
-            class="city-tag {{selectedCities.indexOf(item) !== -1 ? 'city-tag-active' : ''}}"
-            bindtap="onCityTap" data-city="{{item}}">
-        {{item}}
-      </view>
-    </view>
+    <text class="form-label">城市</text>
+    <input class="form-input" value="{{city}}" placeholder="如：上海" bindinput="onInput" data-field="city" />
   </view>
 
   <view class="form-group">
     <text class="form-label">生日</text>
     <picker mode="date" value="{{birthday}}" bindchange="onBirthdayChange">
       <view class="form-input picker-value">
-        {{birthday || '请选择生日'}}
+        {{birthday || '请选择具体生日（仅月份会对外展示）'}}
       </view>
     </picker>
   </view>

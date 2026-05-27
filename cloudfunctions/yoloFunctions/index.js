@@ -37,6 +37,7 @@ exports.main = async (event, context) => {
     case 'bindWechat':      return await bindWechat(event);
     case 'bindByPhone':     return await bindByPhone(event);
     case 'listBindable':    return await listBindable(event);
+    case 'cleanupMockUsers': return await cleanupMockUsers(event);
     case 'addStaff':        return await addStaff(event);
     case 'removeStaff':     return await removeStaff(event);
     case 'listStaff':       return await listStaff(event);
@@ -162,9 +163,37 @@ const bindByPhone = async (event) => {
   return { success: true, matched: true, user: { userId: match.userId, name: match.name } };
 };
 
-// 列出可被绑定的成员（用于 auth 页 fallback 列表，排除已绑定的）
+// 清理遗留 mock 数据（仅 admin 可调）
+const cleanupMockUsers = async () => {
+  const { OPENID } = cloud.getWXContext();
+  const ADMIN_OPENIDS = ['oR4Gr5AfM4rgKhFwd6HsK7QWDNG0'];
+  if (ADMIN_OPENIDS.indexOf(OPENID) === -1) {
+    return { success: false, error: 'admin only' };
+  }
+  let removed = 0;
+  while (true) {
+    const r = await db.collection('users')
+      .where({ dataType: 'mock' }).limit(100).get();
+    if (!r.data.length) break;
+    for (const u of r.data) {
+      await db.collection('users').doc(u._id).remove();
+      removed++;
+    }
+  }
+  // 也删 dataType 为 undefined/empty 的（前期残留）
+  const noType = await db.collection('users')
+    .where({ dataType: _.exists(false) }).limit(100).get();
+  for (const u of (noType.data || [])) {
+    await db.collection('users').doc(u._id).remove();
+    removed++;
+  }
+  return { success: true, removed };
+};
+
+// 列出可被绑定的成员（仅当前 real dataType + 非往届 + 尚未绑定）
 const listBindable = async () => {
   const all = await db.collection('users')
+    .where({ dataType: 'real' })
     .field({ userId: true, name: true, englishName: true, company: true,
              memberStatus: true, wechatOpenId: true, avatarImage: true,
              yoloRole: true, joinDate: true })
@@ -446,30 +475,56 @@ const replaceUsersByDataType = async (event) => {
 
   try { await db.createCollection('users'); } catch(e) {}
 
+  // 1. 先把现有该 dataType 的用户的微信绑定信息备份（按 userId 索引）
+  // 防止 replace 后用户需要重新走绑定流程
+  const bindMap = {};
+  let cursor = 0;
+  while (true) {
+    const existing = await db.collection('users')
+      .where({ dataType: dataType })
+      .skip(cursor).limit(100).get();
+    if (!existing.data.length) break;
+    existing.data.forEach((u) => {
+      if (u.wechatOpenId || u.wechatUnionId) {
+        bindMap[u.userId] = {
+          wechatOpenId: u.wechatOpenId || '',
+          wechatUnionId: u.wechatUnionId || ''
+        };
+      }
+    });
+    if (existing.data.length < 100) break;
+    cursor += existing.data.length;
+  }
+
+  // 2. 删除所有
   let removed = 0;
   while (true) {
     const result = await db.collection('users')
       .where({ dataType: dataType })
-      .limit(100)
-      .get();
-
-    if (!result.data.length) {
-      break;
-    }
-
+      .limit(100).get();
+    if (!result.data.length) break;
     for (let i = 0; i < result.data.length; i++) {
       await db.collection('users').doc(result.data[i]._id).remove();
       removed++;
     }
   }
 
+  // 3. 插入新数据，并把备份的绑定信息合并回去
   let added = 0;
+  let restored = 0;
   for (let i = 0; i < users.length; i++) {
-    await db.collection('users').add({ data: users[i] });
+    const u = users[i];
+    const preserved = bindMap[u.userId];
+    if (preserved) {
+      if (preserved.wechatOpenId) u.wechatOpenId = preserved.wechatOpenId;
+      if (preserved.wechatUnionId) u.wechatUnionId = preserved.wechatUnionId;
+      restored++;
+    }
+    await db.collection('users').add({ data: u });
     added++;
   }
 
-  return { success: true, removed: removed, added: added, dataType: dataType };
+  return { success: true, removed, added, restoredBindings: restored, dataType };
 };
 
 // ─── activities collection ───────────────────────────────────────────────────

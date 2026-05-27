@@ -86,20 +86,8 @@ Page({
     this._applyPendingHomeSearch();
   },
 
-  onShareAppMessage: function () {
-    return {
-      title: 'YOLO+ · 我们的成长地图',
-      path: '/pages/index/index'
-    };
-  },
-
-  onShareTimeline: function () {
-    return {
-      title: 'YOLO+ · 我们的成长地图',
-      query: ''
-    };
-  },
-
+  // 分享功能已暂时关闭（未审核小程序无法正常分享，避免"违规"提示）
+  // 上线后恢复 onShareAppMessage / onShareTimeline 即可
   onUnload: function () {
     if (this._loadObserver) {
       this._loadObserver.disconnect();

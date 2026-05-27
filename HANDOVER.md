@@ -2,6 +2,25 @@
 
 > 给下一位接手的 Claude Code 或工程师。读完应该能立刻继续开发、测试、部署、发版。
 > 写于 2026-05-28；维护人 Sean (王骁，openId `oR4Gr5AfM4rgKhFwd6HsK7QWDNG0`)。
+>
+> **完整迭代历史与决策摘要**：见 [`CHANGELOG.md`](./CHANGELOG.md)
+
+## 0. 密钥/凭证审计（重要）
+
+**仓库外没有任何 secret 文件**——这是设计选择：
+- 不需要 AppSecret：用 cloud function + `cloud.getWXContext()` 服务端直签
+- 不需要 CloudBase AccessKey：用 DevTools CLI 部署走 DevTools 微信登录
+- 仓库内的 AppID/EnvID/Sean openId 不是 secret（前者公开，后者是 Sean 个人标识）
+
+**仓库外但跟项目相关**：
+| 项 | 位置 | 说明 |
+|---|---|---|
+| 数据源 xlsx（含 PII 手机号）| `data/sources/` 仓库已备份 + `~/Downloads/` 原版 | scripts 优先用 `data/sources/`，fallback `~/Downloads/` |
+| DevTools 登录态 | `~/Library/Application Support/微信开发者工具/` | Sean 本人持有，无法迁移 |
+| mp.weixin.qq.com 浏览器登录 | 浏览器 cookies | 同上 |
+| `~/.claude/shell-wrapper.sh` 一行 FNM_LOGLEVEL | 1 行环境变量 | 跟项目无关，纯抑制 fnm warning |
+
+→ **所有项目代码 + 数据 + 脚本全部在 `/Users/Sean/WeChatProjects/miniprogram-2`**。
 
 ## 1. 仓库与路径
 

@@ -24,10 +24,14 @@ import os
 import sys
 from datetime import datetime, timedelta
 
-DL = os.path.expanduser('~/Downloads')
-ARCH_PATH = f'{DL}/YOLO+档案信息表（全）.xlsx'
-ATT_PATH = f'{DL}/YOLO+出席表.xlsx'
-REPO = '/Users/Sean/WeChatProjects/miniprogram-2'
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# 优先用仓库 data/sources/ 下的本地副本，fallback 到 ~/Downloads
+def _src(name):
+    a = os.path.join(REPO, 'data', 'sources', name)
+    b = os.path.expanduser('~/Downloads/' + name)
+    return a if os.path.exists(a) else b
+ARCH_PATH = _src('YOLO+档案信息表（全）.xlsx')
+ATT_PATH = _src('YOLO+出席表.xlsx')
 MASTER_OUT = f'{REPO}/data/yolo-2025-members.master.json'
 ACT_OUT = f'{REPO}/data/yolo-activities-collection.json'
 OLD_MASTER = f'{REPO}/data/yolo-2025-members.master.json'

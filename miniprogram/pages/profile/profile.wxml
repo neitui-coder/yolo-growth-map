@@ -19,9 +19,6 @@
     <text class="v2-nav-back-icon">←</text>
   </view>
   <view class="v2-nav-title">个人档案</view>
-  <view class="v2-nav-toggle" bindtap="onToggleUI">
-    <text class="v2-toggle-label">原版</text>
-  </view>
 </view>
 
 <!-- Hero 卡片: 头像 + 名字 + 核心信息 + 操作按钮 -->

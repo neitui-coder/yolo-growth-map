@@ -161,6 +161,22 @@
         </view>
       </view>
 
+      <!-- 趣味档案：书籍/影视/音乐/吃喝/游戏等富字段，分类折叠 -->
+      <view class="v2-detail-group v2-favorites" wx:if="{{selectedUser.favoriteGroups.length > 0}}">
+        <view class="v2-detail-head">
+          <text class="v2-detail-label">趣味档案</text>
+        </view>
+        <view class="v2-fav-row" wx:for="{{selectedUser.favoriteGroups}}" wx:key="key" wx:if="{{favoritesExpanded || index < 4}}">
+          <text class="v2-fav-emoji">{{item.emoji}}</text>
+          <view class="v2-fav-items">
+            <text wx:for="{{item.items}}" wx:for-item="it" wx:key="*this" class="v2-detail-tag v2-tag-fav">{{it}}</text>
+          </view>
+        </view>
+        <view class="v2-fav-toggle" wx:if="{{selectedUser.favoriteGroups.length > 4}}" bindtap="onToggleFavorites">
+          <text>{{favoritesExpanded ? '收起 ⌃' : '展开更多 ⌄'}}</text>
+        </view>
+      </view>
+
       <!-- 擅长 -->
       <view class="v2-detail-group" wx:if="{{selectedUser.expertise.length > 0 && (selectedUser.detailVisibility.expertise !== false || canEditProfile)}}">
         <view class="v2-detail-head">

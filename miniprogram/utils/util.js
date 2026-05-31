@@ -769,8 +769,40 @@ function buildFunnyIntroOptions(user) {
   return unique.slice(offset).concat(unique.slice(0, offset)).slice(0, 5);
 }
 
+// 趣味档案：富字段分类元数据（书籍/作家/影视/音乐/吃喝/游戏/冒险/童年梦想/童年动画/下一站）
+var FAVORITE_META = [
+  { key: 'books', emoji: '📚', label: '书籍' },
+  { key: 'authors', emoji: '✍️', label: '作家' },
+  { key: 'filmsTv', emoji: '🎬', label: '影视' },
+  { key: 'music', emoji: '🎵', label: '音乐' },
+  { key: 'foodDrink', emoji: '🍜', label: '吃喝' },
+  { key: 'games', emoji: '🎮', label: '游戏' },
+  { key: 'adventure', emoji: '🪂', label: '想试的冒险' },
+  { key: 'childhoodDream', emoji: '🌟', label: '小时候的梦想' },
+  { key: 'childhoodCartoon', emoji: '📺', label: '童年动画' },
+  { key: 'nextTravel', emoji: '✈️', label: '下一站' }
+];
+
+function buildFavoriteGroups(user) {
+  var fav = (user && user.favorites) || {};
+  var groups = [];
+  FAVORITE_META.forEach(function (meta) {
+    var items = fav[meta.key];
+    if (Array.isArray(items)) {
+      items = items
+        .map(function (s) { return String(s == null ? '' : s).trim(); })
+        .filter(function (s) { return !!s; });
+      if (items.length) {
+        groups.push({ key: meta.key, emoji: meta.emoji, label: meta.label, items: items });
+      }
+    }
+  });
+  return groups;
+}
+
 module.exports = {
   daysSince: daysSince,
+  buildFavoriteGroups: buildFavoriteGroups,
   yearsSince: yearsSince,
   formatDate: formatDate,
   getAvatarInitial: getAvatarInitial,

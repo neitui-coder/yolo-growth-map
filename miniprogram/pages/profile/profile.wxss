@@ -1404,6 +1404,45 @@ page {
   color: #6d28d9;
 }
 
+/* ---------- 趣味档案 (Favorites) ---------- */
+.v2-fav-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12rpx;
+  padding: 10rpx 0;
+}
+
+.v2-fav-row + .v2-fav-row {
+  border-top: 1rpx solid #f1f5f9;
+}
+
+.v2-fav-emoji {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  flex-shrink: 0;
+  width: 40rpx;
+  text-align: center;
+}
+
+.v2-fav-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  flex: 1;
+}
+
+.v2-tag-fav {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.v2-fav-toggle {
+  margin-top: 12rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #2563eb;
+}
+
 /* ---------- Similar Users (Horizontal Scroll) ---------- */
 .v2-similar-scroll {
   white-space: nowrap;

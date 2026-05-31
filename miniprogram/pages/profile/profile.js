@@ -17,6 +17,7 @@ Page({
     hasProfileInfo: false,
     hasDetailInfo: false,
     profileDetailExpanded: false,
+    favoritesExpanded: false,
     showGrowthModal: false,
     growthTotal: 0,
     growthRows: [],
@@ -245,6 +246,7 @@ Page({
         ? app.getMediaUrl(user.avatarImage) || util.getAvatarUrl(user, 80)
         : util.getAvatarUrl(user, 80),
       avatarInitial: util.getAvatarInitial(user),
+      favoriteGroups: util.buildFavoriteGroups ? util.buildFavoriteGroups(user) : [],
       cityDisplay: cityDisplay,
       isLishi: isLishi,
       isBirthdayMonth: util.isBirthdayInCurrentMonth(user),
@@ -290,6 +292,7 @@ Page({
       selectedUser.zodiac ||
       selectedUser.gallup.length ||
       selectedUser.hobbies.length ||
+      selectedUser.favoriteGroups.length ||
       (user.skills && user.skills.length) ||
       (user.expertise && user.expertise.length) ||
       (user.tags && user.tags.length) ||
@@ -688,6 +691,10 @@ Page({
 
   onToggleProfileDetail: function () {
     this.setData({ profileDetailExpanded: !this.data.profileDetailExpanded });
+  },
+
+  onToggleFavorites: function () {
+    this.setData({ favoritesExpanded: !this.data.favoritesExpanded });
   },
 
   onExplainSimilarity: function () {

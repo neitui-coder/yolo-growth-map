@@ -39,12 +39,15 @@
       </view>
       <view class="v2-hero-info">
         <view class="v2-hero-name">{{selectedUser.name}}</view>
+        <!-- 会员自己的一句话 -->
+        <view class="v2-hero-motto" wx:if="{{heroMotto}}">{{heroMotto}}</view>
+        <!-- AI 锐评 -->
         <view class="v2-hero-funny-box" wx:if="{{funnyIntro}}">
-          <view class="v2-hero-funny">{{funnyIntro}}</view>
-          <view class="v2-hero-funny-meta" wx:if="{{funnyIntroSourceLabel || canRefreshFunnyIntro}}">
-            <text wx:if="{{funnyIntroSourceLabel}}" class="v2-ai-label">{{funnyIntroSourceLabel}}</text>
+          <view class="v2-hero-funny-meta">
+            <text class="v2-ai-label">{{funnyIntroSourceLabel || 'AI锐评'}}</text>
             <text wx:if="{{canRefreshFunnyIntro}}" class="v2-funny-refresh {{funnyIntroRefreshing ? 'loading' : ''}}" bindtap="onRefreshFunnyIntro">{{funnyIntroRefreshing ? '生成中' : '换一句'}}</text>
           </view>
+          <view class="v2-hero-funny">{{funnyIntro}}</view>
         </view>
         <view class="v2-hero-chips">
           <text wx:if="{{selectedUser.memberStatus === 'alumni'}}" class="v2-chip v2-chip-alumni">往届</text>

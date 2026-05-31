@@ -24,6 +24,7 @@ Page({
     selectedUserQa: [],
     qaVisibleCount: 0,
     qaEmptyText: "",
+    heroMotto: "",
     funnyIntro: "",
     funnyIntroOptions: [],
     funnyIntroVariantIndex: 0,
@@ -353,13 +354,14 @@ Page({
       hasProfileInfo: hasProfileInfo,
       hasDetailInfo: hasDetailInfo,
       growthTotal: util.computeGrowthValue(user),
+      heroMotto: introUsesMemberLine ? this._normalizeMotto(selectedUser.motto) : "",
       funnyIntro: funnyIntroOptions[funnyIntroVariantIndex] || "",
       funnyIntroOptions: funnyIntroOptions,
       funnyIntroVariantIndex: funnyIntroVariantIndex,
-      funnyIntroSourceLabel: introUsesMemberLine ? "" : "AI锐评",
-      funnyIntroIsAi: !introUsesMemberLine,
-      canRefreshFunnyIntro: !!(!introUsesMemberLine && canEditProfile),
-      canAutoGenerateFunnyIntro: !!(!introUsesMemberLine && (isBoundMember || canEditProfile)),
+      funnyIntroSourceLabel: "AI锐评",
+      funnyIntroIsAi: true,
+      canRefreshFunnyIntro: !!canEditProfile,
+      canAutoGenerateFunnyIntro: !!(isBoundMember || canEditProfile),
       funnyIntroRefreshing: false,
       completeness: completeness,
       missingFieldsText: missingFieldsText,
@@ -382,7 +384,6 @@ Page({
     setTimeout(function () {
       if (thatRef.data.userId !== targetUserId) return;
       if (!thatRef.data.canAutoGenerateFunnyIntro) return;
-      if (thatRef._hasMemberOneLiner(thatRef.data.selectedUser)) return;
       thatRef._ensureFunnyIntro(user);
     }, 300);
   },
@@ -429,10 +430,15 @@ Page({
     );
   },
 
+  // 提取会员"自己的一句话"，去掉首尾引号，交给 hero 用引号样式展示
+  _normalizeMotto: function (motto) {
+    var s = (motto == null ? "" : String(motto)).trim();
+    s = s.replace(/^[「『“"']+/, "").replace(/[」』”"']+$/, "").trim();
+    return s;
+  },
+
   _buildFunnyIntroOptions: function (user, sourceKey) {
-    if (this._hasMemberOneLiner(user)) {
-      return [this._normalizeFunnyIntro(user.motto)];
-    }
+    // AI 锐评始终独立于会员"一句话"：不再用 motto 短路，保证两者可同时展示
     var originalUser = app.getUser && user ? app.getUser(user.userId || user.id) : null;
     var candidates = [];
     if (this._isFunnyIntroFresh(originalUser, sourceKey)) {

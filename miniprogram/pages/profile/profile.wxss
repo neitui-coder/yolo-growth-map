@@ -952,15 +952,28 @@ page {
 }
 
 .v2-hero-motto {
-  font-size: 24rpx;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 10rpx;
-  line-height: 1.35;
+  font-size: 25rpx;
+  color: #fff;
+  margin-bottom: 12rpx;
+  line-height: 1.4;
   word-break: break-word;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  padding-left: 18rpx;
+  border-left: 4rpx solid rgba(255, 255, 255, 0.55);
+  font-style: italic;
+}
+
+.v2-hero-motto::before {
+  content: "“";
+  opacity: 0.8;
+}
+
+.v2-hero-motto::after {
+  content: "”";
+  opacity: 0.8;
 }
 
 .v2-hero-funny {
@@ -990,7 +1003,7 @@ page {
   display: flex;
   align-items: center;
   gap: 12rpx;
-  margin-top: 6rpx;
+  margin-bottom: 6rpx;
 }
 
 .v2-ai-label,

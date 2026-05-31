@@ -145,6 +145,12 @@ Page({
     });
   },
 
+  onStatsEntryTap: function () {
+    wx.navigateTo({
+      url: "/pages/community-stats/community-stats",
+    });
+  },
+
   onCardTap: function (e) {
     var activityKey = e.currentTarget.dataset.activityKey;
     if (!activityKey) return;

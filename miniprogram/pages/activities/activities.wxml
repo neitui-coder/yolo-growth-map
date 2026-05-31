@@ -33,6 +33,18 @@
       </view>
     </view>
 
+    <view class="footprint-entry stats-entry" bindtap="onStatsEntryTap">
+      <view class="footprint-entry-main">
+        <view class="footprint-entry-kicker">社区数据</view>
+        <view class="footprint-entry-title">YOLO+ 大家的共性</view>
+        <view class="footprint-entry-meta">性格 · 爱好 · 缘分时刻</view>
+      </view>
+      <view class="footprint-entry-action">
+        <text>进入</text>
+        <text class="footprint-entry-arrow">›</text>
+      </view>
+    </view>
+
     <scroll-view class="year-filter" scroll-x="true" enhanced="true" show-scrollbar="{{false}}">
       <view class="year-filter-inner">
         <view

@@ -5,6 +5,7 @@
     "pages/me/me",
     "pages/community/community",
     "pages/activities/activities",
+    "pages/community-stats/community-stats",
     "pages/activity-detail/activity-detail",
     "pages/profile/profile",
     "pages/edit/edit",

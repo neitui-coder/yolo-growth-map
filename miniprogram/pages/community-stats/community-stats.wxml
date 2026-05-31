@@ -1,0 +1,75 @@
+<view class="stats-page">
+  <view wx:if="{{loading}}" class="stats-loading">统计中…</view>
+
+  <block wx:else>
+    <!-- Hero -->
+    <view class="stats-hero">
+      <view class="hero-total"><text class="hero-num">{{stats.total}}</text><text class="hero-unit">位现届会员</text></view>
+      <view class="hero-ie">
+        <view class="ie-bar">
+          <view class="ie-e" style="width:{{stats.ePct}}%;">E {{stats.ePct}}%</view>
+          <view class="ie-i" style="width:{{stats.iPct}}%;">I {{stats.iPct}}%</view>
+        </view>
+        <view class="ie-label">外向 {{stats.eCount}} 人 · 内向 {{stats.iCount}} 人</view>
+      </view>
+    </view>
+
+    <!-- 缘分时刻 -->
+    <view class="stats-card" wx:if="{{stats.serendipity.length > 0}}">
+      <view class="card-title">✨ 缘分时刻</view>
+      <view class="card-sub">这些会员，喜欢着同样的东西</view>
+      <view class="seren-list">
+        <view class="seren-item" wx:for="{{stats.serendipity}}" wx:key="text">
+          <text class="seren-emoji">{{item.emoji}}</text>
+          <view class="seren-body">
+            <text class="seren-text">{{item.text}}</text>
+            <text class="seren-names">{{item.names}}</text>
+          </view>
+          <text class="seren-count">{{item.count}}人</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 共同爱好 -->
+    <view class="stats-card" wx:if="{{stats.hobbyTop.length > 0}}">
+      <view class="card-title">🎯 大家都爱</view>
+      <view class="bar-row" wx:for="{{stats.hobbyTop}}" wx:key="name">
+        <text class="bar-name">{{item.name}}</text>
+        <view class="bar-track"><view class="bar-fill bar-hobby" style="width:{{item.pct}}%;"></view></view>
+        <text class="bar-count">{{item.count}}</text>
+      </view>
+    </view>
+
+    <!-- MBTI -->
+    <view class="stats-card" wx:if="{{stats.mbtiTop.length > 0}}">
+      <view class="card-title">🧠 性格分布 (MBTI)</view>
+      <view class="bar-row" wx:for="{{stats.mbtiTop}}" wx:key="name">
+        <text class="bar-name">{{item.name}}</text>
+        <view class="bar-track"><view class="bar-fill bar-mbti" style="width:{{item.pct}}%;"></view></view>
+        <text class="bar-count">{{item.count}}</text>
+      </view>
+    </view>
+
+    <!-- 盖洛普 -->
+    <view class="stats-card" wx:if="{{stats.gallupTop.length > 0}}">
+      <view class="card-title">🧬 盖洛普天赋 Top</view>
+      <view class="chip-wrap">
+        <view class="stat-chip" wx:for="{{stats.gallupTop}}" wx:key="name">{{item.name}} · {{item.count}}</view>
+      </view>
+    </view>
+
+    <!-- 城市 + 星座 -->
+    <view class="stats-card">
+      <view class="card-title">📍 据点城市</view>
+      <view class="chip-wrap">
+        <view class="stat-chip" wx:for="{{stats.cityTop}}" wx:key="name">{{item.name}} · {{item.count}}</view>
+      </view>
+      <view class="card-title" style="margin-top:28rpx;">⭐ 星座分布</view>
+      <view class="chip-wrap">
+        <view class="stat-chip" wx:for="{{stats.zodiacTop}}" wx:key="name">{{item.name}} · {{item.count}}</view>
+      </view>
+    </view>
+
+    <view class="stats-footer" bindtap="onMemberTap">去看看全部会员 ›</view>
+  </block>
+</view>

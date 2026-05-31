@@ -70,6 +70,7 @@ Page({
         userId: p.userId,
         name: p.name || "",
         role: p.role || "",
+        avatarImage: p.avatarImage || "",
         avatarUrl: app.getMediaUrl
           ? app.getMediaUrl(p.avatarImage) || p.avatarUrl || ""
           : p.avatarUrl || "",
@@ -151,6 +152,34 @@ Page({
       current: images[index] || images[0],
       urls: images,
     });
+  },
+
+  // 同行伙伴头像加载失败：重新解析临时 URL，仍失败则退回首字占位（不缓存空头像）
+  onParticipantAvatarError: function (e) {
+    var that = this;
+    var idx = Number(e.currentTarget.dataset.index);
+    var list = this.data.displayParticipants || [];
+    var p = list[idx];
+    if (!p || !p.avatarImage || p._avatarRetried) {
+      if (p) this.setData(this._participantPatch(idx, { avatarUrl: "", _avatarRetried: true }));
+      return;
+    }
+    this.setData(this._participantPatch(idx, { _avatarRetried: true }));
+    if (app.refreshMediaUrl) {
+      app.refreshMediaUrl(p.avatarImage, function (url) {
+        that.setData(that._participantPatch(idx, { avatarUrl: url || "" }));
+      });
+    } else {
+      this.setData(this._participantPatch(idx, { avatarUrl: "" }));
+    }
+  },
+
+  _participantPatch: function (idx, fields) {
+    var patch = {};
+    Object.keys(fields).forEach(function (k) {
+      patch["displayParticipants[" + idx + "]." + k] = fields[k];
+    });
+    return patch;
   },
 
   onParticipantTap: function (e) {

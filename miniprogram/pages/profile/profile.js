@@ -474,6 +474,7 @@ Page({
     var similarUsers = similarResults.map(function (item) {
       return {
         user: item.user,
+        avatarImage: item.user.avatarImage || "",
         avatarUrl: app.getMediaUrl
           ? app.getMediaUrl(item.user.avatarImage) || util.getAvatarUrl(item.user, 80)
           : util.getAvatarUrl(item.user, 80),
@@ -695,6 +696,52 @@ Page({
 
   onToggleFavorites: function () {
     this.setData({ favoritesExpanded: !this.data.favoritesExpanded });
+  },
+
+  // 主头像加载失败：重新解析临时 URL，仍失败退回首字
+  onAvatarMainError: function () {
+    var that = this;
+    var fileID = this.data.selectedUser && this.data.selectedUser.avatarImage;
+    if (!fileID || this._mainAvatarRetried) {
+      this.setData({ "selectedUser.avatarUrl": "" });
+      return;
+    }
+    this._mainAvatarRetried = true;
+    if (app.refreshMediaUrl) {
+      app.refreshMediaUrl(fileID, function (url) {
+        that.setData({ "selectedUser.avatarUrl": url || "" });
+      });
+    } else {
+      this.setData({ "selectedUser.avatarUrl": "" });
+    }
+  },
+
+  // 相似会员头像加载失败：重新解析，仍失败退回首字
+  onSimilarAvatarError: function (e) {
+    var that = this;
+    var idx = Number(e.currentTarget.dataset.index);
+    var list = this.data.similarUsers || [];
+    var item = list[idx];
+    if (!item || !item.avatarImage || item._avatarRetried) {
+      if (item) this.setData(this._similarPatch(idx, { avatarUrl: "", _avatarRetried: true }));
+      return;
+    }
+    this.setData(this._similarPatch(idx, { _avatarRetried: true }));
+    if (app.refreshMediaUrl) {
+      app.refreshMediaUrl(item.avatarImage, function (url) {
+        that.setData(that._similarPatch(idx, { avatarUrl: url || "" }));
+      });
+    } else {
+      this.setData(this._similarPatch(idx, { avatarUrl: "" }));
+    }
+  },
+
+  _similarPatch: function (idx, fields) {
+    var patch = {};
+    Object.keys(fields).forEach(function (k) {
+      patch["similarUsers[" + idx + "]." + k] = fields[k];
+    });
+    return patch;
   },
 
   onExplainSimilarity: function () {

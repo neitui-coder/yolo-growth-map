@@ -151,6 +151,7 @@ App({
     }
     var sysInfo = wx.getSystemInfoSync();
     this.globalData.statusBarHeight = sysInfo.statusBarHeight || 20;
+    this._restoreMediaCache();
     this.globalData.homeMode = this.globalData.homeMode || 'real';
     this.globalData.dataType = this.globalData.homeMode === 'mock' ? 'mock' : 'real';
     this.globalData.operatorModeActive = this.globalData.homeMode === 'operator';
@@ -340,9 +341,94 @@ App({
     return typeof value === 'string' && value.indexOf('cloud://') === 0;
   },
 
+  // 云存储临时 URL 有效期约 2 小时，这里设 100 分钟过期，避免拿到过期 URL 导致头像变灰
+  _MEDIA_URL_TTL: 100 * 60 * 1000,
+  _MEDIA_CACHE_KEY: 'mediaUrlCacheV1',
+
+  _restoreMediaCache: function () {
+    try {
+      var saved = wx.getStorageSync(this._MEDIA_CACHE_KEY);
+      if (!saved || typeof saved !== 'object') return;
+      var now = Date.now();
+      var cache = {};
+      var ts = {};
+      Object.keys(saved).forEach(function (fileID) {
+        var entry = saved[fileID];
+        if (entry && entry.url && entry.ts && (now - entry.ts) < (100 * 60 * 1000)) {
+          cache[fileID] = entry.url;
+          ts[fileID] = entry.ts;
+        }
+      });
+      this.globalData.mediaUrlCache = cache;
+      this._mediaCacheTs = ts;
+    } catch (e) {}
+  },
+
+  _persistMediaCache: function () {
+    var that = this;
+    if (this._persistMediaTimer) return; // 节流，1.5s 内合并
+    this._persistMediaTimer = setTimeout(function () {
+      that._persistMediaTimer = null;
+      try {
+        var cache = that.globalData.mediaUrlCache || {};
+        var ts = that._mediaCacheTs || {};
+        var out = {};
+        Object.keys(cache).forEach(function (fileID) {
+          out[fileID] = { url: cache[fileID], ts: ts[fileID] || Date.now() };
+        });
+        wx.setStorage({ key: that._MEDIA_CACHE_KEY, data: out });
+      } catch (e) {}
+    }, 1500);
+  },
+
+  _setMediaCacheEntry: function (fileID, url) {
+    if (!fileID || !url) return;
+    this.globalData.mediaUrlCache[fileID] = url;
+    if (!this._mediaCacheTs) this._mediaCacheTs = {};
+    this._mediaCacheTs[fileID] = Date.now();
+  },
+
   getMediaUrl: function (value) {
     if (!value) return value;
-    return this.globalData.mediaUrlCache[value] || value;
+    // 非云存储引用（http/本地路径）直接返回
+    if (!this.isCloudMediaRef(value)) {
+      return this.globalData.mediaUrlCache[value] || value;
+    }
+    var url = this.globalData.mediaUrlCache[value];
+    if (url) {
+      var ts = (this._mediaCacheTs && this._mediaCacheTs[value]) || 0;
+      if (Date.now() - ts < this._MEDIA_URL_TTL) return url;
+      // 已过期：清掉，交回 cloud:// 由 <image> 原生解析，同时触发后台刷新
+      delete this.globalData.mediaUrlCache[value];
+      if (this._mediaCacheTs) delete this._mediaCacheTs[value];
+    }
+    return value;
+  },
+
+  // 头像/图片加载失败时调用：强制重新解析该 fileID（不缓存失败态），成功后通知页面刷新
+  refreshMediaUrl: function (fileID, callback) {
+    var that = this;
+    if (!this.isCloudMediaRef(fileID) || !wx.cloud || !wx.cloud.getTempFileURL) {
+      if (callback) callback('');
+      return;
+    }
+    delete this.globalData.mediaUrlCache[fileID];
+    if (this._mediaCacheTs) delete this._mediaCacheTs[fileID];
+    wx.cloud.getTempFileURL({
+      fileList: [fileID],
+      success: function (res) {
+        var item = (res.fileList || [])[0];
+        if (item && item.fileID && item.tempFileURL && (!item.status || item.status === 0)) {
+          that._setMediaCacheEntry(item.fileID, item.tempFileURL);
+          that._persistMediaCache();
+          that._notifyMediaCacheUpdated();
+          if (callback) callback(item.tempFileURL);
+        } else if (callback) {
+          callback('');
+        }
+      },
+      fail: function () { if (callback) callback(''); }
+    });
   },
 
   getMediaUrls: function (values) {
@@ -371,7 +457,10 @@ App({
       return !!ref && list.indexOf(ref) === index;
     });
     var unresolved = uniqueRefs.filter(function (ref) {
-      return that.isCloudMediaRef(ref) && !that.globalData.mediaUrlCache[ref];
+      if (!that.isCloudMediaRef(ref)) return false;
+      if (!that.globalData.mediaUrlCache[ref]) return true;
+      var ts = (that._mediaCacheTs && that._mediaCacheTs[ref]) || 0;
+      return (Date.now() - ts) >= that._MEDIA_URL_TTL; // 过期也需重新解析
     });
 
     if (!unresolved.length || !wx.cloud || !wx.cloud.getTempFileURL) {
@@ -409,10 +498,11 @@ App({
         fileList: chunk,
         success: function (res) {
           (res.fileList || []).forEach(function (item) {
-            if (item.fileID && item.tempFileURL) {
-              that.globalData.mediaUrlCache[item.fileID] = item.tempFileURL;
+            if (item.fileID && item.tempFileURL && (!item.status || item.status === 0)) {
+              that._setMediaCacheEntry(item.fileID, item.tempFileURL);
             }
           });
+          that._persistMediaCache();
         },
         complete: next
       });

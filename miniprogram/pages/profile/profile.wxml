@@ -28,7 +28,7 @@
     <!-- 上半: 头像 + 信息 -->
     <view class="v2-hero-row">
       <view class="v2-avatar-wrap" bindtap="onAvatarPreview">
-        <image wx:if="{{selectedUser.avatarUrl}}" class="v2-avatar" src="{{selectedUser.avatarUrl}}" mode="aspectFill" lazy-load="true" />
+        <image wx:if="{{selectedUser.avatarUrl}}" class="v2-avatar" src="{{selectedUser.avatarUrl}}" mode="aspectFill" lazy-load="true" binderror="onAvatarMainError" />
         <view wx:else class="v2-avatar v2-avatar-initial">{{selectedUser.avatarInitial}}</view>
         <view wx:if="{{selectedUser.isBirthdayMonth}}" class="v2-birthday-hat">
           <view class="v2-birthday-hat-ball"></view>
@@ -226,7 +226,7 @@
   <scroll-view class="v2-similar-scroll" scroll-x enable-flex>
     <view class="v2-similar-item" wx:for="{{similarUsers}}" wx:key="index" bindtap="onSimilarTap" data-user-id="{{item.user.userId || item.user.id}}">
       <view class="v2-similar-avatar-wrap">
-        <image wx:if="{{item.avatarUrl}}" class="v2-similar-avatar" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load="true" />
+        <image wx:if="{{item.avatarUrl}}" class="v2-similar-avatar" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load="true" data-index="{{index}}" binderror="onSimilarAvatarError" />
         <view wx:else class="v2-similar-avatar v2-similar-avatar-initial">{{item.avatarInitial}}</view>
       </view>
       <text class="v2-similar-name">{{item.user.name}}</text>
@@ -530,7 +530,7 @@
   </view>
   <view class="similar-list">
     <view class="similar-item" wx:for="{{similarUsers}}" wx:key="index" bindtap="onSimilarTap" data-user-id="{{item.user.userId || item.user.id}}">
-      <image class="similar-avatar" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load="true" />
+      <image class="similar-avatar" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load="true" data-index="{{index}}" binderror="onSimilarAvatarError" />
       <text class="similar-name">{{item.user.name}}</text>
       <text class="similar-reason">{{item.reason}}</text>
     </view>

@@ -4,7 +4,7 @@
   </view>
   <!-- 头像（有则图，没有则名字首字）-->
   <view class="mc-avatar-wrap">
-    <image wx:if="{{avatarUrl}}" class="mc-avatar" src="{{avatarUrl}}" mode="aspectFill" lazy-load="true" />
+    <image wx:if="{{avatarUrl}}" class="mc-avatar" src="{{avatarUrl}}" mode="aspectFill" lazy-load="true" binderror="onAvatarError" />
     <view wx:else class="mc-avatar mc-avatar-initial">{{avatarInitial}}</view>
     <view wx:if="{{displayBirthday}}" class="mc-birthday-hat">
       <view class="mc-birthday-hat-pom"></view>

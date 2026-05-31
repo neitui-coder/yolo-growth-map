@@ -75,6 +75,8 @@
               class="participant-avatar"
               src="{{item.avatarUrl}}"
               mode="aspectFill"
+              data-index="{{index}}"
+              binderror="onParticipantAvatarError"
             />
             <view wx:else class="participant-avatar participant-avatar-placeholder">
               <text>{{item.name ? item.name[0] : '?'}}</text>

@@ -77,10 +77,17 @@ function buildOption(data) {
     },
     series: [{
       name: '活动城市', type: 'effectScatter', coordinateSystem: 'geo',
-      rippleEffect: { brushType: 'stroke', scale: 3.2, period: 3.5 },
-      symbolSize: function (val) { return 8 + ((val[2] || 1) / data.maxCount) * 16; },
-      itemStyle: { color: '#5eead4', shadowBlur: 12, shadowColor: '#5eead4' },
-      label: { show: true, position: 'right', formatter: '{b}', color: '#cffafe', fontSize: 10, fontWeight: 'bold' },
+      rippleEffect: { brushType: 'stroke', scale: 2.4, period: 3.5 },
+      symbolSize: function (val) { return 5 + ((val[2] || 1) / data.maxCount) * 9; },
+      itemStyle: { color: '#5eead4', shadowBlur: 8, shadowColor: '#5eead4' },
+      label: {
+        show: true,
+        position: 'right',
+        formatter: function (p) { return p.name + ' ' + (p.value && p.value[2] ? p.value[2] : 0); },
+        color: '#cffafe',
+        fontSize: 10,
+        fontWeight: 'bold'
+      },
       labelLayout: { hideOverlap: true },
       data: data.points
     }]

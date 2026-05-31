@@ -213,7 +213,7 @@ Page({
         ? this.data.zodiacOptions[this.data.zodiacIndex]
         : (util.deriveZodiacFromBirthday(this.data.birthday) || ''),
       gallup: this._splitToArray(this.data.gallupStr).slice(0, 5),
-      hobbies: this._splitToArray(this.data.hobbiesStr),
+      hobbies: this._splitToArray(this.data.hobbiesStr).slice(0, 10),
       expertise: this._splitToArray(this.data.expertiseStr),
       tags: this._splitToArray(this.data.tagsStr),
       skills: this._splitToArray(this.data.skillsStr)

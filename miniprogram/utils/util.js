@@ -445,53 +445,59 @@ function getMissingFields(user) {
  * 计算两个用户的相似度
  * 同 MBTI +3，同城市 +2（支持多城市），相同爱好每个 +1，相同技能每个 +1，加入时间差1年内 +1
  */
-function computeSimilarity(userA, userB) {
-  var score = 0;
-  if (userA.mbti && userB.mbti && userA.mbti === userB.mbti) score += 3;
-  if (userA.city && userB.city) {
-    var citiesA = normalizeCityList(userA.city);
-    var citiesB = normalizeCityList(userB.city);
-    for (var i = 0; i < citiesA.length; i++) {
-      if (citiesB.indexOf(citiesA[i]) !== -1) { score += 2; break; }
-    }
-  }
-  // 盖洛普五大天赋（强信号：性格匹配的核心维度）
-  if (Array.isArray(userA.gallup) && Array.isArray(userB.gallup)) {
-    userA.gallup.forEach(function (g) {
-      if (userB.gallup.indexOf(g) !== -1) score += 1;
-    });
-  }
-  var hobbiesA = normalizeHobbyList(userA.hobbies || []);
-  var hobbiesB = normalizeHobbyList(userB.hobbies || []);
-  if (hobbiesA.length && hobbiesB.length) {
-    hobbiesA.forEach(function (h) {
-      if (hobbiesB.indexOf(h) !== -1) score += 1;
-    });
-  }
-  if (userA.skills && userB.skills) {
-    userA.skills.forEach(function (s) {
-      if (userB.skills.indexOf(s) !== -1) score += 1;
-    });
-  }
-  if (userA.joinDate && userB.joinDate) {
-    var ya = parseInt(userA.joinDate.split('-')[0]);
-    var yb = parseInt(userB.joinDate.split('-')[0]);
-    if (Math.abs(ya - yb) <= 1) score += 1;
-  }
-  return score;
+// 相似度归一化小工具
+function _favNorm(s) {
+  return String(s == null ? '' : s)
+    .replace(/[《》「」『』“”"'，,。.\s·、!！~?？:：;；()（）]/g, '')
+    .toLowerCase();
 }
 
+function _flattenFavorites(user) {
+  var groups = buildFavoriteGroups(user) || [];
+  var out = [];
+  groups.forEach(function (g) {
+    (g.items || []).forEach(function (it) {
+      var n = _favNorm(it);
+      if (n) out.push({ raw: it, norm: n });
+    });
+  });
+  return out;
+}
+
+function _mbti4(value) {
+  var m = String(value || '').toUpperCase().match(/[IE][NS][FT][JP]/);
+  return m ? m[0] : '';
+}
+
+function computeSimilarity(userA, userB) {
+  return computeSimilarityBreakdown(userA, userB).score;
+}
+
+// 综合相似度：不再让 MBTI 一家独大。MBTI 按维度部分计分，叠加城市/盖洛普/爱好/
+// 趣味共鸣（同一首歌/书/游戏等高信号）/星座/加入年份。computeSimilarity 复用此结果。
 function computeSimilarityBreakdown(userA, userB) {
   var score = 0;
   var reasons = [];
   var breakdown = [];
 
-  if (userA.mbti && userB.mbti && userA.mbti === userB.mbti) {
-    score += 3;
-    reasons.push('同为 ' + userA.mbti);
-    breakdown.push({ label: 'MBTI', points: 3, detail: '同为 ' + userA.mbti });
+  // MBTI：逐维度匹配，每维 +0.6（四维全同=2.4），避免"同 MBTI 直接霸榜"
+  var mA = _mbti4(userA.mbti), mB = _mbti4(userB.mbti);
+  if (mA && mB) {
+    var shared = 0;
+    for (var k = 0; k < 4; k++) { if (mA[k] === mB[k]) shared++; }
+    if (shared > 0) {
+      var mpts = Math.round(shared * 0.6 * 100) / 100;
+      score += mpts;
+      if (shared === 4) {
+        reasons.push('同为 ' + mA);
+        breakdown.push({ label: 'MBTI', points: mpts, detail: '同为 ' + mA });
+      } else {
+        breakdown.push({ label: 'MBTI', points: mpts, detail: 'MBTI ' + shared + '/4 维相同 (' + mA + '·' + mB + ')' });
+      }
+    }
   }
 
+  // 城市同城
   if (userA.city && userB.city) {
     var citiesA = normalizeCityList(userA.city);
     var citiesB = normalizeCityList(userB.city);
@@ -505,47 +511,88 @@ function computeSimilarityBreakdown(userA, userB) {
     }
   }
 
+  // 盖洛普天赋（性格核心维度）
+  var commonGallup = [];
+  if (Array.isArray(userA.gallup) && Array.isArray(userB.gallup)) {
+    userA.gallup.forEach(function (g) {
+      if (userB.gallup.indexOf(g) !== -1) commonGallup.push(g);
+    });
+  }
+  if (commonGallup.length) {
+    var gpts = Math.round(commonGallup.length * 1.2 * 100) / 100;
+    score += gpts;
+    reasons.push('同有「' + commonGallup.slice(0, 2).join('、') + '」天赋');
+    breakdown.push({ label: '盖洛普', points: gpts, detail: '共同天赋：' + commonGallup.join('、') });
+  }
+
+  // 爱好
   var commonHobbies = [];
   var hobbiesA = normalizeHobbyList(userA.hobbies || []);
   var hobbiesB = normalizeHobbyList(userB.hobbies || []);
   if (hobbiesA.length && hobbiesB.length) {
     hobbiesA.forEach(function (h) {
-      if (hobbiesB.indexOf(h) !== -1) {
-        score += 1;
-        commonHobbies.push(h);
-      }
+      if (hobbiesB.indexOf(h) !== -1) commonHobbies.push(h);
     });
   }
   if (commonHobbies.length > 0) {
+    var hpts = Math.round(commonHobbies.length * 1.2 * 100) / 100;
+    score += hpts;
     reasons.push('都爱' + commonHobbies.slice(0, 2).join('、'));
-    breakdown.push({ label: '爱好', points: commonHobbies.length, detail: '共同爱好：' + commonHobbies.join('、') });
+    breakdown.push({ label: '爱好', points: hpts, detail: '共同爱好：' + commonHobbies.join('、') });
   }
 
+  // 趣味共鸣（同一本书/同一首歌/同一部电影/同一款游戏…高信号"缘分"）
+  var favA = _flattenFavorites(userA);
+  var favB = _flattenFavorites(userB);
+  if (favA.length && favB.length) {
+    var bset = {};
+    favB.forEach(function (f) { bset[f.norm] = true; });
+    var commonFav = [];
+    var seenFav = {};
+    favA.forEach(function (f) {
+      if (bset[f.norm] && !seenFav[f.norm]) { seenFav[f.norm] = true; commonFav.push(f.raw); }
+    });
+    if (commonFav.length) {
+      var fpts = Math.round(commonFav.length * 1.5 * 100) / 100;
+      score += fpts;
+      reasons.push('都喜欢' + commonFav.slice(0, 2).join('、'));
+      breakdown.push({ label: '趣味共鸣', points: fpts, detail: '都喜欢：' + commonFav.join('、') });
+    }
+  }
+
+  // 技能
   var commonSkills = [];
   if (userA.skills && userB.skills) {
     userA.skills.forEach(function (s) {
-      if (userB.skills.indexOf(s) !== -1) {
-        score += 1;
-        commonSkills.push(s);
-      }
+      if (userB.skills.indexOf(s) !== -1) commonSkills.push(s);
     });
   }
   if (commonSkills.length > 0) {
+    score += commonSkills.length;
     reasons.push('同持' + commonSkills.slice(0, 2).join('、'));
     breakdown.push({ label: '技能', points: commonSkills.length, detail: '共同技能：' + commonSkills.join('、') });
   }
 
+  // 星座
+  var zA = userA.zodiac || deriveZodiacFromBirthday(userA.birthday);
+  var zB = userB.zodiac || deriveZodiacFromBirthday(userB.birthday);
+  if (zA && zB && zA === zB) {
+    score += 0.8;
+    breakdown.push({ label: '星座', points: 0.8, detail: '同为' + zA });
+  }
+
+  // 加入年份相近
   if (userA.joinDate && userB.joinDate) {
     var ya = parseInt(userA.joinDate.split('-')[0]);
     var yb = parseInt(userB.joinDate.split('-')[0]);
     if (Math.abs(ya - yb) <= 1) {
-      score += 1;
-      breakdown.push({ label: '加入时间', points: 1, detail: '加入年份相差不超过 1 年' });
+      score += 0.6;
+      breakdown.push({ label: '加入时间', points: 0.6, detail: '加入年份相差不超过 1 年' });
     }
   }
 
   return {
-    score: score,
+    score: Math.round(score * 100) / 100,
     reasons: reasons,
     breakdown: breakdown
   };

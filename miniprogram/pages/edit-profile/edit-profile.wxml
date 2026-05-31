@@ -73,8 +73,8 @@
   </view>
 
   <view class="form-group">
-    <text class="form-label">爱好</text>
-    <textarea class="form-input form-textarea" value="{{hobbiesStr}}" placeholder="用逗号分隔，如：阅读,跑步,旅行" auto-height maxlength="-1" bindinput="onInput" data-field="hobbiesStr" />
+    <text class="form-label">爱好（最多 10 个）</text>
+    <textarea class="form-input form-textarea" value="{{hobbiesStr}}" placeholder="用逗号分隔，最多 10 个，如：阅读,跑步,旅行" auto-height maxlength="-1" bindinput="onInput" data-field="hobbiesStr" />
   </view>
 
   <view class="form-group">

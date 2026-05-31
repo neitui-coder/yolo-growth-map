@@ -2,6 +2,32 @@ var util = require("../../utils/util.js");
 var app = getApp();
 var AI_FUNNY_INTRO_VERSION = 3;
 
+// "和TA最像"的理由：优先展示有缘分感的（都喜欢同一首歌/书/游戏、共同爱好），
+// 而不是冷冰冰的"同为某 MBTI"。带 emoji，取最戳人的两条。
+function serendipityReason(reasons) {
+  if (!reasons || !reasons.length) return "志趣相投";
+  // 前缀 -> 优先级(越小越靠前) + emoji
+  var RULES = [
+    { p: "都喜欢", rank: 0, emoji: "💫" },
+    { p: "都想去", rank: 1, emoji: "✈️" },
+    { p: "都爱", rank: 2, emoji: "🎯" },
+    { p: "同有", rank: 3, emoji: "🧬" },
+    { p: "都在", rank: 4, emoji: "📍" },
+    { p: "同为", rank: 5, emoji: "🧠" }
+  ];
+  function meta(r) {
+    for (var i = 0; i < RULES.length; i++) {
+      if (r.indexOf(RULES[i].p) === 0) return RULES[i];
+    }
+    return { rank: 9, emoji: "" };
+  }
+  var sorted = reasons.slice().sort(function (a, b) { return meta(a).rank - meta(b).rank; });
+  return sorted.slice(0, 2).map(function (r) {
+    var e = meta(r).emoji;
+    return e ? (e + " " + r) : r;
+  }).join("  ");
+}
+
 Page({
   data: {
     pageLoading: true,
@@ -488,7 +514,7 @@ Page({
         score: item.score,
         reason:
           item.detail && item.detail.reasons && item.detail.reasons.length
-            ? item.detail.reasons.slice(0, 2).join(" · ")
+            ? serendipityReason(item.detail.reasons)
             : "志趣相投",
         breakdown: item.detail ? item.detail.breakdown : [],
       };

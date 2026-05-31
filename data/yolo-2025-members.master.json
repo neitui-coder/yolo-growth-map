@@ -43,13 +43,13 @@
       "profile": {
         "mbti": "",
         "gallup": [],
-        "company": "天合资本管理公司",
+        "company": "天合富家能源股份有限公司",
         "city": "上海",
         "birthday": "6月13日",
         "education": "美国布朗大学（经济学、社会学）",
         "educationDegree": "本科",
         "motto": "",
-        "career": "执行董事"
+        "career": "董事长"
       },
       "interests": {
         "hobbies": [
@@ -113,9 +113,22 @@
       },
       "interests": {
         "hobbies": [
-          "旅行",
+          "睡觉",
+          "小酌",
           "看书"
-        ]
+        ],
+        "favorites": {
+          "music": [
+            "Lady Gaga，刚看了她的演唱会"
+          ],
+          "foodDrink": [
+            "随心所欲的小酌",
+            "都喜欢"
+          ],
+          "nextTravel": [
+            "日本"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-bill.jpg"
@@ -153,12 +166,13 @@
       "profile": {
         "mbti": "",
         "gallup": [],
-        "company": "上海识野文化创意",
+        "company": "浙江中兴精密工业集团有限公司",
         "city": "宁波",
         "birthday": "7月4日",
-        "education": "多伦多大学",
+        "education": "加拿大多伦多大学 金融系",
         "educationDegree": "本科",
-        "motto": ""
+        "motto": "",
+        "career": "副总裁"
       },
       "interests": {
         "hobbies": [
@@ -212,18 +226,36 @@
         ],
         "company": "江苏康乃馨纺织集团",
         "city": "淮安",
-        "birthday": "4月",
-        "education": "南安普顿大学会计和金融 / 谢菲尔德大学管理学",
+        "birthday": "4月10日",
+        "education": "本科：英国南安普顿大学会计和金融 研究生：英国谢菲尔德大学管理学",
         "educationDegree": "硕士",
         "motto": "和好朋友一起吃漂亮饭喝酒。",
-        "mottoSource": "poster-2025-note"
+        "mottoSource": "poster-2025-note",
+        "career": "投资部/人力资源部经理"
       },
       "interests": {
         "hobbies": [
           "时尚",
           "教育",
-          "旅游"
-        ]
+          "旅行"
+        ],
+        "favorites": {
+          "filmsTv": [
+            "藏海传"
+          ],
+          "music": [
+            "单依纯，周深"
+          ],
+          "foodDrink": [
+            "和好朋友一起吃漂亮饭喝酒"
+          ],
+          "games": [
+            "无限暖暖"
+          ],
+          "nextTravel": [
+            "伦敦"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-yueyue.jpg"
@@ -273,15 +305,42 @@
         "education": "本科：费城艺术大学 研究生：美国帕森斯艺术设计学院，工业设计",
         "educationDegree": "硕士",
         "motto": "抬手探星云，纵身破迷雾。",
-        "career": "人力资源总监",
+        "career": "事业部总经理",
         "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
           "艺术",
           "设计",
-          "滑雪"
-        ]
+          "读书",
+          "滑雪",
+          "讲师",
+          "教练",
+          "引导师"
+        ],
+        "favorites": {
+          "books": [
+            "《成就》《坚毅》《呼吸12：成功以外的长期主义》",
+            "《创新公司皮克斯的启示》《所谓会带人，就是会提问》",
+            "《给经理人的第一课》安迪格鲁夫"
+          ],
+          "foodDrink": [
+            "苹果",
+            "沙拉"
+          ],
+          "games": [
+            "SLG"
+          ],
+          "childhoodCartoon": [
+            "反叛的鲁鲁修"
+          ],
+          "nextTravel": [
+            "伦敦",
+            "冰岛",
+            "大溪地。",
+            "最喜欢的旅行的部分：规划行程"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jingzi.jpg"
@@ -375,7 +434,7 @@
         ]
       },
       "profile": {
-        "mbti": "ENTJ-A",
+        "mbti": "ENTJ",
         "gallup": [
           "和谐",
           "学习",
@@ -383,18 +442,31 @@
           "成就",
           "行动"
         ],
-        "company": "华为公司",
+        "company": "华为",
         "city": "深圳",
         "birthday": "10月10日",
-        "education": "美国加州大学UCSB 计算机专业 香港大学读研中",
+        "education": "本科：美国加州大学UCSB 计算机专业   研究生：香港大学",
         "educationDegree": "本科",
         "motto": "今天永远是新的开始",
         "mottoSource": "poster-2025"
       },
       "interests": {
         "hobbies": [
-          "篮球"
-        ]
+          "篮球",
+          "健身",
+          "摄影"
+        ],
+        "favorites": {
+          "filmsTv": [
+            "《触不可及》"
+          ],
+          "adventure": [
+            "高空跳伞"
+          ],
+          "childhoodDream": [
+            "企业家"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-charles.jpg"
@@ -438,10 +510,10 @@
           "积极",
           "个别"
         ],
-        "company": "聚橙音乐剧",
+        "company": "音乐剧制作人",
         "city": "上海",
         "birthday": "4月20日",
-        "education": "英国皇家中央演讲与戏剧学院-实验戏剧",
+        "education": "本科：伦敦大学国王学院 研究生：英国皇家中央演讲与戏剧学院-实验戏剧",
         "educationDegree": "在读研究生",
         "motto": "来都来了",
         "career": "经理",
@@ -450,9 +522,24 @@
       "interests": {
         "hobbies": [
           "弹钢琴",
-          "看戏看展",
+          "看戏",
+          "看展",
           "做美食"
-        ]
+        ],
+        "favorites": {
+          "books": [
+            "《道格拉斯被取消了》《苦尽柑来遇见你》"
+          ],
+          "filmsTv": [
+            "《完美的日子》《One Day》"
+          ],
+          "music": [
+            "单依纯"
+          ],
+          "foodDrink": [
+            "“液体粮食（嘻嘻”"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sarah.jpg"
@@ -558,7 +645,7 @@
         "company": "JobWizard.ai",
         "city": "北京",
         "birthday": "8月19日",
-        "education": "UCSD Data Science（本） UCB IEOR（硕）",
+        "education": "UCSD Data Science（本）  UCB IEOR（硕）",
         "educationDegree": "本科",
         "motto": "流水不争先，争的是滔滔不绝",
         "career": "CEO",
@@ -566,8 +653,37 @@
       },
       "interests": {
         "hobbies": [
-          "滑雪"
-        ]
+          "滑雪",
+          "网球",
+          "自驾"
+        ],
+        "favorites": {
+          "books": [
+            "《标杆领导力》"
+          ],
+          "music": [
+            "必须《富士山下》"
+          ],
+          "foodDrink": [
+            "潮汕牛肉火锅",
+            "椰子鸡"
+          ],
+          "games": [
+            "腾讯的大掼蛋"
+          ],
+          "adventure": [
+            "溯溪和野攀"
+          ],
+          "childhoodDream": [
+            "科学家😂"
+          ],
+          "childhoodCartoon": [
+            "柯南"
+          ],
+          "nextTravel": [
+            "日本九州"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-sean.jpg"
@@ -605,26 +721,55 @@
       "profile": {
         "mbti": "ENFP",
         "gallup": [
+          "思维",
           "学习",
-          "分析",
-          "理念",
-          "专注",
-          "交往"
+          "交往",
+          "前瞻",
+          "竞争"
         ],
         "company": "凯文彼德科技有限公司",
         "city": "桂林",
         "birthday": "6月29日",
-        "education": "美国罗格斯大学 人力资源专业",
+        "education": "美国罗格斯大学  人力资源专业",
         "educationDegree": "本科",
-        "motto": "I came I saw I conquered",
+        "motto": "l came l saw l conquered",
         "career": "董事长",
         "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
-          "读书",
-          "短跑"
-        ]
+          "探索本质",
+          "口腔世界第一"
+        ],
+        "favorites": {
+          "books": [
+            "《五十度灰》：他用皮鞭和手铐锁住肉体，却忘了，真正在场的，是无法格式化的心。",
+            "《银河系搭车客指南》：银河有尽头，荒诞没有；他试图搞懂世界，却先被一句“42”乱了神。问错，皆空。"
+          ],
+          "authors": [
+            "藤本树：他笔下的善比恶更残忍，灭比生更温柔。"
+          ],
+          "filmsTv": [
+            "《瑞士军刀男》：有些人不是不合群，只是还没找到愿意听他放屁的尸体。",
+            "《让子弹飞》：他想讲道理，却发现子弹比道理快；那只能，比子弹想得远。",
+            "《爱乐之城 La La Land》：她成了星光，他成了乐章，错过？无妨。因为在彼此梦里留了空席。"
+          ],
+          "music": [
+            "《哥哥呀哥哥》《Wrong Hole》《Michael in the Bathroom》"
+          ],
+          "foodDrink": [
+            "玛格丽特披萨"
+          ],
+          "adventure": [
+            "爬雪山"
+          ],
+          "childhoodDream": [
+            "济公"
+          ],
+          "childhoodCartoon": [
+            "JoJo"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-peter.jpg"
@@ -671,7 +816,7 @@
         "company": "浙江新农化工股份有限公司",
         "city": "杭州",
         "birthday": "4月28日",
-        "education": "本科：美国欧文谷大学金融管理专业 /加州大学尔湾分校的经济学专业 研究生：加州大学尔湾分校创新创业专业",
+        "education": "本科：美国欧文谷大学经融管理专业 /加州大学尔湾分校的经济学专业 研究生：加州大学尔湾分校创新创业专业",
         "educationDegree": "本科",
         "motto": "",
         "career": "人力资源管培生"
@@ -679,9 +824,29 @@
       "interests": {
         "hobbies": [
           "看书",
-          "画画",
-          "学美术"
-        ]
+          "学美术",
+          "画画"
+        ],
+        "favorites": {
+          "foodDrink": [
+            "一点点奶茶/必胜客"
+          ],
+          "games": [
+            "英雄联盟"
+          ],
+          "adventure": [
+            "自驾游"
+          ],
+          "childhoodDream": [
+            "太空人"
+          ],
+          "childhoodCartoon": [
+            "哆啦A梦"
+          ],
+          "nextTravel": [
+            "公司"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-zhiqian.jpg"
@@ -782,22 +947,51 @@
           "包容",
           "体谅"
         ],
-        "company": "本地生活投资人 (电竞酒店/民宿/美业/休闲娱乐）",
+        "company": "本地生活投资人 竞鹅酒店品牌合伙人",
         "city": "上海",
         "birthday": "5月5日",
-        "education": "波士顿大学商学院市场营销专业 复旦大学新闻学院广告系（研二）",
+        "education": "本科：波士顿大学商学院 市场营销专业 研究生：复旦大学新闻学院 广告系",
         "educationDegree": "本科",
         "motto": "大展宏图",
         "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
-          "电影",
-          "唱歌",
-          "剧本杀",
+          "影视剧",
+          "音乐",
           "电竞",
-          "二次元"
-        ]
+          "宠物",
+          "滑雪"
+        ],
+        "favorites": {
+          "books": [
+            "易中天《曹操》"
+          ],
+          "filmsTv": [
+            "黑镜第七季"
+          ],
+          "foodDrink": [
+            "江湖菜"
+          ],
+          "games": [
+            "瓦 lol 下棋",
+            "王者荣耀",
+            "死亡搁浅"
+          ],
+          "adventure": [
+            "滑板"
+          ],
+          "childhoodDream": [
+            "宇航员"
+          ],
+          "childhoodCartoon": [
+            "海尔兄弟"
+          ],
+          "nextTravel": [
+            "泰国",
+            "济州岛"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-p09.jpg"
@@ -844,7 +1038,7 @@
         "company": "明亚保险经纪公司",
         "city": "上海",
         "birthday": "2月2日",
-        "education": "本科：加拿大麦吉尔大学心理和经济专业",
+        "education": "本科：加拿大麦吉尔大学 心理和经济专业",
         "educationDegree": "本科",
         "motto": "诚征跑团桌游小伙伴",
         "career": "高级经纪人",
@@ -852,9 +1046,39 @@
       },
       "interests": {
         "hobbies": [
+          "桌游",
+          "睡觉",
           "唱歌",
-          "做饭"
-        ]
+          "看戏"
+        ],
+        "favorites": {
+          "authors": [
+            "金爱烂"
+          ],
+          "filmsTv": [
+            "番《Alien Stage》"
+          ],
+          "music": [
+            "韩语歌：Villian",
+            "歌手：张悬",
+            "音乐剧：Little Night Music"
+          ],
+          "foodDrink": [
+            "咖啡"
+          ],
+          "games": [
+            "杀戮尖塔"
+          ],
+          "adventure": [
+            "徒步"
+          ],
+          "childhoodDream": [
+            "作家"
+          ],
+          "nextTravel": [
+            "意大利"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-janine.jpg"
@@ -948,7 +1172,7 @@
         ]
       },
       "profile": {
-        "mbti": "INTP-A",
+        "mbti": "INTP",
         "gallup": [
           "适应",
           "积极",
@@ -956,20 +1180,37 @@
           "行动",
           "完美"
         ],
-        "company": "",
-        "city": "洛杉矶",
+        "company": "协合新能源集团",
+        "city": "新加坡",
         "birthday": "10月9日",
-        "education": "本科：西方文理学院 专业：历史系",
+        "education": "本科：西方文理学院  历史系",
         "educationDegree": "本科",
         "motto": "",
-        "career": "Risk management manager （风险管理经理）"
+        "career": "Global Compliance Manager"
       },
       "interests": {
         "hobbies": [
-          "骑自行车",
-          "健身",
-          "打游戏"
-        ]
+          "摇滚乐",
+          "吃辣",
+          "小酌"
+        ],
+        "favorites": {
+          "books": [
+            "盐野七生《罗马人的故事》“条条大路‘起’罗马”",
+            "《银河系漫游指南》 “生命和宇宙的终极答案是42，但问题是什么？”"
+          ],
+          "filmsTv": [
+            "《被解救的姜戈》：听话，鬼佬！",
+            "《让子弹飞》：枪在手，跟我走！",
+            "《美国精神病人》"
+          ],
+          "music": [
+            "Pink Floyd 《wish you were here》Kanye West《Devil in a new dress》"
+          ],
+          "foodDrink": [
+            "炸酱面"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-kevin.jpg"
@@ -1071,17 +1312,46 @@
           "追求"
         ],
         "company": "",
-        "city": "无锡",
+        "city": "美国",
         "birthday": "8月1日",
-        "education": "本科：布里斯托大学生物化学专业 研究生：美国西北大学 生物技术 硕士在读",
+        "education": "本科：布里斯托大学生物化学专业 研究生：美国西北大学 生物技术 （在读）",
         "educationDegree": "",
-        "motto": "KEEP CALM AND CARRY ON 最近自学韩语日语中 欢迎交流😌",
+        "motto": "KEEP CALM AND CARRY ON， 最近自学韩语日语中 欢迎交流😌",
         "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
           "自己也是体育赛事相关的博主"
-        ]
+        ],
+        "favorites": {
+          "books": [
+            "《解忧杂货铺》《哑舍》"
+          ],
+          "authors": [
+            "村上春树"
+          ],
+          "filmsTv": [
+            "《低俗小说》《碟中谍系列》《盗梦空间》"
+          ],
+          "music": [
+            "《indie rock》《kpop（riize 死忠粉激推）》《R&B》",
+            "最近 riize 出新专辑了 odyssey 欢迎收听哈哈哈 安利一下"
+          ],
+          "foodDrink": [
+            "啥都吃一点 只是不吃蘑菇",
+            "口味的话喜欢吃辣比如重庆火锅😍",
+            "爱喝霸王茶姬和柠檬向右～但是最爱吃的食物还是小馄饨还有无锡小笼包"
+          ],
+          "games": [
+            "《云顶之弈》《英雄联盟》 《王者荣耀》 《和平精英》 《猛兽派对》"
+          ],
+          "adventure": [
+            "想去跳伞哈哈哈"
+          ],
+          "nextTravel": [
+            "想什么时候抽空去一趟南极～"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-monica.jpg"
@@ -1117,25 +1387,49 @@
         ]
       },
       "profile": {
-        "mbti": "INTJ-A",
+        "mbti": "INTJ",
         "gallup": [
-          "交往｜战略｜排难｜成就｜竞争"
+          "交往",
+          "战略",
+          "排难",
+          "成就",
+          "竞争"
         ],
         "company": "无锡市吉润国际贸易有限公司",
         "city": "无锡",
         "birthday": "1月19日",
-        "education": "本科：澳洲悉尼 新南威尔士大学 Biotechnology, Accounting 研究生：澳洲悉尼 新南威尔士大学 Financial analysis",
+        "education": "本科：澳洲悉尼 新南威尔士大学  Biotechnology, Accounting 研究生：澳洲悉尼  新南威尔士大学  Financial analysis",
         "educationDegree": "研究生",
         "motto": "拓宽视野，发现自我",
-        "career": "业务经理",
+        "career": "副总经理",
         "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
           "旅游",
-          "高尔夫",
-          "钢琴"
-        ]
+          "网球",
+          "钢琴",
+          "阅读"
+        ],
+        "favorites": {
+          "books": [
+            "《三体》《Sapiens》"
+          ],
+          "authors": [
+            "看得杂，择书不择作家"
+          ],
+          "filmsTv": [
+            "《星际穿越》《寻梦环游记》偏爱科幻和动画"
+          ],
+          "music": [
+            "音乐剧：",
+            "Hamilton",
+            "NOTRE DAME de PARIS"
+          ],
+          "foodDrink": [
+            "吃很少 & 少油少盐少糖"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-xiaoyan.jpg"
@@ -1241,18 +1535,35 @@
         "company": "",
         "city": "上海",
         "birthday": "7月29日",
-        "education": "本科：华盛顿大学 工商管理 研究生：杜克大学 管理学 / 中欧国际工商学院工商管理专业",
+        "education": "本科：华盛顿大学  工商管理 研究生：杜克大学  管理学 中欧国际工商学院工商管理",
         "educationDegree": "研究生",
         "motto": "最近沉迷上班 请大家莫要见怪 另外寻求滑雪搭子 人生就这点爱好了",
         "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
-          "橄榄球（业余橄榄球队）",
           "露营",
           "旅游",
-          "马术"
-        ]
+          "滑雪",
+          "Techno音乐",
+          "健身",
+          "工作"
+        ],
+        "favorites": {
+          "music": [
+            "Techno都还可以"
+          ],
+          "foodDrink": [
+            "无糖芬达"
+          ],
+          "games": [
+            "金蝶云星空ERP",
+            "（202106版本）"
+          ],
+          "adventure": [
+            "潜水"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jerry.jpg"
@@ -1299,7 +1610,7 @@
         "company": "garmentHERE",
         "city": "上海",
         "birthday": "3月6日",
-        "education": "上海纽约大学，business marketing",
+        "education": "本科：上海纽约大学，business marketing",
         "educationDegree": "本科",
         "motto": "永远学习，永不止步",
         "career": "Marketing Officer",
@@ -1309,11 +1620,24 @@
         "hobbies": [
           "健身",
           "打篮球",
-          "煮饭",
-          "美食",
-          "旅游",
-          "看艺术展"
-        ]
+          "烹饪",
+          "旅游"
+        ],
+        "favorites": {
+          "books": [
+            "《The Almanack of Naval Ravikant》《The Alchemist》"
+          ],
+          "filmsTv": [
+            "《The Dark Knight》《Godfather》"
+          ],
+          "music": [
+            "《My House Is Not a Home》《places to be》《Me(heavy)》"
+          ],
+          "foodDrink": [
+            "任何瘦肉类",
+            "不吃甜品😁"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-mat-so.jpg"
@@ -1349,7 +1673,7 @@
         ]
       },
       "profile": {
-        "mbti": "ENFJ-T",
+        "mbti": "ENFJ",
         "gallup": [
           "排难",
           "成就",
@@ -1360,7 +1684,7 @@
         "company": "合肥佳冠口腔医疗有限公司",
         "city": "杭州",
         "birthday": "2月5日",
-        "education": "浙江大学工商管理专业",
+        "education": "本科：浙江大学工商管理专业",
         "educationDegree": "本科",
         "motto": "且让自己欢喜",
         "career": "网络运营",
@@ -1369,8 +1693,37 @@
       "interests": {
         "hobbies": [
           "改车",
-          "溜车"
-        ]
+          "溜车",
+          "自驾游"
+        ],
+        "favorites": {
+          "books": [
+            "《毛泽东选集》"
+          ],
+          "authors": [
+            "毛泽东：不是先学好了再干，而是干起来再学习，干就是学习"
+          ],
+          "music": [
+            "薛之谦，陈奕迅"
+          ],
+          "foodDrink": [
+            "西湖醋鱼以外都可以"
+          ],
+          "adventure": [
+            "跳伞"
+          ],
+          "childhoodDream": [
+            "救死扶伤"
+          ],
+          "childhoodCartoon": [
+            "天空之城"
+          ],
+          "nextTravel": [
+            "新疆",
+            "公路",
+            "远离城市的地方"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jiawei.jpg"
@@ -1417,16 +1770,39 @@
         "company": "安徽亿维医疗用品有限公司",
         "city": "扬州",
         "birthday": "10月12日",
-        "education": "加拿大约克大学 工商管理",
+        "education": "本科：加拿大约克大学 工商管理",
         "educationDegree": "本科",
-        "motto": "I DON'T GET OLDER I JUST GET BETTER",
+        "motto": "l don't get older,I just get better",
         "career": "副总经理",
         "mottoSource": "poster-2025"
       },
       "interests": {
         "hobbies": [
           "脱口秀"
-        ]
+        ],
+        "favorites": {
+          "books": [
+            "《红楼梦》"
+          ],
+          "filmsTv": [
+            "蜡笔小新"
+          ],
+          "music": [
+            "周杰伦"
+          ],
+          "foodDrink": [
+            "柠檬茶"
+          ],
+          "childhoodDream": [
+            "艺术家"
+          ],
+          "childhoodCartoon": [
+            "麦兜"
+          ],
+          "nextTravel": [
+            "新疆"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-wenxin.jpg"
@@ -1473,7 +1849,7 @@
         "company": "广州月集科技有限公司",
         "city": "广州",
         "birthday": "6月23日",
-        "education": "美国南加州大学 工商管理专业",
+        "education": "本科：美国南加州大学 工商管理专业",
         "educationDegree": "本科",
         "motto": "我没有梦想，我脚踏实地",
         "career": "总经理",
@@ -1481,10 +1857,28 @@
       },
       "interests": {
         "hobbies": [
-          "动画片",
-          "玩游戏",
-          "关心消费领域"
-        ]
+          "游戏",
+          "潜水",
+          "戏剧"
+        ],
+        "favorites": {
+          "books": [
+            "《基督山伯爵》《汉尼拔》"
+          ],
+          "authors": [
+            "加缪、阿加莎·克里斯蒂"
+          ],
+          "filmsTv": [
+            "《赌神》《功夫熊猫》《银翼杀手》"
+          ],
+          "music": [
+            "keshi，宫野真守，lana del ray"
+          ],
+          "foodDrink": [
+            "🥔制品",
+            "咖啡"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-shenyin.jpg"
@@ -1520,7 +1914,7 @@
         ]
       },
       "profile": {
-        "mbti": "INFP",
+        "mbti": "ENFP",
         "gallup": [
           "前瞻",
           "适应",
@@ -1531,18 +1925,39 @@
         "company": "",
         "city": "美国",
         "birthday": "12月22日",
-        "education": "美国南加州大学",
+        "education": "本科：美国南加州大学（在读）",
         "educationDegree": "高中",
         "motto": "我最喜欢的放松方式：旅游，购物，晒太阳，吃",
         "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
-          "看",
-          "玩",
-          "吃",
+          "运动",
+          "时尚",
+          "做饮品",
+          "旅游",
           "记录"
-        ]
+        ],
+        "favorites": {
+          "foodDrink": [
+            "刺身",
+            "抹茶",
+            "芒果",
+            "凉拌茄子",
+            "擂茶"
+          ],
+          "adventure": [
+            "坐热气球",
+            "跳伞",
+            "漂流"
+          ],
+          "childhoodDream": [
+            "有趣的人"
+          ],
+          "nextTravel": [
+            "台湾"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-lucy.jpg"
@@ -1691,10 +2106,10 @@
           "排难",
           "战略"
         ],
-        "company": "合鲸资本 二级投资",
-        "city": "上海",
+        "company": "豪盛集团",
+        "city": "西安",
         "birthday": "1月29日",
-        "education": "多伦多大学罗德曼商学院管理专业",
+        "education": "本科：多伦多大学罗德曼商学院 管理专业",
         "educationDegree": "本科",
         "motto": "就那样",
         "career": "投资经理",
@@ -1706,7 +2121,22 @@
           "哲学",
           "研究新爱好",
           "二次元"
-        ]
+        ],
+        "favorites": {
+          "books": [
+            "《The Unbearable Lightness of Being》"
+          ],
+          "filmsTv": [
+            "《全职猎人》"
+          ],
+          "music": [
+            "《周深》《Gero - just  be friends》《AKMU- Dinosaur》"
+          ],
+          "foodDrink": [
+            "凉皮肉夹馍",
+            "熟普"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-weiyun.jpg"
@@ -1804,10 +2234,10 @@
           "前瞻",
           "伯乐"
         ],
-        "company": "6月初计划哔哩哔哩实习",
-        "city": "湾区",
+        "company": "哔哩哔哩",
+        "city": "美国",
         "birthday": "4月15日",
-        "education": "Santa Clara经济",
+        "education": "Santa Clara 经济",
         "educationDegree": "本科在读",
         "motto": "别人老问我什么时候不困，我说睡觉的时候不困",
         "career": "实习生",
@@ -1815,10 +2245,36 @@
       },
       "interests": {
         "hobbies": [
-          "打游戏",
+          "游戏",
           "滑雪",
           "打篮球"
-        ]
+        ],
+        "favorites": {
+          "filmsTv": [
+            "韩剧《正在拨打的电话》"
+          ],
+          "music": [
+            "capper"
+          ],
+          "foodDrink": [
+            "喜欢吃辣的"
+          ],
+          "games": [
+            "Valorant和cs2"
+          ],
+          "adventure": [
+            "跳伞"
+          ],
+          "childhoodDream": [
+            "好人"
+          ],
+          "childhoodCartoon": [
+            "闪电麦昆"
+          ],
+          "nextTravel": [
+            "成都"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-jiatong.jpg"
@@ -1918,21 +2374,50 @@
           "体谅"
         ],
         "company": "",
-        "city": "杭州",
+        "city": "美国",
         "birthday": "4月13日",
-        "education": "加州大学尔湾分校 戏剧专业",
+        "education": "本科：加州大学尔湾分校 戏剧专业（在读）",
         "educationDegree": "",
         "motto": "爱冲浪 爱玩烂梗",
         "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
-          "游戏",
+          "单机游戏",
           "羽毛球",
-          "电影",
+          "看电影",
           "汽车",
           "偶尔健身"
-        ]
+        ],
+        "favorites": {
+          "authors": [
+            "东野圭吾 阿加莎"
+          ],
+          "filmsTv": [
+            "看番：进击的巨人 地狱之歌 大剑 无职转生 电影：肖申克的救赎 沙丘 请以你的名字呼唤我 电视剧：亢奋 人民的名义"
+          ],
+          "music": [
+            "The Weeknd/Ariana Grande"
+          ],
+          "foodDrink": [
+            "毛血旺 杨枝甘露"
+          ],
+          "games": [
+            "黑暗之魂3 光与影：33号远征队"
+          ],
+          "adventure": [
+            "跳伞"
+          ],
+          "childhoodDream": [
+            "想做保安 现在觉得也不错 月薪够活还能玩手机"
+          ],
+          "childhoodCartoon": [
+            "铠甲勇士里的炎龙侠"
+          ],
+          "nextTravel": [
+            "德国"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-dufresne.jpg"
@@ -2035,7 +2520,7 @@
         "company": "南京金禾金家居用品有限公司",
         "city": "上海",
         "birthday": "8月29日",
-        "education": "本科：维多利亚大学 专业：理论经济学 研究生：复旦大学 专业：工商管理 供应链管理",
+        "education": "本科：维多利亚大学  理论经济学 研究生：复旦大学  工商管理 供应链管理",
         "educationDegree": "",
         "motto": "",
         "career": "市场总监"
@@ -2044,7 +2529,24 @@
         "hobbies": [
           "工作",
           "学习"
-        ]
+        ],
+        "favorites": {
+          "books": [
+            "道德经说什么如何用/了凡四训"
+          ],
+          "adventure": [
+            "跳伞"
+          ],
+          "childhoodDream": [
+            "曾梦想仗剑走天涯"
+          ],
+          "childhoodCartoon": [
+            "哈利波特"
+          ],
+          "nextTravel": [
+            "慕尼黑"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-eco.jpg"
@@ -2081,20 +2583,39 @@
         "mbti": "INFP",
         "gallup": [],
         "company": "",
-        "city": "",
+        "city": "美国",
         "birthday": "11月24日",
-        "education": "本科：达特茅斯学院(Dartmouth College)，生物专业， 博士：耶鲁 生物博士在读",
+        "education": "本科：达特茅斯学院 生物专业， 博士：耶鲁 生物博士（在读）",
         "educationDegree": "",
         "motto": ""
       },
       "interests": {
         "hobbies": [
           "滑雪",
-          "高尔夫",
+          "打高尔夫",
           "看书（侦探小说）",
           "德州扑克",
           "探店"
-        ]
+        ],
+        "favorites": {
+          "books": [
+            "白夜行、了不起的盖茨比"
+          ],
+          "authors": [
+            "加缪、春上村树"
+          ],
+          "foodDrink": [
+            "最喜欢禽类（鸡鸭鹅）",
+            "很喜欢烧鸟",
+            "讨厌吃鱼"
+          ],
+          "games": [
+            "王者荣耀"
+          ],
+          "nextTravel": [
+            "Caribbean islands 或者日本"
+          ]
+        }
       },
       "assets": {
         "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-dameixin.jpg"
@@ -3744,17 +4265,27 @@
         ]
       },
       "profile": {
-        "mbti": "",
-        "gallup": [],
-        "company": "",
-        "city": "",
-        "birthday": "",
-        "education": "",
+        "mbti": "ENTJ",
+        "gallup": [
+          "搜集",
+          "取悦",
+          "理念",
+          "积极",
+          "自信"
+        ],
+        "company": "亿叶（杭州）商贸有限公司",
+        "city": "杭州",
+        "birthday": "9月18日",
+        "education": "本科：墨尔本大学 金融与经济 研究生：墨尔本大学 信息系统",
         "educationDegree": "",
-        "motto": ""
+        "motto": "",
+        "career": "总经理"
       },
       "interests": {
-        "hobbies": []
+        "hobbies": [
+          "潜水",
+          "滑雪"
+        ]
       },
       "assets": {},
       "import": {
@@ -5601,9 +6132,15 @@
       },
       "profile": {
         "mbti": "ISFP",
-        "gallup": [],
-        "company": "上海欣驰电子有限公司",
-        "career": "企业发展部总监",
+        "gallup": [
+          "和谐",
+          "责任",
+          "伯乐",
+          "交往",
+          "信仰"
+        ],
+        "company": "上海欣驰电子有限公司企业",
+        "career": "发展部总监",
         "city": "上海",
         "birthday": "1月20日",
         "education": "本科：西雅图华盛顿大学 数学和经济双专业 研究生：Johns Hopkins University 金融工程",
@@ -5612,10 +6149,9 @@
       },
       "interests": {
         "hobbies": [
-          "网球",
+          "打网球",
           "滑雪",
-          "德州扑克",
-          "电影"
+          "德州扑克 电影"
         ]
       },
       "assets": {
@@ -5651,21 +6187,27 @@
       },
       "profile": {
         "mbti": "INFP",
-        "gallup": [],
-        "company": "书房文化发展有限公司",
+        "gallup": [
+          "体谅",
+          "适应",
+          "交往",
+          "前瞻",
+          "个别"
+        ],
+        "company": "楠书房文化发展有限公司",
         "career": "",
         "city": "上海",
         "birthday": "8月9日",
         "education": "本科：纽约大学 经济学 研究生：纽约大学 经济学硕士",
         "educationDegree": "",
-        "motto": ""
+        "motto": "来都来了"
       },
       "interests": {
         "hobbies": [
           "网球",
-          "单板滑雪",
-          "FPS游戏",
-          "科幻电影",
+          "滑雪（单板）",
+          "FPS 类游戏",
+          "科幻类电影",
           "画画"
         ]
       },
@@ -5702,17 +6244,27 @@
       },
       "profile": {
         "mbti": "",
-        "gallup": [],
-        "company": "",
-        "career": "",
-        "city": "",
-        "birthday": "",
-        "education": "",
+        "gallup": [
+          "交往",
+          "前瞻",
+          "体谅",
+          "个别",
+          "战略"
+        ],
+        "company": "杭州福瑞加工具科技有限公司",
+        "career": "跨境电商和短视频平台的视频制作",
+        "city": "杭州",
+        "birthday": "7月27日",
+        "education": "本科：密歇根大学安娜堡分校 传媒",
         "educationDegree": "",
-        "motto": ""
+        "motto": "无限进步"
       },
       "interests": {
-        "hobbies": []
+        "hobbies": [
+          "健身",
+          "摄影",
+          "游戏"
+        ]
       },
       "assets": {},
       "import": {
@@ -5744,18 +6296,29 @@
         "phones": []
       },
       "profile": {
-        "mbti": "",
-        "gallup": [],
-        "company": "",
-        "career": "",
-        "city": "",
-        "birthday": "",
+        "mbti": "ENFP",
+        "gallup": [
+          "取悦",
+          "回顾",
+          "包容",
+          "体谅",
+          "行动"
+        ],
+        "company": "上海航运交易所（CYS)",
+        "career": "航运管理，媒体监测",
+        "city": "新加坡",
+        "birthday": "3月10日",
         "education": "",
         "educationDegree": "",
         "motto": ""
       },
       "interests": {
-        "hobbies": []
+        "hobbies": [
+          "运动",
+          "高尔夫",
+          "篮球",
+          "做音乐"
+        ]
       },
       "assets": {},
       "import": {
@@ -5787,23 +6350,116 @@
         "phones": []
       },
       "profile": {
-        "mbti": "",
-        "gallup": [],
-        "company": "",
-        "career": "",
-        "city": "",
-        "birthday": "",
-        "education": "",
+        "mbti": "ENFP",
+        "gallup": [
+          "理念",
+          "取悦",
+          "行动",
+          "搜集",
+          "学习"
+        ],
+        "company": "Stanford",
+        "career": "AI researcher",
+        "city": "香港",
+        "birthday": "6月19日",
+        "education": "本科：约翰霍普金斯大学 电脑科学 研究生：斯坦福大学 教学设计和科技硕士、微软应用科学",
         "educationDegree": "",
         "motto": ""
       },
       "interests": {
-        "hobbies": []
+        "hobbies": [
+          "桌游",
+          "音乐",
+          "写曲子"
+        ]
       },
       "assets": {},
       "import": {
         "dataType": "real",
         "source": "yolo-2026-profile-collection"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "identity": {
+        "userId": "new2026-xiangmingkai",
+        "name": "项铭凯",
+        "englishName": ""
+      },
+      "community": {
+        "role": "现届会员",
+        "isLishi": false,
+        "category": "新增会员",
+        "joinYear": 2026,
+        "durationYears": 0,
+        "joinDate": "2026",
+        "joinPeriods": [
+          {
+            "start": "2026",
+            "end": null
+          }
+        ],
+        "phones": []
+      },
+      "profile": {
+        "company": "东正科技有限公司",
+        "career": "副总经理",
+        "education": "本科：美国麻省大学阿默斯特分校，电子工程 研究生： 美国宾夕法尼亚州立大学，电子工程",
+        "city": "温州",
+        "birthday": "9月27日"
+      },
+      "interests": {
+        "hobbies": [
+          "滑雪",
+          "跳伞",
+          "网球"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-2026-05"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "identity": {
+        "userId": "new2026-xiangsiyi",
+        "name": "项思怡",
+        "englishName": ""
+      },
+      "community": {
+        "role": "现届会员",
+        "isLishi": false,
+        "category": "新增会员",
+        "joinYear": 2026,
+        "durationYears": 0,
+        "joinDate": "2026",
+        "joinPeriods": [
+          {
+            "start": "2026",
+            "end": null
+          }
+        ],
+        "phones": []
+      },
+      "profile": {
+        "company": "东正科技有限公司",
+        "career": "外贸板块",
+        "education": "本科： 德雷塞尔大学drexel  商业与工程管理 研究生：南加利福尼亚大学  运筹学",
+        "city": "温州",
+        "birthday": "11月30日"
+      },
+      "interests": {
+        "hobbies": [
+          "打网球",
+          "旅游"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-2026-05"
       }
     }
   ]

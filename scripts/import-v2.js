@@ -153,6 +153,7 @@ function buildImportUser(master, activitiesCollection, personalEvents, member) {
     mbti: normalizeString(profile.mbti),
     gallup: ensureArray(profile.gallup),
     hobbies: ensureArray(interests.hobbies),
+    favorites: (interests.favorites && typeof interests.favorites === 'object') ? interests.favorites : {},
     expertise: [],
     yoloRole: normalizeString(community.role),
     phones: Array.isArray(community.phones) ? community.phones : [],

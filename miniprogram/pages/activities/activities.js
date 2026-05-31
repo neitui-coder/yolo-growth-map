@@ -141,7 +141,7 @@ Page({
 
   onFootprintEntryTap: function () {
     wx.navigateTo({
-      url: "/pages/footprint/footprint",
+      url: "/packageMap/pages/footprint-map/footprint-map",
     });
   },
 

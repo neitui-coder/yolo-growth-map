@@ -13,6 +13,15 @@
     "pages/auth/auth",
     "pages/privacy/privacy"
   ],
+  "subPackages": [
+    {
+      "root": "packageMap",
+      "name": "packageMap",
+      "pages": [
+        "pages/footprint-map/footprint-map"
+      ]
+    }
+  ],
   "window": {
     "navigationBarBackgroundColor": "#1d4ed8",
     "navigationBarTitleText": "YOLO+",

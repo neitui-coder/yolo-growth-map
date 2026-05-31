@@ -1,0 +1,27 @@
+<view class="map-page">
+  <view class="map-header">
+    <view class="map-stat">
+      <text class="map-stat-num">{{litCount}}</text>
+      <text class="map-stat-unit">个城市被点亮</text>
+    </view>
+    <view class="map-stat-sub">{{provinceCount}} 个省份 · {{activityTotal}} 场 YOLO+ 活动足迹</view>
+  </view>
+
+  <view class="map-canvas-wrap">
+    <ec-canvas id="footprintChart" canvas-id="footprint-canvas" ec="{{ ec }}"></ec-canvas>
+    <view wx:if="{{errMsg}}" style="position:absolute;top:20rpx;left:20rpx;right:20rpx;color:#fca5a5;font-size:22rpx;z-index:99;">{{errMsg}}</view>
+  </view>
+
+  <view class="map-footer">
+    <view class="map-legend">
+      <view class="legend-item"><view class="legend-dot dot-lit"></view><text>点亮的城市/省份</text></view>
+      <view class="legend-item"><view class="legend-dot dot-dim"></view><text>尚未点亮</text></view>
+    </view>
+    <view class="map-overseas" wx:if="{{overseasList.length > 0}}">
+      <text class="overseas-title">🌏 海外足迹</text>
+      <view class="overseas-tags">
+        <text class="overseas-tag" wx:for="{{overseasList}}" wx:key="name">{{item.name}}<text wx:if="{{item.count > 1}}"> ×{{item.count}}</text></text>
+      </view>
+    </view>
+  </view>
+</view>

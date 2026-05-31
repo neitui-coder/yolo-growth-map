@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "YOLO+ 足迹地图",
+  "navigationBarBackgroundColor": "#081a33",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#081a33",
+  "disableScroll": true,
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

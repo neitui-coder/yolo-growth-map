@@ -65,7 +65,11 @@ function buildOption(data) {
     animation: true,
     hoverLayerThreshold: Infinity,
     geo: {
-      map: 'china', roam: true, zoom: 1.2, scaleLimit: { min: 1, max: 6 },
+      map: 'china', roam: true,
+      // 活动几乎都在中国东部，聚焦东部、裁掉空旷的西部
+      center: [114, 31],
+      zoom: 2.6,
+      scaleLimit: { min: 1.2, max: 8 },
       label: { show: false },
       itemStyle: { areaColor: '#0f2546', borderColor: '#1e3a5f', borderWidth: 0.6 },
       emphasis: { label: { show: false }, itemStyle: { areaColor: '#163358' } },
@@ -77,6 +81,7 @@ function buildOption(data) {
       symbolSize: function (val) { return 8 + ((val[2] || 1) / data.maxCount) * 16; },
       itemStyle: { color: '#5eead4', shadowBlur: 12, shadowColor: '#5eead4' },
       label: { show: true, position: 'right', formatter: '{b}', color: '#cffafe', fontSize: 10, fontWeight: 'bold' },
+      labelLayout: { hideOverlap: true },
       data: data.points
     }]
   };
@@ -144,7 +149,7 @@ Page({
         chart.setOption(buildOption(data));
         canvas.setChart(chart);
         that._chart = chart;
-        that._zoom = 1.2;
+        that._zoom = 2.6;
         return chart;
       } catch (e2) {
         that.setData({ errMsg: 'echarts 初始化失败: ' + (e2 && (e2.message || e2)) });

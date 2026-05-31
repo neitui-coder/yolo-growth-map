@@ -634,6 +634,8 @@
   visible="{{showAvatarPicker}}"
   currentStyle="{{selectedUser.avatarStyle}}"
   currentSeed="{{selectedUser.avatarSeed}}"
+  userId="{{userId}}"
   bind:avatarselect="onAvatarSelect"
+  bind:avatarupload="onAvatarUpload"
   bind:close="onAvatarPickerClose"
 />

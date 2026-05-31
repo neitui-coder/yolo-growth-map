@@ -23,6 +23,32 @@
   box-shadow: 0 16rpx 60rpx rgba(0, 0, 0, 0.15);
 }
 
+.picker-upload-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 84rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+
+.picker-upload-btn.disabled {
+  opacity: 0.5;
+}
+
+.picker-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+  color: #94a3b8;
+  font-size: 22rpx;
+}
+
 .picker-title {
   font-size: 32rpx;
   font-weight: 700;

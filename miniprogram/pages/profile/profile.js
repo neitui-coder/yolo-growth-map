@@ -937,6 +937,31 @@ Page({
     });
   },
 
+  // 用户上传自己的照片作为头像
+  onAvatarUpload: function (e) {
+    if (!this.data.canEditProfile) return;
+    var that = this;
+    var fileID = e.detail && e.detail.avatarImage;
+    if (!fileID) return;
+    this.setData({ showAvatarPicker: false });
+    wx.showLoading({ title: "保存中..." });
+    this._syncUserUpdates({ avatarImage: fileID }).then(function () {
+      wx.hideLoading();
+      var user = app.getUser(that.data.userId);
+      if (user) user.avatarImage = fileID;
+      // 预解析新头像的临时 URL 再刷新，避免短暂灰头像
+      if (app.refreshMediaUrl) {
+        app.refreshMediaUrl(fileID, function () { that._refreshUser(); });
+      } else {
+        that._refreshUser();
+      }
+      wx.showToast({ title: "已更新头像", icon: "success" });
+    }).catch(function (error) {
+      wx.hideLoading();
+      wx.showToast({ title: (error && error.message) || "保存失败", icon: "none" });
+    });
+  },
+
   onAvatarPickerClose: function () {
     this.setData({ showAvatarPicker: false });
   },

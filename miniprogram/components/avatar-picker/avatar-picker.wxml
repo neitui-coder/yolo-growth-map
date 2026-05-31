@@ -10,6 +10,10 @@
 <view wx:if="{{visible}}" class="avatar-picker-overlay" bindtap="onOverlayTap">
   <view class="avatar-picker-box" catchtap="onContentTap">
     <view class="picker-title">😊 选择你的头像</view>
+    <view class="picker-upload-btn {{uploading ? 'disabled' : ''}}" bindtap="onUploadPhoto">
+      <text>📷 上传我的照片</text>
+    </view>
+    <view class="picker-divider"><text>或选择一个头像</text></view>
     <view class="avatar-grid">
       <image
         wx:for="{{avatarChoices}}"

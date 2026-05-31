@@ -36,11 +36,12 @@ function buildMapData(activities) {
     cityCount[loc] = (cityCount[loc] || 0) + 1;
     provinceCount[geo.province] = (provinceCount[geo.province] || 0) + 1;
   });
+  // 去过的省份只做"轻微提亮+淡青描边"，不整块刷亮（整块亮显得很怪）；
+  // 真正的"点亮感"交给城市发光点
   var regions = Object.keys(provinceCount).map(function (p) {
     return {
       name: p,
-      itemStyle: { areaColor: '#0fb9b1', borderColor: '#5eead4', borderWidth: 1, shadowColor: '#2dd4bf', shadowBlur: 18 },
-      emphasis: { itemStyle: { areaColor: '#2dd4bf' } }
+      itemStyle: { areaColor: '#143b5e', borderColor: 'rgba(94,234,212,0.45)', borderWidth: 0.8 }
     };
   });
   var maxC = 1;

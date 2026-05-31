@@ -20,11 +20,17 @@ Component({
     currentSeed: {
       type: String,
       value: ''
+    },
+    // 用于上传头像时拼云存储路径
+    userId: {
+      type: String,
+      value: ''
     }
   },
 
   data: {
-    avatarChoices: []
+    avatarChoices: [],
+    uploading: false
   },
 
   observers: {
@@ -69,6 +75,45 @@ Component({
       var style = e.currentTarget.dataset.style;
       var seed = e.currentTarget.dataset.seed;
       this.triggerEvent('avatarselect', { style: style, seed: seed });
+    },
+
+    // 上传自己的照片作为头像：选图 -> 上传云存储 -> 把 fileID 抛给页面保存
+    onUploadPhoto: function () {
+      var that = this;
+      if (this.data.uploading) return;
+      wx.chooseMedia({
+        count: 1,
+        mediaType: ['image'],
+        sizeType: ['compressed'],
+        sourceType: ['album', 'camera'],
+        success: function (res) {
+          var file = res.tempFiles && res.tempFiles[0];
+          if (!file || !file.tempFilePath) return;
+          that.setData({ uploading: true });
+          wx.showLoading({ title: '上传中...' });
+          var uid = that.properties.userId || 'user';
+          var ext = (file.tempFilePath.match(/\.(\w+)$/) || [])[1] || 'jpg';
+          var cloudPath = 'yolo-growth-map/media/avatars/uploads/' + uid + '-' + Date.now() + '.' + ext;
+          wx.cloud.uploadFile({
+            cloudPath: cloudPath,
+            filePath: file.tempFilePath,
+            success: function (up) {
+              wx.hideLoading();
+              that.setData({ uploading: false });
+              if (up.fileID) {
+                that.triggerEvent('avatarupload', { avatarImage: up.fileID });
+              } else {
+                wx.showToast({ title: '上传失败', icon: 'none' });
+              }
+            },
+            fail: function () {
+              wx.hideLoading();
+              that.setData({ uploading: false });
+              wx.showToast({ title: '上传失败，请重试', icon: 'none' });
+            }
+          });
+        }
+      });
     },
 
     onOverlayTap: function () {

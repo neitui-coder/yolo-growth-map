@@ -166,14 +166,14 @@
         <view class="v2-detail-head">
           <text class="v2-detail-label">趣味档案</text>
         </view>
-        <view class="v2-fav-row" wx:for="{{selectedUser.favoriteGroups}}" wx:key="key" wx:if="{{favoritesExpanded || index < 4}}">
+        <view class="v2-fav-row" wx:for="{{selectedUser.favoriteGroups}}" wx:key="key" wx:if="{{favoritesExpanded}}">
           <text class="v2-fav-emoji">{{item.emoji}}</text>
           <view class="v2-fav-items">
-            <text wx:for="{{item.items}}" wx:for-item="it" wx:key="*this" class="v2-detail-tag v2-tag-fav">{{it}}</text>
+            <text wx:for="{{item.items}}" wx:for-item="it" wx:key="*this" class="v2-detail-tag v2-tag-fav" bindtap="onTagTap" data-field="favorites" data-value="{{it}}">{{it}}</text>
           </view>
         </view>
-        <view class="v2-fav-toggle" wx:if="{{selectedUser.favoriteGroups.length > 4}}" bindtap="onToggleFavorites">
-          <text>{{favoritesExpanded ? '收起 ⌃' : '展开更多 ⌄'}}</text>
+        <view class="v2-fav-toggle" bindtap="onToggleFavorites">
+          <text>{{favoritesExpanded ? '收起 ⌃' : '展开查看 ⌄'}}</text>
         </view>
       </view>
 

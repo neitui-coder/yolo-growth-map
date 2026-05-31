@@ -998,6 +998,7 @@ Page({
       hobbies: "爱好",
       expertise: "擅长",
       tags: "标签",
+      favorites: "趣味",
       yoloRole: "YOLO角色",
     };
     if (app.setPendingHomeSearch) {

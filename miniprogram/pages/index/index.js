@@ -241,10 +241,14 @@ Page({
           u.company,
           u.education,
           u.yoloRole,
+          u.zodiac || util.deriveZodiacFromBirthday(u.birthday) || "",
           (u.gallup || []).join(" "),
           util.normalizeHobbyList(u.hobbies || []).join(" "),
           (u.expertise || []).join(" "),
           (u.tags || []).join(" "),
+          (util.buildFavoriteGroups ? util.buildFavoriteGroups(u) : [])
+            .reduce(function (acc, g) { return acc.concat(g.items || []); }, [])
+            .join(" "),
         ]
           .filter(function (item) {
             return !!item;
@@ -517,12 +521,17 @@ Page({
       company: user.company ? [user.company] : [],
       education: user.education ? [user.education] : [],
       birthday: birthdayValues,
-      zodiac: user.zodiac ? [user.zodiac] : [],
+      zodiac: (function () {
+        var z = user.zodiac || util.deriveZodiacFromBirthday(user.birthday);
+        return z ? [z] : [];
+      })(),
       gallup: user.gallup || [],
       skills: user.skills || [],
       hobbies: util.normalizeHobbyList(user.hobbies || []),
       expertise: user.expertise || [],
       tags: user.tags || [],
+      favorites: (util.buildFavoriteGroups ? util.buildFavoriteGroups(user) : [])
+        .reduce(function (acc, g) { return acc.concat(g.items || []); }, []),
       yoloRole: user.yoloRole ? [user.yoloRole] : [],
     };
     return (fieldMap[field] || [])
@@ -541,6 +550,7 @@ Page({
       field === "hobbies" ||
       field === "expertise" ||
       field === "tags" ||
+      field === "favorites" ||
       field === "city"
     ) {
       return values.indexOf(expected) !== -1;

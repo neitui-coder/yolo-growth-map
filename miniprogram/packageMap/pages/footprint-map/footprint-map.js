@@ -143,11 +143,24 @@ Page({
         echarts.registerMap('china', { geoJSON: chinaJson });
         chart.setOption(buildOption(data));
         canvas.setChart(chart);
+        that._chart = chart;
+        that._zoom = 1.2;
         return chart;
       } catch (e2) {
         that.setData({ errMsg: 'echarts 初始化失败: ' + (e2 && (e2.message || e2)) });
         return null;
       }
     });
-  }
+  },
+
+  _applyZoom: function (factor) {
+    if (!this._chart) return;
+    var z = (this._zoom || 1.2) * factor;
+    z = Math.max(1, Math.min(6, z));
+    this._zoom = z;
+    this._chart.setOption({ geo: { zoom: z } });
+  },
+
+  onZoomIn: function () { this._applyZoom(1.4); },
+  onZoomOut: function () { this._applyZoom(1 / 1.4); }
 });

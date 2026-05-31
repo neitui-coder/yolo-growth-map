@@ -10,6 +10,10 @@
   <view class="map-canvas-wrap">
     <ec-canvas id="footprintChart" canvas-id="footprint-canvas" ec="{{ ec }}"></ec-canvas>
     <view wx:if="{{errMsg}}" style="position:absolute;top:20rpx;left:20rpx;right:20rpx;color:#fca5a5;font-size:22rpx;z-index:99;">{{errMsg}}</view>
+    <view class="map-zoom-ctrl">
+      <view class="zoom-btn" bindtap="onZoomIn">＋</view>
+      <view class="zoom-btn" bindtap="onZoomOut">－</view>
+    </view>
   </view>
 
   <view class="map-footer">

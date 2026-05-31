@@ -68,7 +68,7 @@
   </view>
 
   <!-- 保存按钮 -->
-  <button class="btn-submit" bindtap="onSubmit">
-    {{isEdit ? '更新' : '保存'}}
+  <button class="btn-submit" bindtap="onSubmit" loading="{{saving}}" disabled="{{saving}}">
+    {{saving ? '保存中...' : (isEdit ? '更新' : '保存')}}
   </button>
 </view>

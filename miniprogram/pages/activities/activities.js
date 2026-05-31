@@ -1,10 +1,6 @@
 var app = getApp();
-
-var TYPE_META = {
-  activity: { emoji: "🤝", label: "集体活动" },
-  travel:   { emoji: "🌍", label: "游学" },
-  annual:   { emoji: "🎉", label: "年会" },
-};
+var footprint = require("../../utils/footprint.js");
+var TYPE_META = footprint.TYPE_META;
 
 Page({
   data: {
@@ -12,10 +8,11 @@ Page({
     activities: [],
     filteredActivities: [],
     activeYear: "全部",
-    yearOptions: ["全部", "2026", "2025", "2024", "2023"],
-    totalCount: 15,
+    yearOptions: ["全部"],
+    totalCount: 0,
     skeletonItems: [1, 2, 3],
     navPaddingTop: 20,
+    footprintSummary: null,
   },
 
   onLoad: function () {
@@ -34,17 +31,31 @@ Page({
 
   onPullDownRefresh: function () {
     var that = this;
-    app.getActivitiesCache(function (acts) {
-      that._processActivities(acts);
-      wx.stopPullDownRefresh();
-    }, { force: true });
+    var load = function () {
+      app.getActivitiesCache(function (acts) {
+        that._processActivities(acts);
+        wx.stopPullDownRefresh();
+      }, { force: true });
+    };
+    if (app.ensureAllUsersLoaded) {
+      app.ensureAllUsersLoaded(load);
+    } else {
+      load();
+    }
   },
 
   _loadActivities: function () {
     var that = this;
-    app.getActivitiesCache(function (acts) {
-      that._processActivities(acts);
-    });
+    var load = function () {
+      app.getActivitiesCache(function (acts) {
+        that._processActivities(acts);
+      });
+    };
+    if (app.ensureAllUsersLoaded) {
+      app.ensureAllUsersLoaded(load);
+    } else {
+      load();
+    }
   },
 
   _processActivities: function (acts) {
@@ -62,6 +73,7 @@ Page({
           userId: p.userId,
           avatarUrl: app.getMediaUrl ? app.getMediaUrl(p.avatarImage) || p.avatarUrl || "" : p.avatarUrl || "",
           name: p.name || "",
+          initial: (p.name || "?").slice(0, 1),
         };
       });
       var coverUrl = app.getMediaUrl ? app.getMediaUrl(act.coverImage) || act.coverImage || "" : act.coverImage || "";
@@ -86,6 +98,16 @@ Page({
       });
     });
 
+    var yearMap = {};
+    activities.forEach(function (act) {
+      if (act.yearStr) yearMap[act.yearStr] = true;
+    });
+    var yearOptions = ["全部"].concat(Object.keys(yearMap).sort(function (a, b) {
+      return b.localeCompare(a);
+    }));
+    var activeYear = yearMap[this.data.activeYear] ? this.data.activeYear : "全部";
+    var footprintSummary = footprint.buildFootprintOverview(activities);
+
     var coverRefs = activities.map(function (a) { return a.coverImage; }).filter(Boolean);
     if (app.prefetchMediaUrls) {
       app.prefetchMediaUrls(coverRefs);
@@ -93,9 +115,13 @@ Page({
 
     that.setData({
       activities: activities,
+      activeYear: activeYear,
+      yearOptions: yearOptions,
+      totalCount: activities.length,
       pageLoading: false,
+      footprintSummary: footprintSummary,
     });
-    that._applyFilter(that.data.activeYear, activities);
+    that._applyFilter(activeYear, activities);
   },
 
   _applyFilter: function (year, activities) {
@@ -111,6 +137,12 @@ Page({
     if (year === this.data.activeYear) return;
     this.setData({ activeYear: year });
     this._applyFilter(year);
+  },
+
+  onFootprintEntryTap: function () {
+    wx.navigateTo({
+      url: "/pages/footprint/footprint",
+    });
   },
 
   onCardTap: function (e) {

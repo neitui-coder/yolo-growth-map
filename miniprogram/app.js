@@ -15,6 +15,7 @@ App({
     // 登录网关状态
     authReady: false,
     authBound: false,
+    currentUserMemberStatus: '',
     // ⚠️ 临时开关：测试期允许未绑定微信号的访客直接查看全部内容
     // 上线前必须改回 false 恢复强制登录网关
     TEST_BYPASS_AUTH: true,
@@ -50,7 +51,10 @@ App({
     ],
     // 节点类型定义
     NODE_TYPES: {
+      join:     { label: '加入YOLO+', icon: 'flag',          className: 'type-join' },
       activity: { label: 'YOLO+活动', icon: 'people-group', className: 'type-activity' },
+      travel:   { label: '游学',      icon: 'globe',         className: 'type-travel' },
+      annual:   { label: '年会',      icon: 'sparkles',      className: 'type-annual' },
       role:     { label: '角色变化', icon: 'user-tie',      className: 'type-role' },
       life:     { label: '人生节点', icon: 'heart',         className: 'type-life' },
       ted:      { label: 'TED分享',  icon: 'microphone',    className: 'type-ted' },
@@ -173,16 +177,21 @@ App({
       if (r.bound && r.bound.userId) {
         that.globalData.currentUserId = r.bound.userId;
         that.globalData.selectedUserId = r.bound.userId;
+        that.globalData.currentUserMemberStatus = r.bound.memberStatus || 'active';
         that.globalData.authBound = true;
         that.globalData.isStaff = false;
       } else if (r.staff || (that.globalData.staffOpenIds || []).indexOf(r.openId) !== -1) {
         // 隐藏型工作人员：DB 查得到 staff 记录 或 兜底白名单命中
         that.globalData.authBound = true;
         that.globalData.isStaff = true;
+        that.globalData.currentUserId = '';
+        that.globalData.selectedUserId = '';
+        that.globalData.currentUserMemberStatus = '';
         that.globalData.staffNote = r.staff ? r.staff.note : '';
       } else {
         that.globalData.authBound = false;
         that.globalData.isStaff = false;
+        that.globalData.currentUserMemberStatus = '';
       }
       that.globalData.authReady = true;
       if (that._onWechatLoginCallbacks) {
@@ -241,6 +250,14 @@ App({
   // 隐藏型工作人员模式：openid 在 staffOpenIds 白名单
   isStaffMode: function () {
     return !!this.globalData.isStaff;
+  },
+
+  isBoundMemberMode: function () {
+    return !!(
+      this.globalData.authBound &&
+      !this.globalData.isStaff &&
+      this.globalData.currentUserId
+    );
   },
 
   bindCurrentUserToWechat: function (userId) {
@@ -408,10 +425,18 @@ App({
     this.prefetchMediaUrls(this._collectMediaRefs(users), callback);
   },
 
+  _normalizeMbti: function (value) {
+    var raw = (value || '').toString().trim().toUpperCase();
+    var match = raw.match(/[IE][NS][FT][JP]/);
+    return match ? match[0] : raw;
+  },
+
   _normalizeUsers: function (users) {
+    var that = this;
     return (users || []).map(function (u) {
       if (!u.id && u.userId) u.id = u.userId;
       if (!u.userId && u.id) u.userId = u.id;
+      u.mbti = that._normalizeMbti(u.mbti);
       if (!u.qa) u.qa = [];
       if (!u.nodes) u.nodes = [];
       if (!u.skills) u.skills = [];
@@ -478,7 +503,13 @@ App({
         that.globalData.usersPage = page + 1;
         that.globalData.usersHasMore = normalized.length === that.globalData.usersPageSize;
         that.globalData.allUsersLoaded = !that.globalData.usersHasMore;
-        that.globalData.currentUserId = that._pickCurrentUserId();
+        if (that.globalData.isStaff) {
+          that.globalData.currentUserId = '';
+        } else if (that.globalData.TEST_BYPASS_AUTH && !that.globalData.authBound) {
+          that.globalData.currentUserId = that.globalData.TEST_GUEST_USER_ID;
+        } else {
+          that.globalData.currentUserId = that._pickCurrentUserId();
+        }
         that.globalData.selectedUserId = that.globalData.currentUserId;
         that.globalData.usersLoading = false;
         if (that._pendingReload) {
@@ -624,7 +655,9 @@ App({
    * 获取用户数据
    */
   getUser: function (id) {
-    return this.globalData.users.find(function (u) { return u.id === id || u.userId === id; });
+    var user = this.globalData.users.find(function (u) { return u.id === id || u.userId === id; });
+    if (user) user.mbti = this._normalizeMbti(user.mbti);
+    return user;
   },
 
   /**
@@ -644,6 +677,12 @@ App({
 
   ensureAllUsersLoaded: function (callback) {
     var that = this;
+    if (that.globalData.usersLoading) {
+      setTimeout(function () {
+        that.ensureAllUsersLoaded(callback);
+      }, 120);
+      return;
+    }
     if (that.globalData.allUsersLoaded || !that.globalData.usersHasMore) {
       that.globalData.allUsersLoaded = true;
       if (callback) callback();
@@ -688,6 +727,22 @@ App({
   canManageUser: function (userId) {
     if (!userId) return false;
     if (this.canUseGodView()) return true;
+    if (!this.isBoundMemberMode()) return false;
+    var status = this.globalData.currentUserMemberStatus;
+    var currentUser = this.getUser && this.getUser(this.globalData.currentUserId);
+    if (!status && currentUser) status = currentUser.memberStatus || 'active';
+    if (status === 'alumni') return false;
+    return userId === this.globalData.currentUserId;
+  },
+
+  /**
+   * 当前账户是否可编辑某个用户的基础资料。
+   * 往届会员可以维护自己的展示资料，但不能维护成长节点。
+   */
+  canEditUserProfile: function (userId) {
+    if (!userId) return false;
+    if (this.canUseGodView()) return true;
+    if (!this.isBoundMemberMode()) return false;
     return userId === this.globalData.currentUserId;
   },
 

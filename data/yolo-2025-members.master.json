@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-05-27T15:25:33.451804",
+  "generatedAt": "2026-05-29T04:52:55.228Z",
   "source": "YOLO+档案信息表（全）.xlsx",
   "rules": {
     "keep": "理事∪joinYear>=2022",
@@ -11,7 +11,6 @@
       "hobbies",
       "company",
       "city",
-      "birthdayMonth",
       "education"
     ]
   },
@@ -46,10 +45,11 @@
         "gallup": [],
         "company": "天合资本管理公司",
         "city": "上海",
-        "birthday": "6月",
-        "education": "布朗大学（经济学 / 社会学）",
+        "birthday": "6月13日",
+        "education": "美国布朗大学（经济学、社会学）",
         "educationDegree": "本科",
-        "motto": ""
+        "motto": "",
+        "career": "执行董事"
       },
       "interests": {
         "hobbies": [
@@ -103,15 +103,18 @@
           "统筹"
         ],
         "company": "凌嘉科技",
-        "city": "昆山",
-        "birthday": "1月",
-        "education": "Syracuse University / 国际关系学",
+        "city": "台湾",
+        "birthday": "1月28日",
+        "education": "美国雪城大学创业创新学系国际关系学系双主修，经济学辅修",
         "educationDegree": "本科",
-        "motto": "让生活自然的发生"
+        "motto": "让生活自然的发生",
+        "career": "特助",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
-          "旅行"
+          "旅行",
+          "看书"
         ]
       },
       "assets": {
@@ -152,7 +155,7 @@
         "gallup": [],
         "company": "上海识野文化创意",
         "city": "宁波",
-        "birthday": "7月",
+        "birthday": "7月4日",
         "education": "多伦多大学",
         "educationDegree": "本科",
         "motto": ""
@@ -199,7 +202,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "ENFP",
         "gallup": [
           "沟通",
           "积极",
@@ -212,7 +215,8 @@
         "birthday": "4月",
         "education": "南安普顿大学会计和金融 / 谢菲尔德大学管理学",
         "educationDegree": "硕士",
-        "motto": ""
+        "motto": "和好朋友一起吃漂亮饭喝酒。",
+        "mottoSource": "poster-2025-note"
       },
       "interests": {
         "hobbies": [
@@ -263,12 +267,14 @@
           "责任",
           "积极"
         ],
-        "company": "浙江飞越机电",
-        "city": "浙江台州",
-        "birthday": "6月",
-        "education": "费城艺术大学 / 帕森斯艺术设计学院，工业设计",
+        "company": "飞越真空科技",
+        "city": "台州",
+        "birthday": "6月6日",
+        "education": "本科：费城艺术大学 研究生：美国帕森斯艺术设计学院，工业设计",
         "educationDegree": "硕士",
-        "motto": "万物皆可期，星海无限大"
+        "motto": "抬手探星云，纵身破迷雾。",
+        "career": "人力资源总监",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
@@ -286,7 +292,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "alumni-ruixiang",
         "name": "王睿翔",
@@ -377,12 +383,13 @@
           "成就",
           "行动"
         ],
-        "company": "",
-        "city": "",
-        "birthday": "10月",
-        "education": "加州大学计算机专业",
+        "company": "华为公司",
+        "city": "深圳",
+        "birthday": "10月10日",
+        "education": "美国加州大学UCSB 计算机专业 香港大学读研中",
         "educationDegree": "本科",
-        "motto": ""
+        "motto": "今天永远是新的开始",
+        "mottoSource": "poster-2025"
       },
       "interests": {
         "hobbies": [
@@ -431,19 +438,20 @@
           "积极",
           "个别"
         ],
-        "company": "",
-        "city": "英国伦敦",
-        "birthday": "",
-        "education": "皇家中央演讲与戏剧学院-实验戏剧",
+        "company": "聚橙音乐剧",
+        "city": "上海",
+        "birthday": "4月20日",
+        "education": "英国皇家中央演讲与戏剧学院-实验戏剧",
         "educationDegree": "在读研究生",
-        "motto": "来都来了"
+        "motto": "来都来了",
+        "career": "经理",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
           "弹钢琴",
           "看戏看展",
-          "做美食",
-          "遛狗"
+          "做美食"
         ]
       },
       "assets": {
@@ -455,7 +463,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "mn-18018",
         "name": "潘佳瑜",
@@ -547,12 +555,14 @@
           "自信",
           "统筹"
         ],
-        "company": "",
-        "city": "",
-        "birthday": "8月",
-        "education": "加州大学圣地亚哥分校 / IEOR",
+        "company": "JobWizard.ai",
+        "city": "北京",
+        "birthday": "8月19日",
+        "education": "UCSD Data Science（本） UCB IEOR（硕）",
         "educationDegree": "本科",
-        "motto": ""
+        "motto": "流水不争先，争的是滔滔不绝",
+        "career": "CEO",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
@@ -601,12 +611,14 @@
           "专注",
           "交往"
         ],
-        "company": "",
-        "city": "美国",
-        "birthday": "",
-        "education": "罗格斯大学商学心理学专业",
+        "company": "凯文彼德科技有限公司",
+        "city": "桂林",
+        "birthday": "6月29日",
+        "education": "美国罗格斯大学 人力资源专业",
         "educationDegree": "本科",
-        "motto": ""
+        "motto": "I came I saw I conquered",
+        "career": "董事长",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
@@ -656,12 +668,13 @@
           "交往",
           "责任"
         ],
-        "company": "",
-        "city": "",
-        "birthday": "4月",
-        "education": "欧文谷大学经融管理专业 即将毕业",
+        "company": "浙江新农化工股份有限公司",
+        "city": "杭州",
+        "birthday": "4月28日",
+        "education": "本科：美国欧文谷大学金融管理专业 /加州大学尔湾分校的经济学专业 研究生：加州大学尔湾分校创新创业专业",
         "educationDegree": "本科",
-        "motto": ""
+        "motto": "",
+        "career": "人力资源管培生"
       },
       "interests": {
         "hobbies": [
@@ -679,7 +692,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "mn-18027",
         "name": "张嘉沁",
@@ -769,12 +782,13 @@
           "包容",
           "体谅"
         ],
-        "company": "",
+        "company": "本地生活投资人 (电竞酒店/民宿/美业/休闲娱乐）",
         "city": "上海",
-        "birthday": "5月",
-        "education": "波士顿大学商学院市场营销专业 / 复旦大学新闻学院广告系",
+        "birthday": "5月5日",
+        "education": "波士顿大学商学院市场营销专业 复旦大学新闻学院广告系（研二）",
         "educationDegree": "本科",
-        "motto": "大展宏图！"
+        "motto": "大展宏图",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
@@ -827,12 +841,14 @@
           "思维",
           "自信"
         ],
-        "company": "鲨湾科技",
+        "company": "明亚保险经纪公司",
         "city": "上海",
-        "birthday": "2月",
-        "education": "麦吉尔大学心理和经济专业",
+        "birthday": "2月2日",
+        "education": "本科：加拿大麦吉尔大学心理和经济专业",
         "educationDegree": "本科",
-        "motto": ""
+        "motto": "诚征跑团桌游小伙伴",
+        "career": "高级经纪人",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
@@ -849,7 +865,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "mn-20054",
         "name": "林安之",
@@ -941,11 +957,12 @@
           "完美"
         ],
         "company": "",
-        "city": "中国北京",
-        "birthday": "10月",
-        "education": "西方文理学院",
+        "city": "洛杉矶",
+        "birthday": "10月9日",
+        "education": "本科：西方文理学院 专业：历史系",
         "educationDegree": "本科",
-        "motto": ""
+        "motto": "",
+        "career": "Risk management manager （风险管理经理）"
       },
       "interests": {
         "hobbies": [
@@ -1055,15 +1072,14 @@
         ],
         "company": "",
         "city": "无锡",
-        "birthday": "8月",
-        "education": "布里斯托大学生物化学专业",
+        "birthday": "8月1日",
+        "education": "本科：布里斯托大学生物化学专业 研究生：美国西北大学 生物技术 硕士在读",
         "educationDegree": "",
-        "motto": ""
+        "motto": "KEEP CALM AND CARRY ON 最近自学韩语日语中 欢迎交流😌",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
-          "看赛车",
-          "足球",
           "自己也是体育赛事相关的博主"
         ]
       },
@@ -1105,12 +1121,14 @@
         "gallup": [
           "交往｜战略｜排难｜成就｜竞争"
         ],
-        "company": "无锡市吉润国际贸易",
-        "city": "江苏-无锡",
-        "birthday": "1月",
-        "education": "Biotechnology / Financial analysis",
+        "company": "无锡市吉润国际贸易有限公司",
+        "city": "无锡",
+        "birthday": "1月19日",
+        "education": "本科：澳洲悉尼 新南威尔士大学 Biotechnology, Accounting 研究生：澳洲悉尼 新南威尔士大学 Financial analysis",
         "educationDegree": "研究生",
-        "motto": "拓宽视野，发现自我"
+        "motto": "拓宽视野，发现自我",
+        "career": "业务经理",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
@@ -1128,7 +1146,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "pdf2025-zhuofan",
         "name": "詹卓凡",
@@ -1220,19 +1238,20 @@
           "竞争",
           "成就"
         ],
-        "company": "海通证券",
-        "city": "上海-黄浦区",
-        "birthday": "7月",
-        "education": "华盛顿大学 工商管理 / 杜克大学",
+        "company": "",
+        "city": "上海",
+        "birthday": "7月29日",
+        "education": "本科：华盛顿大学 工商管理 研究生：杜克大学 管理学 / 中欧国际工商学院工商管理专业",
         "educationDegree": "研究生",
-        "motto": "既然都这么想了，就去试试看吧"
+        "motto": "最近沉迷上班 请大家莫要见怪 另外寻求滑雪搭子 人生就这点爱好了",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
           "橄榄球（业余橄榄球队）",
-          "硬核露营",
+          "露营",
           "旅游",
-          "马术（感兴趣）"
+          "马术"
         ]
       },
       "assets": {
@@ -1277,12 +1296,14 @@
           "交往",
           "审慎"
         ],
-        "company": "比特币初创公司",
-        "city": "上海-长宁区",
-        "birthday": "3月",
+        "company": "garmentHERE",
+        "city": "上海",
+        "birthday": "3月6日",
         "education": "上海纽约大学，business marketing",
         "educationDegree": "本科",
-        "motto": "永远学习，永不止步"
+        "motto": "永远学习，永不止步",
+        "career": "Marketing Officer",
+        "mottoSource": "poster-2025"
       },
       "interests": {
         "hobbies": [
@@ -1336,18 +1357,19 @@
           "交往",
           "包容"
         ],
-        "company": "合肥佳冠口腔医疗",
-        "city": "浙江-杭州",
-        "birthday": "2月",
+        "company": "合肥佳冠口腔医疗有限公司",
+        "city": "杭州",
+        "birthday": "2月5日",
         "education": "浙江大学工商管理专业",
         "educationDegree": "本科",
-        "motto": "且让自己欢喜"
+        "motto": "且让自己欢喜",
+        "career": "网络运营",
+        "mottoSource": "poster-2025"
       },
       "interests": {
         "hobbies": [
-          "自驾游",
-          "健身",
-          "听音乐"
+          "改车",
+          "溜车"
         ]
       },
       "assets": {
@@ -1392,12 +1414,14 @@
           "交往",
           "完美"
         ],
-        "company": "安徽亿维医疗用品",
-        "city": "江苏-扬州",
-        "birthday": "10月",
-        "education": "约克大学 工商管理",
+        "company": "安徽亿维医疗用品有限公司",
+        "city": "扬州",
+        "birthday": "10月12日",
+        "education": "加拿大约克大学 工商管理",
         "educationDegree": "本科",
-        "motto": "I DON'T GET OLDER I JUST GET BETTER"
+        "motto": "I DON'T GET OLDER I JUST GET BETTER",
+        "career": "副总经理",
+        "mottoSource": "poster-2025"
       },
       "interests": {
         "hobbies": [
@@ -1446,18 +1470,20 @@
           "分析",
           "和谐"
         ],
-        "company": "绒宝(广州)科技",
-        "city": "广东-广州",
-        "birthday": "6月",
-        "education": "南加州大学 工商管理专业",
+        "company": "广州月集科技有限公司",
+        "city": "广州",
+        "birthday": "6月23日",
+        "education": "美国南加州大学 工商管理专业",
         "educationDegree": "本科",
-        "motto": "我没有梦想，我脚踏实地"
+        "motto": "我没有梦想，我脚踏实地",
+        "career": "总经理",
+        "mottoSource": "poster-2025"
       },
       "interests": {
         "hobbies": [
           "动画片",
           "玩游戏",
-          "关心消费邻域"
+          "关心消费领域"
         ]
       },
       "assets": {
@@ -1503,11 +1529,12 @@
           "追求"
         ],
         "company": "",
-        "city": "英国",
-        "birthday": "12月",
-        "education": "威斯敏斯特公学",
+        "city": "美国",
+        "birthday": "12月22日",
+        "education": "美国南加州大学",
         "educationDegree": "高中",
-        "motto": "我最喜欢的放松方式：旅游，购物，晒太阳，吃"
+        "motto": "我最喜欢的放松方式：旅游，购物，晒太阳，吃",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
@@ -1526,7 +1553,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "pdf2025-jackson",
         "name": "葛汉",
@@ -1582,7 +1609,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "pdf2025-sarah-p30",
         "name": "高秋闲",
@@ -1656,7 +1683,7 @@
         ]
       },
       "profile": {
-        "mbti": "",
+        "mbti": "INTP",
         "gallup": [
           "学习",
           "思维",
@@ -1664,17 +1691,21 @@
           "排难",
           "战略"
         ],
-        "company": "公众号",
-        "city": "中国-上海",
-        "birthday": "1月",
+        "company": "合鲸资本 二级投资",
+        "city": "上海",
+        "birthday": "1月29日",
         "education": "多伦多大学罗德曼商学院管理专业",
         "educationDegree": "本科",
-        "motto": "就那样"
+        "motto": "就那样",
+        "career": "投资经理",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
-          "二次元相关∶漫展",
-          "漫画书 手游 接触新东西∶YouTube"
+          "看小说漫画",
+          "哲学",
+          "研究新爱好",
+          "二次元"
         ]
       },
       "assets": {
@@ -1686,7 +1717,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "pdf2025-sophie",
         "name": "苏雨",
@@ -1774,11 +1805,13 @@
           "伯乐"
         ],
         "company": "6月初计划哔哩哔哩实习",
-        "city": "美国-湾区",
-        "birthday": "4月",
-        "education": "Santa Clara",
+        "city": "湾区",
+        "birthday": "4月15日",
+        "education": "Santa Clara经济",
         "educationDegree": "本科在读",
-        "motto": "别人老问我什么时候不困 我说睡觉的时候不困"
+        "motto": "别人老问我什么时候不困，我说睡觉的时候不困",
+        "career": "实习生",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
@@ -1796,7 +1829,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "pdf2025-weijie",
         "name": "毕伟杰",
@@ -1885,18 +1918,20 @@
           "体谅"
         ],
         "company": "",
-        "city": "",
-        "birthday": "4月",
-        "education": "",
+        "city": "杭州",
+        "birthday": "4月13日",
+        "education": "加州大学尔湾分校 戏剧专业",
         "educationDegree": "",
-        "motto": "爱冲浪 爱玩烂梗"
+        "motto": "爱冲浪 爱玩烂梗",
+        "mottoSource": "member-2026"
       },
       "interests": {
         "hobbies": [
+          "游戏",
           "羽毛球",
-          "偶尔健身",
-          "单机游戏",
-          "看电影"
+          "电影",
+          "汽车",
+          "偶尔健身"
         ]
       },
       "assets": {
@@ -1908,7 +1943,7 @@
       }
     },
     {
-      "memberStatus": "active",
+      "memberStatus": "alumni",
       "identity": {
         "userId": "pdf2025-linda",
         "name": "陆怡霖",
@@ -1997,18 +2032,18 @@
           "完美",
           "战略"
         ],
-        "company": "",
-        "city": "",
-        "birthday": "8月",
-        "education": "",
+        "company": "南京金禾金家居用品有限公司",
+        "city": "上海",
+        "birthday": "8月29日",
+        "education": "本科：维多利亚大学 专业：理论经济学 研究生：复旦大学 专业：工商管理 供应链管理",
         "educationDegree": "",
-        "motto": ""
+        "motto": "",
+        "career": "市场总监"
       },
       "interests": {
         "hobbies": [
           "工作",
-          "学习",
-          "跳伞"
+          "学习"
         ]
       },
       "assets": {
@@ -2043,11 +2078,602 @@
         "phones": []
       },
       "profile": {
+        "mbti": "INFP",
+        "gallup": [],
+        "company": "",
+        "city": "",
+        "birthday": "11月24日",
+        "education": "本科：达特茅斯学院(Dartmouth College)，生物专业， 博士：耶鲁 生物博士在读",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "滑雪",
+          "高尔夫",
+          "看书（侦探小说）",
+          "德州扑克",
+          "探店"
+        ]
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-dameixin.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-2026-05"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19045",
+        "name": "于芳菲",
+        "englishName": "Jessica Yu"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19045",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "个别",
+          "学习",
+          "思维",
+          "战略",
+          "伯乐"
+        ],
+        "company": "上海佳化化学股份有限公司",
+        "city": "上海",
+        "birthday": "8月",
+        "education": "香港中文大学食品营养系",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "养宠物",
+          "做甜品"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-24099",
+        "name": "何楷行",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "24099",
+        "category": "s",
+        "joinYear": 2024,
+        "durationYears": 2,
+        "joinDate": "2024-01",
+        "joinPeriods": [
+          {
+            "start": "2024-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "沟通",
+          "积极",
+          "战略",
+          "统筹",
+          "取悦"
+        ],
+        "company": "",
+        "city": "杭州",
+        "birthday": "8月",
+        "education": "杜兰大学，大二 国际关系 计划再辅修",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "打篮球",
+          "爱好音乐",
+          "说唱",
+          "弹钢琴",
+          "学习设计和美术"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18011",
+        "name": "何韫儒",
+        "englishName": "Billy"
+      },
+      "community": {
+        "role": "会员/会员关系委员会委员",
+        "isLishi": false,
+        "memberNo": "18011",
+        "category": "W",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "ERNST & YOUNG",
+        "city": "华盛顿",
+        "birthday": "6月",
+        "education": "美国乔治华圣诞大学会计专业本科、研究生",
+        "educationDegree": "硕士",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "运动相关",
+          "篮球网球足球",
+          "学习新鲜事物",
+          "编程",
+          "data"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19034",
+        "name": "倪坤",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19034",
+        "category": "S",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
         "mbti": "",
         "gallup": [],
         "company": "",
         "city": "",
-        "birthday": "11月",
+        "birthday": "12月",
+        "education": "",
+        "educationDegree": "诺丁汉大学计算机科学专业大一",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "hist-4338e37c45",
+        "name": "刘昱同",
+        "englishName": "Yutong Liu"
+      },
+      "community": {
+        "role": "会员/2020年北京活动筹委会",
+        "isLishi": false,
+        "memberNo": "18017",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "成就",
+          "竞争",
+          "沟通",
+          "战略",
+          "交往"
+        ],
+        "company": "",
+        "city": "北京",
+        "birthday": "12月",
+        "education": "北京航空航天大学物理系 大四",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "旅游",
+          "美食"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21061",
+        "name": "包诗虹",
+        "englishName": "Zoe Bao"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21061",
+        "category": "S",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "适应",
+          "排难",
+          "责任",
+          "体谅",
+          "交往"
+        ],
+        "company": "",
+        "city": "上海",
+        "birthday": "10月",
+        "education": "本科：吉林师范大学 研究生：广西艺术学院，出版传媒艺术设计专业",
+        "educationDegree": "研究生在读",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "爱好旅行",
+          "逛吃",
+          "园艺和占星"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18026",
+        "name": "叶达",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18026",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "排难",
+          "学习",
+          "责任",
+          "分析",
+          "审慎"
+        ],
+        "company": "",
+        "city": "",
+        "birthday": "",
+        "education": "普渡大学civil engineering",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "健身",
+          "电视剧"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20059",
+        "name": "吴钰涵",
+        "englishName": "Karen"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20059",
+        "category": "W",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "交往",
+          "和谐",
+          "搜集",
+          "审慎",
+          "学习"
+        ],
+        "company": "上海动次哒次文化传媒有限公司",
+        "city": "上海",
+        "birthday": "2月",
+        "education": "美国波士顿大学，主修：影视传媒专业，辅修：教育专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "运动（网球",
+          "羽毛球",
+          "排球",
+          "篮球",
+          "滑板",
+          "爬山露营）"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19048",
+        "name": "周传凯",
+        "englishName": "Chuankai Zhou"
+      },
+      "community": {
+        "role": "会员/2020年度Mentee Learder/2021年度组长",
+        "isLishi": false,
+        "memberNo": "19048",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "理念",
+          "个别",
+          "排难",
+          "前瞻",
+          "体谅"
+        ],
+        "company": "上海东亚弘安清洁服务有限公司",
+        "city": "上海",
+        "birthday": "9月",
+        "education": "美国伍斯特理工学院信息管理专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "看球",
+          "踢球",
+          "音乐"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-23089",
+        "name": "周浩铖",
+        "englishName": "Howard"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "23089",
+        "category": "w",
+        "joinYear": 2023,
+        "durationYears": 3,
+        "joinDate": "2023-01",
+        "joinPeriods": [
+          {
+            "start": "2023-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "责任",
+          "交往",
+          "和谐",
+          "积极",
+          "体谅"
+        ],
+        "company": "A&W连锁加盟商",
+        "city": "上海-长宁",
+        "birthday": "3月",
+        "education": "Concordia University 工商管理专业，辅修供应链管理",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "运动",
+          "篮球",
+          "滑雪",
+          "听歌",
+          "听播客",
+          "唱歌"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "hist-9538b83b8b",
+        "name": "唐恺飞",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "",
+        "category": "S",
+        "joinYear": null,
+        "durationYears": null,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "",
+        "city": "",
+        "birthday": "",
+        "education": "亚加达学校青藤学院",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19038",
+        "name": "唐淼",
+        "englishName": "Harrison"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19038",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "无锡三水网络有限公司",
+        "city": "无锡",
+        "birthday": "",
         "education": "",
         "educationDegree": "",
         "motto": ""
@@ -2058,7 +2684,3126 @@
       "assets": {},
       "import": {
         "dataType": "real",
-        "source": "official-xlsx-2026-05"
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20058",
+        "name": "唐郁婧",
+        "englishName": "jen"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20058",
+        "category": "S",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "专注",
+          "战略",
+          "分析",
+          "成就",
+          "学习"
+        ],
+        "company": "",
+        "city": "广州",
+        "birthday": "3月",
+        "education": "已拿到芝加哥大学offer，本科专业未定，预计2021入学",
+        "educationDegree": "高中",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "画画",
+          "看youtube science videos",
+          "尝试弹钢琴爵士乐",
+          "尝试跑步",
+          "尝试打游戏",
+          "尝试说法语",
+          "聊天",
+          "讨论各种乱七八糟的学术话题"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21075",
+        "name": "姚依凡",
+        "englishName": "Eva Yao"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21075",
+        "category": "W",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "责任┋战略┋理念┋适应┋交往"
+        ],
+        "company": "喜小川蘸水菜餐厅",
+        "city": "上海",
+        "birthday": "1月",
+        "education": "本科：罗德岛设计学院 双专业：雕塑与工业设计",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "喜欢小动物",
+          "喜欢手做（木工",
+          "焊铁）",
+          "运动（小学田径",
+          "短跑",
+          "标枪",
+          "赛艇",
+          "壁球）"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21070",
+        "name": "姚语馨",
+        "englishName": "Cindy Yao"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21070",
+        "category": "S",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "和谐",
+          "排难",
+          "体谅",
+          "个别",
+          "沟通"
+        ],
+        "company": "",
+        "city": "上海",
+        "birthday": "10月",
+        "education": "高中：上海星河湾双语学校 本科：uc davis communication",
+        "educationDegree": "高中",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "运动",
+          "音乐",
+          "做视频",
+          "配音"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21066",
+        "name": "孙筠桐",
+        "englishName": "Yuntong Sun"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21066",
+        "category": "S",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "积极",
+          "思维",
+          "关联",
+          "学习",
+          "适应"
+        ],
+        "company": "明理书院图灵实验班",
+        "city": "北京",
+        "birthday": "11月",
+        "education": "中国人民大学",
+        "educationDegree": "高中",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "吉他（小学六年级开始） 管弦乐 运动（篮球",
+          "网球）"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18014",
+        "name": "季佳琛",
+        "englishName": "Jiachen Ji"
+      },
+      "community": {
+        "role": "会员，北京、深圳筹委会",
+        "isLishi": false,
+        "memberNo": "18014",
+        "category": "W",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "战略",
+          "成就",
+          "回顾",
+          "个别",
+          "体谅"
+        ],
+        "company": "英国驻华大使馆",
+        "city": "北京",
+        "birthday": "6月",
+        "education": "美国 美利坚大学国际关系学院",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "舞蹈",
+          "运动（马术",
+          "健身房",
+          "跑步） 种花"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18007",
+        "name": "宋相濡",
+        "englishName": "Alex"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18007",
+        "category": "W",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "学习",
+          "思维",
+          "成就",
+          "统筹",
+          "搜集"
+        ],
+        "company": "湖北三新文化传媒有限公司",
+        "city": "湖北武汉",
+        "birthday": "",
+        "education": "美国普渡大学供应链管理",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21071",
+        "name": "张博媛",
+        "englishName": "Boyuan Zhang"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21071",
+        "category": "S",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "",
+        "city": "上海",
+        "birthday": "3月",
+        "education": "本科：旧金山大学 经济专业 研究生：纽约大学 整合营销专业",
+        "educationDegree": "研究生在读",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "游泳",
+          "做饭",
+          "密室",
+          "剧本",
+          "手工"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19047",
+        "name": "张哲瑞",
+        "englishName": "Gary Zhang"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19047",
+        "category": "S",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "回顾",
+          "分析",
+          "交往",
+          "适应",
+          "纪律"
+        ],
+        "company": "",
+        "city": "浙江慈溪",
+        "birthday": "3月",
+        "education": "本科：曼彻斯特大学 材料工程与科学专业帝国理工大学 材料系（在读学校）",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "钓鱼",
+          "出海",
+          "撸猫"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18028",
+        "name": "张曼迪",
+        "englishName": "Mandy"
+      },
+      "community": {
+        "role": "导师辅导委员会委员/会员",
+        "isLishi": false,
+        "memberNo": "18028",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "和谐",
+          "思维",
+          "体谅",
+          "个别",
+          "搜集"
+        ],
+        "company": "",
+        "city": "马里兰州",
+        "birthday": "",
+        "education": "美国马里兰大学 专业：心理学 大四",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "动漫"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19046",
+        "name": "张雨鑫",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19046",
+        "category": "S",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "",
+        "city": "",
+        "birthday": "12月",
+        "education": "",
+        "educationDegree": "日本一桥大学市场管理专业",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "pdf2025-chloe",
+        "name": "彭唐心",
+        "englishName": "Chloe"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21068",
+        "category": "W",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "和谐",
+          "公平",
+          "统筹",
+          "个别",
+          "责任"
+        ],
+        "company": "青海蓝湖善成生物技术有限公司",
+        "city": "上海",
+        "birthday": "8月10日",
+        "education": "加拿大西安大略大学-金融",
+        "educationDegree": "本科",
+        "motto": "我想有个面朝大海充满阳光的房子"
+      },
+      "interests": {
+        "hobbies": [
+          "户外",
+          "滑雪",
+          "潜水"
+        ]
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/pdf2025-chloe.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18024",
+        "name": "徐伟",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18024",
+        "category": "W",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "上海新通联包装股份有限公司",
+        "city": "上海",
+        "birthday": "",
+        "education": "美国福特汉姆大学市场营销专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "运动"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18023",
+        "name": "徐远鹏",
+        "englishName": "Daniel"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18023",
+        "category": "W",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "竞争",
+          "取悦",
+          "沟通",
+          "前瞻",
+          "排难"
+        ],
+        "company": "IBM Canada就职",
+        "city": "",
+        "birthday": "",
+        "education": "多伦多大学电子工程",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "旅游",
+          "探索大自然",
+          "爬山",
+          "划船",
+          "滑雪等"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20060",
+        "name": "朱书妮",
+        "englishName": "Veronica Zhu"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20060",
+        "category": "S",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "纪律",
+          "排难",
+          "体谅",
+          "个别",
+          "和谐"
+        ],
+        "company": "字节跳动",
+        "city": "上海",
+        "birthday": "5月",
+        "education": "本科：南加州大学艺术史专业 研究生：哥伦比亚大学 专业：艺术史",
+        "educationDegree": "硕士",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "跑步",
+          "逛博物馆",
+          "戏剧"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-23086",
+        "name": "朱慧溪",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "23086",
+        "category": "w",
+        "joinYear": 2023,
+        "durationYears": 3,
+        "joinDate": "2023-01",
+        "joinPeriods": [
+          {
+            "start": "2023-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "行动",
+          "和谐",
+          "公平",
+          "适应",
+          "个别"
+        ],
+        "company": "托德斯（上海）商贸有限公司",
+        "city": "上海-浦东新区",
+        "birthday": "3月",
+        "education": "本科：芝加哥艺术学院 Art and design 研究生：伦敦艺术学院--伦敦时装学院 鞋履设计",
+        "educationDegree": "研究生",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "看艺术展",
+          "画展",
+          "歌剧",
+          "戏剧",
+          "约饭",
+          "探索餐厅",
+          "品牌活动"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21080",
+        "name": "朱明昱",
+        "englishName": "Michelle Zhu"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21080",
+        "category": "W",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "北京港澳台侨妇女联谊会",
+        "city": "北京",
+        "birthday": "5月",
+        "education": "本科：澳门大学-会展和款客服务管理 研究生：英国格拉斯哥大学-文化遗迹可持续发展",
+        "educationDegree": "硕士",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "做手工",
+          "画画",
+          "插花",
+          "喜欢组织活动"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21073",
+        "name": "朱泞畅",
+        "englishName": "Emily Zhu"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21073",
+        "category": "S",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "成就",
+          "理念",
+          "取悦",
+          "搜集",
+          "责任"
+        ],
+        "company": "目前实习于，瑞士律所Lenz & Staehelin，CMTA协会主席秘书",
+        "city": "瑞士",
+        "birthday": "12月",
+        "education": "本科：瑞士洛桑酒店管理学院 大二",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "跑步",
+          "登山",
+          "葡萄酒",
+          "旅游"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21077",
+        "name": "李嘉怡",
+        "englishName": "Esme"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21077",
+        "category": "W",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "银联商务股份有限公司",
+        "city": "上海",
+        "birthday": "",
+        "education": "本科：西安建筑科技大学 研究生：卡迪夫",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "打羽毛球",
+          "吃东西",
+          "健身"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19033",
+        "name": "李柳均",
+        "englishName": "Aurora"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19033",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "排难",
+          "审慎",
+          "理念",
+          "思维",
+          "竞争"
+        ],
+        "company": "大连隆生服装有限公司",
+        "city": "",
+        "birthday": "",
+        "education": "",
+        "educationDegree": "硕士",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19030",
+        "name": "杜晓欣",
+        "englishName": "Xiaoxin Du"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19030",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "适应",
+          "排难",
+          "公平",
+          "包容",
+          "和谐"
+        ],
+        "company": "深圳宝树商业管理有限公司",
+        "city": "深圳",
+        "birthday": "9月",
+        "education": "硕士：英国-伯明翰城市大学奢侈品管理专业 本科：英国-卡迪夫大学工商管理",
+        "educationDegree": "硕士",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "吃喝",
+          "泰拳",
+          "游泳"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19044",
+        "name": "杨懿晟",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19044",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "无锡博隆机械有限公司",
+        "city": "江苏无锡",
+        "birthday": "",
+        "education": "",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "identity": {
+        "userId": "hist-linleyi",
+        "name": "林乐怡",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "",
+        "category": "",
+        "joinYear": 2026,
+        "durationYears": 1,
+        "joinDate": "2026-01",
+        "joinPeriods": [
+          {
+            "start": "2026-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "",
+        "city": "",
+        "birthday": "",
+        "education": "",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-24096",
+        "name": "林青桐",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "24096",
+        "category": "w",
+        "joinYear": 2024,
+        "durationYears": 2,
+        "joinDate": "2024-01",
+        "joinPeriods": [
+          {
+            "start": "2024-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "适应",
+          "交往",
+          "和谐",
+          "体谅",
+          "责任"
+        ],
+        "company": "浙江浙大联合创新投资管理合伙企业（有限合伙）",
+        "city": "杭州",
+        "birthday": "12月",
+        "education": "伊利诺伊大学厄巴纳香槟分校，主修经济学，辅修心理学",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "游泳",
+          "徒步",
+          "长笛"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-23083",
+        "name": "欧阳瑾莎",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "23083",
+        "category": "w",
+        "joinYear": 2023,
+        "durationYears": 3,
+        "joinDate": "2023-01",
+        "joinPeriods": [
+          {
+            "start": "2023-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "排难",
+          "适应",
+          "个别",
+          "思维",
+          "搜集"
+        ],
+        "company": "上海证券有限责任公司",
+        "city": "上海-黄浦区",
+        "birthday": "5月",
+        "education": "本科：上海财经大学浙江学院 国际会计ACCA 研究生：英国女王大学 会计与金融",
+        "educationDegree": "研究生",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "画画",
+          "目前在学油画",
+          "游泳",
+          "美食"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19039",
+        "name": "汪汪",
+        "englishName": "Wang Wang"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19039",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "搜集",
+          "专注",
+          "排难",
+          "和谐",
+          "分析"
+        ],
+        "company": "江西汪氏蜜蜂园有限公司",
+        "city": "上海",
+        "birthday": "11月",
+        "education": "Boston university 经济",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "宠物",
+          "美食",
+          "电脑娱乐"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19035",
+        "name": "沈丹",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19035",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "学习",
+          "搜集",
+          "成就",
+          "思维",
+          "专注"
+        ],
+        "company": "江苏康乃馨织造有限公司",
+        "city": "南京",
+        "birthday": "11月",
+        "education": "英国帝国理工数学系",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "烹饪",
+          "烘焙"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21064",
+        "name": "焦桢",
+        "englishName": "Kingsley Jiao"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21064",
+        "category": "S",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "个别",
+          "沟通",
+          "成就",
+          "收集",
+          "专注"
+        ],
+        "company": "普华永道ESG部门",
+        "city": "无锡",
+        "birthday": "8月",
+        "education": "研究生：谢菲尔德大学 专业：国际新闻专业 本科：俄勒冈大学 专业：新闻专业",
+        "educationDegree": "硕士",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "运动",
+          "网球",
+          "跑步等"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19041",
+        "name": "王姿予",
+        "englishName": "KAKA Wang"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19041",
+        "category": "S",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "交往",
+          "纪律",
+          "审慎",
+          "公平",
+          "排难"
+        ],
+        "company": "",
+        "city": "北京",
+        "birthday": "7月",
+        "education": "英国伦敦艺术大学 时尚管理类专业 年级：大二",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "健身",
+          "画画",
+          "滑雪"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21067",
+        "name": "王泽鹏",
+        "englishName": "Tony Wang"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21067",
+        "category": "S",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "战略",
+          "完美",
+          "取悦",
+          "个别",
+          "行动"
+        ],
+        "company": "",
+        "city": "杭州",
+        "birthday": "4月",
+        "education": "本科：Tufts University，专业：Engineering Psychology",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "运动：网球",
+          "篮球 文艺：看电影",
+          "收藏当代艺术藏品 社交：喝酒蹦迪"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18019",
+        "name": "王睿翎",
+        "englishName": "Lynn Wang"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18019",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "和谐",
+          "责任",
+          "纪律",
+          "审慎",
+          "公平"
+        ],
+        "company": "",
+        "city": "香港",
+        "birthday": "12月",
+        "education": "美国西雅图华盛顿大学商学院 会计和信息系统专业 大三",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "喜欢跑步 网球 探店 和咖啡"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19040",
+        "name": "王磊",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19040",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "无锡先导智能装备股份有限公司",
+        "city": "无锡",
+        "birthday": "",
+        "education": "Rutgers University Math&Cs",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18021",
+        "name": "王馨婧",
+        "englishName": "Cindy"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18021",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "战略",
+          "沟通",
+          "积极",
+          "包容",
+          "取悦"
+        ],
+        "company": "",
+        "city": "杭州",
+        "birthday": "",
+        "education": "美国艺术中心设计学院产品设计专业大一",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18013",
+        "name": "纪域呈",
+        "englishName": "Yucheng Ji"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18013",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "理念",
+          "适应",
+          "搜集",
+          "交往",
+          "竞争"
+        ],
+        "company": "",
+        "city": "上海",
+        "birthday": "3月",
+        "education": "本科：南京财经大学 专业：计算机科学与技术 研究生：宾夕法尼亚大学；专业：学习科学与技术",
+        "educationDegree": "研究生在读",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "心理学 篮球"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20056",
+        "name": "缪润",
+        "englishName": "Miumiu"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20056",
+        "category": "S",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "思维",
+          "排难",
+          "适应",
+          "体谅",
+          "责任"
+        ],
+        "company": "",
+        "city": "珠海",
+        "birthday": "7月",
+        "education": "纽约大学 专业未定",
+        "educationDegree": "本科在读",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "旅游",
+          "极限运动"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19042",
+        "name": "肖王靖",
+        "englishName": "Nathan Xiao"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19042",
+        "category": "S",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "取悦",
+          "关联",
+          "成就",
+          "竞争",
+          "排难"
+        ],
+        "company": "光大安石",
+        "city": "上海",
+        "birthday": "7月",
+        "education": "格里菲斯大学 企业管理 专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19032",
+        "name": "胡旭东",
+        "englishName": "Xudong Hu"
+      },
+      "community": {
+        "role": "会员/2020年度Mentee Leader",
+        "isLishi": false,
+        "memberNo": "19032",
+        "category": "S",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "排难",
+          "交往",
+          "分析",
+          "个别",
+          "审慎"
+        ],
+        "company": "上海木马设计有限公司",
+        "city": "加拿大多伦多",
+        "birthday": "12月",
+        "education": "加拿大多伦多大学 专业：物理 大三",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "音乐",
+          "电影",
+          "摄影",
+          "篮球",
+          "健身"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18012-hist",
+        "name": "胡晋华",
+        "englishName": "Jinhua Hu"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18012",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "和谐",
+          "学习",
+          "纪律",
+          "成就",
+          "行动"
+        ],
+        "company": "",
+        "city": "成都",
+        "birthday": "10月",
+        "education": "美国加州大学圣塔芭芭拉分校 电子工程专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "篮球",
+          "健身",
+          "摄影"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-23081",
+        "name": "胡晓钰",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "23081",
+        "category": "W",
+        "joinYear": 2023,
+        "durationYears": 3,
+        "joinDate": "2023-01",
+        "joinPeriods": [
+          {
+            "start": "2023-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "个别",
+          "体谅",
+          "战略",
+          "沟通",
+          "积极"
+        ],
+        "company": "波波匠酒酒体包装设计",
+        "city": "贵州",
+        "birthday": "6月",
+        "education": "金融管理专业（不喜欢）",
+        "educationDegree": "大专",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "唱歌",
+          "拍照",
+          "逛街购物",
+          "给别人安利东西",
+          "看电影"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19036",
+        "name": "苏世杰",
+        "englishName": "JAY Su"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "19036",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "统率",
+          "学习",
+          "成就",
+          "思维",
+          "关联"
+        ],
+        "company": "曾在：华创证券",
+        "city": "上海",
+        "birthday": "11月",
+        "education": "本科：美国北达科他大学经济学 在读长江商学院、约翰霍普金斯大学凯瑞商学院。",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "烹饪",
+          "烘焙",
+          "旅行",
+          "音乐"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20057",
+        "name": "苏小禾",
+        "englishName": "Xiaohe Su"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20057",
+        "category": "W",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "适应",
+          "学习",
+          "理念",
+          "排难",
+          "个别"
+        ],
+        "company": "卓时香港有限公司",
+        "city": "杭州",
+        "birthday": "9月",
+        "education": "UCLA-生物专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "画画",
+          "攀岩",
+          "散步"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18009",
+        "name": "蔡之杰",
+        "englishName": "Victor"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18009",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "",
+        "city": "加拿大",
+        "birthday": "",
+        "education": "Mcgill管理学专业，3年制，大三",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "游泳",
+          "演戏"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "hist-jijiawei",
+        "name": "计嘉伟",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "",
+        "category": "",
+        "joinYear": null,
+        "durationYears": null,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "",
+        "city": "",
+        "birthday": "",
+        "education": "",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-19043",
+        "name": "谢承熹",
+        "englishName": "Chengxi Xie"
+      },
+      "community": {
+        "role": "2021年度理事",
+        "isLishi": false,
+        "memberNo": "19043",
+        "category": "W",
+        "joinYear": 2019,
+        "durationYears": 7,
+        "joinDate": "2019-01",
+        "joinPeriods": [
+          {
+            "start": "2019-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "个别",
+          "分析",
+          "责任",
+          "成就",
+          "纪律"
+        ],
+        "company": "常州道康成投资有限公司",
+        "city": "上海",
+        "birthday": "2月",
+        "education": "本科研究生：美国佐治亚理工学院 土木工程专业 剑桥大学MBA",
+        "educationDegree": "硕士",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "做菜",
+          "烘焙"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18010",
+        "name": "谷依阳",
+        "englishName": "Yannie"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18010",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "完美",
+          "积极",
+          "理念",
+          "思维",
+          "前瞻"
+        ],
+        "company": "",
+        "city": "纽约",
+        "birthday": "4月",
+        "education": "萨拉劳伦斯学院 视觉艺术专业大四 NYU-艺术管理（在读研究生）",
+        "educationDegree": "研究生",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "设计（偏向时装设计）",
+          "摄影",
+          "时尚",
+          "文学",
+          "语言"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-23088",
+        "name": "邵怡安",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "23088",
+        "category": "w",
+        "joinYear": 2023,
+        "durationYears": 3,
+        "joinDate": "2023-01",
+        "joinPeriods": [
+          {
+            "start": "2023-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "沟通",
+          "积极",
+          "取悦",
+          "理念",
+          "个别"
+        ],
+        "company": "宁波爱诗化妆品有限公司",
+        "city": "宁波",
+        "birthday": "2月",
+        "education": "本科：UCI加利福尼亚大学尔湾分校，BE + International Studies 双学位",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "跳舞",
+          "健身"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-23087",
+        "name": "邵怡平",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "23087",
+        "category": "w",
+        "joinYear": 2023,
+        "durationYears": 3,
+        "joinDate": "2023-01",
+        "joinPeriods": [
+          {
+            "start": "2023-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "交往",
+          "分析",
+          "纪律",
+          "审慎",
+          "完美"
+        ],
+        "company": "宁波爱诗化妆品有限公司",
+        "city": "宁波",
+        "birthday": "2月",
+        "education": "香港公开大学会计专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "乐高",
+          "建立规则的游戏",
+          "散步",
+          "爬山",
+          "不太喜欢对抗性活动"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21072",
+        "name": "郑艺文",
+        "englishName": "Yiwen Zheng"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21072",
+        "category": "W",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "公平",
+          "和谐",
+          "交往",
+          "成就",
+          "责任"
+        ],
+        "company": "",
+        "city": "浙江杭州",
+        "birthday": "12月",
+        "education": "本科：澳洲皇家墨尔本理工 专业：管理学",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "健身",
+          "艺术（看展",
+          "画画",
+          "音乐）",
+          "旅行"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20053",
+        "name": "金连成",
+        "englishName": "Jack Jin"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20053",
+        "category": "S",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "和谐",
+          "公平",
+          "适应",
+          "审慎",
+          "关联"
+        ],
+        "company": "中国中元国际工程有限公司",
+        "city": "北京",
+        "birthday": "10月",
+        "education": "本科：美国特拉华大学环境工程",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "读书（古生物",
+          "海洋生物）",
+          "看电影",
+          "打游戏（DOLTA）"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21069",
+        "name": "阮赛茜",
+        "englishName": "Sissi Ruan"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21069",
+        "category": "W",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "积极",
+          "取悦",
+          "沟通",
+          "完美",
+          "统筹"
+        ],
+        "company": "上海壹元投资管理有限公司/ 台州赛美妈妈健康咨询有限公司",
+        "city": "上海",
+        "birthday": "10月",
+        "education": "本科：浙江传媒大学 广播电视编导专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "滑雪",
+          "电影",
+          "潜水",
+          "旅行等"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-18008",
+        "name": "陈嘉逸",
+        "englishName": "Maggie"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "18008",
+        "category": "S",
+        "joinYear": 2018,
+        "durationYears": 8,
+        "joinDate": "2018-01",
+        "joinPeriods": [
+          {
+            "start": "2018-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "和谐",
+          "分析",
+          "公平",
+          "适应",
+          "个别"
+        ],
+        "company": "",
+        "city": "香港",
+        "birthday": "6月",
+        "education": "英国伦敦大学学院计算机专业大二",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "运动（篮球）"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-23093",
+        "name": "陈晓萱",
+        "englishName": "Anna"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "23093",
+        "category": "s",
+        "joinYear": 2023,
+        "durationYears": 3,
+        "joinDate": "2023-01",
+        "joinPeriods": [
+          {
+            "start": "2023-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "专注",
+          "统筹",
+          "包容",
+          "学习",
+          "沟通"
+        ],
+        "company": "",
+        "city": "纽约",
+        "birthday": "5月",
+        "education": "纽约大学游戏设计专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "旅游",
+          "摄影",
+          "拍短片Vlog",
+          "戏剧表演",
+          "音乐",
+          "艺术",
+          "插花"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20051",
+        "name": "陈泽宇",
+        "englishName": "Christa Chen"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20051",
+        "category": "S",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "包容",
+          "适应",
+          "和谐",
+          "理念",
+          "体谅"
+        ],
+        "company": "上海金诚同达律师事务所",
+        "city": "上海",
+        "birthday": "7月",
+        "education": "美国麻省州立大学 数学专业",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "宠物（猫）",
+          "电影",
+          "美妆",
+          "烹饪"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20050",
+        "name": "陈诗靓",
+        "englishName": "Shiliang Chen"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20050",
+        "category": "W",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "关联",
+          "学习",
+          "理念",
+          "思维",
+          "搜集"
+        ],
+        "company": "薄荷健康产品部",
+        "city": "上海",
+        "birthday": "3月",
+        "education": "罗德岛设计学院（Rhode Island school of Design）",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "运动",
+          "（羽毛球",
+          "皮划艇）",
+          "画画",
+          "雕塑"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21065",
+        "name": "雷昊",
+        "englishName": "Hao Lei"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21065",
+        "category": "W",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "沟通",
+          "前瞻",
+          "取悦",
+          "统筹",
+          "行动"
+        ],
+        "company": "江苏聚映影视传媒有限公司",
+        "city": "无锡",
+        "birthday": "12月",
+        "education": "本科 波士顿大学 专业 电影与电视",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "电影",
+          "健身",
+          "网球",
+          "足球",
+          "电竞",
+          "滑雪"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20055",
+        "name": "马梓涵",
+        "englishName": "Zihan Ma"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20055",
+        "category": "S",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "思维",
+          "理念",
+          "学习",
+          "交往",
+          "个别"
+        ],
+        "company": "",
+        "city": "密歇根州",
+        "birthday": "6月",
+        "education": "密歇根大学安娜堡分校 经济和哲学双专业 大四",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "跳舞",
+          "弹琴",
+          "滑冰",
+          "剧本杀"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-21062",
+        "name": "高乾潇",
+        "englishName": "Jansen Gao"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "21062",
+        "category": "W",
+        "joinYear": 2021,
+        "durationYears": 5,
+        "joinDate": "2021-01",
+        "joinPeriods": [
+          {
+            "start": "2021-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "理念",
+          "适应",
+          "战略",
+          "体谅",
+          "积极"
+        ],
+        "company": "海通证券；东浩经贸发展有限公司；Alice nine 婚礼艺术空间",
+        "city": "上海",
+        "birthday": "10月",
+        "education": "本科：澳大利亚昆士兰大学 专业：金融管理",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "喜欢小动物（猫、狗）",
+          "羽毛球",
+          "游泳"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-20052",
+        "name": "高倚天",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "20052",
+        "category": "W",
+        "joinYear": 2020,
+        "durationYears": 6,
+        "joinDate": "2020-01",
+        "joinPeriods": [
+          {
+            "start": "2020-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "取悦",
+          "沟通",
+          "理念",
+          "积极",
+          "战略"
+        ],
+        "company": "上海灵愈科技有限公司",
+        "city": "上海",
+        "birthday": "10月",
+        "education": "本科：美国雪城大学，专业公共事务与经济",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "户外骑行（每年10000公里）"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "alumni",
+      "identity": {
+        "userId": "mn-23092",
+        "name": "黄蕾",
+        "englishName": "Angela"
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "23092",
+        "category": "w",
+        "joinYear": 2023,
+        "durationYears": 3,
+        "joinDate": "2023-01",
+        "joinPeriods": [
+          {
+            "start": "2023-01",
+            "end": null
+          }
+        ]
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [
+          "沟通",
+          "积极",
+          "和谐",
+          "取悦",
+          "统筹"
+        ],
+        "company": "Government certified",
+        "city": "上海-长宁区",
+        "birthday": "9月",
+        "education": "Concordia University 社会学",
+        "educationDegree": "本科",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "义工活动",
+          "唱歌",
+          "看书"
+        ]
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "official-xlsx-historical-attendance"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "identity": {
+        "userId": "new2026-liwenyue",
+        "name": "李文越",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "",
+        "category": "",
+        "joinYear": 2026,
+        "durationYears": 1,
+        "joinDate": "2026-01",
+        "joinPeriods": [
+          {
+            "start": "2026-01",
+            "end": null
+          }
+        ],
+        "phones": []
+      },
+      "profile": {
+        "mbti": "ISFP",
+        "gallup": [],
+        "company": "上海欣驰电子有限公司",
+        "career": "企业发展部总监",
+        "city": "上海",
+        "birthday": "1月20日",
+        "education": "本科：西雅图华盛顿大学 数学和经济双专业 研究生：Johns Hopkins University 金融工程",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "网球",
+          "滑雪",
+          "德州扑克",
+          "电影"
+        ]
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-liwenyue.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2026-profile-collection"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "identity": {
+        "userId": "new2026-masimian",
+        "name": "马思勉",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "",
+        "category": "",
+        "joinYear": 2026,
+        "durationYears": 1,
+        "joinDate": "2026-01",
+        "joinPeriods": [
+          {
+            "start": "2026-01",
+            "end": null
+          }
+        ],
+        "phones": []
+      },
+      "profile": {
+        "mbti": "INFP",
+        "gallup": [],
+        "company": "书房文化发展有限公司",
+        "career": "",
+        "city": "上海",
+        "birthday": "8月9日",
+        "education": "本科：纽约大学 经济学 研究生：纽约大学 经济学硕士",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": [
+          "网球",
+          "单板滑雪",
+          "FPS游戏",
+          "科幻电影",
+          "画画"
+        ]
+      },
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-masimian.jpg"
+      },
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2026-profile-collection"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "identity": {
+        "userId": "new2026-panyuhao",
+        "name": "潘宇昊",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "",
+        "category": "",
+        "joinYear": 2026,
+        "durationYears": 1,
+        "joinDate": "2026-01",
+        "joinPeriods": [
+          {
+            "start": "2026-01",
+            "end": null
+          }
+        ],
+        "phones": []
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "",
+        "career": "",
+        "city": "",
+        "birthday": "",
+        "education": "",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2026-profile-collection"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "identity": {
+        "userId": "new2026-gonghaoran",
+        "name": "龚浩然",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "",
+        "category": "",
+        "joinYear": 2026,
+        "durationYears": 1,
+        "joinDate": "2026-01",
+        "joinPeriods": [
+          {
+            "start": "2026-01",
+            "end": null
+          }
+        ],
+        "phones": []
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "",
+        "career": "",
+        "city": "",
+        "birthday": "",
+        "education": "",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2026-profile-collection"
+      }
+    },
+    {
+      "memberStatus": "active",
+      "identity": {
+        "userId": "new2026-yudeyue",
+        "name": "於德悦",
+        "englishName": ""
+      },
+      "community": {
+        "role": "会员",
+        "isLishi": false,
+        "memberNo": "",
+        "category": "",
+        "joinYear": 2026,
+        "durationYears": 1,
+        "joinDate": "2026-01",
+        "joinPeriods": [
+          {
+            "start": "2026-01",
+            "end": null
+          }
+        ],
+        "phones": []
+      },
+      "profile": {
+        "mbti": "",
+        "gallup": [],
+        "company": "",
+        "career": "",
+        "city": "",
+        "birthday": "",
+        "education": "",
+        "educationDegree": "",
+        "motto": ""
+      },
+      "interests": {
+        "hobbies": []
+      },
+      "assets": {},
+      "import": {
+        "dataType": "real",
+        "source": "yolo-2026-profile-collection"
       }
     }
   ]

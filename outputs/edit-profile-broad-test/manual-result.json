@@ -1,0 +1,76 @@
+{
+  "samples": [
+    {
+      "checkedAt": "2026-05-29T08:01:42.392Z",
+      "userId": "mn-21063",
+      "name": "高直方",
+      "originalMbti": "INTP-A",
+      "initialMbti": "INTP",
+      "expectedInitialMbti": "INTP",
+      "initialZodiac": "天秤座",
+      "profileZodiac": "天秤座",
+      "checks": {
+        "name": true,
+        "motto": true,
+        "basic": true,
+        "birthdayEducationGoal": true,
+        "mbti": true,
+        "zodiac": true,
+        "gallup": true,
+        "hobbies": true,
+        "expertise": true,
+        "tags": true,
+        "skills": true
+      },
+      "ok": true
+    },
+    {
+      "checkedAt": "2026-05-29T08:02:38.872Z",
+      "userId": "new2026-liwenyue",
+      "name": "李文越",
+      "originalMbti": "ISFP",
+      "initialMbti": "ISFP",
+      "expectedInitialMbti": "ISFP",
+      "initialZodiac": "水瓶座",
+      "profileZodiac": "水瓶座",
+      "checks": {
+        "name": true,
+        "motto": true,
+        "basic": true,
+        "birthdayEducationGoal": true,
+        "mbti": true,
+        "zodiac": true,
+        "gallup": true,
+        "hobbies": true,
+        "expertise": true,
+        "tags": true,
+        "skills": true
+      },
+      "ok": true
+    },
+    {
+      "checkedAt": "2026-05-29T08:03:32.135Z",
+      "userId": "hist-linleyi",
+      "name": "林乐怡",
+      "originalMbti": "",
+      "initialMbti": "",
+      "expectedInitialMbti": "",
+      "initialZodiac": "",
+      "profileZodiac": "",
+      "checks": {
+        "name": true,
+        "motto": true,
+        "basic": true,
+        "birthdayEducationGoal": true,
+        "mbti": true,
+        "zodiac": true,
+        "gallup": true,
+        "hobbies": true,
+        "expertise": true,
+        "tags": true,
+        "skills": true
+      },
+      "ok": true
+    }
+  ]
+}

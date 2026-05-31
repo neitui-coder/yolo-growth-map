@@ -1,4 +1,5 @@
 var app = getApp();
+var util = require('../../utils/util.js');
 
 function isOperatorMode() {
   return !!(app.globalData && (
@@ -9,8 +10,16 @@ function isOperatorMode() {
   ));
 }
 
+function normalizeMbti(value) {
+  var raw = (value || '').toString().trim().toUpperCase();
+  var match = raw.match(/[IE][NS][FT][JP]/);
+  return match ? match[0] : raw;
+}
+
 Page({
   data: {
+    pageLoading: true,
+    submitting: false,
     userId: '',
     name: '',
     motto: '',
@@ -20,6 +29,7 @@ Page({
     birthday: '',
     education: '',
     goal: '',
+    gallupStr: '',
     hobbiesStr: '',
     expertiseStr: '',
     tagsStr: '',
@@ -41,10 +51,12 @@ Page({
 
   onLoad: function (options) {
     var userId = options.userId || app.globalData.currentUserId;
-    var isOwner = userId === app.globalData.currentUserId;
+    var canEdit = app.canEditUserProfile
+      ? app.canEditUserProfile(userId)
+      : (userId === app.globalData.currentUserId && !(app.isGuestMode && app.isGuestMode()));
     this.setData({ userId: userId });
 
-    if (!isOwner && !isOperatorMode()) {
+    if (!canEdit && !isOperatorMode()) {
       wx.showToast({ title: '仅本人或运营团队可编辑', icon: 'none' });
       wx.navigateBack();
     } else {
@@ -53,13 +65,52 @@ Page({
   },
 
   _loadUserData: function (userId) {
+    var that = this;
     var user = app.getUser(userId);
-    if (!user) return;
+    if (!user && app.ensureAllUsersLoaded && !app.globalData.allUsersLoaded) {
+      app.ensureAllUsersLoaded(function () {
+        that._loadUserData(userId);
+      });
+      return;
+    }
+    if (!user && wx.cloud) {
+      wx.cloud.callFunction({
+        name: 'yoloFunctions',
+        data: {
+          type: 'getUser',
+          userId: userId,
+          dataType: app.globalData.dataType
+        }
+      }).then(function (res) {
+        var r = res && res.result;
+        if (!r || !r.success || !r.data) {
+          wx.showToast({ title: '没有找到资料', icon: 'none' });
+          that.setData({ pageLoading: false });
+          return;
+        }
+        var normalized = app._normalizeUsers ? app._normalizeUsers([r.data])[0] : r.data;
+        app.globalData.users = app._mergeUsers
+          ? app._mergeUsers([normalized])
+          : (app.globalData.users || []).concat([normalized]);
+        that._loadUserData(userId);
+      }).catch(function () {
+        wx.showToast({ title: '资料加载失败', icon: 'none' });
+        that.setData({ pageLoading: false });
+      });
+      return;
+    }
+    if (!user) {
+      wx.showToast({ title: '没有找到资料', icon: 'none' });
+      this.setData({ pageLoading: false });
+      return;
+    }
 
-    var mbtiIndex = this.data.mbtiOptions.indexOf(user.mbti || '');
-    var zodiacIndex = this.data.zodiacOptions.indexOf(user.zodiac || '');
+    var mbtiIndex = this.data.mbtiOptions.indexOf(normalizeMbti(user.mbti));
+    var zodiacValue = user.zodiac || util.deriveZodiacFromBirthday(user.birthday) || '';
+    var zodiacIndex = this.data.zodiacOptions.indexOf(zodiacValue);
 
     this.setData({
+      pageLoading: false,
       name: user.name || '',
       motto: user.motto || '',
       career: user.career || '',
@@ -68,6 +119,7 @@ Page({
       birthday: user.birthday || '',
       education: user.education || '',
       goal: user.goal || '',
+      gallupStr: (user.gallup || []).join(','),
       hobbiesStr: (user.hobbies || []).join(','),
       expertiseStr: (user.expertise || []).join(','),
       tagsStr: (user.tags || []).join(','),
@@ -90,7 +142,12 @@ Page({
   },
 
   onBirthdayChange: function (e) {
-    this.setData({ birthday: e.detail.value });
+    var zodiacValue = util.deriveZodiacFromBirthday(e.detail.value);
+    var zodiacIndex = this.data.zodiacOptions.indexOf(zodiacValue);
+    this.setData({
+      birthday: e.detail.value,
+      zodiacIndex: zodiacIndex >= 0 ? zodiacIndex : this.data.zodiacIndex
+    });
   },
 
   onZodiacChange: function (e) {
@@ -99,83 +156,79 @@ Page({
 
   onSubmit: function () {
     var user = app.getUser(this.data.userId);
-    if (!user) return;
+    if (!user || this.data.submitting) return;
 
-    user.name = this.data.name.trim();
-    user.motto = this.data.motto.trim();
-    user.career = this.data.career.trim();
-    user.company = this.data.company.trim();
-    user.city = (this.data.city || '').trim();
-    user.birthday = this.data.birthday;
-    user.education = this.data.education.trim();
-    user.goal = this.data.goal.trim() || null;
-
-    if (this.data.mbtiIndex >= 0) {
-      user.mbti = this.data.mbtiOptions[this.data.mbtiIndex];
-    } else {
-      user.mbti = '';
-    }
-
-    if (this.data.zodiacIndex >= 0) {
-      user.zodiac = this.data.zodiacOptions[this.data.zodiacIndex];
-    } else {
-      user.zodiac = '';
-    }
-
-    user.hobbies = this._splitToArray(this.data.hobbiesStr);
-    user.expertise = this._splitToArray(this.data.expertiseStr);
-    user.tags = this._splitToArray(this.data.tagsStr);
-    user.skills = this._splitToArray(this.data.skillsStr);
-
-    // 异步同步到云端（乐观更新，先导航返回）
+    var updates = this._buildUpdates();
+    this.setData({ submitting: true });
     wx.cloud.callFunction({
       name: 'yoloFunctions',
       data: {
         type: 'updateUser',
         userId: this.data.userId,
         dataType: app.globalData.dataType,
-        updates: {
-          name: user.name,
-          motto: user.motto,
-          career: user.career,
-          company: user.company,
-          city: user.city,
-          birthday: user.birthday,
-          education: user.education,
-          goal: user.goal,
-          mbti: user.mbti,
-          zodiac: user.zodiac,
-          hobbies: user.hobbies,
-          expertise: user.expertise,
-          tags: user.tags,
-          skills: user.skills
-        }
+        updates: updates
       },
       success: function (res) {
         if (res && res.result && res.result.success) {
+          Object.keys(updates).forEach(function (key) {
+            user[key] = updates[key];
+          });
           wx.showToast({ title: '已保存', icon: 'success' });
           setTimeout(function () { wx.navigateBack(); }, 400);
         } else {
+          this.setData({ submitting: false });
           wx.showModal({
             title: '保存失败',
             content: (res && res.result && res.result.error) || '云端返回异常，请重试',
             showCancel: false
           });
         }
-      },
+      }.bind(this),
       fail: function (err) {
+        this.setData({ submitting: false });
         console.error('updateUser profile sync failed', err);
         wx.showModal({
           title: '保存失败',
           content: (err && err.errMsg) || '网络异常，请重试',
           showCancel: false
         });
-      }
+      }.bind(this)
     });
+  },
+
+  _buildUpdates: function () {
+    var motto = this.data.motto.trim();
+    return {
+      name: this.data.name.trim(),
+      motto: motto,
+      mottoSource: motto ? 'member-edited' : '',
+      career: this.data.career.trim(),
+      company: this.data.company.trim(),
+      city: (this.data.city || '').trim(),
+      birthday: this.data.birthday,
+      education: this.data.education.trim(),
+      goal: this.data.goal.trim() || null,
+      mbti: this.data.mbtiIndex >= 0 ? this.data.mbtiOptions[this.data.mbtiIndex] : '',
+      zodiac: this.data.zodiacIndex >= 0
+        ? this.data.zodiacOptions[this.data.zodiacIndex]
+        : (util.deriveZodiacFromBirthday(this.data.birthday) || ''),
+      gallup: this._splitToArray(this.data.gallupStr).slice(0, 5),
+      hobbies: this._splitToArray(this.data.hobbiesStr),
+      expertise: this._splitToArray(this.data.expertiseStr),
+      tags: this._splitToArray(this.data.tagsStr),
+      skills: this._splitToArray(this.data.skillsStr)
+    };
   },
 
   _splitToArray: function (str) {
     if (!str || !str.trim()) return [];
-    return str.split(/[,，]/).map(function (s) { return s.trim(); }).filter(function (s) { return s; });
+    var seen = {};
+    return str.split(/[,，、;；\n]+/)
+      .map(function (s) { return s.trim(); })
+      .filter(function (s) {
+        if (!s || seen[s]) return false;
+        seen[s] = true;
+        return true;
+      });
   }
 });

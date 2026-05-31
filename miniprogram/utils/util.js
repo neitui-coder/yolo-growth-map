@@ -142,6 +142,257 @@ function getAvatarInitial(user) {
   return name ? name.slice(0, 1) : '?';
 }
 
+function normalizeCityName(value) {
+  if (!value) return '';
+
+  var text = String(value)
+    .replace(/\s+/g, '')
+    .replace(/[—–－]/g, '-')
+    .trim();
+  if (!text) return '';
+
+  text = text.split(/[、,，;；/]/)[0].trim();
+  if (!text) return '';
+
+  var countries = [
+    '中国大陆', '中国', '美国', '英国', '加拿大', '澳大利亚', '日本', '韩国',
+    '法国', '德国', '新加坡', '阿联酋', '沙特'
+  ];
+  var provinces = [
+    '浙江', '江苏', '广东', '福建', '山东', '河南', '河北', '湖南', '湖北',
+    '四川', '陕西', '山西', '安徽', '江西', '广西', '云南', '贵州', '辽宁',
+    '吉林', '黑龙江', '海南', '甘肃', '青海', '内蒙古', '宁夏', '新疆', '西藏'
+  ];
+  var municipalities = ['上海', '北京', '天津', '重庆'];
+
+  var parts = text.split('-').filter(Boolean);
+  if (text.indexOf('-') !== -1 && parts.length > 0) {
+    var first = parts[0];
+    var last = parts[parts.length - 1];
+    if (municipalities.indexOf(first) !== -1) {
+      text = first;
+    } else if (countries.indexOf(first) !== -1 || provinces.indexOf(first) !== -1) {
+      text = last;
+    } else {
+      text = last || first;
+    }
+  }
+
+  countries.forEach(function (prefix) {
+    if (text.indexOf(prefix) === 0 && text.length > prefix.length) {
+      text = text.slice(prefix.length);
+    }
+  });
+
+  provinces.forEach(function (prefix) {
+    if (text.indexOf(prefix) === 0 && text.length > prefix.length) {
+      text = text.slice(prefix.length);
+    }
+  });
+
+  if (countries.indexOf(text) !== -1 || provinces.indexOf(text) !== -1) {
+    return '';
+  }
+
+  return text;
+}
+
+function normalizeCityList(value) {
+  var rawList = Array.isArray(value) ? value : String(value || '').split(/[、,，;；/]/);
+  var seen = {};
+  var result = [];
+  rawList.forEach(function (item) {
+    var city = normalizeCityName(item);
+    if (city && !seen[city]) {
+      seen[city] = true;
+      result.push(city);
+    }
+  });
+  return result;
+}
+
+function normalizeHobbyName(value) {
+  if (!value) return '';
+  var text = String(value)
+    .replace(/\s+/g, ' ')
+    .replace(/[∶﹕]/g, '：')
+    .replace(/[（(]\s*/g, '（')
+    .replace(/\s*[)）]/g, '）')
+    .trim();
+  if (!text) return '';
+
+  var directMap = {
+    '喜欢听歌': '听歌',
+    '看篮球赛': '篮球',
+    '看 YouTube': 'YouTube',
+    '看YouTube': 'YouTube',
+    '尤其是 cba': 'CBA',
+    '尤其是cba': 'CBA',
+    '自己也是体育赛事相关的博主': '体育赛事',
+    '运动（户外': '户外运动',
+    '露营）': '露营',
+    '硬核露营': '露营',
+    '马术（感兴趣）': '马术',
+    '橄榄球（业余橄榄球队）': '橄榄球',
+    '看书（毛选）': '看书',
+    '看电影（剧情类）': '看电影',
+    '动画片': '动画',
+    '玩游戏': '游戏',
+    '打游戏': '游戏',
+    '单机游戏': '游戏',
+    '看艺术展': '看展',
+    '旅游': '旅行',
+    '自驾游': '自驾',
+    '做美食': '美食',
+    '做饭': '做饭',
+    '煮饭': '做饭',
+    '弹钢琴': '钢琴',
+    '打篮球': '篮球',
+    '打网球': '网球',
+    '骑自行车': '骑行',
+    '看赛车': '赛车',
+    '爱好音乐': '音乐'
+  };
+  if (directMap[text]) return directMap[text];
+
+  var categoryPrefixes = [
+    '极限运动', '二次元相关', '接触新东西', '运动', '体育', '户外活动',
+    '户外运动', '球类运动', '球类', '艺术', '音乐', '影音', '影视'
+  ];
+  var colonIndex = text.indexOf('：');
+  if (colonIndex > 0) {
+    var prefix = text.slice(0, colonIndex);
+    var rest = text.slice(colonIndex + 1).trim();
+    if (rest && categoryPrefixes.indexOf(prefix) !== -1) {
+      text = rest;
+    }
+  }
+
+  if (directMap[text]) return directMap[text];
+  return text.replace(/^偶尔/, '').trim();
+}
+
+function splitKnownHobbyTokens(text) {
+  var compact = String(text || '').replace(/\s+/g, '');
+  var known = [
+    'YouTube', '羽毛球', '高尔夫', '橄榄球', '篮球', '足球', '网球',
+    '攀岩', '滑雪', '手游', '漫画书', '漫展', '影视', '阅读',
+    '看展', '露营', '徒步'
+  ];
+  var found = known
+    .map(function (token) {
+      return { token: token, index: compact.indexOf(token) };
+    })
+    .filter(function (item) {
+      return item.index !== -1;
+    })
+    .sort(function (a, b) {
+      return a.index - b.index;
+    })
+    .map(function (item) {
+      return item.token;
+    });
+  return found.length >= 2 ? found : [];
+}
+
+function normalizeHobbyList(value) {
+  var rawList = Array.isArray(value) ? value : String(value || '').split(/[、,，;；/]/);
+  var seen = {};
+  var result = [];
+
+  function pushItem(item) {
+    var normalized = normalizeHobbyName(item);
+    if (!normalized) return;
+    var knownTokens = splitKnownHobbyTokens(normalized);
+    if (knownTokens.length) {
+      knownTokens.forEach(pushItem);
+      return;
+    }
+    if (!seen[normalized]) {
+      seen[normalized] = true;
+      result.push(normalized);
+    }
+  }
+
+  rawList.forEach(function (item) {
+    var text = String(item || '').trim();
+    var shouldKeepWhole =
+      /^尤其是/i.test(text) ||
+      /^看\s*YouTube$/i.test(text) ||
+      /^自己也是/.test(text) ||
+      text.indexOf('：') !== -1 ||
+      text.indexOf('∶') !== -1;
+    (shouldKeepWhole ? [text] : text.split(/\s{1,}|[|｜]/))
+      .filter(Boolean)
+      .forEach(pushItem);
+  });
+  return result;
+}
+
+var CURRENT_DIRECTOR_IDS = {
+  'pdf2025-katherine': true,
+  'pdf2025-bill': true,
+  'pdf2025-rachel': true,
+  'pdf2025-yueyue': true,
+  'pdf2025-jingzi': true,
+  'mn-18025': true,
+  'pdf2025-wenxin': true
+};
+
+// Source: YOLO+2026年会员成长档案资料收集.xlsx, category = "创始理事".
+var FOUNDING_DIRECTOR_IDS = {
+  'pdf2025-bill': true,
+  'pdf2025-yueyue': true,
+  'pdf2025-rachel': true,
+  'pdf2025-katherine': true
+};
+
+var HISTORICAL_DIRECTOR_IDS = {
+  'alumni-ruixiang': true,
+  'pdf2025-sarah': true,
+  'pdf2025-p09': true
+};
+
+function getUserStableId(user) {
+  return (user && (user.userId || user.id || (user.identity && user.identity.userId))) || '';
+}
+
+function isCurrentDirector(user) {
+  if (!user) return false;
+
+  var userId = getUserStableId(user);
+  if (CURRENT_DIRECTOR_IDS[userId]) return true;
+  if (HISTORICAL_DIRECTOR_IDS[userId]) return false;
+  if (user.memberStatus === 'alumni') return false;
+
+  var role = String(
+    user.yoloRole ||
+      (user.community && user.community.role) ||
+      ''
+  ).trim();
+  if (!role || role.indexOf('理事') === -1) return false;
+
+  if (/20\d{2}\s*年度.*理事/.test(role) || /20\d{2}年度.*理事/.test(role)) {
+    return false;
+  }
+  if (/^\d{4}年?度?理事/.test(role)) {
+    return false;
+  }
+
+  return (
+    role === '理事' ||
+    role.indexOf('理事/') === 0 ||
+    role.indexOf('/理事') !== -1 ||
+    role.indexOf('初创理事') !== -1 ||
+    role.indexOf('常务理事') !== -1 ||
+    role.indexOf('成为理事') !== -1
+  );
+}
+
+function isFoundingDirector(user) {
+  return !!(user && FOUNDING_DIRECTOR_IDS[getUserStableId(user)]);
+}
+
 /**
  * 计算用户资料完善度（与 HTML 原型 profileCompleteness 一致）
  * @param {Object} user - 用户对象
@@ -198,8 +449,8 @@ function computeSimilarity(userA, userB) {
   var score = 0;
   if (userA.mbti && userB.mbti && userA.mbti === userB.mbti) score += 3;
   if (userA.city && userB.city) {
-    var citiesA = Array.isArray(userA.city) ? userA.city : [userA.city];
-    var citiesB = Array.isArray(userB.city) ? userB.city : [userB.city];
+    var citiesA = normalizeCityList(userA.city);
+    var citiesB = normalizeCityList(userB.city);
     for (var i = 0; i < citiesA.length; i++) {
       if (citiesB.indexOf(citiesA[i]) !== -1) { score += 2; break; }
     }
@@ -210,9 +461,11 @@ function computeSimilarity(userA, userB) {
       if (userB.gallup.indexOf(g) !== -1) score += 1;
     });
   }
-  if (userA.hobbies && userB.hobbies) {
-    userA.hobbies.forEach(function (h) {
-      if (userB.hobbies.indexOf(h) !== -1) score += 1;
+  var hobbiesA = normalizeHobbyList(userA.hobbies || []);
+  var hobbiesB = normalizeHobbyList(userB.hobbies || []);
+  if (hobbiesA.length && hobbiesB.length) {
+    hobbiesA.forEach(function (h) {
+      if (hobbiesB.indexOf(h) !== -1) score += 1;
     });
   }
   if (userA.skills && userB.skills) {
@@ -240,8 +493,8 @@ function computeSimilarityBreakdown(userA, userB) {
   }
 
   if (userA.city && userB.city) {
-    var citiesA = Array.isArray(userA.city) ? userA.city : [userA.city];
-    var citiesB = Array.isArray(userB.city) ? userB.city : [userB.city];
+    var citiesA = normalizeCityList(userA.city);
+    var citiesB = normalizeCityList(userB.city);
     for (var i = 0; i < citiesA.length; i++) {
       if (citiesB.indexOf(citiesA[i]) !== -1) {
         score += 2;
@@ -253,9 +506,11 @@ function computeSimilarityBreakdown(userA, userB) {
   }
 
   var commonHobbies = [];
-  if (userA.hobbies && userB.hobbies) {
-    userA.hobbies.forEach(function (h) {
-      if (userB.hobbies.indexOf(h) !== -1) {
+  var hobbiesA = normalizeHobbyList(userA.hobbies || []);
+  var hobbiesB = normalizeHobbyList(userB.hobbies || []);
+  if (hobbiesA.length && hobbiesB.length) {
+    hobbiesA.forEach(function (h) {
+      if (hobbiesB.indexOf(h) !== -1) {
         score += 1;
         commonHobbies.push(h);
       }
@@ -356,6 +611,43 @@ function parseBirthday(birthday) {
   return null;
 }
 
+function getZodiacByMonthDay(month, day) {
+  if (!month) return '';
+  var d = day || 15;
+  var ranges = [
+    { name: '水瓶座', start: [1, 20], end: [2, 18] },
+    { name: '双鱼座', start: [2, 19], end: [3, 20] },
+    { name: '白羊座', start: [3, 21], end: [4, 19] },
+    { name: '金牛座', start: [4, 20], end: [5, 20] },
+    { name: '双子座', start: [5, 21], end: [6, 21] },
+    { name: '巨蟹座', start: [6, 22], end: [7, 22] },
+    { name: '狮子座', start: [7, 23], end: [8, 22] },
+    { name: '处女座', start: [8, 23], end: [9, 22] },
+    { name: '天秤座', start: [9, 23], end: [10, 23] },
+    { name: '天蝎座', start: [10, 24], end: [11, 22] },
+    { name: '射手座', start: [11, 23], end: [12, 21] },
+    { name: '摩羯座', start: [12, 22], end: [1, 19] }
+  ];
+  for (var i = 0; i < ranges.length; i++) {
+    var r = ranges[i];
+    var start = r.start[0] * 100 + r.start[1];
+    var end = r.end[0] * 100 + r.end[1];
+    var value = month * 100 + d;
+    if (start <= end) {
+      if (value >= start && value <= end) return r.name;
+    } else if (value >= start || value <= end) {
+      return r.name;
+    }
+  }
+  return '';
+}
+
+function deriveZodiacFromBirthday(birthday) {
+  var parsed = parseBirthday(birthday);
+  if (!parsed || !parsed.month) return '';
+  return getZodiacByMonthDay(parsed.month, parsed.day);
+}
+
 function isBirthdayInCurrentMonth(user, now) {
   var parsed = parseBirthday(user && user.birthday);
   var current = now || new Date();
@@ -364,38 +656,117 @@ function isBirthdayInCurrentMonth(user, now) {
 }
 
 function buildFunnyIntro(user) {
-  if (!user) return '';
+  var options = buildFunnyIntroOptions(user);
+  if (!options.length) return '';
+  var seed = getFunnyIntroSeed(user);
+  return options[seed % options.length];
+}
 
-  var city = Array.isArray(user.city) ? user.city[0] : (user.city || '');
-  var hobby = (user.hobbies || [])[0] || '';
-  var gallup = (user.gallup || [])[0] || '';
-  var mbti = user.mbti || '';
-  var career = user.career || user.company || '';
-  var seed = String(user.userId || user.name || '').split('').reduce(function (sum, ch) {
+function getFunnyIntroSeed(user) {
+  return String((user && (user.userId || user.id || user.name)) || '').split('').reduce(function (sum, ch) {
     return sum + ch.charCodeAt(0);
   }, 0);
+}
 
-  var templates = [
-    function () {
-      return (city || 'YOLO+') + '常驻气氛组，表面淡定，实际上随时准备把聊天热度抬高 3 度。';
-    },
-    function () {
-      return (career || '这位会员') + '白天认真营业，晚上大概率靠' + (hobby || '兴趣爱好') + '给灵魂续费。';
-    },
-    function () {
-      return (mbti || '神秘人格') + '选手一枚，擅长把普通日常过成带一点剧情反转的版本。';
-    },
-    function () {
-      return gallup
-        ? '盖洛普主打“' + gallup + '”，翻译成人话就是：这位同学很难把日子过得无聊。'
-        : '资料还在继续长肉，但气质已经先一步写着“这人应该挺有梗”。';
-    },
-    function () {
-      return (city || '这位会员') + (city ? '出没' : '') + '，大概率能把' + (hobby || '日常') + '聊成一场带笑点的深夜长谈。';
-    }
-  ];
+function buildFunnyIntroOptions(user) {
+  if (!user) return [];
 
-  return templates[seed % templates.length]();
+  var city = normalizeCityName(Array.isArray(user.city) ? user.city[0] : (user.city || ''));
+  var normalizedHobbies = normalizeHobbyList(user.hobbies || []);
+  var genericHobbyWords = { '看': true, '玩': true, '吃': true };
+  var usefulHobbies = normalizedHobbies.filter(function (item) {
+    return item && !genericHobbyWords[item] && String(item).length > 1;
+  });
+  var hobby = usefulHobbies[0] || normalizedHobbies[0] || '';
+  var hobby2 = usefulHobbies[1] || normalizedHobbies[1] || '';
+  var gallups = (user.gallup || []).filter(Boolean);
+  var gallup = gallups[0] || '';
+  var mbti = user.mbti || '';
+  var career = user.career || '';
+  var company = user.company || '';
+  var education = user.education || '';
+
+  function shortField(value, maxLen) {
+    var text = Array.isArray(value) ? value.join('；') : String(value || '');
+    text = text
+      .replace(/\s+/g, ' ')
+      .replace(/^\d+月(初|中|底)?计划/, '')
+      .replace(/^计划/, '')
+      .replace(/[（(].*$/, '')
+      .split(/[；;、,，/]/)[0]
+      .replace(/有限公司$/, '')
+      .replace(/股份有限公司$/, '')
+      .replace(/数字科技$/, '')
+      .replace(/数据科技$/, '')
+      .trim();
+    if (!text) return '';
+    if (/^[A-Za-z ]+$/.test(text)) return text.split(' ')[0];
+    text = text.replace(/\s+/g, '');
+    return text.length > maxLen ? text.slice(0, maxLen) : text;
+  }
+
+  var careerLabel = shortField(career, 8);
+  var companyLabel = shortField(company, 8);
+  var educationLabel = shortField(education, 8);
+  var candidates = [];
+
+  function add(text) {
+    text = String(text || '').trim();
+    if (!text) return;
+    if (/抬高\s*3\s*度|气氛组|灵魂续费/.test(text)) return;
+    candidates.push(text);
+  }
+
+  if (careerLabel && hobby) {
+    add(careerLabel + '和' + hobby + '来回切换，主打认真但不太安分。');
+  }
+  if (mbti && gallup) {
+    add(mbti + '遇上“' + gallup + '”，做事像开了个人任务面板。');
+  }
+  if (city && hobby) {
+    add(city + '出没，' + hobby + '雷达常年在线，遇到同好会自动亮灯。');
+  }
+  if (gallup && hobby) {
+    add('“' + gallup + '”优势加持，连' + hobby + '都像被排进小计划。');
+  }
+  if (careerLabel && mbti) {
+    add(mbti + '的' + careerLabel + '选手，理性在线，脑内弹幕也不少。');
+  }
+  if (companyLabel && hobby2) {
+    add(companyLabel + '之外，还给' + hobby2 + '留了固定档期。');
+  }
+  if (educationLabel && hobby) {
+    add('履历走正经路线，兴趣清单负责把' + hobby + '这面露出来。');
+  }
+  if (hobby && hobby2) {
+    add(hobby + '和' + hobby2 + '双持，休息方式看起来也挺忙。');
+  }
+  if (city && (mbti || gallup)) {
+    add(city + '版' + (mbti || gallup) + '，看着低调，配置其实不简单。');
+  }
+  if (careerLabel || companyLabel) {
+    add((careerLabel || companyLabel) + '只是表面身份，细看还有不少隐藏副本。');
+  }
+  if (mbti) {
+    add(mbti + '选手一枚，日常大概率自带一套内心操作系统。');
+  }
+  if (hobby) {
+    add('资料里最抢戏的是' + hobby + '，像是随时能展开一条支线。');
+  }
+  if (!candidates.length) {
+    add('资料还不多，但已经能看出这位不是标准模板用户。');
+  }
+
+  var seen = {};
+  var unique = candidates.filter(function (text) {
+      text = String(text || '').trim();
+      if (!text || seen[text]) return false;
+      seen[text] = true;
+      return true;
+    });
+  if (!unique.length) return [];
+  var offset = getFunnyIntroSeed(user) % unique.length;
+  return unique.slice(offset).concat(unique.slice(0, offset)).slice(0, 5);
 }
 
 module.exports = {
@@ -403,6 +774,12 @@ module.exports = {
   yearsSince: yearsSince,
   formatDate: formatDate,
   getAvatarInitial: getAvatarInitial,
+  normalizeCityName: normalizeCityName,
+  normalizeCityList: normalizeCityList,
+  normalizeHobbyName: normalizeHobbyName,
+  normalizeHobbyList: normalizeHobbyList,
+  isCurrentDirector: isCurrentDirector,
+  isFoundingDirector: isFoundingDirector,
   computeGrowthValue: computeGrowthValue,
   computeMentors: computeMentors,
   getAvatarUrl: getAvatarUrl,
@@ -413,6 +790,9 @@ module.exports = {
   findSimilarUsers: findSimilarUsers,
   isFieldVisible: isFieldVisible,
   parseBirthday: parseBirthday,
+  getZodiacByMonthDay: getZodiacByMonthDay,
+  deriveZodiacFromBirthday: deriveZodiacFromBirthday,
   isBirthdayInCurrentMonth: isBirthdayInCurrentMonth,
-  buildFunnyIntro: buildFunnyIntro
+  buildFunnyIntro: buildFunnyIntro,
+  buildFunnyIntroOptions: buildFunnyIntroOptions
 };

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-03-22T16:15:53.101Z",
+  "generatedAt": "2026-05-29T06:31:33Z",
   "envId": "cloud1-7giblg7i4595eaf3",
   "assets": {
     "/images/avatars/pdf2025-bill.jpg": {
@@ -278,6 +278,30 @@
       "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/activity-review/review-09.png",
       "cloudPath": "yolo-growth-map/media/activity-review/review-09.png",
       "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activity-review/review-09.png"
+    },
+    "/images/avatars/xlsx2026-dameixin.jpg": {
+      "localRef": "/images/avatars/xlsx2026-dameixin.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/xlsx2026-dameixin.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/xlsx2026-dameixin.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-dameixin.jpg",
+      "updatedAt": "2026-05-29T06:31:33Z",
+      "source": "YOLO+2026年会员成长档案资料收集.xlsx embedded photo"
+    },
+    "/images/avatars/xlsx2026-liwenyue.jpg": {
+      "localRef": "/images/avatars/xlsx2026-liwenyue.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/xlsx2026-liwenyue.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/xlsx2026-liwenyue.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-liwenyue.jpg",
+      "updatedAt": "2026-05-29T06:31:33Z",
+      "source": "YOLO+2026年会员成长档案资料收集.xlsx embedded photo"
+    },
+    "/images/avatars/xlsx2026-masimian.jpg": {
+      "localRef": "/images/avatars/xlsx2026-masimian.jpg",
+      "localPath": "/Users/Sean/WeChatProjects/miniprogram-2/assets-source/images/avatars/xlsx2026-masimian.jpg",
+      "cloudPath": "yolo-growth-map/media/avatars/xlsx2026-masimian.jpg",
+      "fileID": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-masimian.jpg",
+      "updatedAt": "2026-05-29T06:31:33Z",
+      "source": "YOLO+2026年会员成长档案资料收集.xlsx embedded photo"
     }
   }
 }

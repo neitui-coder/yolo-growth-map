@@ -1,7 +1,303 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-04-13T10:06:04.561Z",
+  "generatedAt": "2026-05-28T10:41:23.489Z",
   "activities": [
+    {
+      "activityKey": "yolo-2018-hongkong-06",
+      "title": "YOLO+ 6月香港活动",
+      "date": "2018-06",
+      "dateRange": "",
+      "location": "香港",
+      "type": "travel",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "mn-18009",
+          "role": ""
+        },
+        {
+          "userId": "mn-18008",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "mn-18010",
+          "role": ""
+        },
+        {
+          "userId": "mn-18011",
+          "role": ""
+        },
+        {
+          "userId": "mn-18014",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "mn-18018",
+          "role": ""
+        },
+        {
+          "userId": "mn-18007",
+          "role": ""
+        },
+        {
+          "userId": "mn-18019",
+          "role": ""
+        },
+        {
+          "userId": "alumni-ruixiang",
+          "role": ""
+        },
+        {
+          "userId": "mn-18021",
+          "role": ""
+        },
+        {
+          "userId": "mn-18022",
+          "role": ""
+        },
+        {
+          "userId": "mn-18024",
+          "role": ""
+        },
+        {
+          "userId": "mn-18023",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "mn-18026",
+          "role": ""
+        },
+        {
+          "userId": "mn-18028",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2018-usa-08",
+      "title": "YOLO+ 8月美国活动",
+      "date": "2018-08",
+      "dateRange": "",
+      "location": "美国",
+      "type": "travel",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "mn-19033",
+          "role": ""
+        },
+        {
+          "userId": "hist-4338e37c45",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "mn-18007",
+          "role": ""
+        },
+        {
+          "userId": "alumni-ruixiang",
+          "role": ""
+        },
+        {
+          "userId": "mn-18021",
+          "role": ""
+        },
+        {
+          "userId": "mn-18022",
+          "role": ""
+        },
+        {
+          "userId": "mn-18023",
+          "role": ""
+        },
+        {
+          "userId": "mn-18028",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2018-shanghai-1s-12",
+      "title": "YOLO+ 12月上海 1S",
+      "date": "2018-12",
+      "dateRange": "",
+      "location": "上海",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "mn-18012-hist",
+          "role": ""
+        },
+        {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "hist-4338e37c45",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "mn-18018",
+          "role": ""
+        },
+        {
+          "userId": "mn-18019",
+          "role": ""
+        },
+        {
+          "userId": "alumni-ruixiang",
+          "role": ""
+        },
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "mn-18026",
+          "role": ""
+        },
+        {
+          "userId": "mn-18028",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2018-shanghai-1w-12",
+      "title": "YOLO+ 12月上海1W",
+      "date": "2018-12",
+      "dateRange": "",
+      "location": "上海",
+      "type": "annual",
+      "collectiveActivity": true,
+      "summary": "",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-bill",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "mn-18014",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "mn-19033",
+          "role": ""
+        },
+        {
+          "userId": "hist-4338e37c45",
+          "role": ""
+        },
+        {
+          "userId": "mn-18007",
+          "role": ""
+        },
+        {
+          "userId": "mn-18024",
+          "role": ""
+        },
+        {
+          "userId": "mn-18023",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-yueyue",
+          "role": ""
+        }
+      ]
+    },
     {
       "activityKey": "yolo-2019-taiwan-06",
       "title": "YOLO+ 6月台湾活动",
@@ -16,6 +312,10 @@
       "images": [],
       "participants": [
         {
+          "userId": "mn-18008",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-bill",
           "role": ""
         },
@@ -24,7 +324,27 @@
           "role": ""
         },
         {
+          "userId": "mn-19030",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "mn-18010",
+          "role": ""
+        },
+        {
+          "userId": "mn-19032",
+          "role": ""
+        },
+        {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
+          "userId": "mn-18014",
           "role": ""
         },
         {
@@ -32,7 +352,43 @@
           "role": ""
         },
         {
+          "userId": "hist-4338e37c45",
+          "role": ""
+        },
+        {
+          "userId": "mn-19034",
+          "role": ""
+        },
+        {
+          "userId": "mn-19035",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19038",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19040",
+          "role": ""
+        },
+        {
+          "userId": "mn-18019",
+          "role": ""
+        },
+        {
           "userId": "alumni-ruixiang",
+          "role": ""
+        },
+        {
+          "userId": "mn-19041",
           "role": ""
         },
         {
@@ -40,7 +396,27 @@
           "role": ""
         },
         {
+          "userId": "mn-19042",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-18024",
+          "role": ""
+        },
+        {
           "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "mn-19044",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
           "role": ""
         },
         {
@@ -48,7 +424,19 @@
           "role": ""
         },
         {
+          "userId": "mn-18028",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "mn-19047",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
           "role": ""
         },
         {
@@ -79,7 +467,15 @@
           "role": ""
         },
         {
+          "userId": "mn-19030",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-katherine",
+          "role": ""
+        },
+        {
+          "userId": "mn-18014",
           "role": ""
         },
         {
@@ -87,11 +483,51 @@
           "role": ""
         },
         {
+          "userId": "mn-19035",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19038",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19040",
+          "role": ""
+        },
+        {
           "userId": "alumni-ruixiang",
           "role": ""
         },
         {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19044",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-rachel",
+          "role": ""
+        },
+        {
+          "userId": "mn-19046",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
           "role": ""
         }
       ]
@@ -110,6 +546,10 @@
       "images": [],
       "participants": [
         {
+          "userId": "mn-18008",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-bill",
           "role": ""
         },
@@ -122,7 +562,47 @@
           "role": ""
         },
         {
+          "userId": "mn-19032",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "mn-19035",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19038",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19040",
+          "role": ""
+        },
+        {
+          "userId": "mn-18019",
+          "role": ""
+        },
+        {
+          "userId": "mn-18021",
+          "role": ""
+        },
+        {
+          "userId": "mn-19041",
+          "role": ""
+        },
+        {
+          "userId": "mn-19042",
           "role": ""
         },
         {
@@ -130,11 +610,27 @@
           "role": ""
         },
         {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
           "userId": "mn-18027",
           "role": ""
         },
         {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-yueyue",
+          "role": ""
+        },
+        {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
+          "userId": "mn-20057",
           "role": ""
         }
       ]
@@ -165,7 +661,19 @@
           "role": ""
         },
         {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
+          "userId": "mn-18014",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "hist-4338e37c45",
           "role": ""
         },
         {
@@ -177,11 +685,87 @@
           "role": ""
         },
         {
+          "userId": "mn-19030",
+          "role": ""
+        },
+        {
+          "userId": "mn-19035",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19041",
+          "role": ""
+        },
+        {
+          "userId": "mn-19042",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
+          "userId": "mn-19047",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
           "role": ""
         },
         {
+          "userId": "mn-20050",
+          "role": ""
+        },
+        {
+          "userId": "mn-20051",
+          "role": ""
+        },
+        {
+          "userId": "mn-20052",
+          "role": ""
+        },
+        {
+          "userId": "mn-20053",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20055",
+          "role": ""
+        },
+        {
+          "userId": "mn-20056",
+          "role": ""
+        },
+        {
+          "userId": "mn-20058",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21065",
           "role": ""
         }
       ]
@@ -204,7 +788,43 @@
           "role": ""
         },
         {
+          "userId": "mn-18010",
+          "role": ""
+        },
+        {
+          "userId": "mn-18014",
+          "role": ""
+        },
+        {
+          "userId": "hist-4338e37c45",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19041",
+          "role": ""
+        },
+        {
+          "userId": "mn-19042",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
           "role": ""
         },
         {
@@ -212,7 +832,35 @@
           "role": ""
         },
         {
+          "userId": "mn-20050",
+          "role": ""
+        },
+        {
+          "userId": "mn-20051",
+          "role": ""
+        },
+        {
+          "userId": "mn-20052",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20055",
+          "role": ""
+        },
+        {
+          "userId": "mn-20056",
+          "role": ""
+        },
+        {
+          "userId": "mn-20058",
+          "role": ""
+        },
+        {
+          "userId": "mn-20059",
           "role": ""
         }
       ]
@@ -235,7 +883,19 @@
           "role": ""
         },
         {
+          "userId": "mn-18008",
+          "role": ""
+        },
+        {
+          "userId": "mn-18014",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "mn-18019",
           "role": ""
         },
         {
@@ -247,11 +907,75 @@
           "role": ""
         },
         {
+          "userId": "mn-19035",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19042",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
           "role": ""
         },
         {
+          "userId": "mn-20050",
+          "role": ""
+        },
+        {
+          "userId": "mn-20051",
+          "role": ""
+        },
+        {
+          "userId": "mn-20052",
+          "role": ""
+        },
+        {
+          "userId": "mn-20053",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20055",
+          "role": ""
+        },
+        {
+          "userId": "mn-20057",
+          "role": ""
+        },
+        {
+          "userId": "mn-20058",
+          "role": ""
+        },
+        {
+          "userId": "mn-20059",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
           "role": ""
         },
         {
@@ -282,7 +1006,27 @@
           "role": ""
         },
         {
+          "userId": "mn-18014",
+          "role": ""
+        },
+        {
           "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-18012-hist",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
           "role": ""
         },
         {
@@ -291,6 +1035,14 @@
         },
         {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
           "role": ""
         }
       ]
@@ -317,11 +1069,23 @@
           "role": ""
         },
         {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
+          "userId": "mn-18014",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-sarah",
           "role": ""
         },
         {
           "userId": "mn-18018",
+          "role": ""
+        },
+        {
+          "userId": "mn-18019",
           "role": ""
         },
         {
@@ -341,7 +1105,47 @@
           "role": ""
         },
         {
+          "userId": "mn-19032",
+          "role": ""
+        },
+        {
+          "userId": "mn-18012-hist",
+          "role": ""
+        },
+        {
+          "userId": "mn-19041",
+          "role": ""
+        },
+        {
+          "userId": "mn-19042",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20050",
+          "role": ""
+        },
+        {
+          "userId": "mn-20051",
+          "role": ""
+        },
+        {
+          "userId": "mn-20053",
           "role": ""
         },
         {
@@ -349,7 +1153,67 @@
           "role": ""
         },
         {
+          "userId": "mn-20055",
+          "role": ""
+        },
+        {
+          "userId": "mn-20056",
+          "role": ""
+        },
+        {
+          "userId": "mn-20057",
+          "role": ""
+        },
+        {
+          "userId": "mn-20059",
+          "role": ""
+        },
+        {
+          "userId": "mn-21061",
+          "role": ""
+        },
+        {
+          "userId": "mn-21062",
+          "role": ""
+        },
+        {
           "userId": "mn-21063",
+          "role": ""
+        },
+        {
+          "userId": "mn-21064",
+          "role": ""
+        },
+        {
+          "userId": "mn-21065",
+          "role": ""
+        },
+        {
+          "userId": "mn-21066",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21070",
+          "role": ""
+        },
+        {
+          "userId": "mn-21071",
+          "role": ""
+        },
+        {
+          "userId": "mn-21072",
+          "role": ""
+        },
+        {
+          "userId": "mn-21073",
           "role": ""
         }
       ]
@@ -368,6 +1232,10 @@
       "images": [],
       "participants": [
         {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
           "userId": "mn-18020",
           "role": ""
         },
@@ -380,11 +1248,47 @@
           "role": ""
         },
         {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19042",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
           "role": ""
         },
         {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21061",
+          "role": ""
+        },
+        {
+          "userId": "mn-21064",
+          "role": ""
+        },
+        {
+          "userId": "mn-21066",
+          "role": ""
+        },
+        {
+          "userId": "mn-21071",
+          "role": ""
+        },
+        {
+          "userId": "mn-21073",
           "role": ""
         }
       ]
@@ -411,7 +1315,55 @@
           "role": ""
         },
         {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19042",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20050",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21065",
+          "role": ""
+        },
+        {
+          "userId": "mn-21066",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21071",
+          "role": ""
+        },
+        {
+          "userId": "mn-21075",
           "role": ""
         }
       ]
@@ -438,6 +1390,10 @@
           "role": ""
         },
         {
+          "userId": "hist-4338e37c45",
+          "role": ""
+        },
+        {
           "userId": "mn-18018",
           "role": ""
         },
@@ -446,11 +1402,63 @@
           "role": ""
         },
         {
+          "userId": "mn-19030",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
           "role": ""
         },
         {
+          "userId": "mn-20050",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20057",
+          "role": ""
+        },
+        {
+          "userId": "mn-21061",
+          "role": ""
+        },
+        {
+          "userId": "mn-21064",
+          "role": ""
+        },
+        {
+          "userId": "mn-21065",
+          "role": ""
+        },
+        {
+          "userId": "mn-21067",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21075",
           "role": ""
         }
       ]
@@ -477,11 +1485,75 @@
           "role": ""
         },
         {
+          "userId": "mn-18014",
+          "role": ""
+        },
+        {
+          "userId": "hist-4338e37c45",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-p09",
           "role": ""
         },
         {
+          "userId": "mn-19030",
+          "role": ""
+        },
+        {
+          "userId": "mn-19032",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
+          "userId": "mn-19047",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20059",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21061",
+          "role": ""
+        },
+        {
+          "userId": "mn-21064",
+          "role": ""
+        },
+        {
+          "userId": "mn-21066",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21073",
           "role": ""
         }
       ]
@@ -508,6 +1580,10 @@
           "role": ""
         },
         {
+          "userId": "mn-18014",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-sarah",
           "role": ""
         },
@@ -516,7 +1592,51 @@
           "role": ""
         },
         {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20057",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21066",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21071",
+          "role": ""
+        },
+        {
+          "userId": "mn-21077",
+          "role": ""
+        },
+        {
+          "userId": "mn-21080",
           "role": ""
         }
       ]
@@ -539,7 +1659,15 @@
           "role": ""
         },
         {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "hist-4338e37c45",
           "role": ""
         },
         {
@@ -555,11 +1683,67 @@
           "role": ""
         },
         {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19042",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
           "role": ""
         },
         {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20057",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21064",
+          "role": ""
+        },
+        {
+          "userId": "mn-21065",
+          "role": ""
+        },
+        {
+          "userId": "mn-21066",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21075",
+          "role": ""
+        },
+        {
+          "userId": "mn-21071",
+          "role": ""
+        },
+        {
+          "userId": "mn-21077",
           "role": ""
         },
         {
@@ -590,6 +1774,10 @@
           "role": ""
         },
         {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
           "userId": "mn-18020",
           "role": ""
         },
@@ -602,7 +1790,27 @@
           "role": ""
         },
         {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-21064",
+          "role": ""
+        },
+        {
+          "userId": "mn-21065",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
           "role": ""
         }
       ]
@@ -633,6 +1841,14 @@
           "role": ""
         },
         {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
+          "userId": "hist-4338e37c45",
+          "role": ""
+        },
+        {
           "userId": "mn-18020",
           "role": ""
         },
@@ -649,6 +1865,30 @@
           "role": ""
         },
         {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-19045",
+          "role": ""
+        },
+        {
+          "userId": "mn-19047",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
           "role": ""
         },
@@ -657,7 +1897,178 @@
           "role": ""
         },
         {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21075",
+          "role": ""
+        },
+        {
+          "userId": "mn-21071",
+          "role": ""
+        },
+        {
+          "userId": "mn-21077",
+          "role": ""
+        },
+        {
           "userId": "mn-21078",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "activityKey": "yolo-2023-mentor-group",
+      "title": "YOLO+ 导师小组",
+      "date": "2023-06",
+      "dateRange": "会员年度",
+      "location": "",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "来自 2023 会员年度出席表的导师小组参与记录。",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "alumni-ruixiang",
+          "role": ""
+        },
+        {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-sarah",
+          "role": ""
+        },
+        {
+          "userId": "hist-4338e37c45",
+          "role": ""
+        },
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "mn-18025",
+          "role": ""
+        },
+        {
+          "userId": "mn-18027",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-18012-hist",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
+          "userId": "mn-19047",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-20053",
+          "role": ""
+        },
+        {
+          "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21064",
+          "role": ""
+        },
+        {
+          "userId": "mn-21066",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21070",
+          "role": ""
+        },
+        {
+          "userId": "mn-21077",
+          "role": ""
+        },
+        {
+          "userId": "mn-21078",
+          "role": ""
+        },
+        {
+          "userId": "mn-21079",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jerry",
+          "role": ""
+        },
+        {
+          "userId": "mn-23086",
+          "role": ""
+        },
+        {
+          "userId": "mn-23089",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-mat-so",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "mn-23092",
+          "role": ""
+        },
+        {
+          "userId": "mn-23093",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-shenyin",
           "role": ""
         }
       ]
@@ -677,6 +2088,10 @@
           "role": ""
         },
         {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-sarah",
           "role": ""
         },
@@ -693,11 +2108,43 @@
           "role": ""
         },
         {
+          "userId": "mn-19030",
+          "role": ""
+        },
+        {
+          "userId": "mn-18012-hist",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19048",
+          "role": ""
+        },
+        {
+          "userId": "mn-20053",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
           "role": ""
         },
         {
           "userId": "mn-21063",
+          "role": ""
+        },
+        {
+          "userId": "mn-21064",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21077",
           "role": ""
         },
         {
@@ -709,7 +2156,15 @@
           "role": ""
         },
         {
+          "userId": "mn-23081",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-xiaoyan",
+          "role": ""
+        },
+        {
+          "userId": "mn-23083",
           "role": ""
         },
         {
@@ -721,6 +2176,14 @@
           "role": ""
         },
         {
+          "userId": "mn-23087",
+          "role": ""
+        },
+        {
+          "userId": "mn-23088",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-mat-so",
           "role": ""
         },
@@ -729,10 +2192,15 @@
           "role": ""
         },
         {
+          "userId": "mn-23093",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-wenxin",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": ""
     },
     {
       "activityKey": "yolo-2023-japan",
@@ -746,6 +2214,10 @@
       "participants": [
         {
           "userId": "pdf2025-jingzi",
+          "role": ""
+        },
+        {
+          "userId": "mn-18013",
           "role": ""
         },
         {
@@ -769,7 +2241,23 @@
           "role": ""
         },
         {
+          "userId": "mn-19030",
+          "role": ""
+        },
+        {
+          "userId": "mn-20053",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21070",
           "role": ""
         },
         {
@@ -789,10 +2277,27 @@
           "role": ""
         },
         {
+          "userId": "mn-23086",
+          "role": ""
+        },
+        {
+          "userId": "mn-23089",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-mat-so",
           "role": ""
+        },
+        {
+          "userId": "mn-23092",
+          "role": ""
+        },
+        {
+          "userId": "mn-23093",
+          "role": ""
         }
-      ]
+      ],
+      "dateRange": ""
     },
     {
       "activityKey": "yolo-2023-chongqing",
@@ -825,11 +2330,35 @@
           "role": ""
         },
         {
+          "userId": "mn-18012-hist",
+          "role": ""
+        },
+        {
+          "userId": "mn-19036",
+          "role": ""
+        },
+        {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
           "role": ""
         },
         {
+          "userId": "mn-20053",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
+          "role": ""
+        },
+        {
+          "userId": "mn-20060",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
           "role": ""
         },
         {
@@ -841,7 +2370,19 @@
           "role": ""
         },
         {
+          "userId": "mn-23083",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-zhuofan",
+          "role": ""
+        },
+        {
+          "userId": "mn-23086",
+          "role": ""
+        },
+        {
+          "userId": "mn-23089",
           "role": ""
         },
         {
@@ -853,6 +2394,10 @@
           "role": ""
         },
         {
+          "userId": "mn-23092",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-wenxin",
           "role": ""
         },
@@ -860,7 +2405,8 @@
           "userId": "pdf2025-shenyin",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": ""
     },
     {
       "activityKey": "yolo-2024-shanghai-march",
@@ -873,6 +2419,10 @@
       "images": [],
       "participants": [
         {
+          "userId": "mn-18013",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-sarah",
           "role": ""
         },
@@ -881,7 +2431,15 @@
           "role": ""
         },
         {
+          "userId": "mn-19039",
+          "role": ""
+        },
+        {
           "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
           "role": ""
         },
         {
@@ -897,6 +2455,10 @@
           "role": ""
         },
         {
+          "userId": "mn-23086",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-jiawei",
           "role": ""
         },
@@ -904,7 +2466,8 @@
           "userId": "pdf2025-wenxin",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": ""
     },
     {
       "activityKey": "yolo-2024-shenzhen",
@@ -918,35 +2481,43 @@
       "participants": [
         {
           "userId": "mn-18020",
-          "role": "小组长,主持人"
+          "role": ""
         },
         {
           "userId": "mn-18025",
-          "role": "主持人,小组长"
+          "role": ""
         },
         {
           "userId": "pdf2025-p09",
-          "role": "小组长"
+          "role": ""
         },
         {
           "userId": "mn-18012",
-          "role": "小组长"
+          "role": ""
         },
         {
           "userId": "mn-20049",
-          "role": "学习代表"
+          "role": ""
         },
         {
           "userId": "mn-20054",
           "role": ""
         },
         {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-21077",
+          "role": ""
+        },
+        {
           "userId": "mn-21079",
-          "role": "主持人,小组长"
+          "role": ""
         },
         {
           "userId": "mn-18018",
-          "role": "学习代表"
+          "role": ""
         },
         {
           "userId": "pdf2025-xiaoyan",
@@ -961,11 +2532,23 @@
           "role": ""
         },
         {
+          "userId": "mn-23086",
+          "role": ""
+        },
+        {
+          "userId": "mn-23087",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-mat-so",
-          "role": "小组长"
+          "role": ""
         },
         {
           "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "mn-23093",
           "role": ""
         },
         {
@@ -977,10 +2560,23 @@
           "role": ""
         },
         {
+          "userId": "mn-24096",
+          "role": ""
+        },
+        {
+          "userId": "mn-24099",
+          "role": ""
+        },
+        {
+          "userId": "hist-9538b83b8b",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-jiatong",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": ""
     },
     {
       "activityKey": "yolo-2024-singapore",
@@ -994,31 +2590,31 @@
       "participants": [
         {
           "userId": "pdf2025-sarah",
-          "role": "小组长"
+          "role": ""
         },
         {
           "userId": "mn-18022",
-          "role": "TED Talk"
+          "role": ""
         },
         {
           "userId": "mn-18025",
-          "role": "主持人"
+          "role": ""
         },
         {
           "userId": "pdf2025-p09",
-          "role": "带游戏,筹委会"
+          "role": ""
         },
         {
           "userId": "mn-20054",
-          "role": "小组长"
+          "role": ""
         },
         {
           "userId": "mn-21063",
-          "role": "TED Talk"
+          "role": ""
         },
         {
           "userId": "mn-21079",
-          "role": "筹委会,主持人"
+          "role": ""
         },
         {
           "userId": "mn-18018",
@@ -1026,7 +2622,19 @@
         },
         {
           "userId": "pdf2025-jerry",
-          "role": "学习代表,小组长"
+          "role": ""
+        },
+        {
+          "userId": "mn-23086",
+          "role": ""
+        },
+        {
+          "userId": "mn-23089",
+          "role": ""
+        },
+        {
+          "userId": "mn-23092",
+          "role": ""
         },
         {
           "userId": "pdf2025-wenxin",
@@ -1034,7 +2642,7 @@
         },
         {
           "userId": "pdf2025-shenyin",
-          "role": "学习代表"
+          "role": ""
         },
         {
           "userId": "pdf2025-lucy",
@@ -1044,7 +2652,8 @@
           "userId": "pdf2025-jackson",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": ""
     },
     {
       "activityKey": "yolo-2024-macau",
@@ -1058,7 +2667,7 @@
       "participants": [
         {
           "userId": "mn-18020",
-          "role": "主持人"
+          "role": ""
         },
         {
           "userId": "mn-18022",
@@ -1066,37 +2675,54 @@
         },
         {
           "userId": "mn-18025",
-          "role": "小组长"
+          "role": ""
         },
         {
           "userId": "pdf2025-p09",
-          "role": "主持人"
+          "role": ""
         },
         {
           "userId": "mn-20049",
           "role": ""
         },
         {
+          "userId": "mn-20053",
+          "role": ""
+        },
+        {
           "userId": "mn-20054",
-          "role": "学习代表"
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
         },
         {
           "userId": "mn-18018",
-          "role": "学习代表"
+          "role": ""
         },
         {
           "userId": "pdf2025-zhuofan",
-          "role": "主持人"
+          "role": ""
+        },
+        {
+          "userId": "mn-23089",
+          "role": ""
         },
         {
           "userId": "pdf2025-jiawei",
           "role": ""
         },
         {
+          "userId": "mn-23092",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-shenyin",
           "role": ""
         }
-      ]
+      ],
+      "dateRange": ""
     },
     {
       "activityKey": "yolo-2025-wenling",
@@ -1120,39 +2746,39 @@
       "participants": [
         {
           "userId": "pdf2025-jingzi",
-          "role": "筹委会"
+          "role": ""
         },
         {
           "userId": "pdf2025-sarah",
-          "role": "带星空下夜谈"
+          "role": ""
         },
         {
           "userId": "mn-18020",
-          "role": "主持人"
+          "role": ""
         },
         {
           "userId": "mn-18025",
-          "role": "筹委会"
+          "role": ""
         },
         {
           "userId": "pdf2025-p09",
-          "role": "筹委会"
+          "role": ""
         },
         {
           "userId": "mn-20049",
-          "role": "圆桌论坛嘉宾"
+          "role": ""
         },
         {
           "userId": "mn-18018",
-          "role": "筹委会"
+          "role": ""
         },
         {
           "userId": "pdf2025-xiaoyan",
-          "role": "TED Talk"
+          "role": ""
         },
         {
           "userId": "pdf2025-zhuofan",
-          "role": "TED Talk"
+          "role": ""
         },
         {
           "userId": "pdf2025-mat-so",
@@ -1167,6 +2793,10 @@
           "role": ""
         },
         {
+          "userId": "mn-24096",
+          "role": ""
+        },
+        {
           "userId": "pdf2025-sarah-p30",
           "role": ""
         },
@@ -1176,6 +2806,49 @@
         }
       ],
       "dateRange": "3月13日—15日"
+    },
+    {
+      "activityKey": "yolo-2025-overseas-group",
+      "title": "YOLO+ 海外小组活动",
+      "date": "2025-06",
+      "dateRange": "会员年度",
+      "location": "海外",
+      "type": "activity",
+      "collectiveActivity": true,
+      "summary": "来自 2025 会员年度出席表的海外小组参与记录。",
+      "keyHighlights": [],
+      "coverImage": null,
+      "images": [],
+      "participants": [
+        {
+          "userId": "mn-21063",
+          "role": ""
+        },
+        {
+          "userId": "mn-21079",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-lucy",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiatong",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-linda",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-dufresne",
+          "role": ""
+        },
+        {
+          "userId": "mn-23092",
+          "role": ""
+        }
+      ]
     },
     {
       "activityKey": "yolo-2025-yantai",
@@ -1199,7 +2872,7 @@
       "participants": [
         {
           "userId": "pdf2025-jingzi",
-          "role": "主持人"
+          "role": ""
         },
         {
           "userId": "pdf2025-sarah",
@@ -1211,7 +2884,7 @@
         },
         {
           "userId": "mn-18022",
-          "role": "主持人"
+          "role": ""
         },
         {
           "userId": "mn-18025",
@@ -1219,7 +2892,7 @@
         },
         {
           "userId": "pdf2025-p09",
-          "role": "带游戏"
+          "role": ""
         },
         {
           "userId": "mn-20049",
@@ -1227,7 +2900,7 @@
         },
         {
           "userId": "mn-20054",
-          "role": "主持人"
+          "role": ""
         },
         {
           "userId": "mn-18018",
@@ -1243,15 +2916,19 @@
         },
         {
           "userId": "pdf2025-shenyin",
-          "role": "TED Talk"
+          "role": ""
         },
         {
           "userId": "pdf2025-lucy",
           "role": ""
         },
         {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
           "userId": "mn-21078",
-          "role": "学习代表"
+          "role": ""
         },
         {
           "userId": "pdf2025-weiyun",
@@ -1326,7 +3003,7 @@
         },
         {
           "userId": "pdf2025-jerry",
-          "role": "TED Talk"
+          "role": ""
         },
         {
           "userId": "pdf2025-mat-so",
@@ -1345,6 +3022,10 @@
           "role": ""
         },
         {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
           "userId": "mn-21078",
           "role": ""
         },
@@ -1358,6 +3039,10 @@
         },
         {
           "userId": "mn-25108",
+          "role": ""
+        },
+        {
+          "userId": "mn-21067",
           "role": ""
         }
       ],
@@ -1402,6 +3087,10 @@
         {
           "userId": "pdf2025-jackson",
           "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
         }
       ],
       "dateRange": "9月28日—10月3日"
@@ -1428,15 +3117,15 @@
       "participants": [
         {
           "userId": "pdf2025-jingzi",
-          "role": "小组长"
+          "role": ""
         },
         {
           "userId": "mn-18020",
-          "role": "主持人"
+          "role": ""
         },
         {
           "userId": "mn-18025",
-          "role": "主持人,带游戏"
+          "role": ""
         },
         {
           "userId": "pdf2025-p09",
@@ -1452,7 +3141,7 @@
         },
         {
           "userId": "pdf2025-xiaoyan",
-          "role": "组长"
+          "role": ""
         },
         {
           "userId": "pdf2025-zhuofan",
@@ -1460,7 +3149,7 @@
         },
         {
           "userId": "pdf2025-jerry",
-          "role": "组长"
+          "role": ""
         },
         {
           "userId": "pdf2025-mat-so",
@@ -1488,46 +3177,26 @@
         },
         {
           "userId": "pdf2025-sophie",
-          "role": "主持人"
+          "role": ""
+        },
+        {
+          "userId": "mn-24096",
+          "role": ""
+        },
+        {
+          "userId": "mn-21069",
+          "role": ""
+        },
+        {
+          "userId": "mn-19043",
+          "role": ""
+        },
+        {
+          "userId": "mn-18007",
+          "role": ""
         }
       ],
       "dateRange": "11月14日—15日"
-    },
-    {
-      "activityKey": "yolo-2025-shanghai-group",
-      "title": "YOLO+ 上海小组活动",
-      "summary": "2025年12月上海小组聚会，年末深度交流。",
-      "date": "2025-12",
-      "location": "上海",
-      "type": "activity",
-      "collectiveActivity": false,
-      "images": [],
-      "participants": [
-        {
-          "userId": "mn-18020",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-p09",
-          "role": "筹委会"
-        },
-        {
-          "userId": "mn-20049",
-          "role": ""
-        },
-        {
-          "userId": "mn-21079",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-jiawei",
-          "role": ""
-        },
-        {
-          "userId": "pdf2025-wenxin",
-          "role": ""
-        }
-      ]
     },
     {
       "activityKey": "yolo-2025-guangdong-group",
@@ -1541,7 +3210,7 @@
       "participants": [
         {
           "userId": "mn-18020",
-          "role": "筹委会"
+          "role": ""
         },
         {
           "userId": "mn-18025",
@@ -1561,7 +3230,7 @@
         },
         {
           "userId": "pdf2025-shenyin",
-          "role": "筹委会"
+          "role": ""
         },
         {
           "userId": "pdf2025-weiyun",
@@ -1574,8 +3243,78 @@
         {
           "userId": "pdf2025-bill",
           "role": ""
+        },
+        {
+          "userId": "hist-9538b83b8b",
+          "role": ""
+        },
+        {
+          "userId": "mn-19030",
+          "role": ""
+        },
+        {
+          "userId": "hist-linleyi",
+          "role": ""
         }
-      ]
+      ],
+      "dateRange": ""
+    },
+    {
+      "activityKey": "yolo-2025-shanghai-group",
+      "title": "YOLO+ 上海小组活动",
+      "summary": "2025年12月上海小组聚会，年末深度交流。",
+      "date": "2025-12",
+      "location": "上海",
+      "type": "activity",
+      "collectiveActivity": false,
+      "images": [],
+      "participants": [
+        {
+          "userId": "mn-18020",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-p09",
+          "role": ""
+        },
+        {
+          "userId": "mn-20049",
+          "role": ""
+        },
+        {
+          "userId": "mn-21079",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-jiawei",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-wenxin",
+          "role": ""
+        },
+        {
+          "userId": "pdf2025-chloe",
+          "role": ""
+        },
+        {
+          "userId": "mn-21077",
+          "role": ""
+        },
+        {
+          "userId": "mn-21071",
+          "role": ""
+        },
+        {
+          "userId": "mn-23092",
+          "role": ""
+        },
+        {
+          "userId": "mn-23089",
+          "role": ""
+        }
+      ],
+      "dateRange": ""
     },
     {
       "activityKey": "yolo-2026-wuyishan",
@@ -1602,7 +3341,7 @@
       "participants": [
         {
           "userId": "pdf2025-jingzi",
-          "role": "分享嘉宾"
+          "role": ""
         },
         {
           "userId": "pdf2025-sarah",
@@ -1610,7 +3349,7 @@
         },
         {
           "userId": "mn-18020",
-          "role": "分享嘉宾"
+          "role": ""
         },
         {
           "userId": "mn-18022",
@@ -1658,6 +3397,14 @@
         },
         {
           "userId": "pdf2025-weiyun",
+          "role": ""
+        },
+        {
+          "userId": "hist-linleyi",
+          "role": ""
+        },
+        {
+          "userId": "hist-jijiawei",
           "role": ""
         }
       ],

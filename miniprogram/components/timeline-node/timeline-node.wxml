@@ -30,13 +30,15 @@
 
     <view wx:if="{{hasParticipants}}" class="tl-participant-row">
       <view class="tl-participant-stack">
-        <image
-          wx:for="{{participantAvatars}}"
-          wx:key="userId"
-          class="tl-participant-avatar"
-          src="{{item.avatarUrl}}"
-          mode="aspectFill"
-        />
+        <block wx:for="{{participantAvatars}}" wx:key="userId">
+          <image
+            wx:if="{{item.avatarUrl}}"
+            class="tl-participant-avatar"
+            src="{{item.avatarUrl}}"
+            mode="aspectFill"
+          />
+          <view wx:else class="tl-participant-avatar tl-participant-avatar-initial">{{item.name ? item.name[0] : '?'}}</view>
+        </block>
       </view>
       <text class="tl-participant-count">{{participantCount}} 人参加</text>
     </view>
@@ -89,13 +91,15 @@
     </view>
     <view wx:if="{{hasParticipants}}" class="tl-participant-row tl-participant-row-minimal">
       <view class="tl-participant-stack">
-        <image
-          wx:for="{{participantAvatars}}"
-          wx:key="userId"
-          class="tl-participant-avatar"
-          src="{{item.avatarUrl}}"
-          mode="aspectFill"
-        />
+        <block wx:for="{{participantAvatars}}" wx:key="userId">
+          <image
+            wx:if="{{item.avatarUrl}}"
+            class="tl-participant-avatar"
+            src="{{item.avatarUrl}}"
+            mode="aspectFill"
+          />
+          <view wx:else class="tl-participant-avatar tl-participant-avatar-initial">{{item.name ? item.name[0] : '?'}}</view>
+        </block>
       </view>
       <text class="tl-participant-count">{{participantCount}} 人参加</text>
     </view>

@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-05-29T06:31:33Z",
+  "avatarSources": {
+    "达美欣": {
+      "userId": "mn-25108",
+      "source": "/Users/Sean/WeChatProjects/miniprogram-2/outputs/poster-samples-2026-ai/excel-photos/img-15-r28-c13.jpg",
+      "asset": "/images/avatars/xlsx2026-dameixin.jpg"
+    },
+    "李文越": {
+      "userId": "new2026-liwenyue",
+      "source": "/Users/Sean/WeChatProjects/miniprogram-2/outputs/poster-samples-2026-ai/excel-photos/img-16-r29-c13.jpg",
+      "asset": "/images/avatars/xlsx2026-liwenyue.jpg"
+    },
+    "马思勉": {
+      "userId": "new2026-masimian",
+      "source": "/Users/Sean/WeChatProjects/miniprogram-2/outputs/poster-samples-2026-ai/excel-photos/img-17-r30-c13.jpg",
+      "asset": "/images/avatars/xlsx2026-masimian.jpg"
+    }
+  },
+  "changed": [
+    {
+      "name": "周玥",
+      "field": "profile.motto",
+      "old": "",
+      "new": "和好朋友一起吃漂亮饭喝酒。"
+    },
+    {
+      "name": "周玥",
+      "field": "profile.mottoSource",
+      "old": null,
+      "new": "poster-2025-note"
+    },
+    {
+      "name": "胡润卿",
+      "field": "profile.company",
+      "old": "",
+      "new": "华为公司"
+    },
+    {
+      "name": "胡润卿",
+      "field": "profile.motto",
+      "old": "",
+      "new": "今天永远是新的开始"
+    },
+    {
+      "name": "胡润卿",
+      "field": "profile.mottoSource",
+      "old": null,
+      "new": "poster-2025"
+    },
+    {
+      "name": "苏炜烔",
+      "field": "profile.mottoSource",
+      "old": null,
+      "new": "poster-2025"
+    },
+    {
+      "name": "林佳炜",
+      "field": "profile.mottoSource",
+      "old": null,
+      "new": "poster-2025"
+    },
+    {
+      "name": "宣文馨",
+      "field": "profile.mottoSource",
+      "old": null,
+      "new": "poster-2025"
+    },
+    {
+      "name": "沈吟",
+      "field": "profile.mottoSource",
+      "old": null,
+      "new": "poster-2025"
+    },
+    {
+      "name": "达美欣",
+      "field": "assets.avatarImage",
+      "old": "",
+      "new": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-dameixin.jpg"
+    },
+    {
+      "name": "李文越",
+      "field": "assets.avatarImage",
+      "old": "",
+      "new": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-liwenyue.jpg"
+    },
+    {
+      "name": "马思勉",
+      "field": "assets.avatarImage",
+      "old": "",
+      "new": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-masimian.jpg"
+    }
+  ],
+  "ambiguousOneLinerCandidates": [
+    {
+      "name": "宗羱",
+      "candidate": "曾梦想仗剑走天涯",
+      "source": "2025会员海报第37页，版块为“小时候想成为什么的人”，未自动写入"
+    },
+    {
+      "name": "高直方",
+      "candidate": "生命和宇宙的终极答案是42，但问题是什么？",
+      "source": "2025会员海报第16页，版块为“喜欢的书籍”，未自动写入"
+    }
+  ]
+}

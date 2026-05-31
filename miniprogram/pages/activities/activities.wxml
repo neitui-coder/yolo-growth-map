@@ -19,6 +19,20 @@
   </view>
 
   <view wx:else>
+    <view wx:if="{{footprintSummary}}" class="footprint-entry" bindtap="onFootprintEntryTap">
+      <view class="footprint-entry-main">
+        <view class="footprint-entry-kicker">历史足迹</view>
+        <view class="footprint-entry-title">查看 YOLO+ 地图</view>
+        <view class="footprint-entry-meta">
+          {{footprintSummary.chinaLabel}} · {{footprintSummary.worldLabel}}
+        </view>
+      </view>
+      <view class="footprint-entry-action">
+        <text>进入</text>
+        <text class="footprint-entry-arrow">›</text>
+      </view>
+    </view>
+
     <scroll-view class="year-filter" scroll-x="true" enhanced="true" show-scrollbar="{{false}}">
       <view class="year-filter-inner">
         <view
@@ -72,15 +86,16 @@
 
             <view class="card-participants" wx:if="{{item.participantCount > 0}}">
               <view class="avatar-stack">
-                <image
-                  wx:for="{{item.avatarStack}}"
-                  wx:key="userId"
-                  wx:for-item="p"
-                  class="avatar-item"
-                  src="{{p.avatarUrl}}"
-                  mode="aspectFill"
-                  lazy-load="true"
-                />
+                <block wx:for="{{item.avatarStack}}" wx:key="userId" wx:for-item="p">
+                  <image
+                    wx:if="{{p.avatarUrl}}"
+                    class="avatar-item"
+                    src="{{p.avatarUrl}}"
+                    mode="aspectFill"
+                    lazy-load="true"
+                  />
+                  <view wx:else class="avatar-item avatar-item-initial">{{p.initial}}</view>
+                </block>
               </view>
               <text class="participant-label">{{item.participantCount}} 人参与</text>
             </view>

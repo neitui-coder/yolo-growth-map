@@ -1,8 +1,16 @@
 /* 资料编辑页样式 */
 .edit-profile-page {
-  padding: 32rpx;
+  padding: 32rpx 32rpx 168rpx;
   background: #f8fafc;
   min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.edit-loading {
+  padding: 80rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #64748b;
 }
 
 .form-group {
@@ -20,15 +28,25 @@
 .form-input {
   display: block;
   width: 100%;
+  height: 88rpx;
   box-sizing: border-box;
   border: 2rpx solid #e2e8f0;
-  border-radius: 20rpx;
-  padding: 20rpx 24rpx;
+  border-radius: 16rpx;
+  padding: 0 24rpx;
   font-size: 28rpx;
+  line-height: 88rpx;
   background: #fff;
   color: #1f2937;
   /* 关键：WX <input> 默认 placeholder-style 把宽度限制掉，强制全宽 */
   min-width: 0;
+}
+
+.form-textarea {
+  height: auto;
+  min-height: 112rpx;
+  line-height: 1.45;
+  padding-top: 18rpx;
+  padding-bottom: 18rpx;
 }
 
 .form-input:focus {
@@ -37,8 +55,8 @@
 
 .picker-value {
   color: #1f2937;
-  min-height: 44rpx;
-  line-height: 44rpx;
+  min-height: 88rpx;
+  line-height: 88rpx;
 }
 
 .city-tags {
@@ -62,17 +80,33 @@
   border-color: #2563eb;
 }
 
+.edit-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  box-sizing: border-box;
+  padding: 20rpx 32rpx calc(20rpx + env(safe-area-inset-bottom));
+  background: rgba(248, 250, 252, 0.96);
+  box-shadow: 0 -8rpx 24rpx rgba(15, 23, 42, 0.08);
+}
+
 .btn-submit {
   width: 100%;
   background: #2563eb;
   color: #fff;
   border: none;
-  border-radius: 24rpx;
-  padding: 24rpx;
+  border-radius: 18rpx;
+  padding: 22rpx;
   font-size: 30rpx;
   font-weight: 600;
-  margin-top: 16rpx;
+  margin-top: 0;
   line-height: 1.2;
+}
+
+.btn-submit[disabled] {
+  opacity: 0.7;
 }
 
 .btn-submit::after {

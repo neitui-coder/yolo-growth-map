@@ -57,7 +57,7 @@
         <view wx:if="{{canViewAlumni}}" class="alumni-btn {{showAlumni ? 'active' : ''}}" bindtap="onAlumniToggle">
           <text>往届</text>
         </view>
-        <view class="sort-btn {{sortMode === 'similar' ? 'active' : ''}}" bindtap="onSortBySimilar">
+        <view wx:if="{{canUseSimilarSort}}" class="sort-btn {{sortMode === 'similar' ? 'active' : ''}}" bindtap="onSortBySimilar">
           <text>跟我最像</text>
         </view>
         <view class="sort-btn {{sortMode === 'growth' ? 'active' : ''}}" bindtap="onSortToggle">
@@ -77,7 +77,8 @@
           wx:key="id"
           user="{{item}}"
           rank="{{item._rank}}"
-          showRank="{{sortByGrowth}}"
+          isBirthday="{{item.isBirthdayMonth}}"
+          showRank="{{false}}"
           bind:cardtap="onCardTap"
           bind:growthtap="onCardTap"
         />

@@ -35,17 +35,24 @@ Page({
 
   _loadActivity: function (activityKey) {
     var that = this;
-    app.getActivitiesCache(function (acts) {
-      var act = (acts || []).find(function (a) {
-        return a.activityKey === activityKey;
+    var load = function () {
+      app.getActivitiesCache(function (acts) {
+        var act = (acts || []).find(function (a) {
+          return a.activityKey === activityKey;
+        });
+        if (!act) {
+          wx.showToast({ title: "活动不存在", icon: "none" });
+          that.setData({ pageLoading: false });
+          return;
+        }
+        that._renderActivity(act);
       });
-      if (!act) {
-        wx.showToast({ title: "活动不存在", icon: "none" });
-        that.setData({ pageLoading: false });
-        return;
-      }
-      that._renderActivity(act);
-    });
+    };
+    if (app.ensureAllUsersLoaded) {
+      app.ensureAllUsersLoaded(load);
+    } else {
+      load();
+    }
   },
 
   _renderActivity: function (act) {
@@ -55,7 +62,9 @@ Page({
       ? app.getActivityParticipants(act)
       : [];
 
-    var currentUid = app.globalData.currentUserId || '';
+    var currentUid = app.isBoundMemberMode && app.isBoundMemberMode()
+      ? (app.globalData.currentUserId || '')
+      : '';
     var displayParticipants = participants.map(function (p) {
       return {
         userId: p.userId,

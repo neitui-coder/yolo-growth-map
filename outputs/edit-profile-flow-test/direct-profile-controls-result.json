@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-05-29T07:32:08.997Z",
+  "cases": [
+    {
+      "name": "active member direct profile controls",
+      "userId": "mn-25108",
+      "before": {
+        "canEditProfile": true,
+        "canManageProfile": true,
+        "avatarEditVisible": true,
+        "editProfileVisible": true,
+        "visibilityControlCount": 2,
+        "addNodeVisible": true
+      },
+      "avatarPickerOpened": true,
+      "avatarChoices": 16,
+      "avatarChanged": true,
+      "firstVisibilityText": "设为隐藏",
+      "visibilityChanged": true,
+      "afterVisibility": {
+        "basic": false
+      }
+    },
+    {
+      "name": "alumni own profile access",
+      "userId": "alumni-ruixiang",
+      "flags": {
+        "canEditProfile": true,
+        "canManageProfile": false,
+        "avatarEditVisible": true,
+        "editProfileVisible": true,
+        "visibilityControlCount": 3,
+        "addNodeVisible": false
+      }
+    },
+    {
+      "name": "guest cannot edit profile",
+      "userId": "mn-25108",
+      "flags": {
+        "canEditProfile": false,
+        "canManageProfile": false,
+        "avatarEditVisible": false,
+        "editProfileVisible": false,
+        "visibilityControlCount": 0,
+        "addNodeVisible": false
+      }
+    },
+    {
+      "name": "staff cannot edit profile",
+      "userId": "mn-25108",
+      "flags": {
+        "canEditProfile": false,
+        "canManageProfile": false,
+        "avatarEditVisible": false,
+        "editProfileVisible": false,
+        "visibilityControlCount": 0,
+        "addNodeVisible": false
+      }
+    }
+  ]
+}

@@ -44,6 +44,7 @@ Page({
     typeKeys: ['activity', 'role', 'life', 'ted', 'cert'],
     desc: '',
     images: [],
+    saving: false,
     // 照片选择
     samplePhotos: [],
     selectedPhotos: []
@@ -182,6 +183,7 @@ Page({
   },
 
   onSubmit: function () {
+    if (this.data.saving) return;
     var date = this.data.date;
     var desc = this.data.desc.trim();
 
@@ -191,6 +193,11 @@ Page({
     }
 
     var user = app.getUser(this.data.userId);
+    if (!user) {
+      wx.showToast({ title: '用户不存在', icon: 'none' });
+      return;
+    }
+    user.nodes = user.nodes || [];
     var typeKey = this.data.typeKeys[this.data.typeIndex];
     var nodeData = Object.assign({}, this.data.extraNodeData || {}, {
       date: date,
@@ -200,27 +207,64 @@ Page({
     });
 
     var userId = this.data.userId;
+    var that = this;
+    var showSaveFailed = function (message) {
+      that.setData({ saving: false });
+      wx.showModal({
+        title: '保存失败',
+        content: message || '云端返回异常，请重试',
+        showCancel: false
+      });
+    };
+    var showSaveSuccess = function () {
+      that.setData({ saving: false });
+      wx.showToast({ title: '保存成功', icon: 'success' });
+      setTimeout(function () {
+        wx.navigateBack();
+      }, 800);
+    };
+
+    this.setData({ saving: true });
+
     if (this.data.isEdit) {
-      user.nodes[this.data.nodeIndex] = nodeData;
-      // 异步同步到云端（编辑节点：整体替换节点数组）
+      var nextNodes = user.nodes.slice();
+      nextNodes[this.data.nodeIndex] = nodeData;
       wx.cloud.callFunction({
         name: 'yoloFunctions',
-        data: { type: 'updateUser', userId: userId, dataType: app.globalData.dataType, updates: { nodes: user.nodes } },
-        fail: function (err) { console.error('updateUser nodes sync failed', err); }
+        data: { type: 'updateUser', userId: userId, dataType: app.globalData.dataType, updates: { nodes: nextNodes } },
+        success: function (res) {
+          var r = res && res.result;
+          if (!r || !r.success) {
+            showSaveFailed((r && r.error) || '成长节点未保存成功');
+            return;
+          }
+          user.nodes = nextNodes;
+          showSaveSuccess();
+        },
+        fail: function (err) {
+          console.error('updateUser nodes sync failed', err);
+          showSaveFailed((err && err.errMsg) || '网络异常，请重试');
+        }
       });
     } else {
-      user.nodes.unshift(nodeData);
-      // 异步同步到云端（新增节点）
       wx.cloud.callFunction({
         name: 'yoloFunctions',
         data: { type: 'addNode', userId: userId, dataType: app.globalData.dataType, node: nodeData },
-        fail: function (err) { console.error('addNode sync failed', err); }
+        success: function (res) {
+          var r = res && res.result;
+          if (!r || !r.success) {
+            showSaveFailed((r && r.error) || '成长节点未保存成功');
+            return;
+          }
+          if (r.nodeId) nodeData.nodeId = r.nodeId;
+          user.nodes.unshift(nodeData);
+          showSaveSuccess();
+        },
+        fail: function (err) {
+          console.error('addNode sync failed', err);
+          showSaveFailed((err && err.errMsg) || '网络异常，请重试');
+        }
       });
     }
-
-    wx.showToast({ title: '保存成功', icon: 'success' });
-    setTimeout(function () {
-      wx.navigateBack();
-    }, 800);
   }
 });

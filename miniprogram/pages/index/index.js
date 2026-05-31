@@ -17,6 +17,7 @@ Page({
     activeFilter: "",
     sortByGrowth: false,
     sortMode: '',  // '' | 'growth' | 'similar'
+    canUseSimilarSort: false,
     showAlumni: false,
     canViewAlumni: false,
     filterOptions: [],
@@ -36,7 +37,7 @@ Page({
         avatarUrl: user.avatarUrl || util.getAvatarUrl(user, 60),
         growthValue: user.growthValue || util.computeGrowthValue(user),
         isBirthdayMonth: util.isBirthdayInCurrentMonth(user),
-        birthdayTag: util.isBirthdayInCurrentMonth(user) ? "本月生日" : "",
+        birthdayTag: util.isBirthdayInCurrentMonth(user) ? "生日月" : "",
         birthdayDayLabel: birthdayParsed
           ? (birthdayParsed.day
               ? birthdayParsed.month + "月" + birthdayParsed.day + "日"
@@ -48,6 +49,8 @@ Page({
 
   onLoad: function () {
     var that = this;
+    // 分享暂时关闭（未审核小程序分享会触发"违规"提示）
+    if (wx.hideShareMenu) wx.hideShareMenu();
     this._handleMediaCacheUpdated = function () {
       if (that.data.pageLoading || that.data.dataTypeLoading) return;
       that._hydrateHomeData(
@@ -86,8 +89,8 @@ Page({
     this._applyPendingHomeSearch();
   },
 
-  // 分享功能已暂时关闭（未审核小程序无法正常分享，避免"违规"提示）
-  // 上线后恢复 onShareAppMessage / onShareTimeline 即可
+  // 分享 onShareAppMessage / onShareTimeline 暂时关闭，上架后恢复
+
   onUnload: function () {
     if (this._loadObserver) {
       this._loadObserver.disconnect();
@@ -135,10 +138,13 @@ Page({
     var currentUser = app.getUser
       ? app.getUser(app.globalData.currentUserId)
       : null;
+    var isBoundMember = app.isBoundMemberMode
+      ? app.isBoundMemberMode()
+      : !(app.isGuestMode && app.isGuestMode()) && !(app.isStaffMode && app.isStaffMode());
     var isLishi = !!(
       currentUser &&
-      currentUser.yoloRole &&
-      currentUser.yoloRole.indexOf("理事") !== -1
+      isBoundMember &&
+      util.isCurrentDirector(currentUser)
     );
     var canViewAlumni =
       (app.globalData.homeMode !== "mock") && (isOperator || isLishi);
@@ -147,6 +153,7 @@ Page({
       homeMode: app.globalData.homeMode || "real",
       operatorModeActive: isOperator,
       canViewAlumni: canViewAlumni,
+      canUseSimilarSort: !!(currentUser && isBoundMember),
       users: users,
       filterOptions: app.getMemberFilterOptions
         ? app.getMemberFilterOptions(users)
@@ -158,6 +165,9 @@ Page({
       nextData.searchQuery = "";
       nextData.activeFilter = "";
       nextData.sortByGrowth = false;
+      if (!nextData.canUseSimilarSort && this.data.sortMode === "similar") {
+        nextData.sortMode = "";
+      }
     }
 
     this.setData(nextData);
@@ -226,13 +236,13 @@ Page({
         var pool = [
           u.name,
           u.mbti,
-          Array.isArray(u.city) ? u.city.join(" ") : u.city,
+          util.normalizeCityList(u.city).join(" "),
           u.career,
           u.company,
           u.education,
           u.yoloRole,
           (u.gallup || []).join(" "),
-          (u.hobbies || []).join(" "),
+          util.normalizeHobbyList(u.hobbies || []).join(" "),
           (u.expertise || []).join(" "),
           (u.tags || []).join(" "),
         ]
@@ -440,6 +450,10 @@ Page({
   },
 
   onSortBySimilar: function () {
+    if (!this.data.canUseSimilarSort) {
+      wx.showToast({ title: "绑定成员身份后可使用", icon: "none" });
+      return;
+    }
     var next = this.data.sortMode === 'similar' ? '' : 'similar';
     this.setData({ sortMode: next, sortByGrowth: false });
     this._hydrateHomeData(true);
@@ -484,18 +498,29 @@ Page({
   },
 
   _getScopedSearchValues: function (user, field) {
-    var city = Array.isArray(user.city) ? user.city : user.city ? [user.city] : [];
+    var city = util.normalizeCityList(user.city);
+    var birthdayValues = [];
+    if (user.birthday) {
+      birthdayValues.push(user.birthday);
+      var birthdayParsed = util.parseBirthday(user.birthday);
+      if (birthdayParsed) {
+        birthdayValues.push(birthdayParsed.month + "月");
+        if (birthdayParsed.day) {
+          birthdayValues.push(birthdayParsed.month + "月" + birthdayParsed.day + "日");
+        }
+      }
+    }
     var fieldMap = {
       mbti: user.mbti ? [user.mbti] : [],
       city: city.concat(city.length > 1 ? [city.join("、")] : []),
       career: user.career ? [user.career] : [],
       company: user.company ? [user.company] : [],
       education: user.education ? [user.education] : [],
-      birthday: user.birthday ? [user.birthday] : [],
+      birthday: birthdayValues,
       zodiac: user.zodiac ? [user.zodiac] : [],
       gallup: user.gallup || [],
       skills: user.skills || [],
-      hobbies: user.hobbies || [],
+      hobbies: util.normalizeHobbyList(user.hobbies || []),
       expertise: user.expertise || [],
       tags: user.tags || [],
       yoloRole: user.yoloRole ? [user.yoloRole] : [],

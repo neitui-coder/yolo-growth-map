@@ -33,18 +33,23 @@
         <view wx:if="{{selectedUser.isBirthdayMonth}}" class="v2-birthday-hat">
           <view class="v2-birthday-hat-ball"></view>
         </view>
-        <view wx:if="{{isOwner}}" class="v2-avatar-edit" catchtap="onAvatarEdit">
+        <view wx:if="{{canEditProfile}}" class="v2-avatar-edit" catchtap="onAvatarEdit">
           <text>换</text>
         </view>
       </view>
       <view class="v2-hero-info">
         <view class="v2-hero-name">{{selectedUser.name}}</view>
-        <view class="v2-hero-motto" wx:if="{{selectedUser.motto}}">"{{selectedUser.motto}}"</view>
-        <view class="v2-hero-funny" wx:if="{{funnyIntro}}">{{funnyIntro}}</view>
+        <view class="v2-hero-funny-box" wx:if="{{funnyIntro}}">
+          <view class="v2-hero-funny">{{funnyIntro}}</view>
+          <view class="v2-hero-funny-meta" wx:if="{{funnyIntroSourceLabel || canRefreshFunnyIntro}}">
+            <text wx:if="{{funnyIntroSourceLabel}}" class="v2-ai-label">{{funnyIntroSourceLabel}}</text>
+            <text wx:if="{{canRefreshFunnyIntro}}" class="v2-funny-refresh {{funnyIntroRefreshing ? 'loading' : ''}}" bindtap="onRefreshFunnyIntro">{{funnyIntroRefreshing ? '生成中' : '换一句'}}</text>
+          </view>
+        </view>
         <view class="v2-hero-chips">
           <text wx:if="{{selectedUser.memberStatus === 'alumni'}}" class="v2-chip v2-chip-alumni">往届</text>
           <text wx:if="{{selectedUser.isFounder}}" class="v2-chip v2-chip-founder">创始人</text>
-          <text wx:if="{{selectedUser.isLishi}}" class="v2-chip v2-chip-role">理事</text>
+          <text wx:if="{{selectedUser.isLishi}}" class="v2-chip v2-chip-role">创始理事</text>
         </view>
       </view>
     </view>
@@ -58,7 +63,7 @@
       <view class="v2-stat-divider"></view>
       <view class="v2-stat">
         <text class="v2-stat-num">{{sortedNodes.length}}</text>
-        <text class="v2-stat-label">一起走过</text>
+        <text class="v2-stat-label">参加活动</text>
       </view>
       <view class="v2-stat-divider"></view>
       <view class="v2-stat">
@@ -69,10 +74,10 @@
 
     <!-- 操作按钮 -->
     <view class="v2-hero-actions">
-      <view wx:if="{{isOwner || canEditOthers}}" class="v2-action-btn v2-action-primary" bindtap="onEditProfile">
+      <view wx:if="{{canEditProfile}}" class="v2-action-btn v2-action-primary" bindtap="onEditProfile">
         <text>编辑资料</text>
       </view>
-      <view wx:if="{{isOwner || canEditOthers}}" class="v2-action-btn v2-action-secondary" bindtap="onAddNode">
+      <view wx:if="{{canManageProfile}}" class="v2-action-btn v2-action-secondary" bindtap="onAddNode">
         <text>+ 添加节点</text>
       </view>
     </view>
@@ -80,7 +85,7 @@
 </view>
 
 <!-- 完整度提示 (仅 owner + 未满时) -->
-<view class="v2-completeness" wx:if="{{isOwner && completeness < 100}}">
+<view class="v2-completeness" wx:if="{{canEditProfile && completeness < 100}}">
   <view class="v2-completeness-bar">
     <view class="v2-completeness-fill" style="width: {{completeness}}%;"></view>
   </view>
@@ -96,14 +101,14 @@
   <view class="v2-card-body expanded">
     <view class="v2-card-inner">
       <!-- 更多信息 -->
-      <view class="v2-detail-group" wx:if="{{(selectedUser.mbti || selectedUser.cityDisplay || selectedUser.career || selectedUser.company || selectedUser.education || selectedUser.birthday || selectedUser.zodiac) && (selectedUser.detailVisibility.basic !== false || canEditOthers || isOwner)}}">
+      <view class="v2-detail-group" wx:if="{{(selectedUser.mbti || selectedUser.cityDisplay || selectedUser.career || selectedUser.company || selectedUser.education || selectedUser.zodiac) && (selectedUser.detailVisibility.basic !== false || canEditProfile)}}">
         <view class="v2-detail-head">
           <text class="v2-detail-label">基础信息</text>
-          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="basic">
+          <view wx:if="{{canEditProfile}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="basic">
             <text>{{selectedUser.detailVisibility.basic === false ? '设为公开' : '设为隐藏'}}</text>
           </view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.basic === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.basic === false && canEditProfile}}" class="v2-detail-hidden-note">对外隐藏中</view>
         <view class="v2-detail-tags">
           <text wx:if="{{selectedUser.mbti}}" class="v2-detail-tag" bindtap="onTagTap" data-field="mbti" data-value="{{selectedUser.mbti}}">{{selectedUser.mbti}}</text>
           <text wx:if="{{selectedUser.cityDisplay}}" class="v2-detail-tag" bindtap="onTagTap" data-field="city" data-value="{{selectedUser.cityDisplay}}">{{selectedUser.cityDisplay}}</text>
@@ -115,70 +120,70 @@
       </view>
 
       <!-- 盖洛普优势 -->
-      <view class="v2-detail-group" wx:if="{{selectedUser.gallup && selectedUser.gallup.length > 0 && (selectedUser.detailVisibility.gallup !== false || canEditOthers || isOwner)}}">
+      <view class="v2-detail-group" wx:if="{{selectedUser.gallup && selectedUser.gallup.length > 0 && (selectedUser.detailVisibility.gallup !== false || canEditProfile)}}">
         <view class="v2-detail-head">
           <text class="v2-detail-label">盖洛普优势</text>
-          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="gallup">
+          <view wx:if="{{canEditProfile}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="gallup">
             <text>{{selectedUser.detailVisibility.gallup === false ? '设为公开' : '设为隐藏'}}</text>
           </view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.gallup === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.gallup === false && canEditProfile}}" class="v2-detail-hidden-note">对外隐藏中</view>
         <view class="v2-detail-tags">
           <text wx:for="{{selectedUser.gallup}}" wx:key="*this" class="v2-detail-tag v2-tag-gallup" bindtap="onTagTap" data-field="gallup" data-value="{{item}}">{{item}}</text>
         </view>
       </view>
 
       <!-- 技能 -->
-      <view class="v2-detail-group" wx:if="{{selectedUser.skills.length > 0 && (selectedUser.detailVisibility.skills !== false || canEditOthers || isOwner)}}">
+      <view class="v2-detail-group" wx:if="{{selectedUser.skills.length > 0 && (selectedUser.detailVisibility.skills !== false || canEditProfile)}}">
         <view class="v2-detail-head">
           <text class="v2-detail-label">技能</text>
-          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="skills">
+          <view wx:if="{{canEditProfile}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="skills">
             <text>{{selectedUser.detailVisibility.skills === false ? '设为公开' : '设为隐藏'}}</text>
           </view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.skills === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.skills === false && canEditProfile}}" class="v2-detail-hidden-note">对外隐藏中</view>
         <view class="v2-detail-tags">
           <text wx:for="{{selectedUser.skills}}" wx:key="*this" class="v2-detail-tag v2-tag-skill" bindtap="onTagTap" data-field="skills" data-value="{{item}}">{{item}}</text>
         </view>
       </view>
 
       <!-- 爱好 -->
-      <view class="v2-detail-group" wx:if="{{selectedUser.hobbies.length > 0 && (selectedUser.detailVisibility.hobbies !== false || canEditOthers || isOwner)}}">
+      <view class="v2-detail-group" wx:if="{{selectedUser.hobbies.length > 0 && (selectedUser.detailVisibility.hobbies !== false || canEditProfile)}}">
         <view class="v2-detail-head">
           <text class="v2-detail-label">爱好</text>
-          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="hobbies">
+          <view wx:if="{{canEditProfile}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="hobbies">
             <text>{{selectedUser.detailVisibility.hobbies === false ? '设为公开' : '设为隐藏'}}</text>
           </view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.hobbies === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.hobbies === false && canEditProfile}}" class="v2-detail-hidden-note">对外隐藏中</view>
         <view class="v2-detail-tags">
           <text wx:for="{{selectedUser.hobbies}}" wx:key="*this" class="v2-detail-tag v2-tag-hobby" bindtap="onTagTap" data-field="hobbies" data-value="{{item}}">{{item}}</text>
         </view>
       </view>
 
       <!-- 擅长 -->
-      <view class="v2-detail-group" wx:if="{{selectedUser.expertise.length > 0 && (selectedUser.detailVisibility.expertise !== false || canEditOthers || isOwner)}}">
+      <view class="v2-detail-group" wx:if="{{selectedUser.expertise.length > 0 && (selectedUser.detailVisibility.expertise !== false || canEditProfile)}}">
         <view class="v2-detail-head">
           <text class="v2-detail-label">擅长领域</text>
-          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="expertise">
+          <view wx:if="{{canEditProfile}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="expertise">
             <text>{{selectedUser.detailVisibility.expertise === false ? '设为公开' : '设为隐藏'}}</text>
           </view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.expertise === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.expertise === false && canEditProfile}}" class="v2-detail-hidden-note">对外隐藏中</view>
         <view class="v2-detail-tags">
           <text wx:for="{{selectedUser.expertise}}" wx:key="*this" class="v2-detail-tag" bindtap="onTagTap" data-field="expertise" data-value="{{item}}">{{item}}</text>
         </view>
       </view>
 
       <!-- 标签 -->
-      <view class="v2-detail-group" wx:if="{{selectedUser.tags.length > 0 && (selectedUser.detailVisibility.tags !== false || canEditOthers || isOwner)}}">
+      <view class="v2-detail-group" wx:if="{{selectedUser.tags.length > 0 && (selectedUser.detailVisibility.tags !== false || canEditProfile)}}">
         <view class="v2-detail-head">
           <text class="v2-detail-label">标签</text>
-          <view wx:if="{{isOwner || canEditOthers}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="tags">
+          <view wx:if="{{canEditProfile}}" class="v2-detail-visibility" bindtap="onToggleFieldVisibility" data-field="tags">
             <text>{{selectedUser.detailVisibility.tags === false ? '设为公开' : '设为隐藏'}}</text>
           </view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.tags === false && (isOwner || canEditOthers)}}" class="v2-detail-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.tags === false && canEditProfile}}" class="v2-detail-hidden-note">对外隐藏中</view>
         <view class="v2-detail-tags">
           <text wx:for="{{selectedUser.tags}}" wx:key="*this" class="v2-detail-tag v2-tag-hash" bindtap="onTagTap" data-field="tags" data-value="{{item}}">#{{item}}</text>
         </view>
@@ -189,13 +194,13 @@
 
 <!-- 年度目标 -->
 <goal-card
-  wx:if="{{selectedUser.goal || isOwner}}"
+  wx:if="{{selectedUser.goal || canEditProfile}}"
   goal="{{selectedUser.goal}}"
   bind:setgoal="onSetGoal"
 />
 
 <!-- 相似会员 (横滑卡片) -->
-<view class="v2-card" wx:if="{{similarUsers.length > 0}}">
+<view class="v2-card v2-similar-card" wx:if="{{similarUsers.length > 0}}">
   <view class="v2-card-header">
     <text class="v2-card-title">{{similarUsersTitle}}</text>
     <view class="v2-info-icon" bindtap="onExplainSimilarity">
@@ -204,7 +209,10 @@
   </view>
   <scroll-view class="v2-similar-scroll" scroll-x enable-flex>
     <view class="v2-similar-item" wx:for="{{similarUsers}}" wx:key="index" bindtap="onSimilarTap" data-user-id="{{item.user.userId || item.user.id}}">
-      <image class="v2-similar-avatar" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load="true" />
+      <view class="v2-similar-avatar-wrap">
+        <image wx:if="{{item.avatarUrl}}" class="v2-similar-avatar" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load="true" />
+        <view wx:else class="v2-similar-avatar v2-similar-avatar-initial">{{item.avatarInitial}}</view>
+      </view>
       <text class="v2-similar-name">{{item.user.name}}</text>
       <text class="v2-similar-reason">{{item.reason}}</text>
     </view>
@@ -215,7 +223,7 @@
 <view class="v2-card">
   <view class="v2-card-header">
     <text class="v2-card-title">问答</text>
-    <view wx:if="{{!isOwner}}" class="v2-qa-ask-btn" bindtap="onAskQuestion">
+    <view wx:if="{{canAskQuestion}}" class="v2-qa-ask-btn" bindtap="onAskQuestion">
       <text>向TA提问</text>
     </view>
     <text class="v2-qa-count" wx:if="{{qaVisibleCount > 0}}">{{qaVisibleCount}}</text>
@@ -225,7 +233,7 @@
     <text>{{qaEmptyText}}</text>
   </view>
 
-  <view wx:for="{{selectedUserQa}}" wx:key="index" wx:if="{{!item.hidden || isOwner || canEditOthers}}" class="v2-qa-item {{item.hidden ? 'hidden' : ''}}">
+  <view wx:for="{{selectedUserQa}}" wx:key="index" wx:if="{{!item.hidden || canManageProfile}}" class="v2-qa-item {{item.hidden ? 'hidden' : ''}}">
     <view wx:if="{{item.askedBy !== 'system'}}" class="v2-qa-from">{{item.askedBy}} 提问</view>
     <view class="v2-qa-question">
       <text class="v2-qa-q-badge">Q</text>
@@ -235,14 +243,14 @@
       <view class="v2-qa-answer">{{item.answer}}</view>
     </block>
     <block wx:else>
-      <view wx:if="{{item.hidden && (isOwner || canEditOthers)}}" class="v2-qa-hidden-note">已隐藏，其他人不可见</view>
-      <block wx:if="{{isOwner}}">
+      <view wx:if="{{item.hidden && canManageProfile}}" class="v2-qa-hidden-note">已隐藏，其他人不可见</view>
+      <block wx:if="{{canAnswerQuestion}}">
         <view class="v2-qa-pending">等你来回答...</view>
         <view class="v2-qa-answer-btn" bindtap="onAnswerQuestion" data-index="{{index}}">回答</view>
       </block>
       <view wx:else class="v2-qa-pending">TA 还没回答</view>
     </block>
-    <view wx:if="{{isOwner || canEditOthers}}" class="v2-qa-admin-row">
+    <view wx:if="{{canModerateQuestions}}" class="v2-qa-admin-row">
       <view class="v2-qa-admin-btn" bindtap="onToggleQuestionVisibility" data-index="{{index}}">
         <text>{{item.hidden ? '显示问题' : '隐藏问题'}}</text>
       </view>
@@ -341,12 +349,12 @@
 <!-- 用户资料头部 -->
 <profile-header
   user="{{selectedUser}}"
-  isOwner="{{isOwner}}"
+  isOwner="{{canEditProfile}}"
   bind:avataredit="onAvatarEdit"
 />
 
 <!-- 编辑按钮 -->
-<view wx:if="{{isOwner || canEditOthers}}" class="btn-edit-profile" bindtap="onEditProfile">
+<view wx:if="{{canEditProfile}}" class="btn-edit-profile" bindtap="onEditProfile">
   {{isOwner ? '编辑我的资料' : '编辑资料'}}
 </view>
 
@@ -361,6 +369,10 @@
 
 <view wx:if="{{funnyIntro}}" class="profile-funny-line">
   <text>{{funnyIntro}}</text>
+  <view class="profile-funny-meta" wx:if="{{funnyIntroSourceLabel || canRefreshFunnyIntro}}">
+    <text wx:if="{{funnyIntroSourceLabel}}">{{funnyIntroSourceLabel}}</text>
+    <text wx:if="{{canRefreshFunnyIntro}}" bindtap="onRefreshFunnyIntro">{{funnyIntroRefreshing ? '生成中' : '换一句'}}</text>
+  </view>
 </view>
 
 <!-- 个人资料详情区域 -->
@@ -375,12 +387,12 @@
   <view class="info-detail-body expanded">
     <view class="info-detail-inner">
       <!-- 更多信息 -->
-      <view class="info-section" wx:if="{{(selectedUser.mbti || selectedUser.cityDisplay || selectedUser.career || selectedUser.company || selectedUser.education || selectedUser.birthday || selectedUser.zodiac) && (selectedUser.detailVisibility.basic !== false || isOwner || canEditOthers)}}">
+      <view class="info-section" wx:if="{{(selectedUser.mbti || selectedUser.cityDisplay || selectedUser.career || selectedUser.company || selectedUser.education || selectedUser.zodiac) && (selectedUser.detailVisibility.basic !== false || canEditProfile)}}">
         <view class="info-section-header">
         <view class="info-section-title">更多信息</view>
-        <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="basic">{{selectedUser.detailVisibility.basic === false ? '设为公开' : '设为隐藏'}}</view>
+        <view wx:if="{{canEditProfile}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="basic">{{selectedUser.detailVisibility.basic === false ? '设为公开' : '设为隐藏'}}</view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.basic === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.basic === false && canEditProfile}}" class="info-section-hidden-note">对外隐藏中</view>
         <view class="info-tags">
           <view class="info-tag" wx:if="{{selectedUser.mbti}}">
             <text bindtap="onTagTap" data-field="mbti" data-value="{{selectedUser.mbti}}">{{selectedUser.mbti}}</text>
@@ -397,9 +409,6 @@
           <view class="info-tag" wx:if="{{selectedUser.education}}">
             <text bindtap="onTagTap" data-field="education" data-value="{{selectedUser.education}}">{{selectedUser.education}}</text>
           </view>
-          <view class="info-tag" wx:if="{{selectedUser.birthday}}">
-            <text bindtap="onTagTap" data-field="birthday" data-value="{{selectedUser.birthday}}">{{selectedUser.birthday}}</text>
-          </view>
           <view class="info-tag" wx:if="{{selectedUser.zodiac}}">
             <text bindtap="onTagTap" data-field="zodiac" data-value="{{selectedUser.zodiac}}">{{selectedUser.zodiac}}</text>
           </view>
@@ -407,12 +416,12 @@
       </view>
 
       <!-- 技能认证 -->
-      <view class="info-section" wx:if="{{selectedUser.skills.length > 0 && (selectedUser.detailVisibility.skills !== false || isOwner || canEditOthers)}}">
+      <view class="info-section" wx:if="{{selectedUser.skills.length > 0 && (selectedUser.detailVisibility.skills !== false || canEditProfile)}}">
         <view class="info-section-header">
           <view class="info-section-title">技能认证</view>
-          <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="skills">{{selectedUser.detailVisibility.skills === false ? '设为公开' : '设为隐藏'}}</view>
+          <view wx:if="{{canEditProfile}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="skills">{{selectedUser.detailVisibility.skills === false ? '设为公开' : '设为隐藏'}}</view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.skills === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.skills === false && canEditProfile}}" class="info-section-hidden-note">对外隐藏中</view>
         <view class="info-tags">
           <view class="info-tag skill" wx:for="{{selectedUser.skills}}" wx:key="*this">
             <text bindtap="onTagTap" data-field="skills" data-value="{{item}}">{{item}}</text>
@@ -421,12 +430,12 @@
       </view>
 
       <!-- 爱好 -->
-      <view class="info-section" wx:if="{{selectedUser.hobbies.length > 0 && (selectedUser.detailVisibility.hobbies !== false || isOwner || canEditOthers)}}">
+      <view class="info-section" wx:if="{{selectedUser.hobbies.length > 0 && (selectedUser.detailVisibility.hobbies !== false || canEditProfile)}}">
         <view class="info-section-header">
           <view class="info-section-title">爱好</view>
-          <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="hobbies">{{selectedUser.detailVisibility.hobbies === false ? '设为公开' : '设为隐藏'}}</view>
+          <view wx:if="{{canEditProfile}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="hobbies">{{selectedUser.detailVisibility.hobbies === false ? '设为公开' : '设为隐藏'}}</view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.hobbies === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.hobbies === false && canEditProfile}}" class="info-section-hidden-note">对外隐藏中</view>
         <view class="info-tags">
           <view class="info-tag hobby" wx:for="{{selectedUser.hobbies}}" wx:key="*this">
             <text bindtap="onTagTap" data-field="hobbies" data-value="{{item}}">{{item}}</text>
@@ -435,12 +444,12 @@
       </view>
 
       <!-- 擅长领域 -->
-      <view class="info-section" wx:if="{{selectedUser.expertise.length > 0 && (selectedUser.detailVisibility.expertise !== false || isOwner || canEditOthers)}}">
+      <view class="info-section" wx:if="{{selectedUser.expertise.length > 0 && (selectedUser.detailVisibility.expertise !== false || canEditProfile)}}">
         <view class="info-section-header">
           <view class="info-section-title">擅长领域</view>
-          <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="expertise">{{selectedUser.detailVisibility.expertise === false ? '设为公开' : '设为隐藏'}}</view>
+          <view wx:if="{{canEditProfile}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="expertise">{{selectedUser.detailVisibility.expertise === false ? '设为公开' : '设为隐藏'}}</view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.expertise === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.expertise === false && canEditProfile}}" class="info-section-hidden-note">对外隐藏中</view>
         <view class="info-tags">
           <view class="info-tag" wx:for="{{selectedUser.expertise}}" wx:key="*this">
             <text bindtap="onTagTap" data-field="expertise" data-value="{{item}}">{{item}}</text>
@@ -449,12 +458,12 @@
       </view>
 
       <!-- 标签 -->
-      <view class="info-section" wx:if="{{selectedUser.tags.length > 0 && (selectedUser.detailVisibility.tags !== false || isOwner || canEditOthers)}}">
+      <view class="info-section" wx:if="{{selectedUser.tags.length > 0 && (selectedUser.detailVisibility.tags !== false || canEditProfile)}}">
         <view class="info-section-header">
           <view class="info-section-title">标签</view>
-          <view wx:if="{{isOwner || canEditOthers}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="tags">{{selectedUser.detailVisibility.tags === false ? '设为公开' : '设为隐藏'}}</view>
+          <view wx:if="{{canEditProfile}}" class="info-section-action" bindtap="onToggleFieldVisibility" data-field="tags">{{selectedUser.detailVisibility.tags === false ? '设为公开' : '设为隐藏'}}</view>
         </view>
-        <view wx:if="{{selectedUser.detailVisibility.tags === false && (isOwner || canEditOthers)}}" class="info-section-hidden-note">对外隐藏中</view>
+        <view wx:if="{{selectedUser.detailVisibility.tags === false && canEditProfile}}" class="info-section-hidden-note">对外隐藏中</view>
         <view class="info-tags">
           <view class="info-tag" wx:for="{{selectedUser.tags}}" wx:key="*this">
             <text bindtap="onTagTap" data-field="tags" data-value="{{item}}">#{{item}}</text>
@@ -492,7 +501,7 @@
 
 <!-- 年度目标 -->
 <goal-card
-  wx:if="{{selectedUser.goal || isOwner}}"
+  wx:if="{{selectedUser.goal || canEditProfile}}"
   goal="{{selectedUser.goal}}"
   bind:setgoal="onSetGoal"
 />
@@ -516,14 +525,14 @@
 <view class="qa-section">
   <view class="qa-header">
     <text class="qa-title">问我</text>
-    <view wx:if="{{!isOwner}}" class="qa-ask-btn" bindtap="onAskQuestion">向TA提问</view>
+    <view wx:if="{{canAskQuestion}}" class="qa-ask-btn" bindtap="onAskQuestion">向TA提问</view>
   </view>
 
   <view wx:if="{{qaVisibleCount === 0}}" class="qa-empty">
     <text>{{qaEmptyText}}</text>
   </view>
 
-  <view wx:for="{{selectedUserQa}}" wx:key="index" wx:if="{{!item.hidden || isOwner || canEditOthers}}" class="qa-card {{item.hidden ? 'qa-card-hidden' : ''}}">
+  <view wx:for="{{selectedUserQa}}" wx:key="index" wx:if="{{!item.hidden || canManageProfile}}" class="qa-card {{item.hidden ? 'qa-card-hidden' : ''}}">
     <view wx:if="{{item.askedBy !== 'system'}}" class="qa-from">
       <text>{{item.askedBy}} 提问</text>
     </view>
@@ -537,8 +546,8 @@
       </view>
     </block>
     <block wx:else>
-      <view wx:if="{{item.hidden && (isOwner || canEditOthers)}}" class="qa-hidden-note">已隐藏，其他人不可见</view>
-      <block wx:if="{{isOwner}}">
+      <view wx:if="{{item.hidden && canManageProfile}}" class="qa-hidden-note">已隐藏，其他人不可见</view>
+      <block wx:if="{{canAnswerQuestion}}">
         <view class="qa-unanswered"><text>等你来回答...</text></view>
         <button class="qa-answer-btn" bindtap="onAnswerQuestion" data-index="{{index}}">回答这个问题</button>
       </block>
@@ -546,7 +555,7 @@
         <text>TA 还没回答这个问题</text>
       </view>
     </block>
-    <view wx:if="{{isOwner || canEditOthers}}" class="qa-admin-row">
+    <view wx:if="{{canModerateQuestions}}" class="qa-admin-row">
       <view class="qa-admin-btn" bindtap="onToggleQuestionVisibility" data-index="{{index}}">
         <text>{{item.hidden ? '显示问题' : '隐藏问题'}}</text>
       </view>
@@ -566,7 +575,7 @@
         <text class="tl-variant-label">{{timelineVariant === 'modern' ? '极简' : '卡片'}}</text>
       </view>
     </view>
-    <button wx:if="{{isOwner || canEditOthers}}" class="btn-add" bindtap="onAddNode">+ 添加节点</button>
+    <button wx:if="{{canManageProfile}}" class="btn-add" bindtap="onAddNode">+ 添加节点</button>
   </view>
 
   <view wx:if="{{sortedNodes.length > 0}}" class="timeline {{timelineVariant === 'minimal' ? 'timeline-minimal' : ''}}">

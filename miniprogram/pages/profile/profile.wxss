@@ -846,7 +846,7 @@ page {
   top: 0;
   left: 0;
   right: 0;
-  height: 240rpx;
+  height: 324rpx;
   background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
   border-radius: 0 0 60% 60% / 0 0 40rpx 40rpx;
 }
@@ -854,7 +854,7 @@ page {
 .v2-hero-content {
   position: relative;
   z-index: 1;
-  padding: 32rpx;
+  padding: 32rpx 32rpx 30rpx;
 }
 
 .v2-hero-row {
@@ -875,6 +875,18 @@ page {
   border-radius: 50%;
   border: 6rpx solid rgba(255, 255, 255, 0.6);
   background: #e2e8f0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.v2-avatar-initial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  color: #2563eb;
+  font-size: 50rpx;
+  font-weight: 800;
 }
 
 .v2-avatar-edit {
@@ -928,6 +940,7 @@ page {
 
 .v2-hero-info {
   flex: 1;
+  min-width: 0;
   padding-top: 8rpx;
 }
 
@@ -941,18 +954,71 @@ page {
 .v2-hero-motto {
   font-size: 24rpx;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 12rpx;
-  line-height: 1.4;
+  margin-bottom: 10rpx;
+  line-height: 1.35;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .v2-hero-funny {
-  margin-bottom: 12rpx;
-  padding: 10rpx 16rpx;
-  border-radius: 18rpx;
-  background: rgba(255, 255, 255, 0.14);
   color: rgba(255, 255, 255, 0.92);
   font-size: 22rpx;
-  line-height: 1.5;
+  line-height: 1.42;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.v2-hero-funny-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12rpx;
+  padding: 10rpx 16rpx 8rpx;
+  border-radius: 18rpx;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.v2-hero-funny-meta {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-top: 6rpx;
+}
+
+.v2-ai-label,
+.v2-funny-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 26rpx;
+  padding: 0 10rpx;
+  border-radius: 999rpx;
+  font-size: 17rpx;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.v2-ai-label {
+  color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.v2-funny-refresh {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1rpx solid rgba(255, 255, 255, 0.22);
+}
+
+.v2-funny-refresh.loading {
+  opacity: 0.65;
 }
 
 .v2-hero-chips {
@@ -1098,6 +1164,11 @@ page {
 }
 
 .profile-funny-line {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: calc(100% - 64rpx);
+  box-sizing: border-box;
   margin: 20rpx 32rpx 0;
   padding: 18rpx 22rpx;
   border-radius: 20rpx;
@@ -1105,6 +1176,15 @@ page {
   color: #9a3412;
   font-size: 24rpx;
   line-height: 1.6;
+}
+
+.profile-funny-meta {
+  display: flex;
+  gap: 14rpx;
+  margin-top: 8rpx;
+  color: #c2410c;
+  font-size: 20rpx;
+  font-weight: 700;
 }
 
 .image-viewer-overlay {
@@ -1327,7 +1407,7 @@ page {
 /* ---------- Similar Users (Horizontal Scroll) ---------- */
 .v2-similar-scroll {
   white-space: nowrap;
-  padding: 0 28rpx 24rpx;
+  padding: 22rpx 28rpx 24rpx;
 }
 
 .v2-similar-item {
@@ -1337,15 +1417,36 @@ page {
   width: 160rpx;
   margin-right: 20rpx;
   white-space: normal;
+  vertical-align: top;
+}
+
+.v2-similar-avatar-wrap {
+  width: 88rpx;
+  height: 88rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .v2-similar-avatar {
   width: 88rpx;
   height: 88rpx;
   border-radius: 50%;
-  margin-bottom: 10rpx;
   background: #e2e8f0;
   border: 3rpx solid #dbeafe;
+  box-sizing: border-box;
+  display: block;
+}
+
+.v2-similar-avatar-initial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  color: #2563eb;
+  font-size: 34rpx;
+  font-weight: 700;
 }
 
 .v2-similar-name {
@@ -1353,6 +1454,12 @@ page {
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 4rpx;
+  max-width: 150rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .v2-similar-reason {
@@ -1360,6 +1467,12 @@ page {
   color: #64748b;
   text-align: center;
   line-height: 1.4;
+  min-height: 56rpx;
+  max-width: 150rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 /* ---------- Q&A ---------- */

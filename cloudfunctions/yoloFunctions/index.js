@@ -2,6 +2,88 @@ const cloud = require('wx-server-sdk');
 cloud.init({ env: cloud.DYNAMIC_CURRENT_ENV });
 const db = cloud.database();
 const _ = db.command;
+const ADMIN_OPENIDS = ['oR4Gr5AfM4rgKhFwd6HsK7QWDNG0'];
+const MEMBER_STATUSES = ['active', 'alumni'];
+const PROFILE_UPDATE_FIELDS = [
+  'name', 'motto', 'mottoSource', 'career', 'company', 'city', 'birthday',
+  'education', 'goal', 'mbti', 'zodiac', 'gallup', 'hobbies', 'expertise',
+  'tags', 'skills', 'visibility', 'avatarStyle', 'avatarSeed', 'avatarImage',
+  'aiFunnyIntro', 'aiFunnyIntroVersion', 'aiFunnyIntroSourceKey',
+  'aiFunnyIntroVariantIndex'
+];
+
+const isAdminOpenId = (openId) => ADMIN_OPENIDS.indexOf(openId) !== -1;
+
+const isYoloMemberStatus = (status) => MEMBER_STATUSES.indexOf(status || 'active') !== -1;
+
+const allKeysAllowed = (keys, allowed) => keys.every((key) => allowed.indexOf(key) !== -1);
+
+const buildUserUpdateData = (updates) => {
+  const data = Object.assign({}, updates || {});
+  if (Object.prototype.hasOwnProperty.call(data, 'visibility')) {
+    const visibility = data.visibility && typeof data.visibility === 'object' ? data.visibility : {};
+    data.visibility = _.set(visibility);
+  }
+  return data;
+};
+
+const pickBoundMember = (rows) => {
+  const members = (rows || [])
+    .filter((u) => u.dataType === 'real' && isYoloMemberStatus(u.memberStatus))
+    .sort((a, b) => {
+      if (a.memberStatus === b.memberStatus) return 0;
+      return a.memberStatus === 'active' ? -1 : 1;
+    });
+  return members[0] || null;
+};
+
+const getWechatBoundRows = async (openId, unionId) => {
+  if (!openId) return [];
+  const query = unionId
+    ? _.or([{ wechatOpenId: openId }, { wechatUnionId: unionId }])
+    : { wechatOpenId: openId };
+  const res = await db.collection('users').where(query).limit(20).get();
+  return res.data || [];
+};
+
+const getAuthenticatedMember = async () => {
+  const { OPENID, UNIONID } = cloud.getWXContext();
+  const rows = await getWechatBoundRows(OPENID, UNIONID);
+  return pickBoundMember(rows);
+};
+
+const canEditOwnProfile = (actor, userId) => {
+  return !!(actor && actor.userId === userId && isYoloMemberStatus(actor.memberStatus));
+};
+
+const canManageOwnTimeline = (actor, userId) => {
+  return !!(actor && actor.userId === userId && actor.memberStatus !== 'alumni');
+};
+
+const ensureTimelineWriteAllowed = async (userId) => {
+  const { OPENID } = cloud.getWXContext();
+  if (isAdminOpenId(OPENID)) return { ok: true };
+  const actor = await getAuthenticatedMember();
+  if (canManageOwnTimeline(actor, userId)) return { ok: true };
+  return { ok: false, error: '无权维护成长节点' };
+};
+
+const fetchRealUsers = async () => {
+  const users = [];
+  let cursor = 0;
+  while (true) {
+    const res = await db.collection('users')
+      .where({ dataType: 'real' })
+      .skip(cursor)
+      .limit(100)
+      .get();
+    const rows = res.data || [];
+    users.push(...rows);
+    if (rows.length < 100) break;
+    cursor += rows.length;
+  }
+  return users;
+};
 
 // 内容安全检查（微信审核硬性要求：UGC 文本须过 msgSecCheck）
 // 返回 { ok:true } 或 { ok:false, error:'...' }
@@ -73,14 +155,11 @@ exports.main = async (event, context) => {
 const loginWechat = async () => {
   const { OPENID, UNIONID } = cloud.getWXContext();
   if (!OPENID) return { success: false, error: 'no OPENID in context' };
-  const query = UNIONID
-    ? _.or([{ wechatOpenId: OPENID }, { wechatUnionId: UNIONID }])
-    : { wechatOpenId: OPENID };
-  const userRes = await db.collection('users').where(query).limit(1).get();
-  const bound = userRes.data && userRes.data[0];
+  const boundRows = await getWechatBoundRows(OPENID, UNIONID);
+  const boundMember = pickBoundMember(boundRows);
 
   let staffEntry = null;
-  if (!bound) {
+  if (!boundMember) {
     try {
       const sq = UNIONID
         ? _.or([{ wechatOpenId: OPENID }, { wechatUnionId: UNIONID }])
@@ -98,7 +177,11 @@ const loginWechat = async () => {
     success: true,
     openId: OPENID,
     unionId: UNIONID || '',
-    bound: bound ? { userId: bound.userId, name: bound.name } : null,
+    bound: boundMember ? {
+      userId: boundMember.userId,
+      name: boundMember.name,
+      memberStatus: boundMember.memberStatus || 'active'
+    } : null,
     staff: staffEntry
   };
 };
@@ -135,32 +218,56 @@ const bindByPhone = async (event) => {
   const normalized = normalizePhone(rawPhone);
   if (!normalized) return { success: false, error: '手机号格式异常' };
 
-  // 已被其他 openid 绑定？
-  const alreadyBound = await db.collection('users')
-    .where({ wechatOpenId: OPENID }).limit(1).get();
-  if (alreadyBound.data && alreadyBound.data[0]) {
+  // 当前微信若已经绑定过现届或往届成员，直接进入该成员身份。
+  const alreadyBound = pickBoundMember(await getWechatBoundRows(OPENID, UNIONID));
+  if (alreadyBound) {
     return { success: true, alreadyBound: true,
-      user: { userId: alreadyBound.data[0].userId, name: alreadyBound.data[0].name } };
+      user: {
+        userId: alreadyBound.userId,
+        name: alreadyBound.name,
+        memberStatus: alreadyBound.memberStatus || 'active'
+      } };
   }
 
-  // 匹配未绑定的成员：phone 单字段 或 phones 数组任一规范化后命中
-  const all = await db.collection('users').limit(200).get();
-  const match = (all.data || []).find((u) => {
-    if (u.wechatOpenId) return false;
+  // 匹配 YOLO+ 成员（现届或往届）：phone 单字段或 phones 数组任一规范化后命中。
+  // 手机号已由微信侧验证，允许覆盖旧 openid，解决体验版/正式版或换微信后的旧绑定残留。
+  const realUsers = await fetchRealUsers();
+  const matches = (realUsers || []).filter((u) => {
+    if (!isYoloMemberStatus(u.memberStatus)) return false;
     if (normalizePhone(u.phone) === normalized) return true;
     if (Array.isArray(u.phones) && u.phones.some((p) => normalizePhone(p) === normalized)) return true;
     return false;
   });
+  matches.sort((a, b) => {
+    if (a.memberStatus === b.memberStatus) return 0;
+    return a.memberStatus === 'active' ? -1 : 1;
+  });
+  const match = matches[0];
   if (!match) {
-    return { success: true, matched: false, phone: normalized };
+    return {
+      success: true,
+      matched: false,
+      phone: normalized,
+      notBindable: false,
+      reason: 'not_found'
+    };
   }
 
   // 绑定
-  const update = { wechatOpenId: OPENID };
-  if (UNIONID) update.wechatUnionId = UNIONID;
+  const rebound = !!match.wechatOpenId && match.wechatOpenId !== OPENID;
+  const update = { wechatOpenId: OPENID, wechatUnionId: UNIONID || '' };
   await db.collection('users').where({ userId: match.userId }).update({ data: update });
 
-  return { success: true, matched: true, user: { userId: match.userId, name: match.name } };
+  return {
+    success: true,
+    matched: true,
+    rebound,
+    user: {
+      userId: match.userId,
+      name: match.name,
+      memberStatus: match.memberStatus || 'active'
+    }
+  };
 };
 
 // 清理遗留 mock 数据（仅 admin 可调）
@@ -190,20 +297,16 @@ const cleanupMockUsers = async () => {
   return { success: true, removed };
 };
 
-// 列出可被绑定的成员（仅当前 real dataType + 非往届 + 尚未绑定）
+// 列出可被绑定的成员（仅当前 real dataType + YOLO+ 现届/往届成员 + 尚未绑定）
 const listBindable = async () => {
-  const all = await db.collection('users')
-    .where({ dataType: 'real' })
-    .field({ userId: true, name: true, englishName: true, company: true,
-             memberStatus: true, wechatOpenId: true, avatarImage: true,
-             yoloRole: true, joinDate: true })
-    .limit(200).get();
-  const bindable = (all.data || [])
-    .filter((u) => !u.wechatOpenId && u.memberStatus !== 'alumni')
+  const all = await fetchRealUsers();
+  const bindable = (all || [])
+    .filter((u) => !u.wechatOpenId && !u.wechatUnionId && isYoloMemberStatus(u.memberStatus))
     .map((u) => ({
       userId: u.userId, name: u.name, englishName: u.englishName || '',
       company: u.company || '', avatarImage: u.avatarImage || '',
-      role: u.yoloRole || ''
+      role: u.yoloRole || '',
+      memberStatus: u.memberStatus || 'active'
     }));
   return { success: true, members: bindable };
 };
@@ -262,14 +365,20 @@ const bindWechat = async (event) => {
   const { OPENID, UNIONID } = cloud.getWXContext();
   if (!OPENID) return { success: false, error: 'no OPENID in context' };
   if (!event.userId) return { success: false, error: 'userId required' };
-  const existing = await db.collection('users')
-    .where({ wechatOpenId: OPENID })
-    .limit(1).get();
-  if (existing.data && existing.data[0] && existing.data[0].userId !== event.userId) {
-    return { success: false, error: '该微信号已绑定其他账户: ' + existing.data[0].userId };
+  const existingMember = pickBoundMember(await getWechatBoundRows(OPENID, UNIONID));
+  if (existingMember && existingMember.userId !== event.userId) {
+    return { success: false, error: '该微信号已绑定其他账户: ' + existingMember.userId };
   }
-  const update = { wechatOpenId: OPENID };
-  if (UNIONID) update.wechatUnionId = UNIONID;
+  const targetRes = await db.collection('users')
+    .where({ userId: event.userId, dataType: 'real' })
+    .limit(1)
+    .get();
+  const target = targetRes.data && targetRes.data[0];
+  if (!target) return { success: false, error: '成员不存在' };
+  if (!isYoloMemberStatus(target.memberStatus)) {
+    return { success: false, error: '该档案不是 YOLO+ 会员身份，不能绑定' };
+  }
+  const update = { wechatOpenId: OPENID, wechatUnionId: UNIONID || '' };
   const r = await db.collection('users')
     .where({ userId: event.userId })
     .update({ data: update });
@@ -331,20 +440,51 @@ const updateUser = async (event) => {
   const { userId, updates, dataType } = event;
   // 资料文本内容安全检查
   const u = updates || {};
+  const updateKeys = Object.keys(u);
+  if (!userId) return { success: false, error: 'userId required' };
+  if (!updateKeys.length) return { success: false, error: 'no updates' };
+
+  const { OPENID } = cloud.getWXContext();
+  if (!isAdminOpenId(OPENID)) {
+    const actor = await getAuthenticatedMember();
+    const profileOnly = allKeysAllowed(updateKeys, PROFILE_UPDATE_FIELDS);
+    const qaOnly = updateKeys.length === 1 && updateKeys[0] === 'qa';
+    const timelineOnly = updateKeys.length === 1 && updateKeys[0] === 'nodes';
+
+    if (profileOnly) {
+      if (!canEditOwnProfile(actor, userId)) {
+        return { success: false, error: '仅档案本人可修改资料' };
+      }
+    } else if (qaOnly) {
+      if (!canEditOwnProfile(actor, userId)) {
+        return { success: false, error: '无权修改问答' };
+      }
+    } else if (timelineOnly) {
+      if (!canManageOwnTimeline(actor, userId)) {
+        return { success: false, error: '无权维护成长节点' };
+      }
+    } else {
+      return { success: false, error: '无权修改这些字段' };
+    }
+  }
   const textFields = [u.name, u.motto, u.career, u.company, u.city, u.goal,
-    u.education].concat(u.hobbies || [], u.expertise || [], u.tags || [], u.skills || []);
+    u.education].concat(u.gallup || [], u.hobbies || [], u.expertise || [], u.tags || [], u.skills || []);
   const sec = await checkTextSecurity(textFields);
   if (!sec.ok) return { success: false, error: sec.error };
   const where = { userId: userId };
   if (dataType) where.dataType = dataType;
   const result = await db.collection('users')
     .where(where)
-    .update({ data: updates });
+    .update({ data: buildUserUpdateData(updates) });
   return { success: true, updated: result.stats.updated };
 };
 
 // 按 _id 更新单条记录
 const updateById = async (event) => {
+  const { OPENID } = cloud.getWXContext();
+  if (!isAdminOpenId(OPENID)) {
+    return { success: false, error: 'admin only' };
+  }
   const { id, updates } = event;
   const result = await db.collection('users').doc(id).update({ data: updates });
   return { success: true, updated: result.stats.updated };
@@ -362,6 +502,8 @@ const bulkSetDataType = async (event) => {
 // 添加成长节点（插入到数组头部）；若未传 nodeId，自动生成
 const addNode = async (event) => {
   const { userId, dataType } = event;
+  const auth = await ensureTimelineWriteAllowed(userId);
+  if (!auth.ok) return { success: false, error: auth.error };
   const node = Object.assign({}, event.node);
   const sec = await checkTextSecurity([node.desc, node.title, node.summary]);
   if (!sec.ok) return { success: false, error: sec.error };
@@ -379,6 +521,8 @@ const addNode = async (event) => {
 // 删除节点（按索引，使用 splice 命令）
 const deleteNode = async (event) => {
   const { userId, index, dataType } = event;
+  const auth = await ensureTimelineWriteAllowed(userId);
+  if (!auth.ok) return { success: false, error: auth.error };
   const where = { userId: userId };
   if (dataType) where.dataType = dataType;
   const result = await db.collection('users')
@@ -389,12 +533,39 @@ const deleteNode = async (event) => {
 
 // 添加提问到 qa 数组
 const addQuestion = async (event) => {
-  const { userId, question, askedBy, dataType } = event;
-  const sec = await checkTextSecurity(question);
-  if (!sec.ok) return { success: false, error: sec.error };
-  const newQa = { question: question, answer: null, askedBy: askedBy || 'anonymous' };
+  const { userId, question, dataType } = event;
+  const asker = await getAuthenticatedMember();
+  if (!asker) {
+    return { success: false, error: '仅 YOLO+ 会员可提问' };
+  }
+  if (asker.userId === userId) {
+    return { success: false, error: '不能向自己提问' };
+  }
+  const cleanQuestion = String(question || '').trim();
+  if (!cleanQuestion) return { success: false, error: '问题不能为空' };
+  if (cleanQuestion.length > 120) return { success: false, error: '问题不能超过 120 字' };
+
   const where = { userId: userId };
   if (dataType) where.dataType = dataType;
+  const targetRes = await db.collection('users').where(where).limit(1).get();
+  const target = targetRes.data && targetRes.data[0];
+  if (!target || !isYoloMemberStatus(target.memberStatus)) {
+    return { success: false, error: '被提问对象不是 YOLO+ 会员' };
+  }
+
+  const sec = await checkTextSecurity(cleanQuestion);
+  if (!sec.ok) return { success: false, error: sec.error };
+  const newQa = {
+    qaId: 'qa_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+    question: cleanQuestion,
+    answer: null,
+    askedBy: '匿名会员',
+    askedByUserId: asker.userId,
+    askedByMemberStatus: asker.memberStatus || 'active',
+    visibility: 'public',
+    status: 'active',
+    createdAt: Date.now()
+  };
   const result = await db.collection('users')
     .where(where)
     .update({
@@ -402,17 +573,32 @@ const addQuestion = async (event) => {
         qa: _.push(newQa)
       }
     });
-  return { success: true, updated: result.stats.updated };
+  return { success: true, updated: result.stats.updated, qa: newQa };
 };
 
 // 回答某个问题（按 qa 数组索引更新）
 const answerQuestion = async (event) => {
   const { userId, index, answer, dataType } = event;
-  const sec = await checkTextSecurity(answer);
+  const { OPENID } = cloud.getWXContext();
+  const actor = await getAuthenticatedMember();
+  const canAnswer = isAdminOpenId(OPENID) || !!(actor && actor.userId === userId);
+  if (!canAnswer) {
+    return { success: false, error: '只有档案本人可回答问题' };
+  }
+  const qaIndex = Number(index);
+  if (!Number.isInteger(qaIndex) || qaIndex < 0) {
+    return { success: false, error: '问题索引无效' };
+  }
+  const cleanAnswer = String(answer || '').trim();
+  if (!cleanAnswer) return { success: false, error: '回答不能为空' };
+  if (cleanAnswer.length > 500) return { success: false, error: '回答不能超过 500 字' };
+  const sec = await checkTextSecurity(cleanAnswer);
   if (!sec.ok) return { success: false, error: sec.error };
-  const updateKey = 'qa.' + index + '.answer';
+  const updateKey = 'qa.' + qaIndex + '.answer';
+  const answeredAtKey = 'qa.' + qaIndex + '.answeredAt';
   const updateData = {};
-  updateData[updateKey] = answer;
+  updateData[updateKey] = cleanAnswer;
+  updateData[answeredAtKey] = Date.now();
   const where = { userId: userId };
   if (dataType) where.dataType = dataType;
   const result = await db.collection('users')
@@ -485,7 +671,7 @@ const replaceUsersByDataType = async (event) => {
       .skip(cursor).limit(100).get();
     if (!existing.data.length) break;
     existing.data.forEach((u) => {
-      if (u.wechatOpenId || u.wechatUnionId) {
+      if (isYoloMemberStatus(u.memberStatus) && (u.wechatOpenId || u.wechatUnionId)) {
         bindMap[u.userId] = {
           wechatOpenId: u.wechatOpenId || '',
           wechatUnionId: u.wechatUnionId || ''
@@ -604,6 +790,8 @@ const getUserProfile = async (event) => {
 // 按 nodeId 删除节点（找到后用 splice 删除）
 const deleteNodeById = async (event) => {
   const { userId, nodeId, dataType } = event;
+  const auth = await ensureTimelineWriteAllowed(userId);
+  if (!auth.ok) return { success: false, error: auth.error };
   const where = { userId: userId };
   if (dataType) where.dataType = dataType;
 
@@ -627,6 +815,8 @@ const deleteNodeById = async (event) => {
 // 按 nodeId 更新节点（读取→找索引→用点路径更新）
 const updateNodeById = async (event) => {
   const { userId, nodeId, updates, dataType } = event;
+  const auth = await ensureTimelineWriteAllowed(userId);
+  if (!auth.ok) return { success: false, error: auth.error };
   const u = updates || {};
   const sec = await checkTextSecurity([u.desc, u.title, u.summary]);
   if (!sec.ok) return { success: false, error: sec.error };

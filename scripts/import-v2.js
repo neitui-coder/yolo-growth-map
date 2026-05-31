@@ -19,11 +19,28 @@ const MiniProgram = require('miniprogram-automator/out/MiniProgram').default;
 const projectPath = path.resolve(__dirname, '..');
 const masterPath = path.join(projectPath, 'data', 'yolo-2025-members.master.json');
 const activitiesCollectionPath = path.join(projectPath, 'data', 'yolo-activities-collection.json');
-const wsEndpoint = process.env.AUTOMATOR_WS_ENDPOINT || 'ws://localhost:9420';
+const personalEventsPath = path.join(projectPath, 'data', 'yolo-personal-events.json');
+const cliPath = '/Applications/wechatwebdevtools.app/Contents/MacOS/cli';
+const wsEndpoint = process.env.AUTOMATOR_WS_ENDPOINT || '';
 const isDryRun = process.argv.includes('--dry-run');
 
 // Bypass version check so we can connect to an already-open DevTools session
 MiniProgram.prototype.checkVersion = async () => true;
+
+function stripProxyEnv() {
+  [
+    'http_proxy',
+    'HTTP_PROXY',
+    'https_proxy',
+    'HTTPS_PROXY',
+    'all_proxy',
+    'ALL_PROXY',
+    'no_proxy',
+    'NO_PROXY'
+  ].forEach((key) => {
+    delete process.env[key];
+  });
+}
 
 // ─── Utility helpers ──────────────────────────────────────────────────────────
 function normalizeString(value) {
@@ -68,8 +85,18 @@ function cleanObject(value) {
  *
  * No embedded activity details — the client resolves full details via activityKey.
  */
-function buildNodes(activitiesCollection, userId, joinDate) {
+function buildNodes(activitiesCollection, personalEvents, userId, joinDate) {
   const activities = (activitiesCollection && activitiesCollection.activities) || [];
+  const personalNodes = ((personalEvents && personalEvents.eventsByUserId && personalEvents.eventsByUserId[userId]) || [])
+    .map((node) => cleanObject({
+      nodeId: normalizeString(node.nodeId),
+      type: normalizeString(node.type) || 'activity',
+      date: normalizeString(node.date),
+      dateRange: normalizeString(node.dateRange),
+      desc: normalizeString(node.desc),
+      sourceActivityKey: normalizeString(node.sourceActivityKey),
+      source: normalizeString(node.source)
+    }));
 
   const joinNode = {
     nodeId: 'n-join-' + userId,
@@ -93,7 +120,7 @@ function buildNodes(activitiesCollection, userId, joinDate) {
     });
 
   // Merge and sort by date descending (join uses .date, activity refs use .joinedDate)
-  const allNodes = [joinNode, ...activityNodes].sort((a, b) => {
+  const allNodes = [joinNode, ...activityNodes, ...personalNodes].sort((a, b) => {
     const da = a.date || a.joinedDate || '';
     const db = b.date || b.joinedDate || '';
     return db.localeCompare(da);
@@ -103,7 +130,7 @@ function buildNodes(activitiesCollection, userId, joinDate) {
 }
 
 // ─── User builder ─────────────────────────────────────────────────────────────
-function buildImportUser(master, activitiesCollection, member) {
+function buildImportUser(master, activitiesCollection, personalEvents, member) {
   const identity = member.identity || {};
   const community = member.community || {};
   const profile = member.profile || {};
@@ -117,6 +144,7 @@ function buildImportUser(master, activitiesCollection, member) {
     name: normalizeString(identity.name),
     englishName: normalizeString(identity.englishName),
     motto: normalizeString(profile.motto),
+    mottoSource: normalizeString(profile.mottoSource),
     birthday: normalizeString(profile.birthday),
     education: ensureArray(profile.education).join('；'),
     company: normalizeString(profile.company),
@@ -145,7 +173,7 @@ function buildImportUser(master, activitiesCollection, member) {
     joinPeriods: Array.isArray(community.joinPeriods) && community.joinPeriods.length
       ? community.joinPeriods
       : [{ start: joinDate, end: null }],
-    nodes: buildNodes(activitiesCollection, userId, joinDate),
+    nodes: buildNodes(activitiesCollection, personalEvents, userId, joinDate),
     qa: [],
     skills: [],
     tags: [],
@@ -193,15 +221,31 @@ async function safeClose(miniProgram) {
   ]);
 }
 
+async function openMiniProgram() {
+  stripProxyEnv();
+  if (wsEndpoint) {
+    return automator.connect({ wsEndpoint });
+  }
+  return automator.launch({
+    cliPath,
+    projectPath,
+    trustProject: true,
+    timeout: 60000
+  });
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
   // Read input data
   const master = JSON.parse(fs.readFileSync(masterPath, 'utf8'));
   const activitiesCollection = JSON.parse(fs.readFileSync(activitiesCollectionPath, 'utf8'));
+  const personalEvents = fs.existsSync(personalEventsPath)
+    ? JSON.parse(fs.readFileSync(personalEventsPath, 'utf8'))
+    : { eventsByUserId: {} };
 
   // Build all user objects with simplified nodes
   const users = (master.members || []).map((member) =>
-    buildImportUser(master, activitiesCollection, member)
+    buildImportUser(master, activitiesCollection, personalEvents, member)
   );
 
   console.log(JSON.stringify({
@@ -217,7 +261,7 @@ async function main() {
   }
 
   // Connect to miniprogram DevTools
-  const mp = await automator.connect({ wsEndpoint });
+  const mp = await openMiniProgram();
 
   try {
     // 1. Push activities collection

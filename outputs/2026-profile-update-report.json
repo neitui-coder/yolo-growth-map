@@ -1,0 +1,143 @@
+{
+  "source": "/Users/Sean/Downloads/YOLO+2026年会员成长档案资料收集.xlsx",
+  "generatedAt": "2026-05-29T04:52:55.228Z",
+  "created": [],
+  "unmatched": [],
+  "changes": [
+    {
+      "row": 29,
+      "userId": "new2026-liwenyue",
+      "name": "李文越",
+      "field": "profile.company",
+      "old": "上海欣驰电子有限公司企业",
+      "new": "上海欣驰电子有限公司"
+    },
+    {
+      "row": 29,
+      "userId": "new2026-liwenyue",
+      "name": "李文越",
+      "field": "profile.career",
+      "old": "发展部总监",
+      "new": "企业发展部总监"
+    },
+    {
+      "row": "confirmed-fix",
+      "userId": "mn-18022",
+      "name": "吴昌鸿",
+      "field": "profile.motto",
+      "old": "l came l saw l conquered",
+      "new": "I came I saw I conquered"
+    },
+    {
+      "row": "confirmed-fix",
+      "userId": "mn-18025",
+      "name": "徐志谦",
+      "field": "profile.education",
+      "old": "本科：美国欧文谷大学经融管理专业 /加州大学尔湾分校的经济学专业 研究生：加州大学尔湾分校创新创业专业",
+      "new": "本科：美国欧文谷大学金融管理专业 /加州大学尔湾分校的经济学专业 研究生：加州大学尔湾分校创新创业专业"
+    },
+    {
+      "row": "confirmed-fix",
+      "userId": "pdf2025-shenyin",
+      "name": "沈吟",
+      "field": "interests.hobbies",
+      "old": [
+        "动画片",
+        "玩游戏",
+        "关心消费邻域"
+      ],
+      "new": [
+        "动画片",
+        "玩游戏",
+        "关心消费领域"
+      ]
+    },
+    {
+      "row": "2026-roster",
+      "userId": "alumni-ruixiang",
+      "name": "王睿翔",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    },
+    {
+      "row": "2026-roster",
+      "userId": "mn-18018",
+      "name": "潘佳瑜",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    },
+    {
+      "row": "2026-roster",
+      "userId": "mn-18027",
+      "name": "张嘉沁",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    },
+    {
+      "row": "2026-roster",
+      "userId": "mn-20054",
+      "name": "林安之",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    },
+    {
+      "row": "2026-roster",
+      "userId": "pdf2025-zhuofan",
+      "name": "詹卓凡",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    },
+    {
+      "row": "2026-roster",
+      "userId": "pdf2025-jackson",
+      "name": "葛汉",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    },
+    {
+      "row": "2026-roster",
+      "userId": "pdf2025-sarah-p30",
+      "name": "高秋闲",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    },
+    {
+      "row": "2026-roster",
+      "userId": "pdf2025-sophie",
+      "name": "苏雨",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    },
+    {
+      "row": "2026-roster",
+      "userId": "pdf2025-weijie",
+      "name": "毕伟杰",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    },
+    {
+      "row": "2026-roster",
+      "userId": "pdf2025-linda",
+      "name": "陆怡霖",
+      "field": "memberStatus",
+      "old": "active",
+      "new": "alumni"
+    }
+  ],
+  "counts": {
+    "members": 112,
+    "active": 32,
+    "alumni": 80,
+    "created": 0,
+    "changedFields": 15
+  }
+}

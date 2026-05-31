@@ -7,14 +7,17 @@
   - 逗号分隔的数组字段
 -->
 <view class="edit-profile-page">
+  <view wx:if="{{pageLoading}}" class="edit-loading">资料加载中...</view>
+
+  <block wx:else>
   <view class="form-group">
     <text class="form-label">姓名</text>
     <input class="form-input" value="{{name}}" placeholder="请输入姓名" bindinput="onInput" data-field="name" />
   </view>
 
   <view class="form-group">
-    <text class="form-label">格言</text>
-    <input class="form-input" value="{{motto}}" placeholder="请输入个人格言" bindinput="onInput" data-field="motto" />
+    <text class="form-label">一句话</text>
+    <input class="form-input" value="{{motto}}" placeholder="请输入你想展示的一句话" bindinput="onInput" data-field="motto" />
   </view>
 
   <view class="form-group">
@@ -45,12 +48,12 @@
     <text class="form-label">生日</text>
     <picker mode="date" value="{{birthday}}" bindchange="onBirthdayChange">
       <view class="form-input picker-value">
-        {{birthday || '请选择具体生日（仅月份会对外展示）'}}
+        {{birthday || '请选择具体生日（仅用于首页生日月提醒）'}}
       </view>
     </picker>
   </view>
 
-  <view class="form-group" wx:if="{{false}}">
+  <view class="form-group">
     <text class="form-label">星座</text>
     <picker range="{{zodiacOptions}}" value="{{zodiacIndex}}" bindchange="onZodiacChange">
       <view class="form-input picker-value">
@@ -61,27 +64,32 @@
 
   <view class="form-group">
     <text class="form-label">教育背景</text>
-    <input class="form-input" value="{{education}}" placeholder="请输入教育背景" bindinput="onInput" data-field="education" />
+    <textarea class="form-input form-textarea" value="{{education}}" placeholder="请输入教育背景" auto-height maxlength="-1" bindinput="onInput" data-field="education" />
+  </view>
+
+  <view class="form-group">
+    <text class="form-label">盖洛普 TOP5</text>
+    <input class="form-input" value="{{gallupStr}}" placeholder="用逗号分隔，最多 5 个，如：沟通,适应,学习" bindinput="onInput" data-field="gallupStr" />
   </view>
 
   <view class="form-group">
     <text class="form-label">爱好</text>
-    <input class="form-input" value="{{hobbiesStr}}" placeholder="用逗号分隔，如：阅读,跑步,旅行" bindinput="onInput" data-field="hobbiesStr" />
+    <textarea class="form-input form-textarea" value="{{hobbiesStr}}" placeholder="用逗号分隔，如：阅读,跑步,旅行" auto-height maxlength="-1" bindinput="onInput" data-field="hobbiesStr" />
   </view>
 
   <view class="form-group">
     <text class="form-label">擅长领域</text>
-    <input class="form-input" value="{{expertiseStr}}" placeholder="用逗号分隔，如：产品设计,数据分析" bindinput="onInput" data-field="expertiseStr" />
+    <textarea class="form-input form-textarea" value="{{expertiseStr}}" placeholder="用逗号分隔，如：产品设计,数据分析" auto-height maxlength="-1" bindinput="onInput" data-field="expertiseStr" />
   </view>
 
   <view class="form-group">
     <text class="form-label">标签</text>
-    <input class="form-input" value="{{tagsStr}}" placeholder="用逗号分隔，如：咖啡爱好者,马拉松跑者" bindinput="onInput" data-field="tagsStr" />
+    <textarea class="form-input form-textarea" value="{{tagsStr}}" placeholder="用逗号分隔，如：咖啡爱好者,马拉松跑者" auto-height maxlength="-1" bindinput="onInput" data-field="tagsStr" />
   </view>
 
   <view class="form-group">
     <text class="form-label">技能认证</text>
-    <input class="form-input" value="{{skillsStr}}" placeholder="用逗号分隔，如：CFA,PMP,AWS SAA" bindinput="onInput" data-field="skillsStr" />
+    <textarea class="form-input form-textarea" value="{{skillsStr}}" placeholder="用逗号分隔，如：CFA,PMP,AWS SAA" auto-height maxlength="-1" bindinput="onInput" data-field="skillsStr" />
   </view>
 
   <view class="form-group">
@@ -89,5 +97,8 @@
     <input class="form-input" value="{{goal}}" placeholder="请输入年度目标" bindinput="onInput" data-field="goal" />
   </view>
 
-  <button class="btn-submit" bindtap="onSubmit">保存</button>
+  <view class="edit-footer">
+    <button class="btn-submit" loading="{{submitting}}" disabled="{{submitting}}" bindtap="onSubmit">{{submitting ? '保存中' : '保存'}}</button>
+  </view>
+  </block>
 </view>

@@ -39,11 +39,13 @@ Page({
     }).then(function (res) {
       var raw = (res && res.result && res.result.members) || [];
       var users = raw.map(function (u) {
+        var statusLabel = u.memberStatus === 'alumni' ? '往届会员' : '现届会员';
         return {
           userId: u.userId,
           name: u.name || '',
           englishName: u.englishName || '',
-          subtitle: [u.company, u.role].filter(Boolean).join(' · '),
+          subtitle: [statusLabel, u.company, u.role].filter(Boolean).join(' · '),
+          memberStatus: u.memberStatus || 'active',
           avatarUrl: app.getMediaUrl ? app.getMediaUrl(u.avatarImage) || util.getAvatarUrl(u, 60) : util.getAvatarUrl(u, 60),
           initial: (u.name || '?').slice(0, 1)
         };
@@ -53,13 +55,15 @@ Page({
     }).catch(function () {
       // fallback：用本地 master
       var users = (app.globalData.users || [])
-        .filter(function (u) { return u.memberStatus !== 'alumni' && !u.wechatOpenId; })
+        .filter(function (u) { return (u.memberStatus === 'active' || u.memberStatus === 'alumni' || !u.memberStatus) && !u.wechatOpenId && !u.wechatUnionId; })
         .map(function (u) {
+          var statusLabel = u.memberStatus === 'alumni' ? '往届会员' : '现届会员';
           return {
             userId: u.userId,
             name: u.name || '',
             englishName: u.englishName || '',
-            subtitle: [u.company, u.role].filter(Boolean).join(' · '),
+            subtitle: [statusLabel, u.company, u.role].filter(Boolean).join(' · '),
+            memberStatus: u.memberStatus || 'active',
             avatarUrl: app.getMediaUrl ? app.getMediaUrl(u.avatarImage) || util.getAvatarUrl(u, 60) : util.getAvatarUrl(u, 60),
             initial: (u.name || '?').slice(0, 1)
           };
@@ -92,15 +96,26 @@ Page({
       if (r && r.success && r.matched) {
         app.globalData.currentUserId = r.user.userId;
         app.globalData.selectedUserId = r.user.userId;
+        app.globalData.currentUserMemberStatus = r.user.memberStatus || 'active';
         app.globalData.authBound = true;
+        app.globalData.isStaff = false;
         wx.showToast({ title: '你好，' + r.user.name, icon: 'success' });
         setTimeout(function () { wx.reLaunch({ url: '/pages/index/index' }); }, 1000);
+      } else if (r && r.success && r.alreadyBound && r.user) {
+        app.globalData.currentUserId = r.user.userId;
+        app.globalData.selectedUserId = r.user.userId;
+        app.globalData.currentUserMemberStatus = r.user.memberStatus || 'active';
+        app.globalData.authBound = true;
+        app.globalData.isStaff = false;
+        wx.showToast({ title: '已绑定，欢迎回来', icon: 'success' });
+        setTimeout(function () { wx.reLaunch({ url: '/pages/index/index' }); }, 800);
       } else {
         // 没匹配上 → 提示手动选
         self.setData({ phoneTried: true });
+        var content = '你的微信手机号不在 YOLO+ 成员名单里，请从下方手动选择。';
         wx.showModal({
           title: '没找到对应的成员',
-          content: '你的微信手机号不在 YOLO+ 成员名单里，请从下方手动选择。',
+          content: content,
           showCancel: false
         });
       }
@@ -143,7 +158,10 @@ Page({
           if (r && r.success) {
             app.globalData.currentUserId = userId;
             app.globalData.selectedUserId = userId;
+            var picked = (self.data.allUsers || []).find(function (u) { return u.userId === userId; });
+            app.globalData.currentUserMemberStatus = (picked && picked.memberStatus) || 'active';
             app.globalData.authBound = true;
+            app.globalData.isStaff = false;
             wx.showToast({ title: '绑定成功', icon: 'success' });
             setTimeout(function () { wx.reLaunch({ url: '/pages/index/index' }); }, 800);
           } else {

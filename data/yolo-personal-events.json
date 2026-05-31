@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-28T10:41:23.489Z",
+  "eventsByUserId": {
+    "mn-18022": [
+      {
+        "nodeId": "n-ted-yolo-2024-singapore-mn-18022",
+        "type": "ted",
+        "date": "2024-09",
+        "dateRange": "",
+        "desc": "TED Talk：新加坡游学",
+        "sourceActivityKey": "yolo-2024-singapore",
+        "source": "attendance-role"
+      }
+    ],
+    "mn-21063": [
+      {
+        "nodeId": "n-ted-yolo-2024-singapore-mn-21063",
+        "type": "ted",
+        "date": "2024-09",
+        "dateRange": "",
+        "desc": "TED Talk：新加坡游学",
+        "sourceActivityKey": "yolo-2024-singapore",
+        "source": "attendance-role"
+      }
+    ],
+    "mn-20053": [
+      {
+        "nodeId": "n-ted-yolo-2024-macau-mn-20053",
+        "type": "ted",
+        "date": "2024-11",
+        "dateRange": "",
+        "desc": "TED Talk：澳门年会",
+        "sourceActivityKey": "yolo-2024-macau",
+        "source": "attendance-role"
+      }
+    ],
+    "mn-23092": [
+      {
+        "nodeId": "n-ted-yolo-2024-macau-mn-23092",
+        "type": "ted",
+        "date": "2024-11",
+        "dateRange": "",
+        "desc": "TED Talk：澳门年会",
+        "sourceActivityKey": "yolo-2024-macau",
+        "source": "attendance-role"
+      }
+    ],
+    "pdf2025-xiaoyan": [
+      {
+        "nodeId": "n-ted-yolo-2025-wenling-pdf2025-xiaoyan",
+        "type": "ted",
+        "date": "2025-03",
+        "dateRange": "3月13日—15日",
+        "desc": "TED Talk：温岭区域活动",
+        "sourceActivityKey": "yolo-2025-wenling",
+        "source": "attendance-role"
+      }
+    ],
+    "pdf2025-zhuofan": [
+      {
+        "nodeId": "n-ted-yolo-2025-wenling-pdf2025-zhuofan",
+        "type": "ted",
+        "date": "2025-03",
+        "dateRange": "3月13日—15日",
+        "desc": "TED Talk：温岭区域活动",
+        "sourceActivityKey": "yolo-2025-wenling",
+        "source": "attendance-role"
+      }
+    ],
+    "pdf2025-shenyin": [
+      {
+        "nodeId": "n-ted-yolo-2025-yantai-pdf2025-shenyin",
+        "type": "ted",
+        "date": "2025-06",
+        "dateRange": "6月26日—28日",
+        "desc": "TED Talk：烟台使命探索之旅",
+        "sourceActivityKey": "yolo-2025-yantai",
+        "source": "attendance-role"
+      }
+    ],
+    "pdf2025-jerry": [
+      {
+        "nodeId": "n-ted-yolo-2025-zhengzhou-pdf2025-jerry",
+        "type": "ted",
+        "date": "2025-08",
+        "dateRange": "8月7日—9日",
+        "desc": "TED Talk：郑州变革管理模块",
+        "sourceActivityKey": "yolo-2025-zhengzhou",
+        "source": "attendance-role"
+      }
+    ],
+    "mn-19043": [
+      {
+        "nodeId": "n-ted-yolo-2025-suzhou-mn-19043",
+        "type": "ted",
+        "date": "2025-11",
+        "dateRange": "11月14日—15日",
+        "desc": "TED Talk：苏州年会",
+        "sourceActivityKey": "yolo-2025-suzhou",
+        "source": "attendance-role"
+      }
+    ],
+    "mn-18007": [
+      {
+        "nodeId": "n-ted-yolo-2025-suzhou-mn-18007",
+        "type": "ted",
+        "date": "2025-11",
+        "dateRange": "11月14日—15日",
+        "desc": "TED Talk：苏州年会",
+        "sourceActivityKey": "yolo-2025-suzhou",
+        "source": "attendance-role"
+      }
+    ]
+  }
+}

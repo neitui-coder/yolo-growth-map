@@ -70,13 +70,7 @@
 
 /* 卡片顶部装饰渐变条 */
 .tl-m-card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1rpx;
-  background: #edf1f5;
+  display: none;
 }
 
 /* 头部: 日期 + 类型 */
@@ -153,6 +147,15 @@
   background: #e2e8f0;
 }
 
+.tl-participant-avatar-initial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 18rpx;
+  font-weight: 700;
+}
+
 .tl-participant-avatar:first-child {
   margin-left: 0;
 }
@@ -222,30 +225,45 @@
 /* === Modern 节点类型颜色（统一蓝色）=== */
 
 .type-activity .tl-m-dot,
+.type-join .tl-m-dot,
+.type-travel .tl-m-dot,
+.type-annual .tl-m-dot,
 .type-role .tl-m-dot,
 .type-life .tl-m-dot,
 .type-ted .tl-m-dot,
 .type-cert .tl-m-dot { background: #2563eb; }
 
 .type-activity .tl-m-pulse,
+.type-join .tl-m-pulse,
+.type-travel .tl-m-pulse,
+.type-annual .tl-m-pulse,
 .type-role .tl-m-pulse,
 .type-life .tl-m-pulse,
 .type-ted .tl-m-pulse,
 .type-cert .tl-m-pulse { background: rgba(37, 99, 235, 0.2); }
 
 .type-activity .tl-m-card,
+.type-join .tl-m-card,
+.type-travel .tl-m-card,
+.type-annual .tl-m-card,
 .type-role .tl-m-card,
 .type-life .tl-m-card,
 .type-ted .tl-m-card,
 .type-cert .tl-m-card { border-left-color: transparent; }
 
 .type-activity .tl-m-card::after,
+.type-join .tl-m-card::after,
+.type-travel .tl-m-card::after,
+.type-annual .tl-m-card::after,
 .type-role .tl-m-card::after,
 .type-life .tl-m-card::after,
 .type-ted .tl-m-card::after,
 .type-cert .tl-m-card::after { background: #edf1f5; }
 
 .type-activity .tl-m-type-badge,
+.type-join .tl-m-type-badge,
+.type-travel .tl-m-type-badge,
+.type-annual .tl-m-type-badge,
 .type-role .tl-m-type-badge,
 .type-life .tl-m-type-badge,
 .type-ted .tl-m-type-badge,
@@ -280,7 +298,6 @@
   border-radius: 0;
   background: transparent;
   border: none;
-  border-bottom: 1rpx solid #edf1f5;
 }
 
 /* 日期 + 标签行 */
@@ -359,12 +376,18 @@
 
 /* === Minimal 节点类型颜色（统一蓝色）=== */
 .type-activity .tl-n-dot,
+.type-join .tl-n-dot,
+.type-travel .tl-n-dot,
+.type-annual .tl-n-dot,
 .type-role .tl-n-dot,
 .type-life .tl-n-dot,
 .type-ted .tl-n-dot,
 .type-cert .tl-n-dot { background: #2563eb; }
 
 .type-activity .tl-n-tag,
+.type-join .tl-n-tag,
+.type-travel .tl-n-tag,
+.type-annual .tl-n-tag,
 .type-role .tl-n-tag,
 .type-life .tl-n-tag,
 .type-ted .tl-n-tag,

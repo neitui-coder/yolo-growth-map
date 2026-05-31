@@ -3,15 +3,67 @@
   display: flex;
   flex-direction: column;
   background: #fff;
-  border-radius: 24rpx;
-  padding: 36rpx 28rpx;
+  border-radius: 20rpx;
+  padding: 24rpx 18rpx 18rpx;
   text-align: center;
-  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3rpx 12rpx rgba(15, 23, 42, 0.06);
   border: 2rpx solid #e2e8f0;
-  min-height: 520rpx;
+  min-height: 356rpx;
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;
+}
+
+.member-card.is-birthday {
+  border-color: #fed7aa;
+  background: linear-gradient(180deg, #fffaf5 0%, #fff 48%);
+  box-shadow: 0 4rpx 18rpx rgba(234, 88, 12, 0.12);
+}
+
+.member-card.is-birthday::before,
+.member-card.is-birthday::after {
+  content: '';
+  position: absolute;
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 50%;
+  background: #fdba74;
+  opacity: 0.9;
+}
+
+.member-card.is-birthday::before {
+  top: 24rpx;
+  left: 28rpx;
+}
+
+.member-card.is-birthday::after {
+  top: 50rpx;
+  left: 48rpx;
+  background: #bfdbfe;
+}
+
+.mc-birthday-ribbon {
+  position: absolute;
+  top: 16rpx;
+  right: 16rpx;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72rpx;
+  height: 34rpx;
+  padding: 0 14rpx;
+  border-radius: 999rpx;
+  background: #fff7ed;
+  border: 1rpx solid #fed7aa;
+  box-shadow: 0 4rpx 10rpx rgba(249, 115, 22, 0.12);
+}
+
+.mc-birthday-ribbon text {
+  font-size: 18rpx;
+  line-height: 1;
+  color: #ea580c;
+  font-weight: 800;
 }
 
 .card-hover {
@@ -21,14 +73,14 @@
 
 .mc-avatar-wrap {
   position: relative;
-  width: 120rpx;
-  height: 120rpx;
-  margin: 0 auto 16rpx;
+  width: 104rpx;
+  height: 104rpx;
+  margin: 0 auto 14rpx;
 }
 
 .mc-avatar {
-  width: 120rpx;
-  height: 120rpx;
+  width: 104rpx;
+  height: 104rpx;
   border-radius: 50%;
   background: #f1f5f9;
   border: 4rpx solid #e2e8f0;
@@ -40,7 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 56rpx;
+  font-size: 48rpx;
   font-weight: 700;
   color: #1d4ed8;
   letter-spacing: 1rpx;
@@ -48,37 +100,58 @@
 
 .mc-birthday-hat {
   position: absolute;
-  top: -14rpx;
-  left: 4rpx;
-  width: 0;
-  height: 0;
-  border-left: 18rpx solid transparent;
-  border-right: 18rpx solid transparent;
-  border-bottom: 42rpx solid #f97316;
-  transform: rotate(-18deg);
-  z-index: 2;
+  top: -20rpx;
+  right: -10rpx;
+  width: 48rpx;
+  height: 58rpx;
+  transform: rotate(18deg);
+  z-index: 3;
 }
 
-.mc-birthday-hat::before {
-  content: '';
+.mc-birthday-hat-pom {
   position: absolute;
-  top: 10rpx;
-  left: -10rpx;
-  width: 20rpx;
-  height: 6rpx;
-  border-radius: 999rpx;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.mc-birthday-hat-ball {
-  position: absolute;
-  top: -10rpx;
-  left: -6rpx;
-  width: 12rpx;
-  height: 12rpx;
+  top: 0;
+  left: 18rpx;
+  width: 13rpx;
+  height: 13rpx;
   border-radius: 50%;
   background: #fde68a;
-  box-shadow: 0 0 0 4rpx rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 4rpx rgba(255, 247, 237, 0.85);
+  z-index: 4;
+}
+
+.mc-birthday-hat-cone {
+  position: absolute;
+  top: 10rpx;
+  left: 5rpx;
+  width: 0;
+  height: 0;
+  border-left: 19rpx solid transparent;
+  border-right: 19rpx solid transparent;
+  border-bottom: 42rpx solid #fb923c;
+}
+
+.mc-birthday-hat-cone::after {
+  content: '';
+  position: absolute;
+  left: -12rpx;
+  top: 22rpx;
+  width: 24rpx;
+  height: 6rpx;
+  border-radius: 999rpx;
+  background: rgba(255, 255, 255, 0.72);
+  transform: rotate(-18deg);
+}
+
+.mc-birthday-hat-brim {
+  position: absolute;
+  left: 3rpx;
+  bottom: 0;
+  width: 42rpx;
+  height: 11rpx;
+  border-radius: 999rpx;
+  background: #fed7aa;
+  box-shadow: 0 2rpx 4rpx rgba(194, 65, 12, 0.12);
 }
 
 .mc-name-row {
@@ -87,11 +160,12 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 8rpx;
-  margin-bottom: 8rpx;
+  min-height: 42rpx;
+  margin-bottom: 10rpx;
 }
 
 .mc-name {
-  font-size: 30rpx;
+  font-size: 29rpx;
   font-weight: 700;
   color: #1f2937;
   word-break: break-all;
@@ -164,15 +238,44 @@
   word-break: break-all;
 }
 
+.mc-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8rpx;
+  min-height: 42rpx;
+}
+
 .mc-mbti {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 22rpx;
-  font-weight: 600;
-  padding: 4rpx 16rpx;
-  border-radius: 20rpx;
+  font-weight: 700;
+  padding: 4rpx 12rpx;
+  border-radius: 999rpx;
   background: #f1f5f9;
   color: #475569;
-  margin-bottom: 12rpx;
+  line-height: 1.25;
+  min-width: 0;
+}
+
+.mc-city {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 160rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 999rpx;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 22rpx;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .mc-motto {
@@ -208,53 +311,17 @@
 
 .mc-footer {
   margin-top: auto;
-  padding-top: 16rpx;
+  padding-top: 14rpx;
 }
 
 .mc-growth {
   font-size: 22rpx;
   color: #3b82f6;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mc-days {
-  font-size: 22rpx;
+  font-size: 21rpx;
   color: #d1d5db;
-  margin-top: 12rpx;
-}
-
-/* Rank badge */
-.mc-rank {
-  position: absolute;
-  top: 16rpx;
-  right: 16rpx;
-  min-width: 44rpx;
-  height: 44rpx;
-  border-radius: 22rpx;
-  font-size: 22rpx;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10rpx;
-}
-
-.mc-rank.top1 {
-  background: #f59e0b;
-  color: #fff;
-}
-
-.mc-rank.top2 {
-  background: #94a3b8;
-  color: #fff;
-}
-
-.mc-rank.top3 {
-  background: #b87333;
-  color: #fff;
-}
-
-.mc-rank.top-other {
-  background: #f3f4f6;
-  color: #6b7280;
+  margin-top: 8rpx;
 }

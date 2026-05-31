@@ -18,6 +18,10 @@ Component({
     showRank: {
       type: Boolean,
       value: false
+    },
+    isBirthday: {
+      type: Boolean,
+      value: false
     }
   },
 
@@ -28,7 +32,9 @@ Component({
     yearsSince: 0,
     growthValue: 0,
     cityDisplay: '',
-    isLishi: false
+    isLishi: false,
+    displayBirthday: false,
+    birthdayClass: ''
   },
 
   lifetimes: {
@@ -38,8 +44,8 @@ Component({
   },
 
   observers: {
-    'user': function (user) {
-      this._computeData(user);
+    'user,isBirthday': function (user) {
+      this._computeData(user || this.data.user);
     }
   },
 
@@ -48,11 +54,10 @@ Component({
       if (!user || !user.name) return;
       var cityDisplay = '';
       if (user.city) {
-        // 多个城市只取第一个
-        var raw = Array.isArray(user.city) ? user.city[0] : user.city;
-        cityDisplay = (raw || '').split(/[、,，;；/]/)[0].trim();
+        cityDisplay = util.normalizeCityName(Array.isArray(user.city) ? user.city[0] : user.city);
       }
-      var isLishi = !!(user.yoloRole && user.yoloRole.indexOf('理事') !== -1);
+      var isLishi = util.isFoundingDirector(user);
+      var displayBirthday = !!(this.data.isBirthday || user.isBirthdayMonth);
       this.setData({
         avatarUrl: util.getAvatarUrl(user, 60),
         avatarInitial: util.getAvatarInitial(user),
@@ -60,7 +65,9 @@ Component({
         yearsSince: util.yearsSince(user),
         growthValue: util.computeGrowthValue(user),
         cityDisplay: cityDisplay,
-        isLishi: isLishi
+        isLishi: isLishi,
+        displayBirthday: displayBirthday,
+        birthdayClass: displayBirthday ? 'is-birthday' : ''
       });
     },
 

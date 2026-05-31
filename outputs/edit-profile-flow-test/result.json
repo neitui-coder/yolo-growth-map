@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "results": [
+    {
+      "label": "active-dameixin",
+      "userId": "mn-25108",
+      "entryState": {
+        "path": "pages/profile/profile",
+        "name": "达美欣",
+        "canEditProfile": true,
+        "canManageProfile": true,
+        "addNodeButton": true
+      },
+      "saved": {
+        "motto": "测试签名 active-dameixin Tl61jc",
+        "mbti": "ISFP",
+        "company": "测试公司Tl61jc",
+        "career": "测试岗位Tl61jc",
+        "city": "上海",
+        "gallup": [
+          "沟通",
+          "适应",
+          "学习",
+          "战略",
+          "行动"
+        ],
+        "hobbies": [
+          "滑雪",
+          "高尔夫",
+          "测试爱好Tl61jc"
+        ],
+        "expertise": [
+          "数据分析",
+          "测试专长Tl61jc"
+        ],
+        "tags": [
+          "测试标签Tl61jc",
+          "发版前验证"
+        ],
+        "skills": [
+          "PMP",
+          "测试认证Tl61jc"
+        ],
+        "goal": "测试年度目标Tl61jc"
+      }
+    },
+    {
+      "label": "alumni-ruixiang",
+      "userId": "alumni-ruixiang",
+      "entryState": {
+        "path": "pages/profile/profile",
+        "name": "王睿翔",
+        "canEditProfile": true,
+        "canManageProfile": false,
+        "addNodeButton": false
+      },
+      "saved": {
+        "motto": "测试签名 alumni-ruixiang Tl6cew",
+        "mbti": "INTJ",
+        "company": "测试公司Tl6cew",
+        "career": "测试岗位Tl6cew",
+        "city": "北京",
+        "gallup": [
+          "沟通",
+          "适应",
+          "学习",
+          "战略",
+          "行动"
+        ],
+        "hobbies": [
+          "滑雪",
+          "高尔夫",
+          "测试爱好Tl6cew"
+        ],
+        "expertise": [
+          "数据分析",
+          "测试专长Tl6cew"
+        ],
+        "tags": [
+          "测试标签Tl6cew",
+          "发版前验证"
+        ],
+        "skills": [
+          "PMP",
+          "测试认证Tl6cew"
+        ],
+        "goal": "测试年度目标Tl6cew"
+      }
+    }
+  ],
+  "guestState": {
+    "canEditProfile": false,
+    "editButton": false
+  },
+  "staffState": {
+    "canEditProfile": false,
+    "editButton": false
+  },
+  "screenshots": "/Users/Sean/WeChatProjects/miniprogram-2/outputs/edit-profile-flow-test"
+}

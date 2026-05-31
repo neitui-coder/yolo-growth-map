@@ -249,8 +249,14 @@
       "collectiveActivity": true,
       "summary": "",
       "keyHighlights": [],
-      "coverImage": null,
-      "images": [],
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2018-shanghai-1w-12/1.jpg",
+      "images": [
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2018-shanghai-1w-12/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2018-shanghai-1w-12/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2018-shanghai-1w-12/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2018-shanghai-1w-12/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2018-shanghai-1w-12/5.jpg"
+      ],
       "participants": [
         {
           "userId": "pdf2025-bill",

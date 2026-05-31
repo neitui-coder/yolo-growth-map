@@ -4287,7 +4287,9 @@
           "滑雪"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/hist-linleyi.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "official-xlsx-historical-attendance"
@@ -6155,7 +6157,7 @@
         ]
       },
       "assets": {
-        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/xlsx2026-liwenyue.jpg"
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/new2026-liwenyue.jpg"
       },
       "import": {
         "dataType": "real",
@@ -6266,7 +6268,9 @@
           "游戏"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/new2026-panyuhao.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "yolo-2026-profile-collection"
@@ -6373,7 +6377,9 @@
           "写曲子"
         ]
       },
-      "assets": {},
+      "assets": {
+        "avatarImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/avatars/new2026-yudeyue.jpg"
+      },
       "import": {
         "dataType": "real",
         "source": "yolo-2026-profile-collection"

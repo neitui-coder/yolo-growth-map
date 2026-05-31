@@ -9,22 +9,10 @@
 -->
 <view wx:if="{{visible}}" class="avatar-picker-overlay" bindtap="onOverlayTap">
   <view class="avatar-picker-box" catchtap="onContentTap">
-    <view class="picker-title">😊 选择你的头像</view>
+    <view class="picker-title">😊 上传头像</view>
     <view class="picker-upload-btn {{uploading ? 'disabled' : ''}}" bindtap="onUploadPhoto">
-      <text>📷 上传我的照片</text>
+      <text>📷 从相册/相机上传照片</text>
     </view>
-    <view class="picker-divider"><text>或选择一个头像</text></view>
-    <view class="avatar-grid">
-      <image
-        wx:for="{{avatarChoices}}"
-        wx:key="seed"
-        class="avatar-choice {{item.isCurrent ? 'current' : ''}}"
-        src="{{item.url}}"
-        mode="aspectFill"
-        data-style="{{item.style}}"
-        data-seed="{{item.seed}}"
-        bindtap="onAvatarTap"
-      />
-    </view>
+    <view class="picker-upload-hint">建议使用清晰的正脸照，方形效果最佳</view>
   </view>
 </view>

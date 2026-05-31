@@ -33,13 +33,7 @@ Component({
     uploading: false
   },
 
-  observers: {
-    'visible': function (visible) {
-      if (visible) {
-        this._generateChoices();
-      }
-    }
-  },
+  // 已改为"仅上传照片"，不再生成预设(DiceBear)头像
 
   methods: {
     _generateChoices: function () {

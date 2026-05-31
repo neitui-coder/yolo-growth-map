@@ -33,6 +33,7 @@
       </view>
     </view>
 
+    <!-- 社区数据(共性)入口暂时隐藏，页面代码保留，需要时恢复此卡片即可
     <view class="footprint-entry stats-entry" bindtap="onStatsEntryTap">
       <view class="footprint-entry-main">
         <view class="footprint-entry-kicker">社区数据</view>
@@ -44,6 +45,7 @@
         <text class="footprint-entry-arrow">›</text>
       </view>
     </view>
+    -->
 
     <scroll-view class="year-filter" scroll-x="true" enhanced="true" show-scrollbar="{{false}}">
       <view class="year-filter-inner">

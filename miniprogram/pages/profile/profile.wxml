@@ -117,7 +117,7 @@
           <text wx:if="{{selectedUser.cityDisplay}}" class="v2-detail-tag" bindtap="onTagTap" data-field="city" data-value="{{selectedUser.cityDisplay}}">{{selectedUser.cityDisplay}}</text>
           <text wx:if="{{selectedUser.career}}" class="v2-detail-tag" bindtap="onTagTap" data-field="career" data-value="{{selectedUser.career}}">{{selectedUser.career}}</text>
           <text wx:if="{{selectedUser.company}}" class="v2-detail-tag" bindtap="onTagTap" data-field="company" data-value="{{selectedUser.company}}">{{selectedUser.company}}</text>
-          <text wx:if="{{selectedUser.education}}" class="v2-detail-tag" bindtap="onTagTap" data-field="education" data-value="{{selectedUser.education}}">{{selectedUser.education}}</text>
+          <text wx:for="{{selectedUser.educationTags}}" wx:key="*this" class="v2-detail-tag" bindtap="onTagTap" data-field="education" data-value="{{item}}">{{item}}</text>
           <text wx:if="{{selectedUser.zodiac}}" class="v2-detail-tag" bindtap="onTagTap" data-field="zodiac" data-value="{{selectedUser.zodiac}}">{{selectedUser.zodiac}}</text>
         </view>
       </view>
@@ -218,7 +218,7 @@
   bind:setgoal="onSetGoal"
 />
 
-<!-- 相似会员 (横滑卡片) -->
+<!-- 相似会员 (4 格平铺，不横滑) -->
 <view class="v2-card v2-similar-card" wx:if="{{similarUsers.length > 0}}">
   <view class="v2-card-header">
     <text class="v2-card-title">{{similarUsersTitle}}</text>
@@ -226,7 +226,7 @@
       <text>i</text>
     </view>
   </view>
-  <scroll-view class="v2-similar-scroll" scroll-x enable-flex>
+  <view class="v2-similar-grid">
     <view class="v2-similar-item" wx:for="{{similarUsers}}" wx:key="index" bindtap="onSimilarTap" data-user-id="{{item.user.userId || item.user.id}}">
       <view class="v2-similar-avatar-wrap">
         <image wx:if="{{item.avatarUrl}}" class="v2-similar-avatar" src="{{item.avatarUrl}}" mode="aspectFill" lazy-load="true" data-index="{{index}}" binderror="onSimilarAvatarError" />
@@ -235,7 +235,7 @@
       <text class="v2-similar-name">{{item.user.name}}</text>
       <text class="v2-similar-reason">{{item.reason}}</text>
     </view>
-  </scroll-view>
+  </view>
 </view>
 
 <!-- Q&A 区域 -->

@@ -6,26 +6,14 @@ var AI_FUNNY_INTRO_VERSION = 3;
 // 而不是冷冰冰的"同为某 MBTI"。带 emoji，取最戳人的两条。
 function serendipityReason(reasons) {
   if (!reasons || !reasons.length) return "志趣相投";
-  // 前缀 -> 优先级(越小越靠前) + emoji
-  var RULES = [
-    { p: "都喜欢", rank: 0, emoji: "💫" },
-    { p: "都想去", rank: 1, emoji: "✈️" },
-    { p: "都爱", rank: 2, emoji: "🎯" },
-    { p: "同有", rank: 3, emoji: "🧬" },
-    { p: "都在", rank: 4, emoji: "📍" },
-    { p: "同为", rank: 5, emoji: "🧠" }
-  ];
-  function meta(r) {
-    for (var i = 0; i < RULES.length; i++) {
-      if (r.indexOf(RULES[i].p) === 0) return RULES[i];
-    }
-    return { rank: 9, emoji: "" };
+  // 按缘分感排序（都喜欢>都想去>都爱>盖洛普>城市>MBTI），纯文字、不带 emoji
+  var ORDER = ["都喜欢", "都想去", "都爱", "同有", "都在", "同为"];
+  function rank(r) {
+    for (var i = 0; i < ORDER.length; i++) { if (r.indexOf(ORDER[i]) === 0) return i; }
+    return 9;
   }
-  var sorted = reasons.slice().sort(function (a, b) { return meta(a).rank - meta(b).rank; });
-  return sorted.slice(0, 2).map(function (r) {
-    var e = meta(r).emoji;
-    return e ? (e + " " + r) : r;
-  }).join("  ");
+  var sorted = reasons.slice().sort(function (a, b) { return rank(a) - rank(b); });
+  return sorted.slice(0, 2).join(" · ");
 }
 
 Page({
@@ -274,6 +262,9 @@ Page({
         : util.getAvatarUrl(user, 80),
       avatarInitial: util.getAvatarInitial(user),
       favoriteGroups: util.buildFavoriteGroups ? util.buildFavoriteGroups(user) : [],
+      educationTags: util.isFieldVisible(user, "education")
+        ? (util.splitEducationTags ? util.splitEducationTags(user.education) : [])
+        : [],
       cityDisplay: cityDisplay,
       isLishi: isLishi,
       isBirthdayMonth: util.isBirthdayInCurrentMonth(user),

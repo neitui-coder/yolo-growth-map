@@ -847,8 +847,34 @@ function buildFavoriteGroups(user) {
   return groups;
 }
 
+// 把整段教育经历拆成可点击搜索的词条（大学 / 学科分开），让同校/同专业的人能搜到一起
+function splitEducationTags(edu) {
+  if (!edu) return [];
+  var s = String(edu);
+  s = s.replace(/(本科|研究生|硕士|博士|MBA|PhD)\s*[：:]/g, '｜');
+  s = s.replace(/[（(]/g, '｜').replace(/[)）]/g, '｜');
+  s = s.replace(/在读|双主修|辅修/g, '｜');
+  var rough = s.split(/[｜、，,；;\/\n]+|\s{2,}/);
+  var UNIend = /^(.*?(?:大学|学院|学系|学校))\s+(.+)$/;
+  var tags = [], seen = {};
+  function push(t) {
+    t = (t || '').replace(/^[\s·、，,]+|[\s·、，,]+$/g, '').trim();
+    if (t.length < 2) return;
+    if (/^(本科|研究生|硕士|博士|在读)$/.test(t)) return;
+    if (seen[t]) return;
+    seen[t] = 1; tags.push(t);
+  }
+  rough.forEach(function (chunk) {
+    chunk = chunk.trim(); if (!chunk) return;
+    var m = chunk.match(UNIend);
+    if (m) { push(m[1]); push(m[2]); } else { push(chunk); }
+  });
+  return tags;
+}
+
 module.exports = {
   daysSince: daysSince,
+  splitEducationTags: splitEducationTags,
   buildFavoriteGroups: buildFavoriteGroups,
   yearsSince: yearsSince,
   formatDate: formatDate,

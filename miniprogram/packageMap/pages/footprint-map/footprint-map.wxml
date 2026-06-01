@@ -3,6 +3,7 @@
     <view class="map-stat">
       <text class="map-stat-num">{{litCount}}</text>
       <text class="map-stat-unit">个城市被点亮</text>
+      <text class="map-beta-badge">BETA</text>
     </view>
     <view class="map-stat-sub">{{provinceCount}} 个省份 · {{activityTotal}} 场 YOLO+ 活动足迹</view>
   </view>

@@ -28,6 +28,18 @@
   color: #cffafe;
 }
 
+.map-beta-badge {
+  margin-left: 12rpx;
+  padding: 2rpx 12rpx;
+  font-size: 18rpx;
+  font-weight: 700;
+  letter-spacing: 1rpx;
+  color: #081a33;
+  background: #5eead4;
+  border-radius: 6rpx;
+  align-self: center;
+}
+
 .map-stat-sub {
   margin-top: 6rpx;
   font-size: 24rpx;

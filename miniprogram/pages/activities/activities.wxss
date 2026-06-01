@@ -47,6 +47,19 @@ page {
   border-color: rgba(199, 210, 254, 0.9);
 }
 
+.beta-badge {
+  display: inline-block;
+  margin-left: 8rpx;
+  padding: 1rpx 10rpx;
+  font-size: 18rpx;
+  font-weight: 700;
+  letter-spacing: 1rpx;
+  color: #fff;
+  background: linear-gradient(135deg, #f59e0b, #f43f5e);
+  border-radius: 6rpx;
+  vertical-align: middle;
+}
+
 .footprint-entry-main {
   min-width: 0;
 }

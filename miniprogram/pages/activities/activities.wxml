@@ -21,7 +21,7 @@
   <view wx:else>
     <view wx:if="{{footprintSummary}}" class="footprint-entry" bindtap="onFootprintEntryTap">
       <view class="footprint-entry-main">
-        <view class="footprint-entry-kicker">历史足迹</view>
+        <view class="footprint-entry-kicker">历史足迹 <text class="beta-badge">BETA</text></view>
         <view class="footprint-entry-title">查看 YOLO+ 地图</view>
         <view class="footprint-entry-meta">
           {{footprintSummary.chinaLabel}} · {{footprintSummary.worldLabel}}

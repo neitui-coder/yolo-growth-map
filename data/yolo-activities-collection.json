@@ -2087,7 +2087,13 @@
       "location": "香港",
       "type": "travel",
       "collectiveActivity": true,
-      "images": [],
+      "images": [
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-hongkong/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-hongkong/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-hongkong/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-hongkong/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-hongkong/5.jpg"
+      ],
       "participants": [
         {
           "userId": "pdf2025-jingzi",
@@ -2212,7 +2218,8 @@
         "马文藻博士「Web3 领导力工作坊」",
         "YMCA 酒店 CEO Peter Ho 分享\"仆人式领导力\"",
         "预告八月日本海外私访"
-      ]
+      ],
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-hongkong/1.jpg"
     },
     {
       "activityKey": "yolo-2023-japan",
@@ -2222,7 +2229,13 @@
       "location": "日本",
       "type": "travel",
       "collectiveActivity": true,
-      "images": [],
+      "images": [
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-japan/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-japan/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-japan/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-japan/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-japan/5.jpg"
+      ],
       "participants": [
         {
           "userId": "pdf2025-jingzi",
@@ -2315,7 +2328,8 @@
         "太鼓体验 & 启动仪式",
         "2023-2024 年度导师计划正式启动",
         "新消费新科技企业参访"
-      ]
+      ],
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-japan/1.jpg"
     },
     {
       "activityKey": "yolo-2023-chongqing",
@@ -2325,7 +2339,13 @@
       "location": "重庆",
       "type": "annual",
       "collectiveActivity": true,
-      "images": [],
+      "images": [
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-chongqing/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-chongqing/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-chongqing/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-chongqing/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-chongqing/5.jpg"
+      ],
       "participants": [
         {
           "userId": "pdf2025-jingzi",
@@ -2430,7 +2450,8 @@
         "长安汽车企业参访",
         "企业家跨界 TED Talk",
         "导师见面会 + 私董会"
-      ]
+      ],
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2023-chongqing/1.jpg"
     },
     {
       "activityKey": "yolo-2024-shanghai-march",
@@ -2501,7 +2522,13 @@
       "location": "深圳",
       "type": "travel",
       "collectiveActivity": true,
-      "images": [],
+      "images": [
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-shenzhen/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-shenzhen/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-shenzhen/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-shenzhen/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-shenzhen/5.jpg"
+      ],
       "participants": [
         {
           "userId": "mn-18020",
@@ -2606,7 +2633,8 @@
         "Robot Balloon 团队竞技",
         "Crafting Your Career Journey 工作坊",
         "AI 重塑产业前沿探讨"
-      ]
+      ],
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-shenzhen/1.jpg"
     },
     {
       "activityKey": "yolo-2024-singapore",
@@ -2616,7 +2644,13 @@
       "location": "新加坡",
       "type": "travel",
       "collectiveActivity": true,
-      "images": [],
+      "images": [
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-singapore/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-singapore/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-singapore/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-singapore/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-singapore/5.jpg"
+      ],
       "participants": [
         {
           "userId": "pdf2025-sarah",
@@ -2689,7 +2723,8 @@
         "名企探访 local & global",
         "大咖课程 + 工作坊",
         "花园城市文化体验"
-      ]
+      ],
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-singapore/1.jpg"
     },
     {
       "activityKey": "yolo-2024-macau",
@@ -2699,7 +2734,13 @@
       "location": "澳门",
       "type": "annual",
       "collectiveActivity": true,
-      "images": [],
+      "images": [
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-macau/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-macau/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-macau/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-macau/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-macau/5.jpg"
+      ],
       "participants": [
         {
           "userId": "mn-18020",
@@ -2764,7 +2805,8 @@
         "明略科技吴明辉《AI 落地与营销创新》",
         "海尔副总裁刁云峰：全球化本土化经验",
         "企业出海实践分享"
-      ]
+      ],
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2024-macau/1.jpg"
     },
     {
       "activityKey": "yolo-2025-wenling",
@@ -2775,7 +2817,11 @@
       "type": "activity",
       "collectiveActivity": true,
       "images": [
-        "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSlfFYLdUnHoWGjRX4Qx38XPianibDatxAcibUQOP9ab2zqdDRVpswyQW7VoZvm6y0licFVJUrwyefzzg/640?wx_fmt=gif&from=appmsg"
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-wenling/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-wenling/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-wenling/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-wenling/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-wenling/5.jpg"
       ],
       "keyHighlights": [
         "石塘滨海绿道徒步 + 深夜坦白局",
@@ -2783,7 +2829,7 @@
         "制造业二代创业与转型分享",
         "ICF PCC 教练认证模块"
       ],
-      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSlfFYLdUnHoWGjRX4Qx38XPianibDatxAcibUQOP9ab2zqdDRVpswyQW7VoZvm6y0licFVJUrwyefzzg/640?wx_fmt=gif&from=appmsg",
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-wenling/1.jpg",
       "participants": [
         {
           "userId": "pdf2025-jingzi",
@@ -2900,7 +2946,11 @@
       "type": "activity",
       "collectiveActivity": true,
       "images": [
-        "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSAezjI5VwlHNfj5bWXmMDBc00TBDFOITKEF8wE5KeIJ5JeZupA2gWn3Tel2bC4R4CV2ZxeS0sUMA/640?wx_fmt=gif&from=appmsg"
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-yantai/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-yantai/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-yantai/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-yantai/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-yantai/5.jpg"
       ],
       "keyHighlights": [
         "走进中集来福士，感受\"大国重器\"",
@@ -2908,7 +2958,7 @@
         "山海步道团建",
         "个人使命工作坊"
       ],
-      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_gif/xeuxIvQA9ZSAezjI5VwlHNfj5bWXmMDBc00TBDFOITKEF8wE5KeIJ5JeZupA2gWn3Tel2bC4R4CV2ZxeS0sUMA/640?wx_fmt=gif&from=appmsg",
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-yantai/1.jpg",
       "participants": [
         {
           "userId": "pdf2025-jingzi",
@@ -3006,7 +3056,11 @@
       "type": "activity",
       "collectiveActivity": true,
       "images": [
-        "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZTmKQiaVSbV8TExnmpX3CxS8kIXw37G8krH22OwWE9KUpeggKC6QkgJU17xmwibcmtGyp0nYmNFo9JA/640?wx_fmt=jpeg"
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-zhengzhou/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-zhengzhou/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-zhengzhou/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-zhengzhou/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-zhengzhou/5.jpg"
       ],
       "keyHighlights": [
         "走进蜜雪冰城总部 & 温县产业园，解码雪王 IP",
@@ -3014,7 +3068,7 @@
         "变革管理模块课程 + 实战推演",
         "「宋风雅宴」接风晚宴"
       ],
-      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZTmKQiaVSbV8TExnmpX3CxS8kIXw37G8krH22OwWE9KUpeggKC6QkgJU17xmwibcmtGyp0nYmNFo9JA/640?wx_fmt=jpeg",
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-zhengzhou/1.jpg",
       "participants": [
         {
           "userId": "mn-18020",
@@ -3096,7 +3150,10 @@
       "type": "travel",
       "collectiveActivity": true,
       "images": [
-        "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZSvO40yqvyFaplJLJWV1wFdKiajENC2CXTjPxoiaqg5knn5pPImcwBe1hhcyOsicMPNpUIOQ5ZXicgSyA/640?wx_fmt=jpeg"
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-middleeast/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-middleeast/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-middleeast/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-middleeast/4.jpg"
       ],
       "keyHighlights": [
         "对话美团 Keeta / 联想 / 极兔（利雅得）",
@@ -3104,7 +3161,7 @@
         "谢赫扎耶德清真寺 + 阿布扎比卢浮宫文化之旅",
         "杰瑞集团灯塔分享 + 私董会"
       ],
-      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/xeuxIvQA9ZSvO40yqvyFaplJLJWV1wFdKiajENC2CXTjPxoiaqg5knn5pPImcwBe1hhcyOsicMPNpUIOQ5ZXicgSyA/640?wx_fmt=jpeg",
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-middleeast/1.jpg",
       "participants": [
         {
           "userId": "pdf2025-jingzi",
@@ -3142,7 +3199,11 @@
       "type": "annual",
       "collectiveActivity": true,
       "images": [
-        "https://mmbiz.qpic.cn/sz_mmbiz_png/xeuxIvQA9ZSXQE21tUrXM61lyNkkylK39INqpU3eUFSFB6zFAHPwTmaMS7vNCxjcXgd7Rk7sNUZZEjhzrrqfZA/640?wx_fmt=png&from=appmsg"
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-suzhou/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-suzhou/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-suzhou/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-suzhou/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-suzhou/5.jpg"
       ],
       "keyHighlights": [
         "孙立平教授：经济收缩期的\"收缩型思维\"",
@@ -3150,7 +3211,7 @@
         "AI 技术的企业落地实践",
         "穿越周期的长效增长路径"
       ],
-      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_png/xeuxIvQA9ZSXQE21tUrXM61lyNkkylK39INqpU3eUFSFB6zFAHPwTmaMS7vNCxjcXgd7Rk7sNUZZEjhzrrqfZA/640?wx_fmt=png&from=appmsg",
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2025-suzhou/1.jpg",
       "participants": [
         {
           "userId": "pdf2025-jingzi",
@@ -3362,10 +3423,11 @@
       "type": "activity",
       "collectiveActivity": true,
       "images": [
-        "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6naibkrLTSY4zDD3zE59LOAxVda4AMdQxjHqdzsduTjXatibGu9c59icKubJmNjR2yNZ8ibKD5puomjicaIvQQVge3FtKWibKSbia4ELw3xV7Pbj0c/640",
-        "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6naibkrLTSY6LWlR8l1VB1hicAKFkJa8S89HXInfggyBt21icot9Uyicp7rm95BqokGVDcfGNSBOC5wEHuPIgGvQO1JpZgvxcg1sibD06vc2SouA/640",
-        "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6naibkrLTSY7NUR5C7ObnQNiaIRo0p0s9Q7ZxbRuvibLKPoKnOMZX3Oxh4yJVOjP31aAk00H6jWISmbNJoU7gaSibFPibKiaQAeorbH0KxibxWDSo4/640",
-        "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6naibkrLTSY7BCbXL1jYX6e1uJ8e6nyZngdDm5LuZq4clOPTDqvOOtdS7g7QjpRENvKvNEMRX7J1LMt0myUiccxltWs2OvjCiaNfvqQcwBz6N4/640"
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2026-wuyishan/1.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2026-wuyishan/2.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2026-wuyishan/3.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2026-wuyishan/4.jpg",
+        "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2026-wuyishan/5.jpg"
       ],
       "keyHighlights": [
         "黄坑茶园参访 + 非遗摇青技艺体验",
@@ -3373,7 +3435,7 @@
         "古谷会所两代茶人对话（Johnny 导师）",
         "山水间品茗与人生故事分享"
       ],
-      "coverImage": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6naibkrLTSY4zDD3zE59LOAxVda4AMdQxjHqdzsduTjXatibGu9c59icKubJmNjR2yNZ8ibKD5puomjicaIvQQVge3FtKWibKSbia4ELw3xV7Pbj0c/640",
+      "coverImage": "cloud://cloud1-7giblg7i4595eaf3.636c-cloud1-7giblg7i4595eaf3-1306756329/yolo-growth-map/media/activities/yolo-2026-wuyishan/1.jpg",
       "participants": [
         {
           "userId": "pdf2025-jingzi",

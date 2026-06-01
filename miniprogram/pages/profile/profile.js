@@ -502,7 +502,7 @@ Page({
       return u && u.dataType === user.dataType && u.memberStatus === "active";
     });
     if (!allUsers.length) return;
-    var similarResults = util.findSimilarUsers(user, allUsers, 3);
+    var similarResults = util.findSimilarUsers(user, allUsers, 4);
     var similarUsers = similarResults.map(function (item) {
       return {
         user: item.user,

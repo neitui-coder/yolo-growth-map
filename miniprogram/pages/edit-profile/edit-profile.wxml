@@ -63,8 +63,15 @@
   </view>
 
   <view class="form-group">
-    <text class="form-label">教育背景</text>
-    <textarea class="form-input form-textarea" value="{{education}}" placeholder="请输入教育背景" auto-height maxlength="-1" bindinput="onInput" data-field="education" />
+    <text class="form-label">教育背景（最多两段）</text>
+    <view class="edu-row">
+      <input class="form-input edu-input" value="{{eduSchool1}}" placeholder="学校（如 斯坦福大学）" bindinput="onInput" data-field="eduSchool1" />
+      <input class="form-input edu-input" value="{{eduMajor1}}" placeholder="专业（如 计算机）" bindinput="onInput" data-field="eduMajor1" />
+    </view>
+    <view class="edu-row">
+      <input class="form-input edu-input" value="{{eduSchool2}}" placeholder="学校（第二段，可留空）" bindinput="onInput" data-field="eduSchool2" />
+      <input class="form-input edu-input" value="{{eduMajor2}}" placeholder="专业（第二段，可留空）" bindinput="onInput" data-field="eduMajor2" />
+    </view>
   </view>
 
   <view class="form-group">

@@ -28,6 +28,10 @@ Page({
     city: '',
     birthday: '',
     education: '',
+    eduSchool1: '',
+    eduMajor1: '',
+    eduSchool2: '',
+    eduMajor2: '',
     goal: '',
     gallupStr: '',
     hobbiesStr: '',
@@ -118,6 +122,10 @@ Page({
       city: Array.isArray(user.city) ? (user.city[0] || '') : (user.city || ''),
       birthday: user.birthday || '',
       education: user.education || '',
+      eduSchool1: (this._eduEntries(user.education)[0] || {}).school || '',
+      eduMajor1: (this._eduEntries(user.education)[0] || {}).major || '',
+      eduSchool2: (this._eduEntries(user.education)[1] || {}).school || '',
+      eduMajor2: (this._eduEntries(user.education)[1] || {}).major || '',
       goal: user.goal || '',
       gallupStr: (user.gallup || []).join(','),
       hobbiesStr: (user.hobbies || []).join(','),
@@ -206,7 +214,7 @@ Page({
       company: this.data.company.trim(),
       city: (this.data.city || '').trim(),
       birthday: this.data.birthday,
-      education: this.data.education.trim(),
+      education: this._composeEducation(),
       goal: this.data.goal.trim() || null,
       mbti: this.data.mbtiIndex >= 0 ? this.data.mbtiOptions[this.data.mbtiIndex] : '',
       zodiac: this.data.zodiacIndex >= 0
@@ -230,5 +238,31 @@ Page({
         seen[s] = true;
         return true;
       });
+  },
+
+  // 把已有教育字符串解析成最多两段 {school, major}（用于编辑预填）
+  _eduEntries: function (edu) {
+    if (!edu) return [];
+    var s = String(edu).replace(/(本科|研究生|硕士|博士|MBA|PhD)\s*[：:]/g, '｜');
+    var segs = s.split(/[｜\n]+|\s{2,}/).map(function (x) { return x.trim(); }).filter(Boolean);
+    return segs.map(function (seg) {
+      var m = seg.match(/^(.*?(?:大学|学院|学系|学校))\s*(.*)$/);
+      if (m) return { school: m[1].trim(), major: (m[2] || '').trim() };
+      var sp = seg.match(/^(\S+)\s+(.+)$/);
+      if (sp) return { school: sp[1].trim(), major: sp[2].trim() };
+      return { school: seg, major: '' };
+    });
+  },
+
+  // 把两段(学校,专业)组合成 education 字符串，用双空格分隔，便于展示端 splitEducationTags 拆词条
+  _composeEducation: function () {
+    var d = this.data;
+    var entries = [[d.eduSchool1, d.eduMajor1], [d.eduSchool2, d.eduMajor2]];
+    var parts = [];
+    entries.forEach(function (e) {
+      var s = (e[0] || '').trim(), m = (e[1] || '').trim();
+      if (s || m) parts.push([s, m].filter(Boolean).join('  '));
+    });
+    return parts.join('  ');
   }
 });

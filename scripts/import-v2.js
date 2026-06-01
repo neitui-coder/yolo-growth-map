@@ -214,6 +214,38 @@ async function replaceUsers(miniProgram, users) {
   });
 }
 
+// 读取云端现有用户，把"用户自己改过、不该被 master 覆盖"的字段合并回待导入数据
+// （目前：用户上传的头像 avatarImage[路径含 /uploads/]、本人编辑的签名 motto[mottoSource=member-edited]）
+async function preserveUserEdits(miniProgram, users) {
+  let dbUsers = [];
+  try {
+    const r = await cloudCall(miniProgram, { type: 'getUsers', dataType: 'real' });
+    dbUsers = (r && r.data) || [];
+  } catch (e) {
+    console.warn('preserveUserEdits: getUsers failed, skip', e && e.errMsg);
+    return null;
+  }
+  const byId = {};
+  dbUsers.forEach((u) => { if (u && u.userId) byId[u.userId] = u; });
+  const report = { avatar: [], motto: [] };
+  users.forEach((u) => {
+    const db = byId[u.userId];
+    if (!db) return;
+    // 用户上传的头像（云存储 uploads 路径）优先保留
+    if (typeof db.avatarImage === 'string' && db.avatarImage.indexOf('/uploads/') !== -1 && db.avatarImage !== u.avatarImage) {
+      u.avatarImage = db.avatarImage;
+      report.avatar.push(u.userId);
+    }
+    // 本人编辑过的签名优先保留
+    if (db.mottoSource === 'member-edited' && db.motto && db.motto !== u.motto) {
+      u.motto = db.motto;
+      u.mottoSource = 'member-edited';
+      report.motto.push(u.userId);
+    }
+  });
+  return (report.avatar.length || report.motto.length) ? report : null;
+}
+
 async function safeClose(miniProgram) {
   if (!miniProgram) return;
   await Promise.race([
@@ -265,6 +297,11 @@ async function main() {
   const mp = await openMiniProgram();
 
   try {
+    // 0. 保护用户自己改过的字段：重导前先读云端现状，把"用户上传的头像 / 本人编辑的签名"
+    //    保留下来，避免被 master 覆盖回去（用户头像必须保持）
+    const preserved = await preserveUserEdits(mp, users);
+    if (preserved) console.log('preserved user edits:', JSON.stringify(preserved));
+
     // 1. Push activities collection
     const activitiesResult = await seedActivities(mp, activitiesCollection);
     console.log('seedActivities result:', JSON.stringify(activitiesResult));

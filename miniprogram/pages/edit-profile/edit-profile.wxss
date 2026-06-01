@@ -41,6 +41,17 @@
   min-width: 0;
 }
 
+.edu-row {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.edu-row .edu-input {
+  flex: 1;
+  min-width: 0;
+}
+
 .form-textarea {
   height: auto;
   min-height: 112rpx;

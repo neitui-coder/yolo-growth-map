@@ -3129,47 +3129,6 @@
     {
       "memberStatus": "alumni",
       "identity": {
-        "userId": "hist-9538b83b8b",
-        "name": "唐恺飞",
-        "englishName": ""
-      },
-      "community": {
-        "role": "会员",
-        "isLishi": false,
-        "memberNo": "",
-        "category": "S",
-        "joinYear": null,
-        "durationYears": null,
-        "joinDate": "2018-01",
-        "joinPeriods": [
-          {
-            "start": "2018-01",
-            "end": null
-          }
-        ]
-      },
-      "profile": {
-        "mbti": "",
-        "gallup": [],
-        "company": "",
-        "city": "",
-        "birthday": "",
-        "education": "亚加达学校青藤学院",
-        "educationDegree": "",
-        "motto": ""
-      },
-      "interests": {
-        "hobbies": []
-      },
-      "assets": {},
-      "import": {
-        "dataType": "real",
-        "source": "official-xlsx-historical-attendance"
-      }
-    },
-    {
-      "memberStatus": "alumni",
-      "identity": {
         "userId": "mn-19038",
         "name": "唐淼",
         "englishName": "Harrison"
